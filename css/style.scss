@@ -1,0 +1,8 @@
+@import 'base';
+@import 'fonts';
+
+body {
+	a {
+		@include ease-in-out(.4s);
+	}
+}

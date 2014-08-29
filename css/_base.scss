@@ -1,0 +1,6 @@
+@mixin ease-in-out($seconds) {
+	-webkit-transition: all $seconds ease-in-out;
+	-moz-transition: all $seconds ease-in-out;
+	-o-transition: all $seconds ease-in-out;
+	transition: all $seconds ease-in-out;
+}
