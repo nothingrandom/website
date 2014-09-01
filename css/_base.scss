@@ -4,3 +4,8 @@
 	-o-transition: all $seconds ease-in-out;
 	transition: all $seconds ease-in-out;
 }
+
+@mixin center-width($width, $margin) {
+	width: $width;
+	margin: $margin;
+}
