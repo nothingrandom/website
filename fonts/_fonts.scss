@@ -43,45 +43,23 @@
 }
 
 @font-face {
-	font-family: 'MinionPro';
-	src: url('MinionPro-Regular.eot');
-	/*src: url('.eot?#iefix') format('embedded-opentype'),*/
-	src: url('MinionPro-Regular.woff') format('woff'),
-		url('MinionPro-Regular.ttf') format('truetype'),
-		url('MinionPro-Regular.svg#MinionPro-Regular') format('svg');
+	font-family: 'Minion';
+	src: url('Minion-Regular.eot');
+	src: url('Minion-Regular.eot?#iefix') format('embedded-opentype'),
+	 	url('Minion-Regular.woff') format('woff'),
+		url('Minion-Regular.ttf') format('truetype'),
+		url('Minion-Regular.svg#MinionPro-Regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'MinionPro';
-	src: url('MinionPro-It.eot');
-	/*src: url('.eot?#iefix') format('embedded-opentype'),*/
-	src: url('MinionPro-It.woff') format('woff'),
-		url('MinionPro-It.ttf') format('truetype'),
-		url('MinionPro-It.svg#MinionPro-It') format('svg');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'MinionWebPro';
-	src: url('MinionWebPro.eot');
-	/*src: url('.eot?#iefix') format('embedded-opentype'),*/
-	src: url('MinionWebPro.woff') format('woff'),
-		url('MinionWebPro.ttf') format('truetype'),
-		url('MinionWebPro.svg#MinionWebPro') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'MinionWebPro-Italic';
-	src: url('MinionWebPro-Italic.eot');
-	/*src: url('.eot?#iefix') format('embedded-opentype'),*/
-	src: url('MinionWebPro-Italic.woff') format('woff'),
-		url('MinionWebPro-Italic.ttf') format('truetype'),
-		url('MinionWebPro-Italic.svg#MinionWebPro-Italic') format('svg');
+	font-family: 'Minion';
+	src: url('Minion-Italic.eot');
+	src: url('Minion-Italic.eot?#iefix') format('embedded-opentype'),
+		url('Minion-Italic.woff') format('woff'),
+		url('Minion-Italic.ttf') format('truetype'),
+		url('Minion-Italic.svg#MinionPro-It') format('svg');
 	font-weight: normal;
 	font-style: italic;
 }
