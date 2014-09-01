@@ -1,10 +1,20 @@
 @import 'base';
-@import '../fonts/fonts.css';
+@import '../fonts/_fonts.css';
 @import 'default.css';
 @import 'colors';
 
 body {
 
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	font-family: 'Minion';
+	font-style: normal;
+	font-weight: 100;
 }
 
 a {
@@ -14,9 +24,15 @@ a {
 .page-line {
 	width: 100%;
 	height: 1px;
-	background-color: $lightgrey;
 	clear: both;
 }
+
+.page-line-grey {
+	@extend .page-line;
+	background-color: $lightgrey;
+}
+
+/*Main navigation*/
 
 header {
 	nav {
@@ -46,8 +62,28 @@ ul {
 			text-decoration: none;
 			color: $midgrey;
 		}
-		a:hover {
-				color: $black;
-			}
+		a:hover,
+		a:focus {
+			color: $black;
+		}
+	}
+}
+
+/*Portfolio*/
+
+header.portfolio {
+
+	width: 80%;
+	margin: 100px auto;
+
+	h1 {
+		margin: 0 0 12px;
+		font-size: 3em;
+	}
+
+	h2 {
+		margin: 0;
+		font-style: italic;
+		font-size: 2.5em;
 	}
 }
