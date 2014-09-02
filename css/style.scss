@@ -51,8 +51,6 @@ ul {
 	list-style: none;
 	line-height: normal;
 
-
-
 	li {
 		font-family: 'Proxima Nova';
 		font-weight: 200;
@@ -69,7 +67,8 @@ ul {
 		}
 
 		a:hover,
-		a:focus {
+		a:focus,
+		a:active {
 			color: $black;
 		}
 	}
@@ -97,7 +96,16 @@ section.portfolio {
 	@include center-width(80%, 0 auto 40px);
 
 	img {
-		@include center-width(40%, 40px 0 0 0);
+		@include center-width(48%, 40px 0 0 0);
+		@include ease-in-out(.4s);
+		pointer-events: auto;
+	}
+
+	img:hover,
+	img:focus,
+	img:active {
+		@include hover-bright(.4);
+		z-index: 9;
 	}
 
 }

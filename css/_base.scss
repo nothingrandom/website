@@ -9,3 +9,19 @@
 	width: $width;
 	margin: $margin;
 }
+
+@mixin hover-dark($amount) {
+	filter: brightness($amount);
+	-webkit-filter: brightness($amount);
+	-moz-filter: brightness($amount);
+	-o-filter: brightness($amount);
+	-ms-filter: brightness($amount);
+}
+
+@mixin hover-bright($amount) {
+	filter: opacity($amount);
+	-webkit-filter: opacity($amount);
+	-moz-filter: opacity($amount);
+	-o-filter: opacity($amount);
+	-ms-filter: opacity($amount);
+}
