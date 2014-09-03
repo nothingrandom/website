@@ -13,6 +13,7 @@ body {
 	/*keeps cursor as an arrow or a hand when hovering over a link*/
 	text-rendering: optimizeLegibility;
 	/*should cause text to be as readable as possible*/
+	-webkit-font-smoothing: antialiased;
 
 }
 
