@@ -25,3 +25,12 @@
 	-o-filter: opacity($amount);
 	-ms-filter: opacity($amount);
 }
+
+@mixin opacity($amount) {
+	-moz-opacity: $amount;
+	-khtml-opacity: $amount;
+	-webkit-opacity: $amount;
+	opacity: $amount;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=$amount * 10000);
+	filter: alpha(opacity=$amount * 10000);
+}

@@ -1,7 +1,12 @@
 @import 'base';
 @import '../fonts/_fonts.css';
-@import 'default.css';
+@import '_default';
 @import 'colors';
+
+$sans-serif: Proxima Nova, sans-serif;
+$serif: Minion, Georgia, Times, serif;
+
+$global-ease: .4s;
 
 body {
 
@@ -12,13 +17,13 @@ h2,
 h3,
 h4,
 p {
-	font-family: 'Minion';
+	font-family: $serif;
 	font-style: normal;
 	font-weight: 100;
 }
 
 a {
-	@include ease-in-out(.4s);
+	@include ease-in-out($global-ease);
 }
 
 
@@ -29,6 +34,11 @@ a {
 %page-line {
 	height: 1px;
 	width: 100%;
+}
+
+.page-line-red {
+	@extend %page-line;
+	background-color: $darkred;
 }
 
 .page-line-grey {
@@ -52,7 +62,7 @@ ul {
 	line-height: normal;
 
 	li {
-		font-family: 'Proxima Nova';
+		font-family: $sans-serif;
 		font-weight: 200;
 		font-size: .813em;
 		text-transform: uppercase;
@@ -71,6 +81,10 @@ ul {
 		a:active {
 			color: $black;
 		}
+	}
+
+	li:last-child {
+		padding: 0 0 0 10px;
 	}
 }
 
@@ -95,26 +109,90 @@ header.portfolio {
 section.portfolio {
 	@include center-width(80%, 0 auto 40px);
 
-	img {
-		@include center-width(48%, 40px 0 0 0);
-		@include ease-in-out(.4s);
+	.box {
+		position: relative;
+		display: inline;
+		vertical-align: middle;
+	}
+
+	.box h6,
+	.box p {
+		margin: 0;
+		text-align: center;
+		line-height: 1.5em;
+	}
+
+	.box h6 {
+		font-family: $sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-size: 1em;
+	}
+
+	.box p {
+		font-style: italic;
+		color: $darkgrey;
+	}
+
+	.box a,
+	.box a:visited {
+		color: $black;
+		text-decoration: none;
+	}
+
+	.hover {
+		@include opacity(0);
+		@include ease-in-out($global-ease);
+		-webkit-user-select: none;
+		-webkit-touch-callout: none;
+		-webkit-tap-highlight-color: transparent;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 80%;
+		height: 30%;
+		margin: 0 0 0 -40%;
+		/*top: 50%;
+ 		  left: 50%;
+ 		  height: 30%;
+  		  width: 80%;
+ 		  margin: -9% 0 0 -40%;*/
+	}
+
+	.box:hover .hover,
+	.box:focus .hover,
+	.box:active .hover {
+		display: block;
+		@include opacity(1);
+	}
+
+	%img {
+		@include opacity(1);
+		@include ease-in-out($global-ease);
 		pointer-events: auto;
+		display: inline;
+		vertical-align: middle;
 	}
 
-	img:hover,
-	img:focus,
-	img:active {
-		@include hover-bright(.4);
-		z-index: 9;
+	//18px margin (36 total) seems to move the hover caption. Need to find a fix.
+	.left-img {
+		@extend %img;
+		@include center-width(48%, 40px 18px 0 0);
 	}
 
-}
+	.right-img {
+		@extend %img;
+		@include center-width(48%, 40px 0 0 18px);
+	}
 
-//Images
-.left-img {
-	float: left;
-}
+	.large-img {
+		@extend %img;
+		@include center-width(100%, 40px 0 0 0);
+	}
 
-.right-img {
-	float: right;
+	.box:hover img,
+	.box:focus img,
+	.box:active img {
+		@include opacity(.4);
+	}
 }
