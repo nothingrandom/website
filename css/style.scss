@@ -175,7 +175,6 @@ section.portfolio {
 	}
 
 	%img {
-		@include opacity(1);
 		@include ease-in-out($global-ease);
 		pointer-events: auto;
 		display: inline;
@@ -201,7 +200,7 @@ section.portfolio {
 	.box:hover img,
 	.box:focus img,
 	.box:active img {
-		@include opacity(.4);
+		@include hover-bright(.4);
 	}
 }
 
