@@ -7,6 +7,7 @@ $sans-serif: Proxima Nova, sans-serif;
 $serif: Minion, Georgia, Times, serif;
 
 $global-ease: .4s;
+$global-width: 80%;
 
 body {
 
@@ -24,6 +25,24 @@ p {
 
 a {
 	@include ease-in-out($global-ease);
+	text-decoration: none;
+	background-image: linear-gradient(to top,
+	/*rgba(0, 0, 0, 0) 11%,
+	rgba(0, 0, 0, .43) 11%,
+	rgba(0, 0, 0, .43) 16%,
+	rgba(0, 0, 0, 0) 11%*/
+	transparent 10%,
+	currentColor 10%,
+	currentColor 14%,
+	transparent 10%
+	);
+	text-shadow:
+		.025em 0 0 $white,
+		-.025em 0 0 $white,
+		.05em 0 0 $white,
+		-.05em 0 0 $white,
+		.075em 0 0 $white,
+		-.075em 0 0 $white;
 }
 
 
@@ -49,61 +68,79 @@ a {
 .page-line-short-grey {
 	height: 1px;
 	width: 100px;
-	background-color: $lightgrey;
+	background-color: $midgrey;
 	margin: 15px auto;
+}
+
+.page-line-medium-grey {
+	height: 1px;
+	width: 250px;
+	background-color: $lightgrey;
+	margin: 19px auto 0;
+	//19px because the height is 1.
 }
 
 //Main navigation
 
 header {
 	nav {
-		@include center-width(80%, 0 auto);
+		@include center-width($global-width, 0 auto);
+
+		ul {
+			float: right;
+			margin: 20px 0;
+
+			li {
+				font-family: $sans-serif;
+				font-weight: 200;
+				font-size: .813em;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				text-align: right;
+				display: inline;
+				padding: 0 10px;
+
+				a {
+					color: $midgrey;
+					text-decoration: none;
+					background-image: none;
+					text-shadow: none;
+				}
+
+				a.active {
+					color: $darkgrey;
+				}
+
+				a:hover,
+				a:focus,
+				a:active {
+					color: $black;
+				}
+			}
+
+			li:last-child {
+				padding: 0 0 0 10px;
+			}
+		}
 	}
 }
 
 ul {
-	float: right;
-	margin: 20px 0;
 	padding: 0;
 	list-style: none;
 	line-height: normal;
 
-	li {
-		font-family: $sans-serif;
-		font-weight: 200;
-		font-size: .813em;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		text-align: right;
-		display: inline;
-		padding: 0 10px;
-
-		a {
-			color: $midgrey;
-			text-decoration: none;
-		}
-
-		a:hover,
-		a:focus,
-		a:active {
-			color: $black;
-		}
-	}
-
-	li:last-child {
-		padding: 0 0 0 10px;
-	}
 }
 
 //Portfolio
 
 header.portfolio {
 
-	@include center-width(80%, 100px auto);
+	@include center-width($global-width, 100px auto 55px);
 
 	h1 {
 		font-size: 2.25em;
-		margin: 0 0 12px;
+		//margin: 0 0 12px;
 	}
 
 	h2 {
@@ -114,7 +151,7 @@ header.portfolio {
 }
 
 section.portfolio {
-	@include center-width(80%, 35px auto 75px);
+	@include center-width($global-width, 35px auto 75px);
 
 	.box {
 		position: relative;
@@ -146,6 +183,8 @@ section.portfolio {
 	.box a:visited {
 		color: $black;
 		text-decoration: none;
+		background-image: none;
+		text-shadow: none;
 	}
 
 	.hover {
@@ -160,11 +199,6 @@ section.portfolio {
 		width: 80%;
 		height: 30%;
 		margin: 0 0 0 -40%;
-		/*top: 50%;
- 		  left: 50%;
- 		  height: 30%;
-  		  width: 80%;
- 		  margin: -9% 0 0 -40%;*/
 	}
 
 	.box:hover .hover,
@@ -204,8 +238,105 @@ section.portfolio {
 	}
 }
 
+.content.about {
+	@include center-width($global-width, 100px auto 0);
+
+}
+
+header.about {
+	@include center-width(100%, 100px 0 0);
+
+	h1 {
+		font-size: 2.25em;
+		margin: 0;
+		text-align: center;
+		//line-height: 1.25em;
+	}
+
+	img {
+		width: 100%;
+		margin: 75px 0 70px;
+	}
+}
+
+section.profile-picture {
+	@include center-width(25%, 0 auto);
+	float: left;
+}
+
+section.about {
+	@include center-width(50%, 0 auto);
+	float: left;
+
+	p {
+		font-size: 1.25em;
+		line-height: 1.25em;
+	}
+
+	p:first-child {
+		margin-top: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 70px;
+	}
+}
+
+section.about-sidebar {
+	@include center-width(25%, 0);
+	float: left;
+
+	article {
+		float: right;
+		width: 200px;
+		//margin-left: 56px;
+	}
+
+	h4 {
+		font-family: $sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 1em;
+		margin: 0;
+	}
+
+	ul {
+		margin: 6px 0 25px;
+	}
+
+	li {
+		font-family: $serif;
+		color: $darkgrey;
+		font-size: 1em;
+		line-height: 1.188em;
+	}
+
+	a,
+	a.visited {
+		color: $darkgrey;
+	}
+
+	a:hover {
+		color: $black;
+	}
+}
+
+section.instagram {
+	clear: both;
+	@include center-width(100%, 0 auto 70px);
+
+	img {
+		width: 18%;
+		margin-left: 1.5%;
+	}
+
+	img:first-child {
+		margin-left: 1.2%;
+	}
+}
+
 footer {
-	padding: 50px 0;
+	margin: 50px 0;
 
 	p {
 		text-align: center;
@@ -219,7 +350,14 @@ footer {
 
 	a,
 	a:visited {
-		color: $semigrey;
+		@include ease-in-out($global-ease);
+		color: #808080;
 		text-decoration: none;
+		background-image: none;
+		text-shadow: none;
+	}
+
+	a:hover {
+		color: $black;
 	}
 }
