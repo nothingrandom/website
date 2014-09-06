@@ -7,6 +7,7 @@ $sans-serif: Proxima Nova, sans-serif;
 $serif: Minion, Georgia, Times, serif;
 
 $global-ease: .4s;
+$link-ease: .1s;
 $global-width: 80%;
 
 body {
@@ -20,21 +21,21 @@ h4,
 p {
 	font-family: $serif;
 	font-style: normal;
-	font-weight: 100;
+	font-weight: 100; //Minion is > 400 for the regular, and there is nothing below that. Use 100 incase this changes in future.
 }
 
 a {
-	@include ease-in-out($global-ease);
+	@include ease-in-out($link-ease);
 	text-decoration: none;
 	background-image: linear-gradient(to top,
-	/*rgba(0, 0, 0, 0) 11%,
-	rgba(0, 0, 0, .43) 11%,
-	rgba(0, 0, 0, .43) 16%,
-	rgba(0, 0, 0, 0) 11%*/
-	transparent 10%,
-	currentColor 10%,
-	currentColor 14%,
-	transparent 10%
+		/*rgba(0, 0, 0, 0) 11%,
+		rgba(0, 0, 0, 1) 11%,
+		rgba(0, 0, 0, 1) 16%,
+		rgba(0, 0, 0, 0) 11%*/
+		transparent 10%,
+		currentColor 10%,
+		currentColor 14%,
+		transparent 10%
 	);
 	text-shadow:
 		.025em 0 0 $white,
@@ -45,6 +46,30 @@ a {
 		-.075em 0 0 $white;
 }
 
+a,
+a.visited {
+	color: $semigrey;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: $black;
+}
+
+::selection {
+	background-color: $selection;
+}
+
+a::selection {
+	text-shadow:
+		.025em 0 0 $selection,
+		-.025em 0 0 $selection,
+		.05em 0 0 $selection,
+		-.05em 0 0 $selection,
+		.075em 0 0 $selection,
+		-.075em 0 0 $selection;
+}
 
 .clear {
 	clear: both;
@@ -101,6 +126,7 @@ header {
 				padding: 0 10px;
 
 				a {
+					@include ease-in-out($global-ease);
 					color: $midgrey;
 					text-decoration: none;
 					background-image: none;
@@ -159,21 +185,22 @@ section.portfolio {
 		vertical-align: middle;
 	}
 
-	.box h6,
-	.box p {
+	.box h3,
+	.box h4 {
 		margin: 0;
 		text-align: center;
 		line-height: 1.625em;
 	}
 
-	.box h6 {
+	.box h3 {
 		font-family: $sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		font-size: 1em;
+		font-weight: 600;
 	}
 
-	.box p {
+	.box h4 {
 		font-style: italic;
 		color: $darkgrey;
 		font-size: 1.125em;
@@ -268,9 +295,17 @@ section.about {
 	@include center-width(50%, 0 auto);
 	float: left;
 
+	h2 {
+		margin-top: 0;
+		font-size: 1.625em;
+		font-style: italic;
+	}
+
 	p {
-		font-size: 1.25em;
-		line-height: 1.25em;
+		font-size: 1.313em;
+		line-height: 1.313em;
+		margin: 1.063em 0;
+		//color: $black;
 	}
 
 	p:first-child {
@@ -306,14 +341,14 @@ section.about-sidebar {
 
 	li {
 		font-family: $serif;
-		color: $darkgrey;
+		color: $semigrey;
 		font-size: 1em;
 		line-height: 1.188em;
 	}
 
 	a,
 	a.visited {
-		color: $darkgrey;
+		color: $semigrey;
 	}
 
 	a:hover {
