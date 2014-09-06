@@ -1,4 +1,5 @@
 //https://github.com/nothingrandom/copyrightyear.js
+//https://github.com/nothingrandom/calculate-age.js
 
 window.onload = function() {
 
@@ -20,12 +21,6 @@ function copyright(startingYear) {
 }
 
 document.getElementById("copyyear").innerHTML = (copyright(2013));
-
-};
-
-//https://github.com/nothingrandom/calculate-age.js
-
-window.onload = function() {
 
 function getAge(birth) {
 

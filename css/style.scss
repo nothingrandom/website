@@ -24,6 +24,18 @@ p {
 	font-weight: 100; //Minion is > 400 for the regular, and there is nothing below that. Use 100 incase this changes in future.
 }
 
+p {
+	font-size: 1.25em;
+	line-height: 1.25em;
+	margin: 1em 0;
+	color: $black;
+}
+
+p.last,
+img.last {
+	margin-bottom: 0 !important;
+}
+
 a {
 	@include ease-in-out($link-ease);
 	text-decoration: none;
@@ -104,6 +116,26 @@ a::selection {
 	margin: 19px auto 0;
 	//19px because the height is 1.
 }
+
+/*%page-line-blog {
+	height: 1px;
+	background-color: $lightgrey;
+}
+
+.page-line-blog-short {
+	@extend %page-line-blog;
+	width: 33%;
+}
+
+.page-line-blog-mid {
+	@extend %page-line-blog;
+	width: 50%;
+}
+
+.page-line-blog-long {
+	@extend %page-line-blog;
+	width: 66%;
+}*/
 
 //Main navigation
 
@@ -265,13 +297,16 @@ section.portfolio {
 	}
 }
 
-.content.about {
-	@include center-width($global-width, 100px auto 0);
+
+//About and blog mixed styles
+
+.content.about, .content.blog, .content.blog-post, .content.project {
+	@include center-width($global-width, 0 auto 70px);
 
 }
 
-header.about {
-	@include center-width(100%, 100px 0 0);
+header.about, header.blog, header.blog-post, header.project {
+	@include center-width(100%, 100px 0 70px);
 
 	h1 {
 		font-size: 2.25em;
@@ -282,9 +317,11 @@ header.about {
 
 	img {
 		width: 100%;
-		margin: 75px 0 70px;
+		margin: 75px 0 0;
 	}
 }
+
+//About
 
 section.profile-picture {
 	@include center-width(25%, 0 auto);
@@ -302,9 +339,9 @@ section.about {
 	}
 
 	p {
-		font-size: 1.313em;
+		/*font-size: 1.313em;
 		line-height: 1.313em;
-		margin: 1.063em 0;
+		margin: 1.063em 0;*/
 		//color: $black;
 	}
 
@@ -315,6 +352,21 @@ section.about {
 	p:last-child {
 		margin-bottom: 70px;
 	}
+
+	/*a {
+		color: $black;
+	}
+
+	a:hover,
+	a:focus,
+	a:active {
+		background-image: linear-gradient(to top,
+		transparent 10%,
+		$darkred 10%,
+		$darkred 14%,
+		transparent 10%
+	);
+	}*/
 }
 
 section.about-sidebar {
@@ -351,6 +403,8 @@ section.about-sidebar {
 		color: $semigrey;
 	}
 
+	a:hover,
+	a:focus,
 	a:hover {
 		color: $black;
 	}
@@ -358,7 +412,7 @@ section.about-sidebar {
 
 section.instagram {
 	clear: both;
-	@include center-width(100%, 0 auto 70px);
+	@include center-width(100%, 0 auto);
 
 	img {
 		width: 18%;
@@ -370,6 +424,178 @@ section.instagram {
 	}
 }
 
+//Blog
+
+section.blog {
+	//@include center-width(100%, 0 auto);
+
+	h2 {
+		font-size: 1.625em;
+		margin: 0;
+	}
+
+	h3 {
+		font-family: $sans-serif;
+		text-transform: uppercase;
+		font-size: .813em;
+		letter-spacing: 1px;
+		margin: 5px 0 15px;
+	}
+
+	p {
+		margin: 0 0 35px;
+	}
+
+	h2 a {
+		color: $black;
+	}
+
+	h2 a:hover,
+	h2 a:focus,
+	h2 a:active {
+		color: $semigrey;
+	}
+}
+
+//Blog Post
+
+section.blog-post, section.project {
+
+	header {
+		@include center-width(75%, 0 auto);
+
+		h2 {
+			@include center-width(100%, 75px auto 50px);
+			font-size: 1.25em;
+		}
+
+		section {
+			display: inline;
+			width: 33%;
+			float: left;
+			vertical-align: top;
+			text-align: center;
+			margin: 2px 0 0;
+
+			h3 {
+				margin: 0 0 5px;
+				font-family: $sans-serif;
+				font-size: .813em;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: $semigrey;
+			}
+
+			p {
+				margin: 0;
+				font-size: 1.125em;
+				color: $semigrey;
+			}
+		}
+
+	}
+}
+
+section.blog-post {
+
+	article {
+		@include center-width(75%, 0 auto);
+		margin: 75px auto 0;
+
+		h2:first-child {
+			margin: 0;
+		}
+
+		h2 {
+			margin: 2em 0 0;
+			font-size: 1.625em;
+		}
+
+		p {
+			text-indent: 2em;
+			margin: 1em 0;
+		}
+
+		p.image-caption {
+			margin: 0;
+			text-indent: 0;
+			text-align: center;
+			font-style: italic;
+			font-size: 1.125em;
+		}
+
+		img {
+			display: block;
+			margin: 10px auto;
+		}
+	}
+}
+
+section.project {
+
+	img.project-main-image {
+		@include center-width(100%, 45px auto 55px);
+	}
+
+	img {
+		@include center-width(100%, 30px auto);
+	}
+
+	h4 {
+		font-family: $sans-serif;
+		letter-spacing: 2px;
+		margin: 0;
+		text-transform: uppercase;
+	}
+
+	p {
+		margin: .5em 0;
+	}
+
+	p:last-child {
+		margin: .5em 0 0;
+	}
+
+	article {
+		margin: .813em 0;
+	}
+
+	.project-left, .project-right {
+		display: inline;
+		float: left;
+		vertical-align: top;
+		width: 50%;
+
+
+		img {
+			width: 75%;
+			float: right;
+			margin: 0;
+		}
+	}
+
+}
+
+//Videos
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+//Footer
+
 footer {
 	margin: 50px 0;
 
@@ -377,6 +603,8 @@ footer {
 		text-align: center;
 		margin: 0;
 		color: $semigrey;
+		font-size: 1em;
+		line-height: 1em;
 	}
 
 	.email {
@@ -392,7 +620,9 @@ footer {
 		text-shadow: none;
 	}
 
-	a:hover {
+	a:hover,
+	a:focus,
+	a:active {
 		color: $black;
 	}
 }
