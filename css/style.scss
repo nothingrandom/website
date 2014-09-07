@@ -1,5 +1,5 @@
 @import 'base';
-@import '../fonts/_fonts.css';
+@import 'http://beta.nothingrandom.com/fonts/_fonts.css';
 @import '_default';
 @import 'colors';
 
@@ -9,10 +9,6 @@ $serif: Minion, Georgia, Times, serif;
 $global-ease: .4s;
 $link-ease: .1s;
 $global-width: 80%;
-
-body {
-
-}
 
 h1,
 h2,
@@ -117,26 +113,6 @@ a::selection {
 	//19px because the height is 1.
 }
 
-/*%page-line-blog {
-	height: 1px;
-	background-color: $lightgrey;
-}
-
-.page-line-blog-short {
-	@extend %page-line-blog;
-	width: 33%;
-}
-
-.page-line-blog-mid {
-	@extend %page-line-blog;
-	width: 50%;
-}
-
-.page-line-blog-long {
-	@extend %page-line-blog;
-	width: 66%;
-}*/
-
 //Main navigation
 
 header {
@@ -150,12 +126,12 @@ header {
 			li {
 				font-family: $sans-serif;
 				font-weight: 200;
-				font-size: .813em;
+				font-size: .875em;
 				text-transform: uppercase;
 				letter-spacing: 2px;
 				text-align: right;
 				display: inline;
-				padding: 0 10px;
+				padding: 0 15px;
 
 				a {
 					@include ease-in-out($global-ease);
@@ -163,10 +139,6 @@ header {
 					text-decoration: none;
 					background-image: none;
 					text-shadow: none;
-				}
-
-				a.active {
-					color: $darkgrey;
 				}
 
 				a:hover,
@@ -215,35 +187,35 @@ section.portfolio {
 		position: relative;
 		display: inline;
 		vertical-align: middle;
-	}
 
-	.box h3,
-	.box h4 {
-		margin: 0;
-		text-align: center;
-		line-height: 1.625em;
-	}
+		h3,
+		h4 {
+			margin: 0;
+			text-align: center;
+			line-height: 1.375em;
+		}
 
-	.box h3 {
-		font-family: $sans-serif;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-size: 1em;
-		font-weight: 600;
-	}
+		h3 {
+			font-family: $sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			font-size: 1em;
+			//font-weight: 600;
+		}
 
-	.box h4 {
-		font-style: italic;
-		color: $darkgrey;
-		font-size: 1.125em;
-	}
+		h4 {
+			font-style: italic;
+			color: $darkgrey;
+			font-size: 1.125em;
+		}
 
-	.box a,
-	.box a:visited {
-		color: $black;
-		text-decoration: none;
-		background-image: none;
-		text-shadow: none;
+		a,
+		a:visited {
+			color: $black;
+			text-decoration: none;
+			background-image: none;
+			text-shadow: none;
+		}
 	}
 
 	.hover {
@@ -300,12 +272,18 @@ section.portfolio {
 
 //About and blog mixed styles
 
-.content.about, .content.blog, .content.blog-post, .content.project {
+.content.about,
+.content.blog,
+.content.blog-post,
+.content.project {
 	@include center-width($global-width, 0 auto 70px);
 
 }
 
-header.about, header.blog, header.blog-post, header.project {
+header.about,
+header.blog,
+header.blog-post,
+header.project {
 	@include center-width(100%, 100px 0 70px);
 
 	h1 {
@@ -336,13 +314,6 @@ section.about {
 		margin-top: 0;
 		font-size: 1.625em;
 		font-style: italic;
-	}
-
-	p {
-		/*font-size: 1.313em;
-		line-height: 1.313em;
-		margin: 1.063em 0;*/
-		//color: $black;
 	}
 
 	p:first-child {
@@ -383,7 +354,7 @@ section.about-sidebar {
 		font-family: $sans-serif;
 		text-transform: uppercase;
 		letter-spacing: 2px;
-		font-size: 1em;
+		font-size: .875em;
 		margin: 0;
 	}
 
@@ -401,6 +372,7 @@ section.about-sidebar {
 	a,
 	a.visited {
 		color: $semigrey;
+		background-image: none;
 	}
 
 	a:hover,
@@ -437,8 +409,9 @@ section.blog {
 	h3 {
 		font-family: $sans-serif;
 		text-transform: uppercase;
-		font-size: .813em;
-		letter-spacing: 1px;
+		font-size: .875em;
+		letter-spacing: 2px;
+		color: $darkgrey;
 		margin: 5px 0 15px;
 	}
 
@@ -459,7 +432,8 @@ section.blog {
 
 //Blog Post
 
-section.blog-post, section.project {
+section.blog-post,
+section.project {
 
 	header {
 		@include center-width(75%, 0 auto);
@@ -467,6 +441,7 @@ section.blog-post, section.project {
 		h2 {
 			@include center-width(100%, 75px auto 50px);
 			font-size: 1.25em;
+			line-height: 1.25em;
 		}
 
 		section {
@@ -480,14 +455,14 @@ section.blog-post, section.project {
 			h3 {
 				margin: 0 0 5px;
 				font-family: $sans-serif;
-				font-size: .813em;
+				font-size: .875em;
 				text-transform: uppercase;
-				letter-spacing: 1px;
-				color: $semigrey;
+				letter-spacing: 2px;
+				color: $darkgrey;
 			}
 
 			p {
-				margin: 0;
+				margin: 0 !important;
 				font-size: 1.125em;
 				color: $semigrey;
 			}
@@ -533,6 +508,13 @@ section.blog-post {
 
 section.project {
 
+	header {
+
+		a {
+			background-image: none;
+		}
+	}
+
 	img.project-main-image {
 		@include center-width(100%, 45px auto 55px);
 	}
@@ -544,6 +526,7 @@ section.project {
 	h4 {
 		font-family: $sans-serif;
 		letter-spacing: 2px;
+		font-size: 1em;
 		margin: 0;
 		text-transform: uppercase;
 	}
@@ -557,10 +540,11 @@ section.project {
 	}
 
 	article {
-		margin: .813em 0;
+		margin: .938em 0;
 	}
 
-	.project-left, .project-right {
+	.project-left,
+	.project-right {
 		display: inline;
 		float: left;
 		vertical-align: top;
@@ -576,22 +560,86 @@ section.project {
 
 }
 
+section.back-forward {
+	@include center-width(80%, 40px auto);
+	font-size: 1.25em;
+
+	a {
+		background-image: none;
+		text-shadow: none;
+	}
+}
+
+section.back-forward.blog-arrows {
+	@include center-width(60%, 40px auto);
+}
+
+.left-arrow,
+.right-arrow {
+	vertical-align: top;
+}
+
+.left-arrow {
+	float: left;
+}
+
+.right-arrow {
+	float: right;
+}
+
+.left-arrow-content p,
+.right-arrow-content p {
+	margin: 0;
+	font-style: italic;
+	color: $semigrey;
+	line-height: .688em;
+}
+
+.left-arrow-content p:hover,
+.right-arrow-content p:hover {
+	color: $black;
+}
+
+.hidden-arrow,
+section.back-forward a {
+	@include ease-in-out($global-ease);
+}
+
+p.tweet-arrow {
+	font-size: .875em;
+}
+
+.hidden-arrow {
+	font-size: .688em;
+	@include opacity(0);
+}
+
+.left-arrow:hover .hidden-arrow,
+.left-arrow:focus .hidden-arrow,
+.left-arrow:active .hidden-arrow,
+.right-arrow:hover .hidden-arrow,
+.right-arrow:focus .hidden-arrow,
+.right-arrow:active .hidden-arrow {
+	@include opacity(1);
+	@include ease-in-out(0);
+}
+
 //Videos
 
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px; height: 0; overflow: hidden;
 }
 
 .video-container iframe,
 .video-container object,
 .video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
 //Footer
