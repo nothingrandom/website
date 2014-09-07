@@ -284,7 +284,7 @@ header.about,
 header.blog,
 header.blog-post,
 header.project {
-	@include center-width(100%, 100px 0 70px);
+	@include center-width(100%, 100px 0 75px);
 
 	h1 {
 		font-size: 2.25em;
@@ -359,14 +359,14 @@ section.about-sidebar {
 	}
 
 	ul {
-		margin: 6px 0 25px;
+		margin: 7px 0 25px;
 	}
 
 	li {
 		font-family: $serif;
 		color: $semigrey;
 		font-size: 1em;
-		line-height: 1.188em;
+		line-height: 1.25em;
 	}
 
 	a,
@@ -389,10 +389,11 @@ section.instagram {
 	img {
 		width: 18%;
 		margin-left: 1.5%;
+		pointer-events: auto;
 	}
 
 	img:first-child {
-		margin-left: 1.2%;
+		margin-left: 1.675%;
 	}
 }
 
