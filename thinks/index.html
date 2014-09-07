@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
+		<?php
+			include('../inc/head.html');
+		?>
 		<title>Benjamin Hollway | Freelance Front-end Developer</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<script type="text/javascript" src="js/scripts.js"></script>
 	</head>
 	<body>
 		<header>
 			<nav>
 				<ul>
-					<li><a href="index">Portfolio</a></li> <!--deafult to just the URL as to make sure that the "index" doesn't show-->
-					<li><a href="is">About</a></li>
-					<li><a href="thinks">Blog</a></li>
-					<li><a href="https://twitter.com/BenjaminHollway">Twitter</a></li>
-					<!--<li>Contact/Hire me</li> Maybe to replace "Twitter"?-->
+					<?php
+						include('../inc/navigation.html');
+					?>
 				</ul>
 			</nav>
 		</header>
@@ -26,13 +24,13 @@
 			</header>
 			<section class="blog">
 				<article>
-					<h2><a href="#">Blog Title</a></h2>
+					<h2><a href="blogpost">Blog Title</a></h2>
 					<h3>00th Mon. Year</h3>
 					<!--<h3>Category</h3>-->
 					<p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis.</p>
 				</article>
 				<article>
-					<h2><a href="#">Blog Title</a></h2>
+					<h2><a href="blogpost">Blog Title</a></h2>
 					<h3>00th Mon. Year</h3>
 					<!--<h3>Category</h3>-->
 					<p class="last">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Sed posuere consectetur est at lobortis. Sed posuere consectetur est at lobortis.</p>
@@ -41,9 +39,9 @@
 		</div>
 		<div class="page-line-grey clear"></div>
 		<footer>
-			<p>&copy; Benjamin Hollway | <span id="copyyear"> </span></p>
-			<div class="page-line-short-grey"></div>
-			<p class="email"><a href="mailto:benjamin@nothingrandom.com">benjamin@nothingrandom.com</a></p>
+			<?php
+				include('../inc/footer.html');
+			?>
 		</footer>
 	</body>
 </html>
