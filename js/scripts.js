@@ -1,5 +1,6 @@
 //https://github.com/nothingrandom/copyrightyear.js
 //https://github.com/nothingrandom/calculate-age.js
+//https://github.com/nothingrandom/lastfm-topartists.js
 
 window.onload = function() {
 
@@ -68,3 +69,30 @@ function getAge(birth) {
 document.getElementById("age").innerHTML = getAge(new Date("November 3, 1997"));
 
 };
+
+$(document).ready(function() {
+	var method = "user.getTopArtists"
+	var username = "nothingrandom";
+	var api_key = "928f184254c119b939f618cdbf36e58d";
+	var period = "1month";
+	var limit = "3";
+    $.getJSON("http://ws.audioscrobbler.com/2.0/?method=" + method + "&user=" + username + "&api_key=" + api_key + "&period=" + period + "&limit=" + limit + "&format=json&callback=?", function(json) {
+        var html = '';
+        $.each(json.topartists.artist, function(i, item) {
+            html += "<li><a href=" + item.url + " target='_blank'>" + item.name + "</a></li>";
+        });
+        $('#lastfm').append(html);
+    });
+});
+
+var feed = new Instafeed({
+	get: 'user',
+    limit: 5,
+    links: true,
+    resolution: 'standard_resolution',
+    sortBy: 'most-recent',
+    clientId: '1210342b48a44533879e8ece5df0bf97',
+    userId: 896545907,
+    accessToken: '896545907.1210342.dcf80e3b731848189d8ed763572cca5d'
+});
+feed.run();
