@@ -1,6 +1,7 @@
 //https://github.com/nothingrandom/copyrightyear.js
 //https://github.com/nothingrandom/calculate-age.js
 //https://github.com/nothingrandom/lastfm-topartists.js
+//https://github.com/stevenschobert/instafeed.js
 
 window.onload = function() {
 
@@ -89,9 +90,9 @@ var feed = new Instafeed({
 	get: 'user',
     limit: 5,
     links: true,
-    resolution: 'standard_resolution',
+    resolution: 'low_resolution',
     sortBy: 'most-recent',
-    clientId: '1210342b48a44533879e8ece5df0bf97',
+    template: '<div class="box"><a href="{{link}}"><img src="{{image}}" /><div class="hover"><h4>{{caption}}</h4></div></a></div>',
     userId: 896545907,
     accessToken: '896545907.1210342.dcf80e3b731848189d8ed763572cca5d'
 });
