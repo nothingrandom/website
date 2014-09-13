@@ -88,7 +88,7 @@ $(document).ready(function() {
 
 var feed = new Instafeed({
 	get: 'user',
-    limit: 5,
+    limit: 6,
     links: true,
     resolution: 'low_resolution',
     sortBy: 'most-recent',

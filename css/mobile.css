@@ -1,0 +1,337 @@
+/*Built around a screen 1280 this accomidates for screens 1px+ bigger*/
+/*Must go near the top or it mucks up with the rest of the code for mobile.css*/
+@media screen and (min-width:1281px) {
+
+}
+
+@media only screen and (min-width : 1024px)
+and (max-width: 1229px) {
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 710px) {
+	body {
+		font-size: 2.5em;
+	}
+
+	header nav {
+		width: 80% !important;
+	}
+
+	header nav ul li {
+		padding: 0 15px !important;
+	}
+
+	.page-line-short-grey {
+		width: 250px;
+		margin: 40px auto;
+	}
+
+	.left-img,
+	.right-img {
+		margin: 80px 0 0 !important;
+	}
+
+	section.portfolio .hover {
+		margin: 60px 0 -40px !important;
+	}
+
+	section.profile-picture img {
+		width: 500px !important;
+	}
+
+	section.about-sidebar {
+		margin: 60px 0 !important;
+	}
+
+	section.blog p {
+		margin: 0 0 80px !important;
+	}
+
+	section.blog-post header section h3,
+	section.project header section h3 {
+ 		margin: 60px 0 0 5px !important;
+ 	}
+
+	footer {
+		padding: 80px 0;
+	}
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 710px),
+only screen and (min-width : 320px)
+and (max-width : 710px) {
+/* Styles */
+
+	section.portfolio .box:nth-child(odd) {
+		margin-right: 0;
+	}
+
+	header.portfolio h1,
+	header.about h1,
+	header.blog h1,
+	header.blog-post h1,
+	header.project h1 {
+		line-height: 1.25em;
+	}
+
+	.left-img,
+	.right-img {
+		width: 100% !important;
+		margin: 40px 0 0;
+	}
+
+	section.portfolio .hover {
+		opacity: 1;
+		position: relative;
+		margin: 40px 0 0px; /*I don't know what is causing this need for a negative margin*/
+		left: auto;
+		width: auto;
+	}
+
+	.project-left,
+	.project-right {
+		display: block !important;
+		float: none !important;
+		width: 100% !important;
+	}
+
+	.project-left img,
+	.project-right img {
+		width: 100% !important;
+		float: none !important;
+		margin: 5px auto 45px !important;
+	}
+
+	section.profile-picture {
+		width: 100%;
+		float: none;
+	}
+
+	section.profile-picture img {
+		display: block;
+		margin: 0 auto 40px;
+	}
+
+	section.about {
+		width: 100%;
+		float: none;
+	}
+
+	section.about p:last-child {
+		margin-bottom: 20px;
+	}
+
+	section.about-sidebar {
+		float: none;
+		width: 100%;
+		margin: 35px 0;
+	}
+
+	section.about-sidebar article {
+		float: none;
+		width: 100% !important;
+		text-align: center;
+	}
+
+	section.instagram {
+		clear: none;
+	}
+
+	section.instagram img {
+		width: 50%;
+		margin: 0 0 -4px;
+	}
+
+ 	section.instagram .hover {
+ 		display: none;
+ 	}
+
+ 	header.blog-post,
+ 	header.project {
+ 		margin: 100px 0 45px
+ 	}
+
+ 	section.blog-post header,
+ 	section.project header {
+ 		width: 100%;
+ 	}
+
+ 	section.blog-post header section,
+ 	section.project header section  {
+ 		float: none;
+ 		width: 100%;
+ 	}
+
+ 	section.project header h2 {
+ 		margin: 75px 0 40px;
+ 	}
+
+ 	section.blog-post header section h3,
+ 	section.project header section h3 {
+ 		margin: 30px 0 0 5px;
+ 	}
+
+ 	section.blog-post article {
+		width: 100%;
+		margin: 35px 0 0;
+	}
+
+	section.blog-post article img.fifty {
+		width: 100%;
+	}
+
+	header nav {
+		width: 90%;
+	}
+
+	header nav ul li {
+		padding: 0 10px;
+	}
+
+	h2.mobile-no {
+		display: none;
+	}
+
+	h2.mobile-yes {
+		display: block;
+	}
+
+}
+
+/*Smartphones (landscape specifics [will still use the section above for everything not encluded below]) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 599px)
+and (orientation : landscape),
+only screen and (min-width : 320px)
+and (max-width : 599px)
+and (orientation : landscape) {
+/*Styles*/
+}
+
+@media only screen
+and (min-device-width : 711px)
+and (max-device-width : 825px),
+only screen and (min-width : 711px)
+and (max-width : 825px) {
+
+	section.portfolio .box:nth-child(odd) {
+		margin-right: 3.3%;
+	}
+
+	section.profile-picture {
+		width: 25%;
+	}
+
+	section.profile-picture img {
+		width: 125px;
+	}
+
+	section.about {
+		width: 75%;
+	}
+
+	section.about-sidebar {
+		float: none;
+		clear: both;
+		width: 100%;
+	}
+
+	section.about-sidebar article {
+		float: left;
+		width: 33%;
+	}
+
+	section.instagram img {
+		width: 33%;
+		margin: 0 0 -4px;
+	}
+
+ 	section.instagram .hover h4 {
+ 		display: none;
+ 	}
+
+}
+
+@media only screen
+and (min-device-width : 826px)
+and (max-device-width : 990px),
+only screen and (min-width : 826px)
+and (max-width : 990px) {
+
+	section.portfolio .box:nth-child(odd) {
+		margin-right: 3.4%;
+	}
+
+	section.profile-picture img,
+	section.about-sidebar article {
+		width: 150px;
+	}
+
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 990px)
+and (max-device-width : 1024px),
+only screen and (min-width : 990px)
+and (max-width : 1024px) {
+
+}
+
+
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+
+}
+
+/*Below are unsed sections from the origional copy, may be required at a later date, should already be covered in other sections*/
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

@@ -96,6 +96,7 @@ a::selection {
 .page-line-grey {
 	@extend %page-line;
 	background-color: $lightgrey;
+	@include animation-delay(1s);
 }
 
 .page-line-short-grey {
@@ -113,6 +114,10 @@ a::selection {
 	//19px because the height is 1.
 }
 
+h2.mobile-yes {
+	display: none;
+}
+
 //Main navigation
 
 header {
@@ -122,6 +127,22 @@ header {
 		ul {
 			float: right;
 			margin: 20px 0;
+
+			.one {
+				@include animation-delay(0);
+			}
+
+			.two {
+				@include animation-delay(.25s);
+			}
+
+			.three {
+				@include animation-delay(.5s);
+			}
+
+			.four {
+				@include animation-delay(.75s);
+			}
 
 			li {
 				font-family: $sans-serif;
@@ -171,6 +192,7 @@ header.portfolio {
 	h1 {
 		font-size: 2.25em;
 		//margin: 0 0 12px;
+		@include animation-delay(1.5s);
 	}
 
 	h2 {
@@ -183,11 +205,24 @@ header.portfolio {
 section.portfolio {
 	@include center-width($global-width, 35px auto 75px);
 
-	.box a {
-	}
-
 	.box:nth-child(odd) {
 		margin-right: 3.5%;
+	}
+
+	.one {
+		@include animation-delay(2s);
+	}
+
+	.two {
+		@include animation-delay(2.5s);
+	}
+
+	.three {
+		@include animation-delay(3s);
+	}
+
+	.four {
+		@include animation-delay(3.5s);
 	}
 
 	.hover {
@@ -220,41 +255,6 @@ section.portfolio {
 
 //Box hover
 
-.box {
-	position: relative;
-	display: inline;
-	vertical-align: middle;
-
-	h3,
-	h4 {
-		margin: 0;
-		text-align: center;
-		line-height: 1.375em;
-	}
-
-	h3 {
-		font-family: $sans-serif;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-size: 1em;
-		//font-weight: 600;
-	}
-
-	h4 {
-		font-style: italic;
-		color: $darkgrey;
-		font-size: 1.125em;
-	}
-
-	a,
-	a:visited {
-		color: $black;
-		text-decoration: none;
-		background-image: none;
-		text-shadow: none;
-	}
-}
-
 .hover {
 	@include opacity(0);
 	@include ease-in-out($global-ease);
@@ -281,6 +281,42 @@ section.portfolio {
 	@include hover-bright(.4);
 }
 
+
+.box {
+	position: relative;
+	display: inline;
+	vertical-align: middle;
+
+	h3,
+	h4 {
+		@include opacity(1);
+		margin: 0;
+		text-align: center;
+		line-height: 1.375em;
+	}
+
+	h3 {
+		font-family: $sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 1em;
+		//font-weight: 600;
+	}
+
+	h4 {
+		font-style: italic;
+		color: $middarkgrey;
+		font-size: 1.125em;
+	}
+
+	a,
+	a:visited {
+		color: $black;
+		text-decoration: none;
+		background-image: none;
+		text-shadow: none;
+	}
+}
 
 //About and blog mixed styles
 
@@ -404,8 +440,8 @@ section.instagram {
 
 	img {
 		@include ease-in-out($global-ease);
-		width: 18%;
-		margin-left: 1.675%;
+		width: 16%;
+		margin: .33%;
 		pointer-events: auto;
 	}
 
@@ -504,6 +540,12 @@ section.blog-post {
 			font-size: 1.625em;
 		}
 
+		h3 {
+			margin: 0;
+			font-size: 1.4em;
+			text-indent: 1.7em;
+		}
+
 		p {
 			text-indent: 2em;
 			margin: 1em 0;
@@ -520,6 +562,17 @@ section.blog-post {
 		img {
 			display: block;
 			margin: 10px auto;
+			width: 50%;
+		}
+
+		img.fifty {
+			width: 50%;
+			float: left;
+			pointer-events: auto;
+		}
+
+		img.full {
+			width: 80%;
 		}
 	}
 }
@@ -527,18 +580,19 @@ section.blog-post {
 section.project {
 
 	header {
-
-		a {
-			background-image: none;
+		.project-url {
+			a {
+				background-image: none;
+			}
 		}
 	}
 
 	img.project-main-image {
-		@include center-width(100%, 45px auto 55px);
+		@include center-width(100%, 45px auto);
 	}
 
 	img {
-		@include center-width(100%, 30px auto);
+		@include center-width(100%, 5px auto 45px);
 	}
 
 	h4 {
@@ -558,7 +612,7 @@ section.project {
 	}
 
 	article {
-		margin: .938em 0;
+		margin: 0 0 2.5em;
 	}
 
 	.project-left,
@@ -663,7 +717,7 @@ p.tweet-arrow {
 //Footer
 
 footer {
-	margin: 50px 0;
+	padding: 50px 0;
 
 	p {
 		text-align: center;
