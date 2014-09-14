@@ -96,7 +96,7 @@ a::selection {
 .page-line-grey {
 	@extend %page-line;
 	background-color: $lightgrey;
-	@include animation-delay(1s);
+	@include animation-delay(1.25s);
 }
 
 .page-line-short-grey {
@@ -121,27 +121,40 @@ h2.mobile-yes {
 //Main navigation
 
 header {
+	@include center-width($global-width, 0 auto);
+
+	.left-nav {
+		float: left;
+		margin: 15px 0;
+		@include animation-delay(0);
+
+		p {
+			font-size: 1.75em;
+			line-height: 1em;
+			margin: 0;
+		}
+	}
+
 	nav {
-		@include center-width($global-width, 0 auto);
 
 		ul {
 			float: right;
 			margin: 20px 0;
 
 			.one {
-				@include animation-delay(0);
-			}
-
-			.two {
 				@include animation-delay(.25s);
 			}
 
-			.three {
+			.two {
 				@include animation-delay(.5s);
 			}
 
-			.four {
+			.three {
 				@include animation-delay(.75s);
+			}
+
+			.four {
+				@include animation-delay(1s);
 			}
 
 			li {
@@ -192,7 +205,7 @@ header.portfolio {
 	h1 {
 		font-size: 2.25em;
 		//margin: 0 0 12px;
-		@include animation-delay(1.5s);
+		@include animation-delay(1.75s);
 	}
 
 	h2 {
@@ -210,19 +223,19 @@ section.portfolio {
 	}
 
 	.one {
-		@include animation-delay(2s);
+		@include animation-delay(2.25s);
 	}
 
 	.two {
-		@include animation-delay(2.5s);
+		@include animation-delay(2.75s);
 	}
 
 	.three {
-		@include animation-delay(3s);
+		@include animation-delay(3.25s);
 	}
 
 	.four {
-		@include animation-delay(3.5s);
+		@include animation-delay(3.75s);
 	}
 
 	.hover {
@@ -446,7 +459,7 @@ section.instagram {
 	}
 
 	.hover {
-		margin: -25% 0 0 -35%;
+		margin: -30% 0 0 -40%;
 	}
 }
 
@@ -746,3 +759,8 @@ footer {
 		color: $black;
 	}
 }
+
+.last-fade {
+	@include animation-delay(1s);
+}
+
