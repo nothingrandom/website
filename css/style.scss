@@ -96,6 +96,9 @@ a::selection {
 .page-line-grey {
 	@extend %page-line;
 	background-color: $lightgrey;
+}
+
+.page-line-grey.home {
 	@include animation-delay(1.25s);
 }
 
@@ -111,6 +114,7 @@ a::selection {
 	width: 250px;
 	background-color: $lightgrey;
 	margin: 19px auto 0;
+	@include animation-delay(2s);
 	//19px because the height is 1.
 }
 
@@ -202,17 +206,23 @@ header.portfolio {
 
 	@include center-width($global-width, 100px auto 55px);
 
-	h1 {
-		font-size: 2.25em;
-		//margin: 0 0 12px;
-		@include animation-delay(1.75s);
-	}
+
 
 	h2 {
 		font-size: 2.5em;
 		font-style: italic;
 		margin: 0;
 	}
+}
+
+header {
+
+	h1 {
+		font-size: 2.25em;
+		//margin: 0 0 12px;
+		@include animation-delay(1.75s);
+	}
+
 }
 
 section.portfolio {
@@ -338,6 +348,7 @@ section.portfolio {
 .content.blog-post,
 .content.project {
 	@include center-width($global-width, 0 auto 70px);
+	@include animation-delay(.2s);
 
 }
 
@@ -445,6 +456,7 @@ section.about-sidebar {
 	a:hover {
 		color: $black;
 	}
+
 }
 
 section.instagram {
@@ -593,6 +605,7 @@ section.blog-post {
 section.project {
 
 	header {
+
 		.project-url {
 			a {
 				background-image: none;
@@ -602,6 +615,7 @@ section.project {
 
 	img.project-main-image {
 		@include center-width(100%, 45px auto);
+		@include animation-delay(3.75s);
 	}
 
 	img {
@@ -634,7 +648,6 @@ section.project {
 		float: left;
 		vertical-align: top;
 		width: 50%;
-
 
 		img {
 			width: 75%;
