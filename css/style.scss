@@ -1,5 +1,5 @@
 @import 'base';
-@import 'http://beta.nothingrandom.com/fonts/_fonts.css';
+@import 'http://nothingrandom.com/fonts/_fonts.css';
 @import '_default';
 @import 'colors';
 
@@ -136,6 +136,18 @@ header {
 			font-size: 1.75em;
 			line-height: 1em;
 			margin: 0;
+		}
+
+		a {
+			background-image: none;
+			color: $black;
+		}
+
+		a:hover,
+		a:active,
+		a:focus {
+			color: $semigrey;
+			@include ease-in-out($global-ease);
 		}
 	}
 
@@ -346,7 +358,8 @@ section.portfolio {
 .content.about,
 .content.blog,
 .content.blog-post,
-.content.project {
+.content.project,
+.content.error {
 	@include center-width($global-width, 0 auto 70px);
 	@include animation-delay(.2s);
 
@@ -355,7 +368,8 @@ section.portfolio {
 header.about,
 header.blog,
 header.blog-post,
-header.project {
+header.project,
+header.error {
 	@include center-width(100%, 100px 0 75px);
 
 	h1 {
