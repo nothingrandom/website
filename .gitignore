@@ -9,3 +9,7 @@ ehthumbs.db
 Thumbs.db
 
 fonts/
+.eot
+.svg
+.ttf
+.woff
