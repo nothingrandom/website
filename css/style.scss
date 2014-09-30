@@ -1,6 +1,6 @@
 @import 'base';
 @import 'http://nothingrandom.com/fonts/_fonts.css';
-//@import 'http://nothingrandom.com/css/mobile.min.css';
+//@import 'http://nothingrandom.com/css/mobile.css';
 //@import 'http://nothingrandom.com/css/animate.min.css';
 @import '_default';
 @import 'colors';
@@ -85,6 +85,10 @@ a::selection {
 	clear: both;
 }
 
+.none {
+	display: none;
+}
+
 %page-line {
 	height: 1px;
 	width: 100%;
@@ -101,7 +105,7 @@ a::selection {
 }
 
 .page-line-grey.home {
-	@include animation-delay(1.25s);
+	@include animation-delay(.25s);
 }
 
 .page-line-short-grey {
@@ -234,7 +238,7 @@ header {
 	h1 {
 		font-size: 2.25em;
 		//margin: 0 0 12px;
-		@include animation-delay(1.75s);
+		@include animation-delay(.5s);
 	}
 
 }
@@ -247,19 +251,19 @@ section.portfolio {
 	}
 
 	.one {
-		@include animation-delay(2.25s);
+		@include animation-delay(1s);
 	}
 
 	.two {
-		@include animation-delay(2.75s);
+		@include animation-delay(1.5s);
 	}
 
 	.three {
-		@include animation-delay(3.25s);
+		@include animation-delay(2s);
 	}
 
 	.four {
-		@include animation-delay(3.75s);
+		@include animation-delay(2.5s);
 	}
 
 	.hover {
@@ -361,7 +365,8 @@ section.portfolio {
 .content.blog,
 .content.blog-post,
 .content.project,
-.content.error {
+.content.error,
+.content.quotes {
 	@include center-width($global-width, 0 auto 70px);
 	@include animation-delay(.2s);
 
@@ -371,7 +376,8 @@ header.about,
 header.blog,
 header.blog-post,
 header.project,
-header.error {
+header.error,
+header.quotes {
 	@include center-width(100%, 100px 0 75px);
 
 	h1 {
@@ -528,7 +534,8 @@ section.blog {
 //Blog Post
 
 section.blog-post,
-section.project {
+section.project,
+section.quotes {
 
 	header {
 		@include center-width(75%, 0 auto);
@@ -618,7 +625,8 @@ section.blog-post {
 	}
 }
 
-section.project {
+section.project,
+section.quotes {
 
 	header {
 
@@ -638,12 +646,18 @@ section.project {
 		@include center-width(100%, 5px auto 45px);
 	}
 
-	h4 {
+	h4,
+	span.quoted {
 		font-family: $sans-serif;
 		letter-spacing: 2px;
 		font-size: 1em;
 		margin: 0;
 		text-transform: uppercase;
+	}
+
+	span.quoted {
+		display: block;
+		text-align: right;
 	}
 
 	p {

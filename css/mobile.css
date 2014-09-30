@@ -240,6 +240,14 @@ and (orientation : landscape) {
 
 @media only screen
 and (min-device-width : 711px)
+and (max-device-width : 825px) {
+	section.instagram img {
+		padding-bottom: 30%;
+	}
+}
+
+@media only screen
+and (min-device-width : 711px)
 and (max-device-width : 825px),
 only screen and (min-width : 711px)
 and (max-width : 825px) {
