@@ -74,6 +74,10 @@ document.getElementById("age").innerHTML = getAge(new Date("November 3, 1997"));
 
 };
 
+/*$(document).ready(function() {
+	$("#instafeed").removeClass("none");
+}*/
+
 $(document).ready(function() {
 	var method = "user.getTopArtists"
 	var username = "nothingrandom";
