@@ -1,9 +1,9 @@
 @import 'base';
-@import 'http://nothingrandom.com/fonts/_fonts.css';
-//@import 'http://nothingrandom.com/css/mobile.css';
-//@import 'http://nothingrandom.com/css/animate.min.css';
-@import '_default';
+@import 'fonts';
+@import 'animate';
+@import 'default';
 @import 'colors';
+//@import '/bourbon/bourbon';
 
 $sans-serif: Proxima Nova, sans-serif;
 $serif: Minion, Georgia, Times, serif;
@@ -18,15 +18,15 @@ h3,
 h4,
 p {
 	font-family: $serif;
-	font-style: normal;
 	font-weight: 100; //Minion is > 400 for the regular, and there is nothing below that. Use 100 incase this changes in future.
+	font-style: normal;
 }
 
 p {
-	font-size: 1.25em;
-	line-height: 1.25em;
 	margin: 1em 0;
 	color: $black;
+	font-size: 1.25em;
+	line-height: 1.25em;
 }
 
 p.last,
@@ -36,7 +36,6 @@ img.last {
 
 a {
 	@include ease-in-out($link-ease);
-	text-decoration: none;
 	background-image: linear-gradient(to top,
 		/*rgba(0, 0, 0, 0) 11%,
 		rgba(0, 0, 0, 1) 11%,
@@ -47,6 +46,7 @@ a {
 		currentColor 14%,
 		transparent 10%
 	);
+	text-decoration: none;
 	text-shadow:
 		.025em 0 0 $white,
 		-.025em 0 0 $white,
@@ -90,8 +90,8 @@ a::selection {
 }
 
 %page-line {
-	height: 1px;
 	width: 100%;
+	height: 1px;
 }
 
 .page-line-red {
@@ -102,26 +102,25 @@ a::selection {
 .page-line-grey {
 	@extend %page-line;
 	background-color: $lightgrey;
-}
 
-.page-line-grey.home {
-	@include animation-delay(.25s);
+	&.home {
+		@include animation-delay(.25s);
+	}
 }
 
 .page-line-short-grey {
-	height: 1px;
 	width: 100px;
-	background-color: $midgrey;
+	height: 1px;
 	margin: 15px auto;
+	background-color: $midgrey;
 }
 
 .page-line-medium-grey {
-	height: 1px;
 	width: 250px;
-	background-color: $lightgrey;
+	height: 1px;
 	margin: 19px auto 0;
+	background-color: $lightgrey;
 	@include animation-delay(2s);
-	//19px because the height is 1.
 }
 
 h2.mobile-yes {
@@ -139,14 +138,14 @@ header {
 		@include animation-delay(0);
 
 		p {
+			margin: 0;
 			font-size: 1.75em;
 			line-height: 1em;
-			margin: 0;
 		}
 
 		a {
-			background-image: none;
 			color: $black;
+			background-image: none;
 		}
 
 		a:hover,
@@ -180,20 +179,20 @@ header {
 			}
 
 			li {
+				display: inline;
+				padding: 0 15px;
 				font-family: $sans-serif;
 				font-weight: 200;
 				font-size: .875em;
-				text-transform: uppercase;
 				letter-spacing: 2px;
 				text-align: right;
-				display: inline;
-				padding: 0 15px;
+				text-transform: uppercase;
 
 				a {
 					@include ease-in-out($global-ease);
 					color: $midgrey;
-					text-decoration: none;
 					background-image: none;
+					text-decoration: none;
 					text-shadow: none;
 				}
 
@@ -213,9 +212,8 @@ header {
 
 ul {
 	padding: 0;
-	list-style: none;
 	line-height: normal;
-
+	list-style: none;
 }
 
 //Portfolio
@@ -227,9 +225,9 @@ header.portfolio {
 
 
 	h2 {
+		margin: 0;
 		font-size: 2.5em;
 		font-style: italic;
-		margin: 0;
 	}
 }
 
@@ -272,8 +270,8 @@ section.portfolio {
 
 	%img {
 		@include ease-in-out($global-ease);
-		pointer-events: auto;
 		display: inline-block;
+		pointer-events: auto;
 		vertical-align: middle;
 	}
 
@@ -333,31 +331,31 @@ section.portfolio {
 	p {
 		@include opacity(1);
 		margin: 0;
-		text-align: center;
 		line-height: 1.375em;
+		text-align: center;
 	}
 
 	h3,
 	p.project-title {
 		font-family: $sans-serif;
-		text-transform: uppercase;
-		letter-spacing: 2px;
 		font-size: 1em;
 		//font-weight: 600;
+		letter-spacing: 2px;
+		text-transform: uppercase;
 	}
 
 	h4,
 	p.project-role {
-		font-style: italic;
 		color: $middarkgrey;
 		font-size: 1.125em;
+		font-style: italic;
 	}
 
 	a,
 	a:visited {
 		color: $black;
-		text-decoration: none;
 		background-image: none;
+		text-decoration: none;
 		text-shadow: none;
 	}
 }
@@ -384,8 +382,8 @@ header.quotes {
 	@include center-width(100%, 100px 0 75px);
 
 	h1 {
-		font-size: 2.25em;
 		margin: 0;
+		font-size: 2.25em;
 		text-align: center;
 		//line-height: 1.25em;
 	}
@@ -425,20 +423,20 @@ section.about {
 		margin-bottom: 70px;
 	}
 
-	/*a {
-		color: $black;
-	}
+	// a {
+	// 	color: $black;
+	// }
 
-	a:hover,
-	a:focus,
-	a:active {
-		background-image: linear-gradient(to top,
-		transparent 10%,
-		$darkred 10%,
-		$darkred 14%,
-		transparent 10%
-	);
-	}*/
+	// a:hover,
+	// a:focus,
+	// a:active {
+	// 	background-image: linear-gradient(to top,
+	// 	transparent 10%,
+	// 	$darkred 10%,
+	// 	$darkred 14%,
+	// 	transparent 10%
+	// );
+	// }
 }
 
 section.about-sidebar {
@@ -452,11 +450,11 @@ section.about-sidebar {
 	}
 
 	h4 {
-		font-family: $sans-serif;
-		text-transform: uppercase;
-		letter-spacing: 2px;
-		font-size: .875em;
 		margin: 0;
+		font-family: $sans-serif;
+		font-size: .875em;
+		letter-spacing: 2px;
+		text-transform: uppercase;
 	}
 
 	ul {
@@ -464,8 +462,8 @@ section.about-sidebar {
 	}
 
 	li {
-		font-family: $serif;
 		color: $semigrey;
+		font-family: $serif;
 		font-size: 1em;
 		line-height: 1.25em;
 	}
@@ -506,31 +504,31 @@ section.blog {
 	//@include center-width(100%, 0 auto);
 
 	h2 {
-		font-size: 1.625em;
 		margin: 0;
+		font-size: 1.625em;
+
+		a {
+			color: $black;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: $semigrey;
+			}
+		}
 	}
 
 	h3 {
+		margin: 5px 0 15px;
+		color: $darkgrey;
 		font-family: $sans-serif;
-		text-transform: uppercase;
 		font-size: .875em;
 		letter-spacing: 2px;
-		color: $darkgrey;
-		margin: 5px 0 15px;
+		text-transform: uppercase;
 	}
 
 	p {
 		margin: 0 0 35px;
-	}
-
-	h2 a {
-		color: $black;
-	}
-
-	h2 a:hover,
-	h2 a:focus,
-	h2 a:active {
-		color: $semigrey;
 	}
 }
 
@@ -551,25 +549,25 @@ section.quotes {
 
 		section {
 			display: inline;
-			width: 33%;
 			float: left;
-			vertical-align: top;
-			text-align: center;
+			width: 33%;
 			margin: 2px 0 0;
+			text-align: center;
+			vertical-align: top;
 
 			h3 {
 				margin: 0 0 5px;
+				color: $darkgrey;
 				font-family: $sans-serif;
 				font-size: .875em;
-				text-transform: uppercase;
 				letter-spacing: 2px;
-				color: $darkgrey;
+				text-transform: uppercase;
 			}
 
 			p {
 				margin: 0 !important;
-				font-size: 1.125em;
 				color: $semigrey;
+				font-size: 1.125em;
 			}
 		}
 
@@ -598,32 +596,32 @@ section.blog-post {
 		}
 
 		p {
-			text-indent: 2em;
 			margin: 1em 0;
-		}
+			text-indent: 2em;
 
-		p.image-caption {
-			margin: 0;
-			text-indent: 0;
-			text-align: center;
-			font-style: italic;
-			font-size: 1.125em;
+			&.image-caption {
+				margin: 0;
+				font-size: 1.125em;
+				font-style: italic;
+				text-align: center;
+				text-indent: 0;
+			}
 		}
 
 		img {
 			display: block;
+			width: 50%;
 			margin: 10px auto;
-			width: 50%;
-		}
 
-		img.fifty {
-			width: 50%;
-			float: left;
-			pointer-events: auto;
-		}
+			&.fifty {
+				float: left;
+				width: 50%;
+				pointer-events: auto;
+			}
 
-		img.full {
-			width: 80%;
+			&.full {
+				width: 80%;
+			}
 		}
 	}
 }
@@ -640,21 +638,21 @@ section.quotes {
 		}
 	}
 
-	img.project-main-image {
-		@include center-width(100%, 45px auto);
-		@include animation-delay(3.75s);
-	}
-
 	img {
 		@include center-width(100%, 5px auto 45px);
+
+		&.project-main-image {
+			@include center-width(100%, 45px auto);
+			//@include animation-delay(3.75s);
+		}
 	}
 
 	h4,
 	span.quoted {
-		font-family: $sans-serif;
-		letter-spacing: 2px;
-		font-size: 1em;
 		margin: 0;
+		font-family: $sans-serif;
+		font-size: 1em;
+		letter-spacing: 2px;
 		text-transform: uppercase;
 	}
 
@@ -679,12 +677,12 @@ section.quotes {
 	.project-right {
 		display: inline;
 		float: left;
-		vertical-align: top;
 		width: 50%;
+		vertical-align: top;
 
 		img {
-			width: 75%;
 			float: right;
+			width: 75%;
 			margin: 0;
 		}
 	}
@@ -699,10 +697,10 @@ section.back-forward {
 		background-image: none;
 		text-shadow: none;
 	}
-}
 
-section.back-forward.blog-arrows {
-	@include center-width(60%, 40px auto);
+	&.blog-arrows {
+		@include center-width(60%, 40px auto);
+	}
 }
 
 .left-arrow,
@@ -721,8 +719,8 @@ section.back-forward.blog-arrows {
 .left-arrow-content p,
 .right-arrow-content p {
 	margin: 0;
-	font-style: italic;
 	color: $semigrey;
+	font-style: italic;
 	line-height: .688em;
 }
 
@@ -759,8 +757,10 @@ p.tweet-arrow {
 
 .video-container {
 	position: relative;
+	overflow: hidden;
+	height: 0;
+	padding-top: 30px;
 	padding-bottom: 56.25%;
-	padding-top: 30px; height: 0; overflow: hidden;
 }
 
 .video-container iframe,
@@ -779,11 +779,11 @@ footer {
 	padding: 50px 0;
 
 	p {
-		text-align: center;
 		margin: 0;
 		color: $semigrey;
 		font-size: 1em;
 		line-height: 1em;
+		text-align: center;
 	}
 
 	.email {
@@ -794,8 +794,8 @@ footer {
 	a:visited {
 		@include ease-in-out($global-ease);
 		color: #808080;
-		text-decoration: none;
 		background-image: none;
+		text-decoration: none;
 		text-shadow: none;
 	}
 
@@ -810,3 +810,4 @@ footer {
 	@include animation-delay(1s);
 }
 
+@import 'mobile';
