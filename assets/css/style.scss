@@ -524,7 +524,21 @@ section.blog {
 	}
 
 	p {
-		margin: 0 0 35px;
+		margin: 0;
+	}
+
+	article {
+		padding: 40px 0;
+		border-bottom: 1px solid $lightgrey;
+
+		&:first-child {
+			padding: 0 0 40px;
+		}
+
+		&:last-child {
+			padding: 40px 0 0;
+			border-bottom: 0;
+		}
 	}
 }
 

@@ -1,34 +1,42 @@
-/*https://github.com/nothingrandom/default.css*/
+// https://github.com/nothingrandom/default.css
 
-html, body {
+html,
+body {
 	height: 100%;
-	/*allows min/max-height to be set for wrappers in the style css*/
+	// allows min/max-height to be set for wrappers in the style css
 }
 
 body {
 	margin: 0;
 	padding: 0;
-	/*prevents any in browser margins and paddings*/
+	// prevents any in browser margins and paddings
 	cursor: default;
-	/*keeps cursor as an arrow or a hand when hovering over a link*/
+	// keeps cursor as an arrow or a hand when hovering over a link
 	text-rendering: optimizeLegibility;
-	/*should cause text to be as readable as possible*/
+	// should cause text to be as readable as possible
 	-webkit-font-smoothing: antialiased;
 
 }
 
 img {
 	pointer-events: none;
-	/*This stops an image from being right clicked/dragged and saved*/
+	// This stops an image from being right clicked/dragged and saved
 }
 
 img a {
 	pointer-events: auto;
 }
 
-header, section, footer, aside, nav, main, article, figure {
+header,
+section,
+footer,
+aside,
+nav,
+main,
+article,
+figure {
 	display: block;
-	/*This is the default setting on new browsers, set so old browsers also view it the same*/
+	// This is the default setting on new browsers, set so old browsers also view it the same
 }
 
 @media screen and (max-width: 600px) {
@@ -36,14 +44,12 @@ header, section, footer, aside, nav, main, article, figure {
 		-webkit-text-size-adjust: none;
 		-ms-text-size-adjust: none;
 		-mos-text-size-adjust: none;
-		/*this is to stop iOS, Windows, and Firefox phones from changing text size*/
-		/*currently excludes ipad - change max width to include*/
-
-		/*needs further testing on android*/
+		// this is to stop iOS, Windows, and Firefox phones from changing text size
+		// currently excludes ipad - change max width to include
 	}
 }
 
-/*Default font effects for span as follow:*/
+// Default font effects for span as follow
 
 span.italic {
 	font-style: italic;
