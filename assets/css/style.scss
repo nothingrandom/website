@@ -244,10 +244,6 @@ header {
 section.portfolio {
 	@include center-width($global-width, 35px auto 75px);
 
-	.box:nth-child(odd) {
-		margin-right: 3.5%;
-	}
-
 	.one {
 		@include animation-delay(1s);
 	}
@@ -278,7 +274,7 @@ section.portfolio {
 	//18px margin (36 total) seems to move the hover caption. Need to find a fix.
 	.left-img {
 		@extend %img;
-		@include center-width(48%, 4% 0 0);
+		@include center-width(48%, 4% 3.5% 0 0);
 	}
 
 	.right-img {
