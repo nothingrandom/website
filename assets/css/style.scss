@@ -458,14 +458,15 @@ section.about-sidebar {
 	}
 
 	ul {
-		margin: 7px 0 25px;
+		margin: 10px 0 25px;
 	}
 
 	li {
+		margin: 3px 0;
 		color: $semigrey;
 		font-family: $serif;
 		font-size: 1em;
-		line-height: 1.25em;
+		line-height: 1.125em;
 	}
 
 	a,
