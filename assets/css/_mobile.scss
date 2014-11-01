@@ -32,7 +32,8 @@ and (max-width : 710px) {
 	header.about,
 	header.blog,
 	header.blog-post,
-	header.project {
+	header.project,
+	header.speaking {
 		margin: 50px auto;
 
 		h1{
@@ -123,22 +124,26 @@ and (max-width : 710px) {
  	// }
 
  	section.blog-post header,
- 	section.project header {
+ 	section.project header,
+ 	section.speaking header {
  		width: 100%;
  	}
 
  	section.blog-post header section,
- 	section.project header section  {
+ 	section.project header section,
+ 	section.speaking header section  {
  		float: none;
  		width: 100%;
  	}
 
- 	section.project header h2 {
+ 	section.project header h2,
+ 	section.speaking header h2 {
  		margin: 40px 0 40px;
  	}
 
  	section.blog-post header section h3,
- 	section.project header section h3 {
+ 	section.project header section h3,
+ 	section.speaking header section h3 {
  		margin: 30px 0 0 5px;
  	}
 
@@ -147,8 +152,10 @@ and (max-width : 710px) {
 		margin: 35px 0 0;
 	}
 
-	section.blog-post article img.fifty {
+	section.blog-post article img.fifty,
+	section.speaking article img.fifty {
 		width: 100%;
+		margin-right: none;
 	}
 
 	header {
