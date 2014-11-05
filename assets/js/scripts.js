@@ -5,6 +5,7 @@ window.onload = function() {
 
 $(document).ready(function() {
 	if ($('#lastfm').length > 0) {
+		$(".top-artists").css("display", "block");
 		var method = "user.getTopArtists",
 			username = "nothingrandom",
 			api_key = "928f184254c119b939f618cdbf36e58d",

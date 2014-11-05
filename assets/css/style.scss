@@ -440,6 +440,10 @@ section.about-sidebar {
 		float: right;
 		width: 200px;
 		//margin-left: 56px;
+
+		&.top-artists {
+			display: none;
+		}
 	}
 
 	h4 {
