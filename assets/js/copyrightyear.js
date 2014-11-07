@@ -4,7 +4,7 @@ function copyright(startingYear) {
 	var currentYear = new Date().getFullYear();
 
 	if (startingYear < currentYear) {
-		return startingYear + "-" + currentYear;
+		return startingYear + '-' + currentYear;
 	}
 
 	else if (startingYear == currentYear) {

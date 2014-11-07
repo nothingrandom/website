@@ -1,9 +1,5 @@
-@import 'base';
-@import 'fonts';
-@import 'animate';
-@import 'default';
-@import 'colors';
-//@import '/bourbon/bourbon';
+@import "base", "fonts", "animate", "default", "colors";
+//@import "/bourbon/bourbon";
 
 $sans-serif: Proxima Nova, sans-serif;
 $serif: Minion, Georgia, Times, serif;
@@ -862,4 +858,4 @@ footer {
 	@include animation-delay(1s);
 }
 
-@import 'mobile';
+@import "mobile";
