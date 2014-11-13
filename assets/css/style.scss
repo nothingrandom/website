@@ -283,14 +283,17 @@ section.portfolio {
 .hover {
 	@include opacity(0);
 	@include ease-in-out($global-ease);
-	-webkit-user-select: none;
-	-webkit-touch-callout: none;
-	-webkit-tap-highlight-color: transparent;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 80%;
 	height: 30%;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .box:hover .hover,
