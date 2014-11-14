@@ -1,6 +1,9 @@
 window.onload = function() {
 	document.getElementById('copyyear').innerHTML = (copyright(2013));
-	document.getElementById('age').innerHTML = getAge(new Date('November 3, 1997'));
+
+	if ($('#age').length > 0) {
+		document.getElementById('age').innerHTML = getAge(new Date('November 3, 1997'));
+	}
 };
 
 $(document).ready(function() {
