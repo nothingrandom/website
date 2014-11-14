@@ -5,7 +5,7 @@ $sans-serif: Proxima Nova, sans-serif;
 $serif: Minion, Georgia, Times, serif;
 
 $global-ease: .4s;
-$link-ease: .1s;
+$link-ease: .15s;
 $global-width: 80%;
 
 h1,
@@ -510,6 +510,7 @@ section.speak {
 			color: $black;
 			background-image: none;
 			text-shadow: none;
+			@include ease-in-out($global-ease);
 
 			&:hover,
 			&:focus,
