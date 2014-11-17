@@ -8,6 +8,7 @@
 @mixin center-width($width, $margin) {
 	width: $width;
 	margin: $margin;
+	//max-width: $max-width;
 }
 
 @mixin hover-dark($amount) {
