@@ -490,7 +490,7 @@ section.instagram {
 	img {
 		@include ease-in-out($global-ease);
 		width: 16%;
-		margin: .33%;
+		margin: .33% .33% 0 .33%;
 		pointer-events: auto;
 	}
 
