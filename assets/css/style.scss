@@ -149,8 +149,8 @@ header {
 		}
 
 		a {
-			color: $black;
 			background-image: none;
+			color: $black;
 		}
 
 		a:hover,
@@ -187,16 +187,16 @@ header {
 				display: inline;
 				padding: 0 15px;
 				font-family: $sans-serif;
-				font-weight: 200;
 				font-size: .875em;
+				font-weight: 200;
 				letter-spacing: 2px;
 				text-align: right;
 				text-transform: uppercase;
 
 				a {
 					@include ease-in-out($global-ease);
-					color: $midgrey;
 					background-image: none;
+					color: $midgrey;
 					text-decoration: none;
 					text-shadow: none;
 				}
@@ -345,8 +345,8 @@ section.portfolio {
 
 	a,
 	a:visited {
-		color: $black;
 		background-image: none;
+		color: $black;
 		text-decoration: none;
 		text-shadow: none;
 	}
@@ -472,8 +472,8 @@ section.about-sidebar {
 
 	a,
 	a.visited {
-		color: $semigrey;
 		background-image: none;
+		color: $semigrey;
 	}
 
 	a:hover,
@@ -491,7 +491,7 @@ section.instagram {
 	img {
 		@include ease-in-out($global-ease);
 		width: 16%;
-		margin: .33% .33% 0 .33%;
+		margin: .33% .33% 0;
 		pointer-events: auto;
 	}
 
@@ -511,8 +511,8 @@ section.speak {
 		font-size: 1.625em;
 
 		a {
-			color: $black;
 			background-image: none;
+			color: $black;
 			text-shadow: none;
 			@include ease-in-out($global-ease);
 
@@ -853,8 +853,8 @@ footer {
 	a,
 	a:visited {
 		@include ease-in-out($global-ease);
-		color: #808080;
 		background-image: none;
+		color: #808080;
 		text-decoration: none;
 		text-shadow: none;
 	}
