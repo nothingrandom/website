@@ -1,5 +1,4 @@
-@import "base", "fonts", "animate", "default", "colors";
-//@import "/bourbon/bourbon";
+@import "default", "mixins", "fonts", "animate", "colors"; //mobile is imported last
 
 $sans-serif: Proxima Nova, sans-serif;
 $serif: Minion, Georgia, Times, serif;
@@ -15,7 +14,7 @@ h3,
 h4,
 p {
 	font-family: $serif;
-	font-weight: 100; //Minion is > 400 for the regular, and there is nothing below that. Use 100 incase this changes in future.
+	font-weight: 300;
 	font-style: normal;
 }
 
