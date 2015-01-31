@@ -21,6 +21,7 @@ body {
 
 	// Make text as readable as possible
 	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 }
 
 // HTML 5 Display definitions
