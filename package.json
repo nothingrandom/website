@@ -1,0 +1,42 @@
+{
+  "name": "nothingrandom.com",
+  "version": "1.0.0",
+  "description": "Benjamin Hollway's portfolio",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-changed": "^1.1.1",
+    "gulp-compass": "^2.0.3",
+    "gulp-concat": "^2.4.3",
+    "gulp-hogan-compile": "^0.4.1",
+    "gulp-imagemin": "^2.1.0",
+    "gulp-sourcemaps": "^1.3.0",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.2",
+    "imagemin-gifsicle": "^4.1.0",
+    "gulp-coffee": "^2.3.1",
+    "imagemin-jpegtran": "^4.0.0",
+    "imagemin-optipng": "^4.2.0",
+    "imagemin": "^3.1.0",
+    "imagemin-pngquant": "^4.0.0",
+    "readable-stream": "^1.0.33",
+    "node-static": "^0.7.6",
+    "should": "^4.6.2",
+    "socket.io": "^1.3.2",
+    "supertest": "^0.15.0",
+    "socket.io-client": "^1.3.2"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.0",
+    "mocha": "^2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nothingrandom/website.git"
+  },
+  "author": "Benjamin Hollway",
+  "bugs": {
+    "url": "https://github.com/nothingrandom/website/issues"
+  },
+  "homepage": "http://nothingrandom.com"
+}
