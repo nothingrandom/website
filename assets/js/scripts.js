@@ -26,7 +26,7 @@ $(document).ready(function() {
 	if ($('#instafeed').length > 0) {
 		var feed = new Instafeed({
 			get: 'user',
-			limit: 12,
+			limit: 18,
 			links: true,
 			resolution: 'low_resolution',
 			sortBy: 'most-recent',
