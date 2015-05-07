@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<?php
+			include('../inc/head.html');
+		?>
+		<title>Benjamin Hollway | Freelance Front-end Developer</title>
+	</head>
+	<body>
+		<header>
+			<?php
+				include('../inc/navigation.html');
+			?>
+		</header>
+		<div class="page-line-grey clear"></div>
+		<div class="content project animated fadeIn">
+			<header class="project">
+				<h1>clock.js</h1>
+				<div class="page-line-medium-grey"></div>
+			</header>
+			<section class="project">
+				<header>
+					<h2>To help improve my JavaScript abilities, I decided to make an in browser clock with a few extra features</h2>
+					<section class="project-date">
+						<h3>Date</h3>
+						<p>November 2014</p>
+					</section>
+					<section class="project-role">
+						<h3>Role</h3>
+						<p>Development</p>
+					</section>
+					<section class="project-url">
+						<h3>URL</h3>
+						<p><a href="http://nothingrandom.com/clock">rndom.io/clockjs</a></p>
+					</section>
+				</header>
+				<div class="clear"></div>
+				<img src="http://nothingrandom.com/images/project/clock/header.png" class="project-main-image">
+				<article>
+					<h4>Hex colors</h4>
+					<p>The first part of the project was simply grabbing the time in a number format, displying it, and changing the background of the page to match the 6 digit time string. Doing this was extremely easy. It was just a case of grabbing the 3 sets of time information, and putting them togeher to create a hex value.</p>
+				</article>
+				<article>
+					<h4>Fuzzy clock</h4>
+					<p>The most prominent feature of the clock is the fuzzy time read out. Unsurprisingly, this was quite a challenge to code as it involved "reading" the current time and working out what it meant to then display the data in text format. I learnt quite a bit from this half of the project, and used large amounts of the JS language that I previously had no experience with.</p>
+				</article>
+			</section>
+		</div>
+		<div class="page-line-grey"></div>
+		<section class="back-forward">
+			<div class="left-arrow">
+				<div class="left-arrow-content">
+					<p><a href="isaac-raymond">&laquo; <span class="hidden-arrow">Isaac Raymond</span></a></p>
+				</div>
+			</div>
+			<!-- <div class="right-arrow">
+				<div class="right-arrow-content">
+					<p><a href="katy-hollway"><span class="hidden-arrow">Katy Hollway</span> &raquo;</a></p>
+				</div>
+			</div> -->
+			<div class="clear"></div>
+		</section>
+		<div class="page-line-grey clear"></div>
+		<footer>
+			<?php
+				include('../inc/footer.html');
+			?>
+		</footer>
+	</body>
+</html>
