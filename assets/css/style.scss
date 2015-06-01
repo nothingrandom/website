@@ -3,8 +3,8 @@
 $sans-serif: Proxima Nova, sans-serif;
 $serif: Minion, Georgia, Times, serif;
 
-$global-ease: .3s;
-$link-ease: .15s;
+$global-ease: .25s;
+$link-ease: .125s;
 $global-width: 80%;
 $global-maxwidth: 1400px;
 
@@ -48,15 +48,15 @@ a {
 		currentColor 10%,
 		currentColor 14%,
 		transparent 10%
-	);
+		);
 	text-decoration: none;
 	text-shadow:
-		.025em 0 0 $white,
-		-.025em 0 0 $white,
-		.05em 0 0 $white,
-		-.05em 0 0 $white,
-		.075em 0 0 $white,
-		-.075em 0 0 $white;
+	.025em 0 0 $white,
+	-.025em 0 0 $white,
+	.05em 0 0 $white,
+	-.05em 0 0 $white,
+	.075em 0 0 $white,
+	-.075em 0 0 $white;
 }
 
 a,
@@ -76,12 +76,12 @@ a:active {
 
 a::selection {
 	text-shadow:
-		.025em 0 0 $selection,
-		-.025em 0 0 $selection,
-		.05em 0 0 $selection,
-		-.05em 0 0 $selection,
-		.075em 0 0 $selection,
-		-.075em 0 0 $selection;
+	.025em 0 0 $selection,
+	-.025em 0 0 $selection,
+	.05em 0 0 $selection,
+	-.05em 0 0 $selection,
+	.075em 0 0 $selection,
+	-.075em 0 0 $selection;
 }
 
 .clear {
@@ -166,22 +166,6 @@ header {
 			float: right;
 			margin: 20px 0;
 
-			.one {
-				@include animation-delay(.25s);
-			}
-
-			.two {
-				@include animation-delay(.5s);
-			}
-
-			.three {
-				@include animation-delay(.75s);
-			}
-
-			.four {
-				@include animation-delay(1s);
-			}
-
 			li {
 				display: inline;
 				padding: 0 15px;
@@ -235,22 +219,6 @@ header {
 
 section.portfolio {
 	@include center-width($global-width, 35px auto 75px);
-
-	.one {
-		@include animation-delay(1s);
-	}
-
-	.two {
-		@include animation-delay(1.5s);
-	}
-
-	.three {
-		@include animation-delay(2s);
-	}
-
-	.four {
-		@include animation-delay(2.5s);
-	}
 
 	.hover {
 		margin: 0 0 0 -40%;
@@ -353,40 +321,46 @@ section.portfolio {
 
 //About and blog mixed styles
 
-.content.about,
-.content.blog,
-.content.blog-post,
-.content.project,
-.content.error,
-.content.quotes,
-.content.speaking,
-.content.speak {
-	@include center-width($global-width, 0 auto 70px);
-	@include animation-delay(.2s);
-	max-width: $global-maxwidth;
-
-}
-
-header.about,
-header.blog,
-header.blog-post,
-header.project,
-header.error,
-header.quotes,
-header.speaking,
-header.speak {
-	@include center-width(100%, 100px 0 75px);
-
-	h1 {
-		margin: 0;
-		font-size: 2.25em;
-		text-align: center;
-		//line-height: 1.25em;
+.content {
+	&.portfolio {
+		@include animation-delay(.2s);
 	}
 
-	img {
-		width: 100%;
-		margin: 75px 0 0;
+	&.about,
+	&.blog,
+	&.blog-post,
+	&.project,
+	&.error,
+	&.quotes,
+	&.speaking,
+	&.speak {
+		@include center-width($global-width, 0 auto 70px);
+		@include animation-delay(.2s);
+		max-width: $global-maxwidth;
+	}
+}
+
+header {
+	&.about,
+	&.blog,
+	&.blog-post,
+	&.project,
+	&.error,
+	&.quotes,
+	&.speaking,
+	&.speak {
+		@include center-width(100%, 100px 0 75px);
+
+		h1 {
+			margin: 0;
+			font-size: 2.25em;
+			text-align: center;
+		}
+
+		img {
+			width: 100%;
+			margin: 75px 0 0;
+		}
 	}
 }
 
