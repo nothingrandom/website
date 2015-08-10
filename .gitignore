@@ -82,3 +82,6 @@ fonts/
 
 # node
 node_modules
+
+# extras
+images/thinks/interrail/**/*.*
