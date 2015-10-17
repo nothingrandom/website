@@ -459,6 +459,7 @@ section.about-sidebar {
 
 section.instagram {
 	clear: both;
+	height: 100%;
 	@include center-width(100%, 0 auto);
 
 	img {
