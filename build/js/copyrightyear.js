@@ -1,1 +1,0 @@
-function copyright(e){var r=(new Date).getFullYear();return r>e?e+"-"+r:e==r?e:r}
