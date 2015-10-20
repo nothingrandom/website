@@ -1,0 +1,121 @@
+.page-section--info-header {
+	text-align: center;
+
+	h3 {
+		text-align: left;
+		margin-bottom: em(50px, 20px);
+	}
+
+	h4 {
+		margin: 0 0 em(5px, 14px);
+		color: palette(grey, dark);
+	}
+
+	p {
+		margin: 0;
+		color: palette(grey);
+		font-size: em(18px);
+	}
+}
+
+.page-section--blog-post {
+	h2 {
+		margin: em(32px) 0 0;
+
+		&:first-child {
+			margin: 0;
+		}
+	}
+
+	p {
+		margin: em(16px) 0;
+		text-indent: em(32px);
+	}
+
+	.text--image-caption {
+		margin: 0;
+		text-align: center;
+		text-indent: 0;
+	}
+
+	img {
+		margin: em(25px) auto em(15px);
+	}
+
+	.video-container {
+		margin: em(25px) 0;
+	}
+}
+
+.page-section--decks {
+	.medium-6 {
+		&:nth-child(odd) {
+			padding-right: em(16px / 2);
+		}
+
+		&:nth-child(even) {
+			padding-left: em(16px / 2);
+		}
+	}
+
+	img {
+		margin: 0 0 em(16px);
+	}
+}
+
+.page-section--script {
+	h4 {
+		margin-bottom: em(10px);
+	}
+
+	p {
+		margin-top: 0;
+		text-indent: 0;
+	}
+}
+
+.page-section--arrows {
+	margin: 0;
+	padding: em(45px) 0 em(40px);
+	border-top: 1px solid palette(grey, light);
+
+	p {
+		margin: 0;
+		font-size: em(16px);
+		font-style: italic;
+		line-height: em(11px);
+	}
+
+	a {
+		background-image: none;
+		color: palette(grey);
+		text-shadow: none;
+		transition: all ease-in-out $global-ease;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: palette(black);
+		}
+	}
+
+	.page-arrow {
+		&:hover,
+		&:focus,
+		&:active {
+			.page-arrow__text {
+				color: palette(black);
+				transition: none;
+			}
+		}
+	}
+
+	.page-arrow__arrow {
+		font-size: em(20px);
+	}
+
+	.page-arrow__text {
+		color: palette(white);
+		transition: all ease-in-out $global-ease;
+	}
+}
