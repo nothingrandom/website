@@ -12,3 +12,8 @@ $screen-xl: 120em;
 $grid-width: em(1200px);
 $grid-gutter: em(32px);
 $grid-columns: 12;
+
+// Transition settings
+// ==============================
+$global-ease: .25s;
+$link-ease: .125s;

@@ -1,0 +1,24 @@
+a {
+	background-image: linear-gradient(to top,
+		transparent 10%,
+		currentColor 10%,
+		currentColor 14%,
+		transparent 10%
+	);
+	color: palette(grey);
+	text-decoration: none;
+	text-shadow:
+		em(1px) 0 0 palette(white),
+		em(-1px) 0 0 palette(white),
+		em(2px) 0 0 palette(white),
+		em(-2px) 0 0 palette(white),
+		em(3px) 0 0 palette(white),
+		em(-3px) 0 0 palette(white);
+	transition: all ease-in-out $link-ease;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: palette(black);
+	}
+}

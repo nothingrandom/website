@@ -1,0 +1,58 @@
+.main-header {
+	border-bottom: 1px solid palette(grey, light);
+
+	.logo {
+		p {
+			margin: em(15px, 28px) 0;
+			font-size: em(28px);
+			line-height: em(16px);
+		}
+
+		a {
+			background-image: none;
+			color: palette(black);
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: palette(grey);
+			}
+		}
+	}
+}
+
+.main-nav {
+	ul {
+		float: right;
+		margin: em(20px) 0;
+	}
+
+	li {
+		display: inline;
+		padding: 0 em(15px);
+		font-family: $sans-serif;
+		font-size: em(14px);
+		font-weight: 200;
+		letter-spacing: em(2px);
+		text-align: right;
+		text-transform: uppercase;
+
+		&:last-child {
+			padding-right: 0;
+		}
+
+		a {
+			background-image: none;
+			color: palette(grey, mid);
+			text-decoration: none;
+			text-shadow: none;
+			transition: all ease-in-out $global-ease;
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: palette(black);
+			}
+		}
+	}
+}

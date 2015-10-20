@@ -1,0 +1,25 @@
+.main-footer {
+	padding: em(50px) 0;
+	border-top: em(1px) solid palette(grey, light);
+
+	p {
+		margin: 0;
+		color: palette(grey);
+		font-size: em(16px);
+		line-height: em(16px);
+		text-align: center;
+	}
+
+	a {
+		background-image: none;
+		color: palette(grey);
+		text-decoration: none;
+		text-shadow: none;
+
+		&:hover,
+		&:focus
+		&:active {
+			color: palette(black);
+		}
+	}
+}
