@@ -2,6 +2,12 @@
 	margin-bottom: em(75px - 3px);
 }
 
+.profile__picture {
+	img {
+		margin: 0 auto;
+	}
+}
+
 .profile__blurb {
 	p {
 		&:first-child {
