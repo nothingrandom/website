@@ -62,7 +62,7 @@ $(document).ready(function() {
 			links: true,
 			resolution: 'low_resolution',
 			sortBy: 'most-recent',
-			template: '<div class="column small-6 medium-2"><div class="instagram--item"><a href="{{link}}"><img src="{{image}}" /><div class="instagram--item__hover"><h4>{{caption}}</h4></div></a></div></div>',
+			template: '<div class="column small-6 medium-4 large-2"><div class="instagram--item"><a href="{{link}}"><img src="{{image}}" /><div class="instagram--item__hover"><h4>{{caption}}</h4></div></a></div></div>',
 			userId: 896545907,
 			accessToken: '896545907.1210342.dcf80e3b731848189d8ed763572cca5d'
 		});

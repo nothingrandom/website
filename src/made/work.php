@@ -61,7 +61,7 @@
 				</div>
 			</div>
 			<div class="column small-12 medium-6">
-				<img src="http://placehold.it/500x250" />
+				<img class="project__image" src="http://placehold.it/500x250" />
 			</div>
 			<div class="column small-12">
 				<div class="project__section">
@@ -72,7 +72,7 @@
 			<div class="column small-12">
 				<div class="project__section">
 					<img class="project__banner" src="http://placehold.it/1200x400" />
-				</div
+				</div>
 			</div>
 			<div class="column small-12">
 				<div class="project__section">

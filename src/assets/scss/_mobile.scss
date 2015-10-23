@@ -12,6 +12,12 @@
 	body {
 		text-rendering: optimizeSpeed;
 	}
+
+	.profile__picture {
+		img {
+			margin-bottom: em(50px);
+		}
+	}
 }
 
 // 481 - 768
@@ -21,5 +27,48 @@
 
 // Below 480
 @include screen-max($screen-sm) {
+	.profile__blurb {
+		p {
+			&:last-child {
+				margin-bottom: em(40px);
+			}
+		}
+	}
 
+	.profile__sidebar {
+		margin-bottom: em(40px);
+		text-align: center;
+	}
+
+	.page-section--info-header {
+		margin-bottom: em(75px - 25px);
+	}
+
+	.info-header__section {
+		margin-bottom: em(25px);
+	}
+
+	.page-section--decks {
+		.medium-6 {
+			&:nth-child(odd) {
+				padding-right: em(16px);
+			}
+
+			&:nth-child(even) {
+				padding-left: em(16px);
+			}
+		}
+	}
+
+	.project__image {
+		width: 100%;
+		margin: 0 auto em(12px);
+	}
+
+	.page-section--arrows {
+		.page-arrow__text {
+			color: palette(grey);
+			transition: all ease-in-out $link-ease;
+		}
+	}
 }
