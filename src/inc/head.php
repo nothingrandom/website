@@ -13,7 +13,7 @@
 		<meta name="msapplication-tap-highlight" content="no" />
 
 		<!-- page info -->
-		<title>Benjamin Hollway | Freelance Front-end Developer</title>
+		<title><?php perch_pages_title(); ?> || nothingrandom</title>
 		<meta name="keywords" content="nothing, is, random, universe, design, designer, developer, web, website, blog, music, electronic, technology, speaker, young, prodigy, benjamin, ben, hollway, holloway, freelace, front end, front-end, brighton, uk, united, code, startup, twitter" />
 		<meta name="description" content="The portfolio of freelance front-end developer, Benjamin Hollway." />
 		<meta name="twitter:description" content="The portfolio of freelance front-end developer, Benjamin Hollway." />

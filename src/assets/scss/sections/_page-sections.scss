@@ -74,7 +74,9 @@
 	}
 
 	.item-list__sub {
-		margin: 0;
+		p {
+			margin: 0;
+		}
 	}
 }
 

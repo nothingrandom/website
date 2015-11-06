@@ -11,9 +11,7 @@ a {
 		em(1px) 0 0 palette(white),
 		em(-1px) 0 0 palette(white),
 		em(2px) 0 0 palette(white),
-		em(-2px) 0 0 palette(white),
-		em(3px) 0 0 palette(white),
-		em(-3px) 0 0 palette(white);
+		em(-2px) 0 0 palette(white);
 	transition: all ease-in-out $link-ease;
 
 	&:hover,

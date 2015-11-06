@@ -4,6 +4,7 @@
 
 .profile__picture {
 	img {
+		max-width: 250px;
 		margin: 0 auto;
 	}
 }
@@ -48,11 +49,54 @@
 	}
 }
 
+.profile__sidebar--availability {
+	margin-bottom: em(30px);
+
+	.availability {
+		margin-top: em(14px);
+	}
+}
+
+.availability__month {
+	display: none;
+	width: 25%;
+	margin-left: -4px;
+	padding: 0 em(4px);
+
+	&:first-child {
+		margin-left: -4px;
+	}
+
+	&.show-item {
+		display: inline-block;
+	}
+}
+
+.availability__text {
+	padding: em(3px) 0;
+	color: palette(white);
+	text-align: center;
+
+	.availability--red & {
+		background-color: palette(red);
+	}
+
+	.availability--yellow & {
+		background-color: palette(yellow);
+	}
+
+	.availability--green & {
+		background-color: palette(green);
+	}
+}
+
 .profile__sidebar--music {
 	display: none;
 }
 
 .profile__instagram {
+	margin-top: em(40px);
+
 	.column {
 		padding: em(3px);
 	}
@@ -60,12 +104,6 @@
 	h4 {
 		margin: 0;
 		text-align: center;
-	}
-
-	img {
-		display: inline-block;
-		vertical-align: middle;
-		transition: all ease-in-out $global-ease;
 	}
 
 	.instagram--item {
@@ -76,14 +114,25 @@
 		&:hover,
 		&:focus,
 		&:active {
+			.background-image {
+				opacity: .1;
+			}
+
 			.instagram--item__hover {
 				opacity: 1;
 			}
-
-			img {
-				filter: opacity(.4);
-			}
 		}
+	}
+
+	.background-image {
+		display: inline-block;
+		width: 100%;
+		height: 194px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		transition: all ease-in-out $global-ease;
+		vertical-align: middle;
 	}
 
 	.instagram--item__hover {
