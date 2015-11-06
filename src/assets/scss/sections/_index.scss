@@ -8,8 +8,12 @@
 	img {
 		display: inline-block;
 		width: 100%;
-		vertical-align: middle;
 		transition: all ease-in-out $global-ease;
+		vertical-align: middle;
+
+		&.small-image {
+			display: none;
+		}
 	}
 
 	.portfolio-item {
@@ -44,7 +48,7 @@
 		}
 
 		.portfolio-item__role {
-			color: palette(grey, mid);
+			color: palette(grey, dark);
 			font-size: em(18px);
 			font-style: italic;
 		}
@@ -63,6 +67,7 @@
 		bottom: 0;
 		left: 0;
 		z-index: 2;
+		padding: 0 em(25px);
 		opacity: 0;
 		transition: all ease-in-out $global-ease;
 		user-select: none;

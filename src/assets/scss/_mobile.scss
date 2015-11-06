@@ -36,7 +36,7 @@
 	}
 
 	.profile__sidebar {
-		margin-bottom: em(40px);
+		// margin-bottom: em(40px);
 		text-align: center;
 	}
 
@@ -69,6 +69,62 @@
 		.page-arrow__text {
 			color: palette(grey);
 			transition: all ease-in-out $link-ease;
+		}
+	}
+
+	.main-header {
+		.logo p {
+			margin-bottom: em(-5px);
+			text-align: center;
+		}
+	}
+
+	.main-nav {
+		ul {
+			float: none;
+			text-align: center;
+		}
+	}
+
+	.page-section--portfolio {
+		.column {
+			&.large-12 {
+				img {
+					&:not(.small-image) {
+						display: none;
+					}
+
+					&.small-image {
+						display: inline-block;
+					}
+				}
+			}
+		}
+
+		.portfolio-item {
+			&:hover,
+			&:focus,
+			&:active {
+				img {
+					filter: opacity(1);
+				}
+			}
+		}
+
+		.portfolio-item {
+			&:hover,
+			&:focus,
+			&:active {
+				img {
+					filter: opacity(1);
+				}
+			}
+		}
+
+		.portfolio-item__hover {
+			position: relative;
+			margin-top: em(15px);
+			opacity: 1;
 		}
 	}
 }

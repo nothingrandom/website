@@ -11,7 +11,7 @@ html {
 
 // YOUR STYLES HERE
 // ==============================
-@import "sections/links", "sections/header", "sections/footer", "sections/video", "sections/page-sections", "sections/index", "sections/profile", "sections/blog", "sections/portfolio";
+@import "sections/links", "sections/header", "sections/footer", "sections/video", "sections/page-sections", "sections/index", "sections/profile", "sections/blog", "sections/portfolio", "sections/cv";
 
 .page-line {
 	width: 100%;
@@ -33,6 +33,21 @@ html {
 
 	&.page-line--mid {
 		background-color: palette(grey, mid);
+	}
+}
+
+ul {
+	&.list--dashed {
+		li {
+			position: relative;
+			padding-left: 7.5px;
+
+			&:before {
+				position: absolute;
+				left: 0;
+				content: '-';
+			}
+		}
 	}
 }
 

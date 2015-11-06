@@ -7,11 +7,15 @@
 		</div>
 		<div class="column small-12 medium-6">
 			<nav class="main-nav">
-				<ul>
-					<li><a href="http://nothingrandom.com">Work</a></li>
-					<li><a href="http://nothingrandom.com/is">Profile</a></li>
-					<li><a href="http://nothingrandom.com/thinks">Journal</a></li>
-				</ul>
+				<?php perch_pages_navigation(array(
+						'add-trailing-slash' => true,
+						'hide-extensions' => true,
+						'hide-default-doc' => true,
+						'levels' => 1,
+						'navgroup' => 'main-navigation'
+					));
+				?>
+			</nav>
 		</div>
 	</div>
 </header>
