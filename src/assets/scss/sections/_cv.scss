@@ -1,0 +1,57 @@
+.page-section--cv {
+	h4 {
+		margin: em(30px) 0 em(-10px);
+
+		// &:first-of-type {
+		// 	margin-top: 0;
+		// }
+	}
+
+	p {
+
+	}
+
+	li {
+		font-size: em(18px);
+		letter-spacing: em(.25px);
+		line-height: em(20px);
+	}
+
+	ul {
+		margin: em(16px) 0;
+	}
+
+	&.list--dashed {
+		li {
+			position: relative;
+			padding-left: em(7.5px);
+
+			&:before {
+				position: absolute;
+				left: 0;
+				content: '-';
+			}
+		}
+	}
+}
+
+.cv-item__career {
+	p {
+		margin-bottom: em(25px);
+
+		&:first-child {
+			font-size: em(16px);
+			margin-bottom: em(-15px);
+		}
+	}
+
+	&:last-child {
+		p {
+			margin-bottom: em(16px);
+
+			&:first-child {
+				margin-bottom: em(-15px);
+			}
+		}
+	}
+}
