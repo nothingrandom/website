@@ -3,6 +3,10 @@
 
 	.column {
 		margin-bottom: em(32px);
+
+		&:last-child {
+			float: left;
+		}
 	}
 
 	img {

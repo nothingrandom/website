@@ -6,6 +6,7 @@
 
 html {
 	@include font-smoothing(on);
+	overflow: hidden;
 	font-size: $base-font-size;
 }
 
