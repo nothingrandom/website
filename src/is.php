@@ -19,7 +19,7 @@
 					<?php perch_content('Blurb'); ?>
 				</div>
 			</div>
-			<div class="column small-12 medium-3">
+			<div class="column small-12 medium-6 large-3">
 				<div class="profile__sidebar">
 					<div class="profile__sidebar--availability">
 						<h4><?php perch_content('Availability title'); ?></h4>
