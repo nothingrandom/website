@@ -1,68 +1,319 @@
-var gulp = require('gulp'),
-	//coffee = require('gulp-coffee'),
-	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
-	imagemin = require('gulp-imagemin'),
-	sourcemaps = require('gulp-sourcemaps'),
-	changed = require('gulp-changed'),
-	compass = require('gulp-compass'),
-	hogan = require('gulp-hogan-compile');
+// Requirements
+// ==============================
+var del = require('del'),
+	gulp = require('gulp'),
+	gutil = require('gulp-util'),
+	path = require('path'),
+	runSequence = require('run-sequence'),
+	through2 = require('through2'),
+	transform = require('vinyl-transform');
 
-var paths = {
-	scripts: 'assets/js/**/*.js',
-	images: 'assets/images/**/*',
-	stylesheets: 'assets/css/**/*.scss'
-	//templates: 'html/assets/templates/**/*.html'
+var plumber = require('gulp-plumber'),
+	sourcemaps = require('gulp-sourcemaps');
+
+var ftpconfig = require('./ftpconfig.json');
+
+// Task Aliases
+// ==============================
+gulp.task('default', ['sass', 'js', 'images']);
+
+// Config
+// ==============================
+var config = {
+	path: {
+		root: path.resolve(__dirname) + '/'
+	}
 };
 
-gulp.task('javascript', function() {
-	return gulp.src('assets/js/**/*.js')
-		.pipe(uglify())
-		.pipe(gulp.dest('build/js'));
+// Base
+config.path.doc = config.path.root + 'src/';
+config.path.assets = config.path.doc + 'assets/';
+config.path.build = config.path.root + 'build/';
+config.path.buildassets = config.path.root + 'build/assets/';
+
+// Source
+config.path.sass = config.path.assets + 'scss/';
+config.path.js_src = config.path.assets + 'js_src/';
+config.path.images = config.path.assets + 'images_src/';
+config.path.fonts = config.path.assets + 'fonts/';
+
+// Compiled
+config.path.css = config.path.assets + 'css/';
+config.path.js = config.path.assets + 'js/';
+config.path.img = config.path.assets + 'images/';
+
+// SASS / SCSS > CSS
+// ==============================
+var autoprefixer = require('gulp-autoprefixer'),
+	sass = require('gulp-sass');
+
+gulp.task('sass', function() {
+	return gulp.src(config.path.sass + '**/*.{scss,sass}')
+	.pipe(plumber({
+		errorHandler: logger.error
+	}))
+	.pipe(sourcemaps.init())
+	.pipe(sass({
+		includePaths: [
+			config.path.vendor
+		],
+		precision: 10
+	}))
+	.pipe(sourcemaps.write({
+		includeContent: false
+	}))
+	.pipe(sourcemaps.init({
+		loadMaps: true
+	}))
+	.pipe(autoprefixer({
+		browsers: [
+		'> 1%',
+		'last 2 versions',
+		'Firefox ESR',
+		'Opera 12.1',
+		'IE 9'
+		]
+	}))
+	.pipe(sourcemaps.write())
+	.pipe(gulp.dest(config.path.css));
 });
 
-gulp.task('scripts', ['javascript'], function() {
-	return gulp.src(paths.scripts)
-		.pipe(sourcemaps.init())
-			//.pipe(coffee())
-			.pipe(uglify())
-			.pipe(concat('all.min.js'))
-		.pipe(sourcemaps.write('../maps'))
-		.pipe(gulp.dest('build/js'));
+// JS
+// ==============================
+var browserify = require('browserify'),
+	concat = require('gulp-concat');
+
+gulp.task('js', function() {
+	return gulp.src(config.path.js_src + '**/*.js')
+	.pipe(plumber({
+		errorHandler: logger.error
+	}))
+	.pipe(sourcemaps.init())
+	.pipe(through2.obj(function (file, enc, next) {
+		browserify(file.path)
+		.bundle(function(err, res) {
+			file.contents = res;
+			next(null, file);
+		});
+	}))
+	.pipe(concat('scripts.js'))
+	.pipe(sourcemaps.write())
+	.pipe(gulp.dest(config.path.js));
 });
 
-gulp.task('images', function() {
-	return gulp.src(paths.images)
-		.pipe(changed('images'))
-		.pipe(imagemin())
-		.pipe(gulp.dest('images'));
+// Images
+// ==============================
+var changed = require('gulp-changed'),
+	imagemin = require('gulp-imagemin'),
+	pngquant = require('imagemin-pngquant'),
+	svg2png = require('gulp-svg2png');
+
+gulp.task('images:svg', function() {
+	return gulp.src(config.path.images + '**/*.svg')
+	.pipe(changed(config.path.img))
+	.pipe(svg2png())
+	.pipe(gulp.dest(config.path.images));
 });
 
-gulp.task('stylesheets', function() {
-	return gulp.src(paths.stylesheets)
-		.pipe(sourcemaps.init())
-			.pipe(compass({
-				css: 'build/css',
-				sass: 'assets/css',
-				style: 'compressed',
-				comments: 'false'
-			}))
-		.pipe(sourcemaps.write('../maps'));
+gulp.task('images', ['images:svg'], function(done) {
+	return gulp.src(config.path.images + '**/*.{png,gif,jpg,jpeg,svg}')
+	.pipe(changed(config.path.img))
+	.pipe(imagemin({
+		optimizationLevel: 3,
+		progressive: true,
+		use: [pngquant()]
+	}))
+	.pipe(gulp.dest(config.path.img));
 });
 
-// gulp.task('templates', function() {
-// 	return gulp.src(paths.templates)
-// 		.pipe(hogan('templates.js', {
-// 			wrapper: false
-// 		}))
-// 		.pipe(gulp.dest('html/build/js'));
-// });
+// Compression
+// ==============================
+var csso = require('gulp-csso'),
+	uncss = require('gulp-uncss'),
+	stripify = require('stripify'),
+	uglify = require('gulp-uglify');
 
-gulp.task('watch', function() {
-	gulp.watch(paths.scripts, ['scripts']);
-	gulp.watch(paths.images, ['images']);
-	gulp.watch(paths.stylesheets, ['stylesheets']);
-	//gulp.watch(paths.templates, ['templates']);
+gulp.task('compress', ['compress:css', 'compress:js-scripts', 'compress:js-vendor']);
+
+gulp.task('compress:css', ['sass'], function(done) {
+	return gulp.src(config.path.css + '**/*.css')
+	.pipe(size({
+		title: 'CSS before',
+		showFiles: true
+	}))
+	.pipe(uncss({
+		html: [config.path.doc + '**/*.{html,htm}', 'http://localhost']
+	}))
+	.pipe(csso())
+	.pipe(size({
+		title: 'CSS after',
+		showFiles: true
+	}))
+	.pipe(gulp.dest(config.path.buildassets + 'css/'));
 });
 
-gulp.task('default', ['scripts', 'images', 'stylesheets', 'watch']);
+gulp.task('compress:js-scripts', ['js'], function(done) {
+	return gulp.src(config.path.js_src + '**/*.js')
+	.pipe(plumber({
+		errorHandler: logger.error
+	}))
+	.pipe(sourcemaps.init())
+	.pipe(through2.obj(function (file, enc, next) {
+		browserify(file.path)
+		.transform('stripify')
+		.bundle(function(err, res) {
+			file.contents = res;
+			next(null, file);
+		});
+	}))
+	.pipe(concat('scripts.js'))
+	.pipe(sourcemaps.write())
+	.pipe(size({
+		title: 'JS before',
+		showFiles: true
+	}))
+	.pipe(uglify())
+	.pipe(size({
+		title: 'JS after',
+		showFiles: true
+	}))
+	.pipe(gulp.dest(config.path.buildassets + 'js/'));
+});
+
+gulp.task('compress:js-vendor', ['js'], function(done) {
+	return gulp.src(config.path.js + 'vendor/**/*.js')
+	.pipe(plumber({
+		errorHandler: logger.error
+	}))
+	.pipe(size({
+		title: 'JS before',
+		showFiles: true
+	}))
+	.pipe(uglify())
+	.pipe(size({
+		title: 'JS after',
+		showFiles: true
+	}))
+	.pipe(gulp.dest(config.path.buildassets + 'js/vendor/'));
+});
+
+// Build
+// ==============================
+gulp.task('build:clean', function() {
+	del([
+		'build/**/*'
+	]);
+})
+
+gulp.task('build:html', function() {
+	return gulp.src(config.path.doc + '**/*.{html,htm,php}')
+	.pipe(gulp.dest(config.path.build));
+})
+
+gulp.task('build:fonts', function() {
+	return gulp.src(config.path.fonts + '**/*.*')
+	.pipe(gulp.dest(config.path.buildassets + 'fonts'));
+})
+
+gulp.task('build:images', ['images'], function(done) {
+	return gulp.src(config.path.img + '**/*.*')
+	.pipe(gulp.dest(config.path.buildassets + 'images'));
+})
+
+gulp.task('build', function(cb) {
+	runSequence('build:clean', 'compress', 'build:html', 'build:images', 'build:fonts', 'build:size', cb);
+})
+
+gulp.task('build:size', function() {
+	return gulp.src(config.path.build + '**/*.*')
+	.pipe(size());
+})
+
+// FTP
+// ==============================
+var ftp = require('vinyl-ftp');
+
+var conn = ftp.create({
+	host: ftpconfig.host,
+	user: ftpconfig.user,
+	pass: ftpconfig.pass,
+	port: ftpconfig.port,
+	parallel: 3,
+	log: gutil.log
+});
+
+gulp.task('deploy:fast', function(done) {
+	var globs = [
+		'build/**'
+	];
+
+	return gulp.src(globs, {
+		base: 'build',
+		buffer: false
+	})
+	.pipe(conn.newer(ftpconfig.path))
+	.pipe(conn.dest(ftpconfig.path));
+})
+
+gulp.task('deploy:clean', function(cb) {
+	conn.rmdir(ftpconfig.path, cb)
+})
+
+gulp.task('deploy', function() {
+	runSequence('build', 'deploy:fast');
+})
+
+// Notifications
+// ==============================
+var notify = require('gulp-notify');
+
+var logger = {
+	log: function() {
+		var parts;
+		parts = 1 <= arguments.length ? [].slice.call(arguments, 0) : [];
+		return gutil.log.call(null, logger.format.apply(null, parts));
+	},
+	format: function() {
+		var parts;
+		parts = 1 <= arguments.length ? [].slice.call(arguments, 0) : [];
+		return parts.join(' ').replace(config.path.root, '', 'g');
+	},
+	error: function(error) {
+		notify.onError({
+			title: 'Error (' + error.plugin + ')',
+			message: logger.format(error.message)
+		}).apply(this, arguments);
+
+		return this.emit('end');
+	}
+};
+
+// File size
+// ==============================
+var size = require('gulp-size');
+
+gulp.task('size', function() {
+	return gulp.src(config.path.doc + '**/*.*')
+	.pipe(size({
+		showFiles: true
+	}));
+})
+
+// Watch
+// ==============================
+gulp.task('watch', ['default'], function(done) {
+	gulp.watch(config.path.sass + '**/*.{sass,scss}', function(event) {
+		logger.log(gutil.colors.magenta(event.path, gutil.colors.white(event.type)));
+		return gulp.start('sass');
+	});
+
+	gulp.watch([config.path.js_src + '**/*.js'], function(event) {
+		logger.log(gutil.colors.magenta(event.path, gutil.colors.white(event.type)));
+		return gulp.start('js');
+	});
+
+	gulp.watch([config.path.images + '**/*.{png,gif,jpg,jpeg,svg}'], function(event) {
+		logger.log(gutil.colors.green(event.path, gutil.colors.white(event.type)));
+		return gulp.start('images');
+	});
+});

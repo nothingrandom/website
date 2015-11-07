@@ -1,0 +1,27 @@
+.page-wrapper--portfolio {
+	.page-section--info-header {
+		margin-bottom: em(45px);
+	}
+}
+
+.page-section--project {
+	h4 {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin: em(8px) 0;
+	}
+
+	.project__banner {
+		margin-bottom: em(30px);
+	}
+
+	.project__section {
+		margin-bottom: em(25px);
+
+		.project__banner {
+			margin: em(20px) 0 em(30px);
+		}
+	}
+}

@@ -1,0 +1,157 @@
+.page-section--profile {
+	margin-bottom: em(75px - 3px);
+}
+
+.profile__picture {
+	img {
+		max-width: 250px;
+		margin: 0 auto;
+	}
+}
+
+.profile__blurb {
+	p {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: em(75px);
+		}
+	}
+}
+
+.profile__sidebar {
+	h4 {
+		margin: 0;
+	}
+
+	ul {
+		margin: em(10px) 0 em(25px);
+	}
+
+	li {
+		margin: em(5px) 0;
+		color: palette(grey);
+		font-size: em(16px);
+		line-height: em(18px);
+
+		a {
+			background-image: none;
+			color: palette(grey);
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: palette(black);
+			}
+		}
+	}
+}
+
+.profile__sidebar--availability {
+	margin-bottom: em(30px);
+
+	.availability {
+		margin-top: em(14px);
+	}
+}
+
+.availability__month {
+	display: none;
+	width: 25%;
+	margin-left: -4px;
+	padding: 0 em(4px);
+
+	&:first-child {
+		margin-left: -4px;
+	}
+
+	&.show-item {
+		display: inline-block;
+	}
+}
+
+.availability__text {
+	padding: em(3px) 0;
+	color: palette(white);
+	text-align: center;
+
+	.availability--red & {
+		background-color: palette(red);
+	}
+
+	.availability--yellow & {
+		background-color: palette(yellow);
+	}
+
+	.availability--green & {
+		background-color: palette(green);
+	}
+}
+
+.profile__sidebar--music {
+	display: none;
+}
+
+.profile__instagram {
+	margin-top: em(40px);
+
+	.column {
+		padding: em(3px);
+	}
+
+	h4 {
+		margin: 0;
+		text-align: center;
+	}
+
+	.instagram--item {
+		position: relative;
+		display: inline;
+		vertical-align: middle;
+
+		&:hover,
+		&:focus,
+		&:active {
+			.background-image {
+				opacity: .1;
+			}
+
+			.instagram--item__hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	.background-image {
+		display: inline-block;
+		width: 100%;
+		height: 194px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		transition: all ease-in-out $global-ease;
+		vertical-align: middle;
+	}
+
+	.instagram--item__hover {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		opacity: 0;
+		transition: all ease-in-out $global-ease;
+		user-select: none;
+		-webkit-touch-callout: none;
+		-webkit-tap-highlight-color: transparent;
+	}
+
+	a {
+		background-image: none;
+		color: palette(black);
+		text-shadow: none;
+	}
+}

@@ -1,0 +1,16 @@
+<div class="column small-12 <perch:content id="size" type="text" label="Size" help="medium-* large-*" /> ">
+	<div class="portfolio-item">
+		<a href="/made/<perch:content id="slug" type="text" label="Slug" /> ">
+			<img src="<perch:content type="image" id="image" label="Image" />" alt="<perch:content type="text" id="alt" label="Image alt" required="true" />" />
+			<img src="<perch:content type="image" id="small-image" label="Small Image" />" class="small-image" />
+			<div class="portfolio-item__hover">
+				<p class="portfolio-item__title">
+					<perch:content id="title" type="text" label="Title" required="true" title="true"/>
+				</p>
+				<p class="portfolio-item__role">
+					<perch:content id="role" type="text" label="Role" />
+				</p>
+			</div>
+		</a>
+	</div>
+</div>
