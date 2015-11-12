@@ -5,18 +5,18 @@
         </a>
     </h1>
 	<p class="meta">
-        <time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Meta information" />">
-            <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" />
+        <time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Publishing" />">
+            <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" /> 
         </time>
 		<perch:if exists="authorGivenName">
             by <span class="p-author h-card"><perch:blog id="authorGivenName" type="hidden" /> <perch:blog id="authorFamilyName" type="hidden" /></span>
-        </perch:if>
+        </perch:if>    
         <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes">
             <a href="archive.php?cat=<perch:category id="catSlug" type="slug" />" class="p-category">
                 <perch:category id="catTitle" type="text" />
             </a>
         </perch:categories>
-
+    
 	</p>
     <perch:if exists="image">
         <div>

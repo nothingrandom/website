@@ -3,7 +3,7 @@
 
 	.logo {
 		p {
-			margin: em(15px, 28px) 0;
+			margin: em(18px, 28px) 0 0;
 			font-size: em(28px);
 			line-height: em(16px);
 		}
@@ -47,7 +47,7 @@
 
 		a {
 			background-image: none;
-			color: palette(grey, mid);
+			color: palette(grey);
 			text-decoration: none;
 			text-shadow: none;
 			transition: all ease-in-out $global-ease;

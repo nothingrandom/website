@@ -14,10 +14,11 @@
 
 		<!-- page info -->
 		<title><?php perch_pages_title(); ?> || nothingrandom</title>
-		<meta name="keywords" content="nothing, is, random, universe, design, designer, developer, web, website, blog, music, electronic, technology, speaker, young, prodigy, benjamin, ben, hollway, holloway, freelace, front end, front-end, brighton, uk, united, code, startup, twitter" />
-		<meta name="description" content="The portfolio of freelance front-end developer, Benjamin Hollway." />
-		<meta name="twitter:description" content="The portfolio of freelance front-end developer, Benjamin Hollway." />
-		<link rel="icon" type="image/png" href="http://nothingrandom.com/assets/images/favicon.png"/>
+		<meta name="description" content="Freelance Front-end Developer based in Brighton, UK." />
+		<link type="text/plain" rel="author" href="http://nothingrandom.com/humans.txt" />
+
+		<meta property="og:image" content="http://nothingrandom.com/perch/resources/profile@2x.jpg"/>
+		<link rel="icon" type="image/png" href="http://nothingrandom.com/images/favicon.png"/>
 
 		<!-- stylesheets -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />

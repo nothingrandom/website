@@ -1,12 +1,12 @@
 <?php
     define('PERCH_LICENSE_KEY', 'P21510-HCE847-CGV181-VWC532-CGB030');
 
-    define("PERCH_DB_USERNAME", 'root');
-    define("PERCH_DB_PASSWORD", 'root');
-    define("PERCH_DB_SERVER", "localhost");
+    define("PERCH_DB_USERNAME", 'nothingrandom');
+    define("PERCH_DB_PASSWORD", 'Olympus97!');
+    define("PERCH_DB_SERVER", "nothingrandom.db.10756496.hostedresource.com");
     define("PERCH_DB_DATABASE", "nothingrandom");
     define("PERCH_DB_PREFIX", "perch2_");
-    
+
     define('PERCH_TZ', 'UTC');
 
     define('PERCH_EMAIL_FROM', 'benjamin@nothingrandom.com');
@@ -18,5 +18,5 @@
 
     define('PERCH_RESFILEPATH', PERCH_PATH . DIRECTORY_SEPARATOR . 'resources');
     define('PERCH_RESPATH', PERCH_LOGINPATH . '/resources');
-    
+
     define('PERCH_HTML5', true);

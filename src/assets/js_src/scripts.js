@@ -2,15 +2,13 @@ var $ = require('jquery'); // ^2.1.4 included
 
 // Google Analytics
 // ==============================
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-41281395-1']);
-_gaq.push(['_trackPageview']);
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
+ga('create', 'UA-41281395-1', 'auto');
+ga('send', 'pageview');
 
 
 // Copyright year
