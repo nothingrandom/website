@@ -1,0 +1,87 @@
+// @include font-face('Font Name', '/path/to/font', 400, normal);
+
+// LL Circular
+@include font-face('Circular', '../fonts/CircularStd-Book', 400, normal);
+@include font-face('Circular', '../fonts/CircularStd-BookItalic', 400, italic);
+
+@include font-face('Circular', '../fonts/CircularStd-Medium', 500, normal);
+
+@include font-face('Circular', '../fonts/CircularStd-Bold', 700, normal);
+
+@include font-face('Circular', '../fonts/CircularStd-Black', 900, normal);
+
+$sans: 'Circular', sans-serif;
+
+// Tisa Pro
+@include font-face('Tisa Pro', '../fonts/TisaPro-Regular', 400, normal);
+@include font-face('Tisa Pro', '../fonts/TisaPro-Ita', 400, italic);
+
+$serif: 'Tisa Pro', serif;
+
+body {
+	color: palette(grey, dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+a {
+	font-family: $sans;
+	font-weight: 400;
+	font-feature-settings: 'ss02', 'ss04', 'ss06'; //ss03 for curled 'r'
+}
+
+// p,
+// p a {
+// 	font-family: $serif;
+// }
+
+h1 {
+	font-size: em(78px);
+	font-weight: 700;
+	line-height: 1.15;
+}
+
+h2 {
+	font-size: (42px);
+	font-weight: 500;
+}
+
+h3 {
+	position: absolute;
+	// z-index: -1;
+	margin: -50px 0 0 -30px;
+	color: palette(grey);
+	font-size: em(200px);
+	font-weight: 900;
+	line-height: 1;
+	user-select: none;
+}
+
+h4 {
+	font-size: em(14px);
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+h5 {
+	margin: 0;
+	font-size: em(30px);
+	font-weight: 900;
+	line-height: 1.2;
+
+	a {
+		font-weight: 900;
+	}
+}
+
+p {
+	font-size: em(18px);
+}

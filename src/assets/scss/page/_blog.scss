@@ -1,0 +1,26 @@
+.section--blog {
+	margin-top: 4px;
+
+	h4 {
+		margin: 0;
+		padding: 20px 0 10px;
+		border-top: 10px solid palette(black);
+	}
+
+	li {
+		margin: 0;
+		font-size: em(30px);
+		line-height: 1.2;
+
+		a {
+			font-weight: 900;
+		}
+	}
+
+	p {
+		position: relative;
+		margin: 5px 0 0;
+		font-size: em(24px);
+		font-weight: 500;
+	}
+}

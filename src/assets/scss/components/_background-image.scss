@@ -1,0 +1,19 @@
+.background-image {
+	@extend %position-stretch;
+	position: fixed;
+	z-index: -1;
+	background: url('../images/hero.jpg');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
+	filter: grayscale(100%);
+	will-change: transform;
+
+	&:after {
+		@extend %position-stretch;
+		position: absolute;
+		display: block;
+		content: '';
+		background-color: rgba-convert(palette(grey), .85);
+	}
+}

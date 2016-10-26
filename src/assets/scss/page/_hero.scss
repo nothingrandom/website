@@ -1,0 +1,12 @@
+.section--hero {
+	min-height: calc(100vh - $page-border);
+	padding-top: 0;
+
+	h1 {
+		margin-bottom: 30px;
+	}
+
+	.social-links {
+		margin-top: 70px;
+	}
+}

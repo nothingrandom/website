@@ -1,0 +1,31 @@
+.row {
+	position: relative;
+	z-index: 2;
+}
+
+.page-wrapper {
+	position: relative;
+	border: $page-border solid palette(white);
+	color: palette(white);
+}
+
+.page-section {
+	position: relative;
+	padding: 40px;
+
+	&:not(.section--hero) {
+		h2 {
+			margin-top: -10px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.section--highlight {
+	background-color: palette(white);
+	color: palette(grey, dark);
+
+	h3 {
+		color: palette(grey, light);
+	}
+}
