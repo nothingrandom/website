@@ -3,10 +3,12 @@ $palettes: (
 		base: #FFFFFF
 	),
 	black: (
-		base: #000000
+		base: #000000,
+		off: #151515
 	),
 	grey: (
 		base: #1C1C1C,
+		darker: #262626,
 		dark: #333333,
 		mid: #686868,
 		light: #F7F7F7
@@ -16,5 +18,11 @@ $palettes: (
 	),
 	purple: (
 		base: #662DE5
+	),
+	green: (
+		base: #AEFFA7
+	),
+	red: (
+		base: #D45E4B
 	)
 );

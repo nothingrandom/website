@@ -1,0 +1,65 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html" version="2.0">
+	<channel>
+		<title>
+			<![CDATA[ Stories by Benjamin Hollway on Medium ]]>
+		</title>
+		<description>
+			<![CDATA[ Stories by Benjamin Hollway on Medium ]]>
+		</description>
+		<link>
+			https://medium.com/@nothingrandom?source=rss-1dbc01ee2b48------2
+		</link>
+		<image>
+			<url>
+				https://d262ilb51hltx0.cloudfront.net/fit/c/150/150/1*Y2yqvIaGtnY_NDNJr66H6Q.png
+			</url>
+			<title>Stories by Benjamin Hollway on Medium</title>
+			<link>
+				https://medium.com/@nothingrandom?source=rss-1dbc01ee2b48------2
+			</link>
+		</image>
+		<generator>Medium</generator>
+		<lastBuildDate>Thu, 27 Oct 2016 16:47:08 GMT</lastBuildDate>
+		<atom:link href="https://medium.com/feed/@nothingrandom" rel="self" type="application/rss+xml"/>
+		<webMaster>...</webMaster>
+		<atom:link href="http://medium.superfeedr.com" rel="hub"/>
+		<item>
+			<title>
+				<![CDATA[ Breathing space ]]>
+			</title>
+			<description>
+				<![CDATA[
+				<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/@nothingrandom/breathing-space-b88e84ec7b1b?source=rss-1dbc01ee2b48------2"><img src="https://d262ilb51hltx0.cloudfront.net/max/2000/1*Wp6m-2dXtyi3w7fpGQO-MQ.jpeg" width="3264"></a></p><p class="medium-feed-snippet">I think it&#x2019;s important to regularly take time out of my usual daily routine.</p><p class="medium-feed-link"><a href="https://medium.com/@nothingrandom/breathing-space-b88e84ec7b1b?source=rss-1dbc01ee2b48------2">Continue reading on »</a></p></div>
+				]]>
+			</description>
+			<link>
+				https://medium.com/@nothingrandom/breathing-space-b88e84ec7b1b?source=rss-1dbc01ee2b48------2
+			</link>
+			<guid isPermaLink="false">https://medium.com/p/b88e84ec7b1b</guid>
+			<dc:creator>
+				<![CDATA[ Benjamin Hollway ]]>
+			</dc:creator>
+			<pubDate>Wed, 26 Oct 2016 18:46:11 GMT</pubDate>
+			<atom:updated>2016-10-26T23:50:12.303Z</atom:updated>
+		</item>
+		<item>
+			<title>
+				<![CDATA[ Inaugural ]]>
+			</title>
+			<description>
+				<![CDATA[
+				<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://medium.com/@nothingrandom/inaugural-4da71238c91a?source=rss-1dbc01ee2b48------2"><img src="https://d262ilb51hltx0.cloudfront.net/max/2000/1*4jElcqJXGEOtDkPaNz8k5Q.jpeg" width="3480"></a></p><p class="medium-feed-snippet">It&#x2019;s time I started to put pen to paper regularly</p><p class="medium-feed-link"><a href="https://medium.com/@nothingrandom/inaugural-4da71238c91a?source=rss-1dbc01ee2b48------2">Continue reading on »</a></p></div>
+				]]>
+			</description>
+			<link>
+				https://medium.com/@nothingrandom/inaugural-4da71238c91a?source=rss-1dbc01ee2b48------2
+			</link>
+			<guid isPermaLink="false">https://medium.com/p/4da71238c91a</guid>
+			<dc:creator>
+				<![CDATA[ Benjamin Hollway ]]>
+			</dc:creator>
+			<pubDate>Tue, 18 Oct 2016 16:24:36 GMT</pubDate>
+			<atom:updated>2016-10-18T16:24:36.418Z</atom:updated>
+		</item>
+	</channel>
+</rss>

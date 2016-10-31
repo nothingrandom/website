@@ -1,0 +1,30 @@
+.section--photos {
+	background-color: palette(black);
+
+	h3 {
+		color: palette(black, off);
+	}
+}
+
+.photo__item {
+	width: 33.333333333%;
+	margin-top: -2px;
+	padding: 0 14px;
+
+	&:before {
+		right: 14px;
+		left: 14px;
+	}
+
+	@include screen-max($screen-md) {
+		width: 50%;
+	}
+
+	@include screen-max($screen-sm) {
+		width: 100%;
+
+		&:nth-child(n+7) {
+			display: none;
+		}
+	}
+}

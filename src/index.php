@@ -18,19 +18,25 @@
 	</div>
 	<div class="page-section section--blog section--highlight">
 		<h3>Writing</h3> <!-- large text, sits behind, faint. parallax -->
-		<div class="row">
+		<div class="row js-not-loaded">
 			<div class="column medium-6">
-				<h4>Latest post</h4>
-				<h5><a href="">Inaugural</a></h5>
-				<p>It’s time I started to put pen to paper regularly <a href="">+</a></p>
+				<p class="font--large">I like to write about things sometimes.</p>
+			</div>
+			<div class="column medium-6">
+				<a href="https://medium.com/@nothingrandom" class="btn btn--secondary">Medium</a>
+			</div>
+		</div>
+		<div class="row js-loaded">
+			<div class="column medium-6">
+				<div class="js-medium-first">
+					<h4>Latest post</h4>
+				</div>
 			</div>
 			<div class="column medium-6">
 				<h4>Older posts</h4>
 				<ul>
-					<li><a href="">Lorem ipsum dolor sit amet.</a></li>
-					<li><a href="">Lorem ipsum dolor sit amet.</a></li>
-					<li><a href="">Lorem ipsum dolor sit amet.</a></li>
-					<li><a href="">See more.</a></li>
+					<div class="js-medium"></div>
+					<li><a href="">Read more</a></li>
 				</ul>
 			</div>
 		</div>
@@ -41,133 +47,155 @@
 			<div class="column small-12">
 				<h2>A collection of my latest work and creations &mdash;</h2>
 			</div>
-			<div class="column large-6">
+			<div class="column small-12 medium-6">
 				<div class="project__item">
-					<img src="http://placehold.it/650x500" />
-					<div class="project__info">
-						<h5>Project title</h5>
-						<h4>development</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-					</div>
+					<a href="#">
+						<img src="http://placehold.it/650x500" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
 				</div>
 			</div>
-			<div class="column large-6">
+			<div class="column small-12 medium-6">
 				<div class="project__item">
-					<img src="http://placehold.it/650x500" />
-					<div class="project__info">
-						<h5>Project title</h5>
-						<h4>development</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-					</div>
+					<a href="#">
+						<img src="http://placehold.it/650x500" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
 				</div>
 			</div>
-			<div class="column large-8">
+			<div class="column medium-8">
 				<div class="project__item">
-					<img src="http://placehold.it/878x500" />
-					<div class="project__info">
-						<h5>Project title</h5>
-						<h4>development</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-					</div>
+					<a href="#">
+						<img src="http://placehold.it/878x500" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
 				</div>
 			</div>
-			<div class="column large-4">
+			<div class="column medium-4">
 				<div class="project__item">
-					<img src="http://placehold.it/423x235" />
-					<div class="project__info">
-						<h5>Project title</h5>
-						<h4>development</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-					</div>
+					<a href="#">
+						<img src="http://placehold.it/423x235" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
 				</div>
 				<div class="project__item">
-					<img src="http://placehold.it/423x235" />
-					<div class="project__info">
-						<h5>Project title</h5>
-						<h4>development</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-					</div>
-				</div>
-			</div>
-			<div class="column large-12">
-				<div class="project__item">
-					<img src="http://placehold.it/1333x500" />
-					<div class="project__info">
-						<h5>Project title</h5>
-						<h4>development</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-					</div>
+					<a href="#">
+						<img src="http://placehold.it/423x235" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
 				</div>
 			</div>
-			<div class="column large-4">
+			<div class="column small-12">
 				<div class="project__item">
-					<img src="http://placehold.it/423x235" />
-					<div class="project__info">
-						<h5>Project title</h5>
-						<h4>development</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-					</div>
-				</div>
-				<div class="project__item">
-					<img src="http://placehold.it/423x235" />
-					<div class="project__info">
-						<h5>Project title</h5>
-						<h4>development</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-					</div>
+					<a href="#">
+						<img src="http://placehold.it/1333x500" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
 				</div>
 			</div>
-			<div class="column large-8">
+			<div class="column small-12 medium-4">
 				<div class="project__item">
-					<img src="http://placehold.it/878x500" />
-					<div class="project__info">
-						<h5>Project title</h5>
-						<h4>development</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-					</div>
+					<a href="#">
+						<img src="http://placehold.it/423x235" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
+				</div>
+				<div class="project__item">
+					<a href="#">
+						<img src="http://placehold.it/423x235" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="column small-12 medium-8">
+				<div class="project__item">
+					<a href="#">
+						<img src="http://placehold.it/878x500" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="page-section section--photos section--highlight">
-		<h2>Sometimes I go outside &mdash;</h2>
-		<h3>Photographs</h3>
-		<ul class="social-links">
-			<li><a href="">Instagram</a></li>
-			<li><a href="">VSCO</a></li>
-		</ul>
-		<p>Photos currently taken with a Nikon D5300 or OnePlus Three</p>
+	<div class="page-section section--photos">
+		<h3>Photos</h3>
+		<div class="row">
+			<div class="column small-12">
+				<h2>Sometimes I go outside &mdash;</h2>
+				<!-- <p>Photos currently taken with a Nikon D5300 or OnePlus Three</p>
+				<ul class="social-links">
+					<li><a href="">Instagram</a></li>
+					<li><a href="">VSCO</a></li>
+				</ul> -->
+			</div>
+			<div class="column small-12">
+				<div class="row">
+					<div class="instagram" id="instafeed">
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="page-section section--contact">
 		<h3>Contact</h3>
 		<div class="row">
-			<div class="column large-6">
-				<p>Currently available for freelance and contract projects.</p>
-				WNW
+			<div class="column small-12 medium-6 large-8">
+				<h4>Don't be shy</h4>
+				<div class="contact__info">
+					<p class="font--large">I'm currently <span class="availability--green">available</span> for freelance and contract projects. If you'd like to get in touch about your idea or just to say hello, drop me an email at <a href="b@nothingrandom.com">b@nothingrandom.com</a>.</p>
+				</div>
 			</div>
-			<div class="column large-6">
-				<a href="" class="btn btn--large btn--dark">b [at] nothingrandom.com</a>
-				<p><a href="">+44 1273 931397</a></p>
-			</div>
-			<div class="column medium-10 large-8 medium-centered">
+			<div class="column small-12 medium-6 large-4">
+				<h4>Elsewhere</h4>
 				<ul class="social-links social-links--icons">
 					<!-- social icons -->
-					<li><a href="">Instagram</a></li>
-					<li><a href="">Twitter</a></li>
-					<li><a href="">Medium</a></li>
-					<li><a href="">Dribbble</a></li>
-					<li><a href="">Github</a></li>
-					<li><a href="">Strava</a></li>
+					<li><a href=""><i class="fa fa-twitter"></i></a></li>
+					<li><a href=""><i class="fa fa-instagram"></i></a></li>
+					<li><a href=""><i class="fa fa-github"></i></a></li>
+					<li><a href=""><i class="fa fa-medium"></i></a></li>
+					<li><a href=""><i class="fa fa-dribbble"></i></a></li>
+					<li><a href=""><i class="fa fa-skype"></i></a></li>
+					<li><a href=""><i class="fa fa-spotify"></i></a></li>
 				</ul>
 			</div>
 		</div>
-
-		<!--
-			social links
-			currently available for freelance
-			contact form?
-		-->
 	</div>
 </main>
 

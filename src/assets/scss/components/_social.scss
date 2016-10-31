@@ -23,3 +23,21 @@
 		}
 	}
 }
+
+.social-links--icons {
+	text-align: center;
+
+	li {
+		margin-right: 15px;
+		font-size: em(32px);
+		letter-spacing: 0;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+}

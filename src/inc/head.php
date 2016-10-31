@@ -22,7 +22,11 @@
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 
 		<!-- scripts -->
+		<script src="/assets/js/vendor/instafeed.min.js" type="text/javascript"></script>
+		<script src="/assets/js/vendor/masonry.pkgd.min.js" type="text/javascript"></script>
+		<script src="/assets/js/vendor/imagesloaded.pkgd.min.js" type="text/javascript"></script>
 		<script src="/assets/js/scripts.js" type="text/javascript"></script>
+		<script src="https://use.fontawesome.com/044d29add3.js"></script>
 
 		<!-- IE specifics -->
 		<!--[if IE]><!-->
