@@ -1,8 +1,13 @@
 .section--projects {
-	// background-color: palette(grey, dark);
+	background-color: palette(grey, dark);
+
+	h3 {
+		color: palette(grey, darker);
+	}
 }
 
-.project__item {
+.project__item,
+.photo__item {
 	position: relative;
 	margin-bottom: 28px;
 	cursor: pointer;
@@ -30,9 +35,18 @@
 			opacity: 1;
 		}
 	}
+
+	img {
+		width: 100%;
+	}
+
+	a {
+		color: palette(white);
+	}
 }
 
-.project__info {
+.project__info,
+.photo__info {
 	position: absolute;
 	bottom: 0;
 	padding: 28px;
@@ -45,7 +59,7 @@
 		border-bottom: 5px solid palette(white);
 	}
 
-	h4 {
+	h6 {
 		margin-top: 20px;
 		margin-bottom: 0;
 	}

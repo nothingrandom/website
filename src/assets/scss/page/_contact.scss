@@ -1,0 +1,20 @@
+.section--contact {
+	@extend %h4-column;
+
+	.contact__info {
+		p {
+			&:first-child {
+				margin-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: -4px;
+			}
+		}
+	}
+
+	.availability--green {
+		color: palette(green);
+		font-weight: 700;
+	}
+}

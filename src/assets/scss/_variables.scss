@@ -22,3 +22,13 @@ $transition-time: .2s;
 	bottom: 0;
 	left: 0;
 }
+
+%h4-column {
+	.column {
+		margin-bottom: 40px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

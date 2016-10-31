@@ -7,10 +7,18 @@
 	position: relative;
 	border: $page-border solid palette(white);
 	color: palette(white);
+
+	@include screen-max($screen-md) {
+	}
+
+	@include screen-max($screen-sm) {
+		border-width: $page-border / 2;
+	}
 }
 
 .page-section {
 	position: relative;
+	min-height: 190px;
 	padding: 40px;
 
 	&:not(.section--hero) {
@@ -18,6 +26,14 @@
 			margin-top: -10px;
 			margin-bottom: 30px;
 		}
+	}
+
+	@include screen-max($screen-md) {
+		padding: 20px;
+	}
+
+	@include screen-max($screen-sm) {
+		padding: 10px;
 	}
 }
 
@@ -27,5 +43,10 @@
 
 	h3 {
 		color: palette(grey, light);
+	}
+
+	h4 {
+		border-color: palette(black);
+		color: palette(black);
 	}
 }
