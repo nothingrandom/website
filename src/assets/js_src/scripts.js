@@ -1,5 +1,35 @@
 var $ = require('jquery'); // ^2.1.4 included
 
+var scrolled;
+
+function parallax() {
+	//set the div that you want to scroll at a different speed
+	//set it to negative scroll so that is goes at the same speed
+
+	//*x.x is the times faster you want it to scroll
+	//in this case 0.65px faster than the scroll speed of the actual website
+	$('h3').css('top', -(scrolled * 0.15) + 'px');
+}
+
+function opacity() {
+	if (scrolled >= 649) {
+		var eq = Math.min(1, ((scrolled - 650) * 0.002));
+		var eq2 = Math.min(1, ((scrolled - 2800) * 0.002));
+
+		$('.page-opacity').css('opacity', eq);
+		$('.page-opacity-two').css('opacity', eq2);
+	}
+}
+
+$(window).scroll(function() {
+	scrolled = $(window).scrollTop();
+
+	if ($(window).width() >= 1024) {
+		parallax();
+		opacity();
+	}
+});
+
 $.ajax({
 	url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent('https://medium.com/feed/@nothingrandom'),
 	dataType: 'json',

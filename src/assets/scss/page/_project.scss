@@ -1,7 +1,6 @@
 .section--projects {
-	background-color: palette(grey, dark);
-
 	h3 {
+		margin-top: $h3-margin + 45px;
 		color: palette(grey, darker);
 	}
 }
@@ -55,12 +54,11 @@
 
 	h5 {
 		display: inline;
-		padding-bottom: 3px;
-		border-bottom: 5px solid palette(white);
+		// padding-bottom: 3px;
 	}
 
 	h6 {
-		margin-top: 20px;
+		margin-top: 10px;
 		margin-bottom: 0;
 	}
 

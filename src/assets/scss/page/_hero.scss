@@ -1,5 +1,6 @@
 .section--hero {
-	min-height: calc(100vh - $page-border);
+	// min-height: calc(100vh - $page-border);
+	min-height: calc(100vh - 30px);
 	padding-top: 0;
 
 	h1 {

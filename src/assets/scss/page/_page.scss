@@ -16,8 +16,22 @@
 	}
 }
 
+.page-opacity,
+.page-opacity-two {
+	@extend %position-stretch;
+	position: absolute;
+	background-color: palette(grey, dark);
+	opacity: 0;
+	will-change: opacity;
+}
+
+.page-opacity-two {
+	background-color: palette(black);
+}
+
 .page-section {
 	position: relative;
+	overflow-y: hidden;
 	min-height: 190px;
 	padding: 40px;
 

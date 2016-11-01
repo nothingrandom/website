@@ -2,6 +2,8 @@
 <?php include('inc/header.php') ?>
 
 <main class="page-wrapper page-wrapper--index">
+	<div class="page-opacity"></div>
+	<div class="page-opacity-two"></div>
 	<div class="background-image"></div>
 	<div class="page-section section--hero">
 		<div class="row">
@@ -9,15 +11,15 @@
 				<h1>Benjamin Hollway is a front end developer.</h1>
 				<h2>Currently based in Brighton, UK and creating web experiences for 4 years. Specialising in animation, simplicity, user interaction and design. <a href="">+</a></h2>
 				<ul class="social-links">
-					<li><a href="">Twitter</a></li>
-					<li><a href="">Instagram</a></li>
-					<li><a href="">GitHub</a></li>
+					<li><a href="https://twitter.com/benjaminhollway">Twitter</a></li>
+					<li><a href="https://www.instagram.com/benjaminhollway">Instagram</a></li>
+					<li><a href="https://github.com/nothingrandom">GitHub</a></li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="page-section section--blog section--highlight">
-		<h3>Writing</h3> <!-- large text, sits behind, faint. parallax -->
+		<h3 id="parallax-one">Writing</h3> <!-- large text, sits behind, faint. parallax -->
 		<div class="row js-not-loaded">
 			<div class="column medium-6">
 				<p class="font--large">I like to write about things sometimes.</p>
@@ -36,7 +38,7 @@
 				<h4>Older posts</h4>
 				<ul>
 					<div class="js-medium"></div>
-					<li><a href="">Read more</a></li>
+					<li><a href="https://medium.com/feed/@nothingrandom">Read more</a></li>
 				</ul>
 			</div>
 		</div>
@@ -186,10 +188,10 @@
 				<h4>Elsewhere</h4>
 				<ul class="social-links social-links--icons">
 					<!-- social icons -->
-					<li><a href=""><i class="fa fa-twitter"></i></a></li>
-					<li><a href=""><i class="fa fa-instagram"></i></a></li>
-					<li><a href=""><i class="fa fa-github"></i></a></li>
-					<li><a href=""><i class="fa fa-medium"></i></a></li>
+					<li><a href="https://twitter.com/benjaminhollway"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://www.instagram.com/benjaminhollway"><i class="fa fa-instagram"></i></a></li>
+					<li><a href="https://github.com/nothingrandom"><i class="fa fa-github"></i></a></li>
+					<li><a href="https://medium.com/feed/@nothingrandom"><i class="fa fa-medium"></i></a></li>
 					<li><a href=""><i class="fa fa-dribbble"></i></a></li>
 					<li><a href=""><i class="fa fa-skype"></i></a></li>
 					<li><a href=""><i class="fa fa-spotify"></i></a></li>

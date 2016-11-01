@@ -302,7 +302,8 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('browser-sync', ['sass'], function() {
 	browserSync.init({
-		proxy: 'localhost'
+		proxy: 'localhost',
+		port: 3002
 	});
 
 	gulp.watch(config.path.sass + '**/*.{sass,scss}', function(event) {
