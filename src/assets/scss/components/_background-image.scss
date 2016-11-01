@@ -8,12 +8,4 @@
 	background-size: cover;
 	filter: grayscale(100%);
 	will-change: transform;
-
-	&:after {
-		@extend %position-stretch;
-		position: absolute;
-		display: block;
-		content: '';
-		background-color: rgba-convert(palette(grey), .85);
-	}
 }

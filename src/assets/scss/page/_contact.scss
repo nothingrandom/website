@@ -1,5 +1,17 @@
 .section--contact {
 	@extend %h4-column;
+	z-index: 1;
+
+	&:after {
+		@extend .background-image;
+		// z-index: -2;
+		content: '';
+		background-position: center bottom;
+	}
+
+	h3 {
+		margin-top: $h3-margin + 630px;
+	}
 
 	.contact__info {
 		p {
