@@ -1,7 +1,7 @@
 <?php include('inc/head.php') ?>
 <?php include('inc/header.php') ?>
 
-<main class="page-wrapper page-wrapper--index">
+<main class="page-wrapper page-wrapper--index no-js">
 	<div class="page-opacity"></div>
 	<div class="page-opacity-two"></div>
 	<div class="background-image"></div>
@@ -21,24 +21,25 @@
 	<div class="page-section section--blog section--highlight">
 		<h3 id="parallax-one">Writing</h3> <!-- large text, sits behind, faint. parallax -->
 		<div class="row js-not-loaded">
-			<div class="column medium-6">
-				<p class="font--large">I like to write about things sometimes.</p>
-			</div>
-			<div class="column medium-6">
-				<a href="https://medium.com/@nothingrandom" class="btn btn--secondary">Medium</a>
+			<div class="column small-12">
+				<h2>I like to write about things sometimes &mdash;</h2>
+				<div class="btn--center">
+					<a href="https://medium.com/@nothingrandom" class="btn btn--secondary btn--large">Medium</a>
+				</div>
 			</div>
 		</div>
 		<div class="row js-loaded">
-			<div class="column medium-6">
+			<div class="column medium-6 large-7">
 				<div class="js-medium-first">
 					<h4>Latest post</h4>
 				</div>
 			</div>
-			<div class="column medium-6">
+			<div class="column medium-6 large-5">
 				<h4>Older posts</h4>
 				<ul>
-					<div class="js-medium"></div>
-					<li><a href="https://medium.com/feed/@nothingrandom">Read more</a></li>
+					<div class="js-medium">
+					</div>
+					<li><a href="https://medium.com/feed/@nothingrandom">Read more &mdash;</a></li>
 				</ul>
 			</div>
 		</div>
@@ -156,7 +157,7 @@
 		</div>
 	</div>
 
-	<div class="page-section section--photos">
+	<div class="page-section section--photos js-loaded">
 		<h3>Photos</h3>
 		<div class="row">
 			<div class="column small-12">
@@ -178,13 +179,13 @@
 	<div class="page-section section--contact">
 		<h3>Contact</h3>
 		<div class="row">
-			<div class="column small-12 medium-6 large-8">
+			<div class="column small-12 medium-6 large-7">
 				<h4>Don't be shy</h4>
 				<div class="contact__info">
 					<p class="font--large">I'm currently <span class="availability--green">available</span> for freelance and contract projects. If you'd like to get in touch about your idea or just to say hello, drop me an email at <a href="b@nothingrandom.com">b@nothingrandom.com</a>.</p>
 				</div>
 			</div>
-			<div class="column small-12 medium-6 large-4">
+			<div class="column small-12 medium-6 large-5">
 				<h4>Elsewhere</h4>
 				<ul class="social-links social-links--icons">
 					<!-- social icons -->
@@ -192,9 +193,9 @@
 					<li><a href="https://www.instagram.com/benjaminhollway"><i class="fa fa-instagram"></i></a></li>
 					<li><a href="https://github.com/nothingrandom"><i class="fa fa-github"></i></a></li>
 					<li><a href="https://medium.com/feed/@nothingrandom"><i class="fa fa-medium"></i></a></li>
-					<li><a href=""><i class="fa fa-dribbble"></i></a></li>
-					<li><a href=""><i class="fa fa-skype"></i></a></li>
-					<li><a href=""><i class="fa fa-spotify"></i></a></li>
+					<li><a href="https://dribbble.com/nothingrandom"><i class="fa fa-dribbble"></i></a></li>
+					<li><a href="skype:nothingrandom?chat"><i class="fa fa-skype"></i></a></li>
+					<li><a href="https://open.spotify.com/user/nothingrandom"><i class="fa fa-spotify"></i></a></li>
 				</ul>
 			</div>
 		</div>

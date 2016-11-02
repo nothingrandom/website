@@ -27,5 +27,9 @@
 		&:first-child {
 			display: none;
 		}
+
+		&:nth-child(n+5) {
+			display: none;
+		}
 	}
 }

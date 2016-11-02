@@ -46,6 +46,7 @@ $.ajax({
 $(function() {
 	$('.js-loaded').addClass('true');
 	$('.js-not-loaded').addClass('false');
+	$('.page-wrapper').removeClass('no-js');
 
 	var gridElem = document.querySelector('#instafeed');
 	var msnry;
