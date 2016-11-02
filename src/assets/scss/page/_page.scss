@@ -14,6 +14,19 @@
 	@include screen-max($screen-sm) {
 		border-width: $page-border / 2;
 	}
+
+	&.no-js {
+		h3 {
+			margin-top: -10px;
+		}
+
+		.section--contact {
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
 }
 
 .page-opacity,
