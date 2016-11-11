@@ -42,13 +42,9 @@
 	}
 }
 
+.background-color {
 	@extend %position-stretch;
 	position: fixed;
 	z-index: -1;
-	background: url('../images/hero.jpg');
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: cover;
-	filter: grayscale(100%);
-	will-change: transform;
+	background-color: palette(grey);
 }
