@@ -10,7 +10,7 @@
 		<div class="row">
 			<div class="column small-12 medium-9 large-7">
 				<h1>Benjamin Hollway is a front end developer.</h1>
-				<h2>Currently based in Brighton, UK and creating web experiences for 4 years. Specialising in animation, simplicity, user interaction and design. <a href="">+</a></h2>
+				<h2>Currently based in Brighton, UK and creating web experiences for 4 years. Specialising in animation, simplicity, user interaction and design. <a href="about.php">+</a></h2>
 				<ul class="social-links">
 					<li><a href="https://twitter.com/benjaminhollway">Twitter</a></li>
 					<li><a href="https://www.instagram.com/benjaminhollway">Instagram</a></li>
@@ -45,11 +45,23 @@
 			</div>
 		</div>
 	</div>
-	<div class="page-section section--projects">
+	<div class="page-section section--projects" id="projects">
 		<h3>Projects</h3>
 		<div class="row">
 			<div class="column small-12">
 				<h2>A collection of my latest work and creations &mdash;</h2>
+			</div>
+			<div class="column small-12">
+				<div class="project__item">
+					<a href="#">
+						<img src="http://placehold.it/1333x500" />
+						<div class="project__info">
+							<h5>Project title</h5>
+							<h6>development</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
+						</div>
+					</a>
+				</div>
 			</div>
 			<div class="column small-12 medium-6">
 				<div class="project__item">
@@ -109,18 +121,6 @@
 					</a>
 				</div>
 			</div>
-			<div class="column small-12">
-				<div class="project__item">
-					<a href="#">
-						<img src="http://placehold.it/1333x500" />
-						<div class="project__info">
-							<h5>Project title</h5>
-							<h6>development</h6>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut officiis quod consequatur asperiores, possimus quia.</p>
-						</div>
-					</a>
-				</div>
-			</div>
 			<div class="column small-12 medium-4">
 				<div class="project__item">
 					<a href="#">
@@ -155,6 +155,11 @@
 					</a>
 				</div>
 			</div>
+			<!-- <div class="column small-12">
+				<div class="btn--center">
+					<a href="#contact" class="btn btn--primary btn--large">Like what you see?</a>
+				</div>
+			</div> -->
 		</div>
 	</div>
 
