@@ -48,6 +48,13 @@ $(function() {
 	$('.js-not-loaded').addClass('false');
 	$('.page-wrapper').removeClass('no-js');
 
+	$('.menu-button').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		$('.header--main').toggleClass('active');
+	});
+
 	var gridElem = document.querySelector('#instafeed');
 	var msnry;
 
