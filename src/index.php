@@ -187,7 +187,7 @@
 			</div>
 			<div class="column small-12 medium-6 large-5">
 				<h4>Elsewhere</h4>
-				<ul class="social-links social-links--icons">
+				<ul class="social-links social-links--icons js-loaded">
 					<!-- social icons -->
 					<li><a href="https://twitter.com/benjaminhollway"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="https://www.instagram.com/benjaminhollway"><i class="fa fa-instagram"></i></a></li>
@@ -196,6 +196,16 @@
 					<li><a href="https://dribbble.com/nothingrandom"><i class="fa fa-dribbble"></i></a></li>
 					<li><a href="skype:nothingrandom?chat"><i class="fa fa-skype"></i></a></li>
 					<li><a href="https://open.spotify.com/user/nothingrandom"><i class="fa fa-spotify"></i></a></li>
+				</ul>
+				<ul class="social-links js-not-loaded">
+					<!-- social icons -->
+					<li><a href="https://twitter.com/benjaminhollway">Twitter</a></li>
+					<li><a href="https://www.instagram.com/benjaminhollway">Instagram</a></li>
+					<li><a href="https://github.com/nothingrandom">GitHub</a></li>
+					<li><a href="https://medium.com/feed/@nothingrandom">Medium</a></li>
+					<li><a href="https://dribbble.com/nothingrandom">Dribble</a></li>
+					<li><a href="skype:nothingrandom?chat">Skype</a></li>
+					<li><a href="https://open.spotify.com/user/nothingrandom">Spotify</a></li>
 				</ul>
 			</div>
 		</div>
