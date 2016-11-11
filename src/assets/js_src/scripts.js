@@ -65,7 +65,7 @@ $(function() {
 			links: true,
 			resolution: 'standard_resolution',
 			sortBy: 'most-recent',
-			template: '<div class="photo__item"><a href="{{link}}"><img src="{{image}}" /><div class="project__info"><h5>{{caption}}</h5></div></a></div>',
+			template: '<div class="photo__item"><a href="{{link}}"><img src="{{image}}" /><div class="photo__info"><h5>{{caption}}</h5></div></a></div>',
 			userId: 896545907,
 			accessToken: '896545907.1210342.dcf80e3b731848189d8ed763572cca5d',
 			after: function() {
