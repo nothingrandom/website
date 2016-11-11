@@ -14,9 +14,13 @@ $grid-gutter: em(28px);
 $grid-columns: 12;
 
 $page-border: 30px;
+$double-border: 60px;
+
 $transition-time: .2s;
 
 $h3-margin: 60px;
+
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
 %position-stretch {
 	top: 0;
