@@ -22,6 +22,8 @@
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 
 		<!-- scripts -->
+		<!-- <script src="/assets/js/vendor/glimpse.blur.js" type="text/javascript"></script> -->
+		<script src="/assets/js/vendor/glimpse.min.js" type="text/javascript"></script>
 		<script src="/assets/js/vendor/instafeed.min.js" type="text/javascript"></script>
 		<script src="/assets/js/vendor/masonry.pkgd.min.js" type="text/javascript"></script>
 		<script src="/assets/js/vendor/imagesloaded.pkgd.min.js" type="text/javascript"></script>
