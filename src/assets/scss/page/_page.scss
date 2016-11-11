@@ -5,17 +5,41 @@
 
 .page-wrapper {
 	position: relative;
-	border: $page-border solid palette(white);
+	padding: $page-border;
 	color: palette(white);
 
-	@include screen-max($screen-md) {
+	&:before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 12;
+		border: $page-border solid palette(white);
+		content: '';
+		opacity: 0;
+		animation: fadeIn ease 1;
+		animation-fill-mode: forwards;
+		animation-duration: .5s;
+		pointer-events: none;
+
+		@include screen-max($screen-md) {
+		}
+
+		@include screen-max($screen-sm) {
+			border-width: $page-border / 2;
+		}
 	}
 
 	@include screen-max($screen-sm) {
-		border-width: $page-border / 2;
+		padding: $page-border / 2;
 	}
 
 	&.no-js {
+		&:before {
+			// display: none;
+		}
+
 		h3 {
 			margin-top: -10px;
 		}
@@ -56,11 +80,11 @@
 	}
 
 	@include screen-max($screen-md) {
-		padding: 20px;
+		padding: 40px 20px;
 	}
 
 	@include screen-max($screen-sm) {
-		padding: 10px;
+		padding: 40px 0;
 	}
 }
 
