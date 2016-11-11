@@ -1,4 +1,47 @@
 .background-image {
+	background-image: url('../images/hero.jpg');
+
+	&,
+	&:before,
+	&:after {
+		@extend %position-stretch;
+		position: fixed;
+		z-index: -1;
+		background-repeat: no-repeat;
+		background-position: center top;
+		background-size: cover;
+		filter: grayscale(100%);
+		will-change: transform;
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		background-color: inherit;
+	}
+
+	&.glimpsed {
+		&:after {
+			opacity: 1;
+		}
+
+		&:before,
+		&:after {
+			transition: opacity $transition-time 0 ease-in-out;
+		}
+	}
+
+	&.glimpsed:before,
+	&:after,
+	&.glimpsed.loaded:after {
+		opacity: 0;
+	}
+
+	&.loaded:after {
+		transition: opacity .6s ease;
+	}
+}
+
 	@extend %position-stretch;
 	position: fixed;
 	z-index: -1;
