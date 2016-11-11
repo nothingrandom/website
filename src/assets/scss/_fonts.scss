@@ -10,7 +10,7 @@
 
 @include font-face('Circular', '../fonts/CircularStd-Black', 900, normal);
 
-$sans: 'Circular', sans-serif;
+$sans: 'Circular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 // Tisa Pro
 @include font-face('Tisa Pro', '../fonts/TisaPro-Regular', 400, normal);
