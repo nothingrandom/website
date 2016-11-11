@@ -1,6 +1,6 @@
 var $ = require('jquery'); // ^2.1.4 included
 
-var scrolled;
+var scrolled = $(window).scrollTop();
 
 function parallax() {
 	//set the div that you want to scroll at a different speed
