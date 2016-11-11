@@ -2,6 +2,13 @@
 	@extend %h4-column;
 	z-index: 1;
 
+	@include screen-max($screen-sm) {
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+
 	&:before {
 		@extend %position-stretch;
 		position: absolute;
@@ -14,30 +21,85 @@
 	}
 
 	&:after {
-		@extend .background-image;
-		// z-index: -2;
+		@extend %position-stretch;
+		position: fixed;
+		z-index: -2;
 		content: '';
+		background-repeat: no-repeat;
 		background-position: center bottom;
+		background-size: cover;
+		filter: grayscale(100%);
+		will-change: transform;
+		background-image: url('../images/hero.jpg');
 	}
 
 	h3 {
 		margin-top: $h3-margin + 630px;
 	}
 
-	.contact__info {
-		p {
-			&:first-child {
-				margin-top: 0;
-			}
+	.social-links--icons {
+		margin-top: 20px;
+	}
+}
 
-			&:last-child {
-				margin-bottom: -4px;
-			}
+.contact__info {
+	p {
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: -4px;
 		}
 	}
+}
 
-	.availability--green {
-		color: palette(green);
-		font-weight: 700;
+.availability--green {
+	color: palette(green);
+	font-weight: 700;
+}
+
+.page-wrapper--contact {
+	.page-section {
+		position: relative;
+		min-height: calc(100vh - 40px);
+
+		.row {
+			min-height: calc(100vh - 140px);
+		}
+
+		.vertical-align {
+			position: absolute;
+			top: 30%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 0;
+			animation: fadeIn ease-in 1;
+			animation-fill-mode: forwards;
+			animation-duration: .5s;
+			// animation-delay: .5s;
+
+			@include screen-max($screen-sm) {
+				top: 0;
+				left: 0;
+				transform: none;
+			}
+		}
+
+		.social-links {
+			position: fixed;
+			bottom: $double-border - 20px;
+			left: 0;
+			width: 100%;
+			opacity: 0;
+			animation: fadeIn ease 1;
+			animation-fill-mode: forwards;
+			animation-duration: .5s;
+			animation-delay: .5s;
+
+			@include screen-max($screen-sm) {
+				padding: 0 40px;
+			}
+		}
 	}
 }
