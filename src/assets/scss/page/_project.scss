@@ -21,6 +21,11 @@
 		background-color: rgba-convert(palette(grey), .7);
 		opacity: 0;
 		transition: opacity ease-in-out $transition-time;
+		pointer-events: none;
+
+		@include screen-max($screen-sm) {
+			display: none;
+		}
 	}
 
 	&:hover,
@@ -30,8 +35,16 @@
 			opacity: 1;
 		}
 
-		.project__info {
+		.project__info,
+		.photo__info {
 			opacity: 1;
+
+			// @include screen-max($screen-sm) {
+			// 	h5,
+			// 	h6 {
+			// 		color: palette(grey, mid);
+			// 	}
+			// }
 		}
 	}
 
@@ -58,7 +71,7 @@
 	}
 
 	h6 {
-		margin-top: 10px;
+		margin-top: 5px;
 		margin-bottom: 0;
 	}
 
@@ -66,4 +79,24 @@
 		margin-top: 20px;
 		margin-bottom: 0;
 	}
+
+	@include screen-max($screen-sm) {
+		position: relative;
+		padding: 10px 0;
+		opacity: 1;
+
+		h6 {
+			margin-bottom: -10px;
+		}
+
+		p {
+			display: none;
+		}
+	}
+
+	// @include screen-max($screen-sm) {
+	// 	&.photo__info {
+	// 		display: none;
+	// 	}
+	// }
 }
