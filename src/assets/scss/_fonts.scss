@@ -82,6 +82,7 @@ h3 {
 
 	@include screen-max($screen-md) {
 		margin: -15px 0 0 -10px !important;
+		font-size: em(150px);
 	}
 
 	@include screen-max($screen-sm) {
