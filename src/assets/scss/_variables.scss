@@ -68,7 +68,9 @@ $h3-margin: 60px;
 
 %h4-column {
 	.column {
-		margin-bottom: 40px;
+		@include screen-max($screen-sm) {
+			margin-bottom: 40px;
+		}
 
 		&:last-child {
 			margin-bottom: 0;
