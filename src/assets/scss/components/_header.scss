@@ -180,6 +180,11 @@
 	width: 35px;
 	height: 7px;
 	padding: 30px 50px 37px 45px;
+	opacity: 0;
+	animation: fadeIn ease-in 1;
+	animation-fill-mode: forwards;
+	animation-duration: .5s;
+	animation-delay: 1s;
 	cursor: pointer;
 
 	@include screen-max($screen-sm) {
@@ -191,7 +196,9 @@
 		position: absolute;
 		// right: 14px;
 		z-index: 15;
-		transition: all ease-in-out .5s;
+		animation: spin-reverse ease 1;
+		animation-fill-mode: forwards;
+		animation-duration: 1s;
 
 		&,
 		&:before,
@@ -220,7 +227,9 @@
 
 	&:hover {
 		span {
-			transform: rotate(630deg);
+			animation: spin ease 1;
+			animation-fill-mode: forwards;
+			animation-duration: 1s;
 
 			@include screen-max($screen-sm) {
 				transform: none;
