@@ -2,7 +2,7 @@
 	@extend %h4-column;
 	z-index: 1;
 
-	@include screen-max($screen-sm) {
+	@include screen-max($screen-md) {
 		&:before,
 		&:after {
 			display: none;
