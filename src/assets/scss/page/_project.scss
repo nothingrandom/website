@@ -1,7 +1,7 @@
 .section--projects {
 	h3 {
 		margin-top: $h3-margin + 45px;
-		color: palette(grey, darker);
+		color: palette(gray, darker);
 	}
 }
 
@@ -18,7 +18,7 @@
 		bottom: 0;
 		left: 0;
 		content: '';
-		background-color: rgba-convert(palette(grey), .7);
+		background-color: rgba-convert(palette(gray), .7);
 		opacity: 0;
 		transition: opacity ease-in-out $transition-time;
 		pointer-events: none;
@@ -42,7 +42,7 @@
 			// @include screen-max($screen-sm) {
 			// 	h5,
 			// 	h6 {
-			// 		color: palette(grey, mid);
+			// 		color: palette(gray, mid);
 			// 	}
 			// }
 		}

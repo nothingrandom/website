@@ -1,7 +1,7 @@
 .header--main {
 	position: relative;
 	margin-top: -142px;
-	border-bottom: 1px solid palette(grey, light);
+	border-bottom: 1px solid palette(gray, light);
 	background-color: palette(white);
 	transition: margin-top ease-in-out .5s;
 
@@ -67,7 +67,7 @@
 				border-color: palette(black);
 
 				@include screen-max($screen-sm) {
-					color: palette(grey, mid);
+					color: palette(gray, mid);
 				}
 			}
 
@@ -162,7 +162,7 @@
 			}
 
 			a {
-				color: palette(grey, mid);
+				color: palette(gray, mid);
 				font-weight: 700;
 			}
 		}

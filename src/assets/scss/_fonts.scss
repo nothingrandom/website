@@ -19,7 +19,7 @@ $sans: 'Circular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $serif: 'Tisa Pro', serif;
 
 body {
-	color: palette(grey, dark);
+	color: palette(gray, dark);
 }
 
 h1,
@@ -74,7 +74,7 @@ h3 {
 	// z-index: -1;
 	top: 0;
 	margin: $h3-margin 0 0 -30px;
-	color: palette(grey);
+	color: palette(gray);
 	font-size: em(200px);
 	font-weight: 900;
 	line-height: 1;
