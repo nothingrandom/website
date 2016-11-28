@@ -80,7 +80,3 @@ $(function() {
 		feed.run();
 	}
 });
-
-$(window).load(function() {
-	$('.js-medium-first').contains('reading').remove();
-});
