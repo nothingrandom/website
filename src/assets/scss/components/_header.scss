@@ -1,5 +1,6 @@
 .header--main {
 	position: relative;
+	top: 0;
 	margin-top: -142px;
 	border-bottom: 1px solid palette(gray, light);
 	background-color: palette(white);
@@ -11,8 +12,7 @@
 	}
 
 	@include screen-max($screen-sm) {
-		margin-top: -325px;
-		margin-bottom: 0;
+		margin-top: -335px;
 	}
 
 	&.active {
@@ -43,9 +43,10 @@
 		}
 	}
 
-	ul {
+	nav {
 		@include screen-max($screen-sm) {
-			padding-bottom: 20px;
+			margin-bottom: 20px;
+			padding-top: 30px;
 		}
 	}
 
@@ -200,6 +201,10 @@
 		animation-fill-mode: forwards;
 		animation-duration: 1s;
 
+		@include screen-max($screen-sm) {
+			animation: none;
+		}
+
 		&,
 		&:before,
 		&:after {
@@ -232,7 +237,7 @@
 			animation-duration: 1s;
 
 			@include screen-max($screen-sm) {
-				transform: none;
+				animation: none;
 			}
 
 			&:before,
