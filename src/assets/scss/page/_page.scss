@@ -57,7 +57,7 @@
 .page-opacity-two {
 	@extend %position-stretch;
 	position: absolute;
-	background-color: palette(grey, dark);
+	background-color: palette(gray, dark);
 	opacity: 0;
 	will-change: opacity;
 }
@@ -91,10 +91,10 @@
 
 .section--highlight {
 	background-color: palette(white);
-	color: palette(grey, dark);
+	color: palette(gray, dark);
 
 	h3 {
-		color: palette(grey, light);
+		color: palette(gray, light);
 	}
 
 	h4 {
