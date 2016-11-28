@@ -4,14 +4,22 @@
 	&,
 	&:before,
 	&:after {
-		@extend %position-stretch;
+		// @extend %position-stretch;
 		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
 		z-index: -1;
+		height: 100vh;
 		background-repeat: no-repeat;
-		background-position: center top;
+		background-position: top center;
 		background-size: cover;
 		filter: grayscale(100%);
 		will-change: transform;
+
+		@include screen-max($screen-sm) {
+			// margin-top: $page-border / 2;
+		}
 	}
 
 	&:before,
