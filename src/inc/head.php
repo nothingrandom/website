@@ -11,6 +11,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0"/>
 		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="theme-color" content="#2E2E2E">
 
 		<!-- page info -->
 		<title>Benjamin Hollway</title>
