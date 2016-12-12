@@ -65,7 +65,7 @@ h2 {
 	}
 
 	@include screen-max($screen-sm) {
-		font-size: em(21px);
+		font-size: em(26px);
 	}
 }
 
@@ -124,6 +124,10 @@ h6 {
 p {
 	font-size: em(18px);
 
+	@include screen-max($screen-sm) {
+		font-size: em(16px);
+	}
+
 	&.font--large {
 		font-size: em(24px);
 		font-weight: 500;
@@ -132,6 +136,10 @@ p {
 		span,
 		a {
 			font-weight: 500;
+		}
+
+		@include screen-max($screen-sm) {
+			font-size: em(18px);
 		}
 	}
 }
