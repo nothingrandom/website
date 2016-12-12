@@ -10,11 +10,10 @@
 		right: 0;
 		left: 0;
 		z-index: -1;
-		height: 100vh;
+		height: calc(100vh + 60px);
 		background-repeat: no-repeat;
 		background-position: top center;
 		background-size: cover;
-		filter: grayscale(100%);
 		will-change: transform;
 
 		@include screen-max($screen-sm) {
