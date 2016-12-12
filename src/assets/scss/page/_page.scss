@@ -57,6 +57,7 @@
 .page-opacity-two {
 	@extend %position-stretch;
 	position: absolute;
+	z-index: 2;
 	background-color: palette(gray, dark);
 	opacity: 0;
 	will-change: opacity;
@@ -68,7 +69,7 @@
 
 .page-section {
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 	overflow-y: hidden;
 	min-height: 190px;
 	padding: 40px;

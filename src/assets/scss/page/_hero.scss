@@ -1,15 +1,21 @@
 .section--hero {
 	// min-height: calc(100vh - $page-border);
-	min-height: calc(100vh - 30px);
+	min-height: calc(100vh - 20px);
 	padding-top: 20px;
 
 	h1 {
-		margin-bottom: 50px;
+		margin-top: 75px;
+		margin-bottom: 60px;
 		opacity: 0;
 		animation: fadeIn ease-in 1;
 		animation-fill-mode: forwards;
 		animation-duration: .5s;
 		animation-delay: .5s;
+
+		@include screen-max($screen-sm) {
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
 	}
 
 	h2 {
@@ -21,7 +27,7 @@
 	}
 
 	.social-links {
-		margin-top: 70px;
+		margin-top: 140px;
 		opacity: 0;
 		animation: fadeIn ease-in 1;
 		animation-fill-mode: forwards;
@@ -29,6 +35,8 @@
 		animation-delay: 1.5s;
 
 		@include screen-max($screen-sm) {
+			margin-top: 70px;
+
 			li {
 				display: block;
 				padding-bottom: 10px;

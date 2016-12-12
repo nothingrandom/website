@@ -10,15 +10,16 @@
 	position: relative;
 	margin-bottom: 28px;
 	cursor: pointer;
+	overflow: hidden;
 
 	&:before {
 		position: absolute;
 		top: 0;
-		right: 0;
 		bottom: 0;
-		left: 0;
+		z-index: 1;
 		content: '';
-		background-color: rgba-convert(palette(gray), .7);
+		width: 100%;
+		background-color: rgba-convert(palette(gray), .4);
 		opacity: 0;
 		transition: opacity ease-in-out $transition-time;
 		pointer-events: none;
@@ -31,6 +32,14 @@
 	&:hover,
 	&:active,
 	&:focus {
+		img {
+			transform: scale(1.06);
+
+			@include screen-max($screen-sm) {
+				transform: none;
+			}
+		}
+
 		&:before {
 			opacity: 1;
 		}
@@ -50,6 +59,7 @@
 
 	img {
 		width: 100%;
+		transition: transform ease-in-out $transition-time;
 	}
 
 	a {
@@ -57,9 +67,16 @@
 	}
 }
 
+&.photo__item {
+	&:before {
+		margin-left: -14px;
+	}
+}
+
 .project__info,
 .photo__info {
 	position: absolute;
+	z-index: 2;
 	bottom: 0;
 	padding: 28px;
 	opacity: 0;

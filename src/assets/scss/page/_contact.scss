@@ -1,6 +1,14 @@
 .section--contact {
 	@extend %h4-column;
-	z-index: 1;
+	position: fixed;
+	bottom: 0;
+	z-index: 2;
+	padding-top: 140px;
+	border-bottom: $page-border solid palette(white);
+
+	.section__content {
+		opacity: 0;
+	}
 
 	@include screen-max($screen-md) {
 		&:before,
@@ -9,36 +17,27 @@
 		}
 	}
 
-	&:before {
-		@extend %position-stretch;
-		position: absolute;
-		bottom: 100px;
-		content: '';
-		background: -webkit-linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-		background: -o-linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-		background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
-	}
-
 	&:after {
 		@extend %position-stretch;
-		position: fixed;
+		position: absolute;
 		z-index: -2;
 		content: '';
+		height: 100vh;
+		background-image: url('../images/hero.jpg');
+		background-attachment: fixed;
 		background-repeat: no-repeat;
 		background-position: center bottom;
 		background-size: cover;
 		filter: grayscale(100%);
 		will-change: transform;
-		background-image: url('../images/hero.jpg');
 	}
 
 	h3 {
-		margin-top: $h3-margin + 630px;
+		margin-top: $h3-margin + 650px;
 	}
 
 	.social-links--icons {
-		margin-top: 20px;
+		margin-top: 0px;
 	}
 }
 
