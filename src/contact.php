@@ -9,9 +9,9 @@
 	<div class="page-section">
 		<div class="row">
 			<div class="column small-12 medium-6 large-7 vertical-align">
-				<h4>Don't be shy</h4>
+				<h4>Let's connect</h4>
 				<div class="contact__info">
-					<p class="font--large">I'm currently <span class="availability--green">available</span> for freelance and contract projects. If you'd like to get in touch about your idea or just to say hello, drop me an email at <a href="b@nothingrandom.com">b@nothingrandom.com</a>.</p>
+					<p class="font--large">Currently <span class="availability--green">available</span> for freelance and contract projects. If you'd like to get in touch about your idea or just to say hello, send an email to <a href="b@nothingrandom.com">b@nothingrandom.com</a>.</p>
 				</div>
 			</div>
 			<div class="column small-12">
