@@ -1,14 +1,33 @@
 .section--photos {
+	margin-bottom: 327px;
+	overflow-y: visible;
+
 	h3 {
-		margin-top: $h3-margin + 370px;
+		margin-top: $h3-margin + 430px;
 		color: palette(black, off);
+	}
+
+	&.scrolled {
+		background-color: palette(black);
+	}
+
+	&:after {
+		position: absolute;
+		right: 0;
+		bottom: -100px;
+		left: 0;
+		height: 100px;
+		content: '';
+		background: -webkit-linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+		background: -o-linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+		background: linear-gradient(rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
 	}
 }
 
 .photo__item {
-	width: 33.333333333%;
-	margin-top: -2px;
-	padding: 0 14px;
+	width: calc(33.333333333% - 28px);
+	margin: -2px 14px 28px;
 
 	&:before {
 		right: 14px;
@@ -16,11 +35,12 @@
 	}
 
 	@include screen-max($screen-md) {
-		width: 50%;
+		width: calc(50% - 28px);
 	}
 
 	@include screen-max($screen-sm) {
 		width: 100%;
+		margin: -2px 0 28px;
 
 		&:nth-child(n+7) {
 			display: none;
