@@ -1,160 +1,99 @@
 var $ = require('jquery'); // ^2.1.4 included
 
-// Google Analytics
-// ==============================
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+var scrolled = $(window).scrollTop();
 
-ga('create', 'UA-41281395-1', 'auto');
-ga('send', 'pageview');
+function parallax() {
+	//set the div that you want to scroll at a different speed
+	//set it to negative scroll so that is goes at the same speed
 
-
-// Copyright year
-// ==============================
-function copyright(startingYear) {
-	var currentYear = new Date().getFullYear();
-
-	if (startingYear < currentYear) {
-		return startingYear + '-' + currentYear;
-	}
-
-	else if (startingYear == currentYear) {
-		return startingYear;
-	}
-
-	else {
-		return currentYear;
-		console.log("Something is wrong with your startingYear variable. Check that it isn't in the future.");
-	}
+	//*x.x is the times faster you want it to scroll
+	//in this case 0.65px faster than the scroll speed of the actual website
+	$('h3').css('top', -(scrolled * 0.15) + 'px');
 }
 
-// Availabilty show
-// ==============================
-function availability() {
-	var monthNum = new Date().getMonth();
-	var monthArray = [
-	'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-	];
+function opacity() {
+	if (scrolled >= $('.section--blog').offset().top - 200) {
+		var eq = Math.min(1, ((scrolled - ($('.section--blog').offset().top - 100)) * 0.0025));
+		var eq2 = Math.min(1, ((scrolled - ($('.section--photos').offset().top - 400)) * 0.0025));
+		// var eq3 = Math.min(1, ((scrolled - ($('.section--photos').offset().top + 1050)) * 0.0025));
 
-	var currentMonth = monthArray[monthNum];
-
-	var monthText = [];
-
-	$('.availability__month .availability__text').each(function() {
-		monthText.push($(this).text());
-	});
-
-	var monthPos = (monthText.indexOf(currentMonth) + 1);
-
-	$('.availability__month:nth-child(' + monthPos + ')').addClass('show-item');
-	$('.availability__month:nth-child(' + (monthPos + 1) + ')').addClass('show-item');
-	$('.availability__month:nth-child(' + (monthPos + 2) + ')').addClass('show-item');
-	$('.availability__month:nth-child(' + (monthPos + 3) + ')').addClass('show-item');
-}
-
-function italicAmp() {
-	$('.info-header__section:contains("&")').html(function(_, html) {
-		return html.replace(/(&amp;)/g, '<span class="text--italic">$1</span>');
-	});
-}
-
-function blogTags() {
-	$('.js-blog-tags').appendTo('.blog-tags');
-}
-
-function blogCatHead() {
-	$('.blog-cat-header').prependTo('.page-section--header');
-}
-
-function blogLength() {
-	var postText = $('.page-section--blog-post').text(),
-	regex = /\s+/gi,
-	wordCount = postText.trim().replace(regex, " ").split(" ").length,
-	readSpeed = 4,
-	readTime = Math.round(wordCount / readSpeed);
-
-	if (readTime < 60) {
-		$('.js-read-time').html(readTime + " seconds");
+		$('.page-opacity').css('opacity', eq).addClass('show').removeClass('hide');
+		$('.page-opacity-two').css('opacity', eq2);
+		// $('.section--contact .section__content').css('opacity', eq3);
 	}
 
 	else {
-		var readTimeMin = Math.ceil(readTime / 60);
-
-		$('.js-read-time').html(readTimeMin + " minutes");
+		$('.page-opacity').removeClass('show').addClass('hide');
 	}
 }
 
-function portfolioURL() {
-	var urlLength = $('.page-wrapper--portfolio .page-section--info-header .medium-4:last-child p').text().length;
+$(window).scroll(function() {
+	scrolled = $(window).scrollTop();
 
-	if (urlLength == 0) {
-		$('.page-wrapper--portfolio .page-section--info-header .medium-4').addClass('info-header__section-wrap');
-		$('.info-header__section-wrap').removeClass('medium-4').addClass('medium-6');
-		$('.info-header__section-wrap:last-child').addClass('hide');
+	opacity();
+
+	if ($(window).width() >= 1024) {
+		parallax();
 	}
-}
 
-function profileInstagram() {
-	var itemWidth = $('.instagram--item .background-image').width();
+	if (scrolled >= $('.section--photos').offset().top) {
+		$('.section--photos').addClass('scrolled');
+		$('.section--contact').addClass('show').removeClass('hide');
+	}
 
-	console.log(itemWidth);
+	else {
+		$('.section--photos').removeClass('scrolled');
+		$('.section--contact').removeClass('show').addClass('hide');
+	}
+});
 
-	$('.instagram--item .background-image').css({
-		height: itemWidth + 'px'
-	});
-}
-
-$(document).ready(function() {
-	document.getElementById('copyyear').innerHTML = (copyright(2013));
-
-	// Last.FM
-	// ==============================
-	if ($('#lastfm').length > 0) {
-		$('.profile__sidebar--music').css('display', 'block');
-		var method = 'user.getTopArtists',
-		username = 'nothingrandom',
-		api_key = '928f184254c119b939f618cdbf36e58d',
-		period = '1month',
-		limit = '5';
-		$.getJSON("http://ws.audioscrobbler.com/2.0/?method=" + method + "&user=" + username + "&api_key=" + api_key + "&period=" + period + "&limit=" + limit + "&format=json&callback=?", function(json) {
-			var html = '';
-			$.each(json.topartists.artist, function(i, item) {
-				html += "<li><a href=" + item.url + " target='_blank'>" + item.name + "</a></li>";
+$.ajax({
+	url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent('https://medium.com/feed/@nothingrandom'),
+	dataType: 'json',
+	success: function(data) {
+		if (data.responseData.feed && data.responseData.feed.entries) {
+			$.each(data.responseData.feed.entries, function(i, e) {
+				$('.js-medium-first').append('<div class="js-medium-item"><h5><a href="' + e.link + '">' + e.title + '</a></h5><p class="font--large">' + e.contentSnippet.slice(0, -28) + ' <a href="' + e.link + '">+</a></p></div>');
+				$('.js-medium').append('<li><a href="' + e.link + '">' + e.title + '</a></li>');
 			});
-			$('#lastfm').append(html);
-		});
+		}
 	}
+});
 
-	// Instafeed (see vendor)
-	// ==============================
+$(function() {
+	$('.js-loaded').addClass('true');
+	$('.js-not-loaded').addClass('false');
+	$('.page-wrapper').removeClass('no-js');
+
+	$('.menu-button').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('active');
+		$('.header--main').toggleClass('active');
+	});
+
+	var gridElem = document.querySelector('#instafeed');
+	var msnry;
+
 	if ($('#instafeed').length > 0) {
 		var feed = new Instafeed({
 			get: 'user',
-			limit: 12,
+			limit: 12, //goes into 2 and 3
 			links: true,
-			resolution: 'low_resolution',
+			resolution: 'standard_resolution',
 			sortBy: 'most-recent',
-			template: '<div class="column small-6 medium-4 large-2"><div class="instagram--item"><a href="{{link}}"><div class="background-image" style="background-image: url({{image}});"></div><div class="instagram--item__hover"><h4>{{caption}}</h4></div></div></a></div>',
+			template: '<div class="photo__item"><a href="{{link}}"><img src="{{image}}" /><div class="photo__info"><h5>{{caption}}</h5></div></a></div>',
 			userId: 896545907,
-			accessToken: '896545907.1210342.dcf80e3b731848189d8ed763572cca5d'
+			accessToken: '896545907.1210342.dcf80e3b731848189d8ed763572cca5d',
+			after: function() {
+				msnry = new Masonry('#instafeed', {
+					transitionDuration: '0.2s'
+				});
+				imagesLoaded(gridElem).on('progress', function() {
+					msnry.layout();
+				});
+			}
 		});
 		feed.run();
 	}
-
-	availability();
-	italicAmp();
-	blogTags();
-	blogLength();
-	blogCatHead();
-	portfolioURL();
-});
-
-$(window).load(function() {
-	profileInstagram();
-
-	$(window).resize(function() {
-		profileInstagram();
-	});
 });
