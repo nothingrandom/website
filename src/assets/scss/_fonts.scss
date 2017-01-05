@@ -1,66 +1,145 @@
-// @include font-face("Font Name", "/path/to/font", 400, normal);
+// @include font-face('Font Name', '/path/to/font', 400, normal);
 
-@include font-face("Proxima Nova", "../fonts/proximanova-light-webfont", 300, normal);
+// LL Circular
+@include font-face('Circular', '../fonts/CircularStd-Book', 400, normal);
+@include font-face('Circular', '../fonts/CircularStd-BookItalic', 400, italic);
 
-@include font-face("Minion", "../fonts/MinionPro-Disp", normal, normal);
+@include font-face('Circular', '../fonts/CircularStd-Medium', 500, normal);
 
-@include font-face("Minion", "../fonts/MinionPro-ItDisp", normal, italic);
+@include font-face('Circular', '../fonts/CircularStd-Bold', 700, normal);
 
-$sans-serif: Proxima Nova, sans-serif;
-$serif: Minion, Georgia, Times, serif;
+@include font-face('Circular', '../fonts/CircularStd-Black', 900, normal);
+
+$sans: 'Circular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+// Tisa Pro
+@include font-face('Tisa Pro', '../fonts/TisaPro-Regular', 400, normal);
+@include font-face('Tisa Pro', '../fonts/TisaPro-Ita', 400, italic);
+
+$serif: 'Tisa Pro', serif;
+
+body {
+	color: palette(gray, dark);
+}
 
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p,
-li {
-	font-family: $serif;
-	font-weight: 300;
-	font-style: normal;
+li,
+span,
+a {
+	font-family: $sans;
+	font-weight: 400;
+	font-feature-settings: 'ss02', 'ss04', 'ss06'; //ss03 for curled 'r'
+}
+
+// p,
+// p a {
+// 	font-family: $serif;
+// }
+
+h1 {
+	font-size: em(78px);
+	font-weight: 700;
+	line-height: 1.15;
+
+	@include screen-max($screen-md) {
+		font-size: em(60px);
+	}
+
+	@include screen-max($screen-sm) {
+		font-size: em(39px);
+	}
 }
 
 h2 {
-	font-size: em(26px);
+	font-size: (42px);
+	font-weight: 500;
+
+	@include screen-max($screen-md) {
+		font-size: em(32px);
+	}
+
+	@include screen-max($screen-sm) {
+		font-size: em(26px);
+	}
 }
 
 h3 {
-	font-size: em(20px);
+	position: absolute;
+	// z-index: -1;
+	top: 0;
+	margin: $h3-margin 0 0 -30px;
+	color: palette(gray);
+	font-size: em(200px);
+	font-weight: 900;
+	line-height: 1;
+	user-select: none;
+
+	@include screen-max($screen-md) {
+		margin: -15px 0 0 -10px !important;
+		font-size: em(150px);
+	}
+
+	@include screen-max($screen-sm) {
+		margin: -5px 0 0 0 !important;
+		font-size: em(80px);
+	}
 }
 
 h4 {
-	font-family: $sans-serif;
+	margin: 0;
+	padding: 20px 0 10px;
+	border-top: 10px solid palette(white);
+	color: palette(white);
 	font-size: em(14px);
-	font-weight: 300;
-	font-style: normal;
-	letter-spacing: em(2px);
+	font-weight: 700;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+}
+
+h5 {
+	margin: 0;
+	font-size: em(30px);
+	font-weight: 900;
+	line-height: 1.2;
+
+	a {
+		font-weight: 900;
+	}
+}
+
+h6 {
+	color: palette(white);
+	font-size: em(14px);
+	font-weight: 700;
+	letter-spacing: 3px;
 	text-transform: uppercase;
 }
 
 p {
-	margin: em(16px) 0;
-	color: palette(black);
-	// font-size: em(20px);
 	font-size: em(18px);
-	letter-spacing: em(.25px);
-	line-height: em(20px);
-}
 
-.text--italic {
-	font-style: italic;
-}
+	@include screen-max($screen-sm) {
+		font-size: em(16px);
+	}
 
-.text--image-caption {
-	font-size: em(18px);
-}
+	&.font--large {
+		font-size: em(24px);
+		font-weight: 500;
+		line-height: 1.3;
 
-.text--left {
-	text-align: left;
-}
+		span,
+		a {
+			font-weight: 500;
+		}
 
-.text--center {
-	text-align: center;
-}
-
-.text--right {
-	text-align: right;
+		@include screen-max($screen-sm) {
+			font-size: em(18px);
+		}
+	}
 }

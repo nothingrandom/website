@@ -1,0 +1,57 @@
+.background-image {
+	background-image: url('../images/hero.jpg');
+
+	&,
+	&:before,
+	&:after {
+		// @extend %position-stretch;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: -1;
+		height: calc(100vh + 60px);
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: cover;
+		will-change: transform;
+
+		@include screen-max($screen-sm) {
+			// margin-top: $page-border / 2;
+		}
+	}
+
+	&:before,
+	&:after {
+		content: '';
+		background-color: inherit;
+	}
+
+	&.glimpsed {
+		&:after {
+			opacity: 1;
+		}
+
+		&:before,
+		&:after {
+			transition: opacity $transition-time 0 ease-in-out;
+		}
+	}
+
+	&.glimpsed:before,
+	&:after,
+	&.glimpsed.loaded:after {
+		opacity: 0;
+	}
+
+	&.loaded:after {
+		transition: opacity .6s ease;
+	}
+}
+
+.background-color {
+	@extend %position-stretch;
+	position: fixed;
+	z-index: -1;
+	background-color: palette(gray);
+}

@@ -9,27 +9,31 @@
 		<!-- html base -->
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0"/>
 		<meta name="msapplication-tap-highlight" content="no" />
+		<meta name="theme-color" content="#2E2E2E">
 
 		<!-- page info -->
-		<title><?php perch_pages_title(); ?> || nothingrandom</title>
-		<meta name="description" content="Freelance Front-end Developer based in Brighton, UK." />
-		<link type="text/plain" rel="author" href="http://nothingrandom.com/humans.txt" />
-
-		<meta property="og:image" content="http://nothingrandom.com/perch/resources/profile@2x.jpg"/>
-		<link rel="icon" type="image/png" href="http://nothingrandom.com/images/favicon.png"/>
+		<title>Benjamin Hollway</title>
+		<meta name="keywords" content=""/>
+		<meta name="description" content="">
+		<link rel="icon" type="image/png" href="assets/images/.png"/>
 
 		<!-- stylesheets -->
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 
 		<!-- scripts -->
-		<script src="/assets/js/scripts.js" type="text/javascript"></script>
-		<script src="/assets/js/vendor/instafeed.min.js" type="text/javascript"></script>
+		<!-- <script src="/assets/js/vendor/glimpse.blur.js" type="text/javascript"></script> -->
+		<script async src="/assets/js/vendor/glimpse.min.js" type="text/javascript"></script>
+		<script defer src="/assets/js/vendor/instafeed.min.js" type="text/javascript"></script>
+		<script defer src="/assets/js/vendor/masonry.pkgd.min.js" type="text/javascript"></script>
+		<script defer src="/assets/js/vendor/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+		<script defer src="/assets/js/scripts.js" type="text/javascript"></script>
+		<script defer src="https://use.fontawesome.com/044d29add3.js"></script>
 
 		<!-- IE specifics -->
 		<!--[if IE]><!-->
-			<script src="/assets/js/vendor/modernizr.js" type="text/javascript"></script>
+			<script async src="/assets/js/vendor/modernizr.js" type="text/javascript"></script>
 		<!--<![endif]-->
 	</head>
 	<body>

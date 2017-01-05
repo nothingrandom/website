@@ -1,0 +1,36 @@
+.section--blog {
+	@extend %h4-column;
+	margin-top: 4px;
+
+	.js-medium-item {
+		display: none;
+
+		&:first-of-type {
+			display: block;
+		}
+	}
+
+	p {
+		position: relative;
+		max-width: 590px;
+		margin: 5px 0 0;
+	}
+
+	li {
+		margin: 0;
+		font-size: em(30px);
+		line-height: 1.2;
+
+		a {
+			font-weight: 900;
+		}
+
+		&:first-child {
+			display: none;
+		}
+
+		&:nth-child(n+5) {
+			display: none;
+		}
+	}
+}

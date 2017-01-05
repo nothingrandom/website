@@ -1,0 +1,41 @@
+.page-wrapper--about {
+	.page-section {
+		position: relative;
+		min-height: calc(100vh - 60px);
+		opacity: 0;
+		animation: fadeIn ease-in 1;
+		animation-fill-mode: forwards;
+		animation-duration: .5s;
+
+		@include screen-max($screen-sm) {
+			padding-top: 75px;
+		}
+
+		h2 {
+			@include screen-max($screen-sm) {
+				margin-bottom: 5px;
+			}
+		}
+
+		p {
+			color: darken(palette(white), 10%);
+			font-size: em(19px);
+			line-height: 1.4;
+		}
+
+		.btn {
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.cv__info {
+	p {
+		margin: 0;
+
+		&:last-child {
+			margin-bottom: 40px;
+		}
+	}
+}

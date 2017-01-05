@@ -1,0 +1,11 @@
+a {
+	color: palette(blue);
+	text-decoration: none;
+	transition: color ease-in-out $transition-time;
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: palette(purple);
+	}
+}
