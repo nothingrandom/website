@@ -15,11 +15,11 @@ function opacity() {
 	if (scrolled >= $('.section--blog').offset().top - 200) {
 		var eq = Math.min(1, ((scrolled - ($('.section--blog').offset().top - 100)) * 0.0025));
 		var eq2 = Math.min(1, ((scrolled - ($('.section--photos').offset().top - 400)) * 0.0025));
-		var eq3 = Math.min(1, ((scrolled - ($('.section--photos').offset().top + 1050)) * 0.0025));
+		// var eq3 = Math.min(1, ((scrolled - ($('.section--photos').offset().top + 1050)) * 0.0025));
 
 		$('.page-opacity').css('opacity', eq).addClass('show').removeClass('hide');
 		$('.page-opacity-two').css('opacity', eq2);
-		$('.section--contact .section__content').css('opacity', eq3);
+		// $('.section--contact .section__content').css('opacity', eq3);
 	}
 
 	else {

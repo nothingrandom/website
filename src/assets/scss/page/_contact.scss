@@ -7,7 +7,7 @@
 	border-bottom: $page-border solid palette(white);
 
 	.section__content {
-		opacity: 0;
+		// opacity: 0;
 	}
 
 	@include screen-max($screen-md) {
@@ -37,7 +37,7 @@
 	}
 
 	.social-links--icons {
-		margin-top: 0px;
+		margin-top: 0;
 	}
 }
 
@@ -62,28 +62,34 @@
 	.page-section {
 		position: relative;
 		min-height: calc(100vh - 40px);
+		padding-top: 100px;
+
+		@include screen-max($screen-sm) {
+			padding-top: 75px;
+			min-height: calc(100vh);
+		}
 
 		.row {
 			min-height: calc(100vh - 140px);
 		}
 
-		.vertical-align {
-			position: absolute;
-			top: 30%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			opacity: 0;
-			animation: fadeIn ease-in 1;
-			animation-fill-mode: forwards;
-			animation-duration: .5s;
-			// animation-delay: .5s;
+		// .vertical-align {
+		// 	position: absolute;
+		// 	top: 30%;
+		// 	left: 50%;
+		// 	transform: translate(-50%, -50%);
+		// 	opacity: 0;
+		// 	animation: fadeIn ease-in 1;
+		// 	animation-fill-mode: forwards;
+		// 	animation-duration: .5s;
+		// 	// animation-delay: .5s;
 
-			@include screen-max($screen-sm) {
-				top: 0;
-				left: 0;
-				transform: none;
-			}
-		}
+		// 	@include screen-max($screen-sm) {
+		// 		top: 0;
+		// 		left: 0;
+		// 		transform: none;
+		// 	}
+		// }
 
 		.social-links {
 			position: fixed;
@@ -97,6 +103,9 @@
 			animation-delay: .5s;
 
 			@include screen-max($screen-sm) {
+				position: relative;
+				bottom: 0;
+				margin-top: 160px;
 				padding: 0 40px;
 			}
 		}
