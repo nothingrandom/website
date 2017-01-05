@@ -12,7 +12,8 @@
 	}
 
 	@include screen-max($screen-sm) {
-		margin-top: -335px;
+		margin-top: -350px;
+		height: 350px;
 	}
 
 	&.active {

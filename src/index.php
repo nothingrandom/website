@@ -217,7 +217,7 @@
 						<li><a href="https://twitter.com/benjaminhollway">Twitter</a></li>
 						<li><a href="https://www.instagram.com/benjaminhollway">Instagram</a></li>
 						<li><a href="https://github.com/nothingrandom">GitHub</a></li>
-						<li><a href="https://medium.com/feed/@nothingrandom">Medium</a></li>
+						<li><a href="https://medium.com/@nothingrandom">Medium</a></li>
 						<li><a href="https://dribbble.com/nothingrandom">Dribble</a></li>
 						<li><a href="skype:nothingrandom?chat">Skype</a></li>
 						<li><a href="https://open.spotify.com/user/nothingrandom">Spotify</a></li>

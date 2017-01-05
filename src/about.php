@@ -9,17 +9,16 @@
 	<div class="page-section">
 		<div class="row">
 			<div class="column small-12">
-				<h2>A little more about me &mdash;</h2>
+				<h2>A little more about him &mdash;</h2>
 			</div>
 			<div class="column small-12 medium-6">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla! Fuga distinctio minima est quis iusto, obcaecati ad earum iste blanditiis expedita, dolorem enim iure, pariatur assumenda ullam dignissimos. Dolores officiis, et aperiam delectus odit dolore magni nostrum reprehenderit recusandae beatae a odio asperiores eligendi tempore quasi sequi ducimus ea.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla! Fuga distinctio minima est quis iusto, obcaecati ad earum iste blanditiis expedita, dolorem enim iure, pariatur assumenda ullam dignissimos. Dolores officiis, et aperiam delectus odit dolore magni nostrum reprehenderit recusandae beatae a odio asperiores eligendi tempore quasi sequi ducimus ea.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla! Fuga distinctio minima est quis iusto, obcaecati ad earum iste blanditiis expedita, dolorem enim iure, pariatur assumenda ullam dignissimos. Dolores officiis, et aperiam delectus odit dolore magni nostrum reprehenderit recusandae beatae a odio asperiores eligendi tempore quasi sequi ducimus ea.</p>
+				<p>Benjamin has been exploring the field of web development since he was eight years old. Starting small with Visual Basic, he is now an acredited coder in HTML, CSS/SCSS, Javascript and JQuery; working alongside a range of clients and agencies to build responsive, performance-based, and accessible websites. In 2014, he was nominated for the ‘Net Mag’s Emerging Talent’ award, featured on ‘Unfinished Business’, and  spoke at ‘The Web Is’ conference in Cardiff. In 2015, he spoke at ‘Upfront Mini’ on the importance of teaching young people about coding.</p>
+				<p>Each website Benjamin builds is unique and functional. He pays attention to the small details - every pixel matters. He also believes in following web standards, and continues to learn about new web technologies including Python, React framework, and Ruby on Rails. When crafting your website, Benjamin will spend time with you, researching your idea brainstorming. His end goal is to create a website which reflects and encompasses the heart of your project, whilst creating a strong foundation for your business. Your website will be the main point of access for many consumers and clients, and for some it will be the centre of your brand.</p>
+				<p>You may see Benjamin cycling around Brighton, or taking photos for his Instagram account, or even sitting in a coffee shop writing his <a href="https://medium.com/@nothingrandom">blog</a>. He is always looking for something new to occupy his mind, and is excited to work with you.</p>
+				<p>If you’d like to know more about his formal background, feel free to drop him an email at <a href="mailto:b@nothingrandom.com">b@nothingrandom.com</a></p>
 			</div>
 			<div class="column small-12 medium-6">
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla! Fuga distinctio minima est quis iusto, obcaecati ad earum iste blanditiis expedita, dolorem enim iure, pariatur assumenda ullam dignissimos. Dolores officiis, et aperiam delectus odit dolore magni nostrum reprehenderit recusandae beatae a odio asperiores eligendi tempore quasi sequi ducimus ea.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla! Fuga distinctio minima est quis iusto, obcaecati ad earum iste blanditiis expedita, dolorem enim iure, pariatur assumenda ullam dignissimos. Dolores officiis, et aperiam delectus odit dolore magni nostrum reprehenderit recusandae beatae a odio asperiores eligendi tempore quasi sequi ducimus ea.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nulla! Fuga distinctio minima est quis iusto, obcaecati ad earum iste blanditiis expedita, dolorem enim iure, pariatur assumenda ullam dignissimos. Dolores officiis, et aperiam delectus odit dolore magni nostrum reprehenderit recusandae beatae a odio asperiores eligendi tempore quasi sequi ducimus ea.</p>
+				<img src="assets/images/benjamin.jpg" alt="" />
 			</div>
 			<div class="column small-12">
 				<div class="btn--center">

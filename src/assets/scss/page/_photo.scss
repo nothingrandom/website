@@ -2,6 +2,14 @@
 	margin-bottom: 327px;
 	overflow-y: visible;
 
+	@include screen-max($screen-md) {
+		margin-bottom: 440px;
+	}
+
+	@include screen-max($screen-sm) {
+		margin-bottom: 510px;
+	}
+
 	h3 {
 		margin-top: $h3-margin + 430px;
 		color: palette(black, off);
@@ -27,6 +35,7 @@
 
 .photo__item {
 	width: calc(33.333333333% - 28px);
+	padding: 0 14px;
 	margin: -2px 14px 28px;
 
 	&:before {
@@ -40,7 +49,7 @@
 
 	@include screen-max($screen-sm) {
 		width: 100%;
-		margin: -2px 0 28px;
+		margin: -2px 0 18px;
 
 		&:nth-child(n+7) {
 			display: none;
