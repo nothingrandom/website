@@ -23,7 +23,7 @@
 		<h3 id="parallax-one">Writing</h3> <!-- large text, sits behind, faint. parallax -->
 		<div class="row js-not-loaded">
 			<div class="column small-12">
-				<h2>I like to write about things sometimes &mdash;</h2>
+				<h2>General musings &mdash;</h2>
 				<div class="btn--center">
 					<a href="https://medium.com/@nothingrandom" class="btn btn--secondary btn--large">Medium</a>
 				</div>
@@ -207,7 +207,7 @@
 						<li><a href="https://twitter.com/benjaminhollway"><i class="fa fa-twitter"></i></a></li>
 						<li><a href="https://www.instagram.com/benjaminhollway"><i class="fa fa-instagram"></i></a></li>
 						<li><a href="https://github.com/nothingrandom"><i class="fa fa-github"></i></a></li>
-						<li><a href="https://medium.com/feed/@nothingrandom"><i class="fa fa-medium"></i></a></li>
+						<li><a href="https://medium.com/@nothingrandom"><i class="fa fa-medium"></i></a></li>
 						<li><a href="https://dribbble.com/nothingrandom"><i class="fa fa-dribbble"></i></a></li>
 						<li><a href="skype:nothingrandom?chat"><i class="fa fa-skype"></i></a></li>
 						<li><a href="https://open.spotify.com/user/nothingrandom"><i class="fa fa-spotify"></i></a></li>

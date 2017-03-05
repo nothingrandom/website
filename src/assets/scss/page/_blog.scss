@@ -2,6 +2,16 @@
 	@extend %h4-column;
 	margin-top: 4px;
 
+	&.error {
+		.js-not-loaded {
+			display: block;
+		}
+
+		.js-loaded {
+			display: none;
+		}
+	}
+
 	.js-medium-item {
 		display: none;
 
