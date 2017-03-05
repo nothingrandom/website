@@ -47,19 +47,6 @@ $(window).scroll(function() {
 	}
 });
 
-$.ajax({
-	url: document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent('https://medium.com/feed/@nothingrandom'),
-	dataType: 'json',
-	success: function(data) {
-		if (data.responseData.feed && data.responseData.feed.entries) {
-			$.each(data.responseData.feed.entries, function(i, e) {
-				$('.js-medium-first').append('<div class="js-medium-item"><h5><a href="' + e.link + '">' + e.title + '</a></h5><p class="font--large">' + e.contentSnippet.slice(0, -28) + ' <a href="' + e.link + '">+</a></p></div>');
-				$('.js-medium').append('<li><a href="' + e.link + '">' + e.title + '</a></li>');
-			});
-		}
-	}
-});
-
 $(function() {
 	$('.js-loaded').addClass('true');
 	$('.js-not-loaded').addClass('false');
@@ -96,4 +83,19 @@ $(function() {
 		});
 		feed.run();
 	}
+});
+
+$.ajax({
+	url: 'https://feed--api.herokuapp.com/v1?url=https://medium.com/feed/@nothingrandom',
+	dataType: 'json',
+	success: function(data) {
+		if (data.responseData.feed && data.responseData.feed.entries) {
+			$.each(data.responseData.feed.entries, function(i, e) {
+				console.log('ping');
+				$('.js-medium-first').append('<div class="js-medium-item"><h5><a href="' + e.link + '">' + e.title + '</a></h5><p class="font--large">' + e.contentSnippet.slice(0, -28) + ' <a href="' + e.link + '">+</a></p></div>');
+				$('.js-medium').append('<li><a href="' + e.link + '">' + e.title + '</a></li>');
+			});
+		}
+	},
+	error: $('.section--blog').addClass('error')
 });
