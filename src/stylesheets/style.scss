@@ -13,3 +13,130 @@ html {
 
 // YOUR STYLES HERE
 // ==============================
+html,
+body,
+.page {
+  overflow-x: hidden !important;
+}
+
+.section {
+  padding-bottom: 20px;
+  color: palette(black);
+}
+
+.section--intro {
+  h2 {
+    margin: em(20px) 0 em(10px);
+    font-size: em(47px);
+    line-height: 1.25;
+
+    @include breakpoint(md) {
+      margin-top: em(100px);
+    }
+  }
+
+  h1 {
+    margin-bottom: em(30px);
+    color: palette(grey);
+    font-size: em(20px);
+  }
+}
+
+.profile-pic {
+  position: relative;
+  right: -1.5rem;
+  margin-bottom: em(60px);
+
+  @include breakpoint(md) {
+    right: 0;
+  }
+
+  img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+    @include breakpoint(sm) {
+      width: 500px;
+      height: 500px;
+    }
+
+    @include breakpoint(md) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  a {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    color: palette(grey);
+    writing-mode: vertical-rl;
+
+    @include breakpoint(md) {
+      bottom: 300px;
+      left: -40px;
+    }
+  }
+}
+
+.section--work {
+  background-color: palette(black);
+  color: palette(white);
+}
+
+.section--blog {
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  h4 {
+    margin: 0;
+    font-size: em(24px);
+  }
+
+  h5 {
+    margin: 10px 0 0;
+    font-size: em(16px);
+  }
+
+  p {
+    color: palette(grey);
+    transition: color ease-in-out .2s;
+  }
+
+  a {
+    position: relative;
+    left: 0;
+    display: block;
+    margin-bottom: 20px;
+    transition: left ease-in-out .2s;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      left: 20px;
+
+      p {
+        color: palette(blue);
+      }
+    }
+  }
+}
+
+.section--contact {
+  background-color: lighten(palette(blue), 28%);
+
+  ul {
+    margin: 30px 0;
+    text-align: center;
+    column-count: 3;
+
+    @include breakpoint(sm) {
+      column-count: 6;
+    }
+  }
+}
