@@ -166,4 +166,40 @@ body,
       column-count: 6;
     }
   }
+
+  a {
+    display: inline-block;
+    color: palette(grey);
+    transition: color ease-in-out .2s;
+
+    &::after {
+      position: relative;
+      right: 0;
+      bottom: -3px;
+      left: 0;
+      display: block;
+      height: 2px;
+      content: '';
+      background-color: palette(blue);
+      opacity: 0;
+      transition: all ease-in-out .2s;
+    }
+
+    &:hover {
+      color: palette(black);
+
+      &::after {
+        bottom: 2px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.col-xs-hidden {
+  display: none;
+
+  @include breakpoint(md) {
+    display: block;
+  }
 }
