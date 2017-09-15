@@ -87,6 +87,33 @@ body,
 }
 
 .section--blog {
+  ul {
+    columns: 1;
+
+    @include breakpoint(md) {
+      columns: 2;
+    }
+  }
+
+  li {
+    list-style: none;
+
+
+    &:nth-child(n+4) {
+      display: none;
+
+      @include breakpoint(md) {
+        display: block;
+      }
+    }
+
+    @include breakpoint(md) {
+      &:nth-child(n+7) {
+        display: none;
+      }
+    }
+  }
+
   h2 {
     margin-bottom: 1em;
   }
