@@ -1,3 +1,30 @@
+%highlight {
+  position: relative;
+
+  &:first-of-type {
+    &::after {
+      left: -2px;
+    }
+  }
+
+  &:last-of-type {
+    &::after {
+      right: -2px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    right: -5px;
+    bottom: -1px;
+    left: -5px;
+    z-index: -1;
+    content: '';
+    background-color: rgba-convert(palette(blue), .4);
+  }
+}
+
 h2,
 h3,
 h4,
@@ -23,30 +50,7 @@ h2 {
 
 p {
   .highlight {
-    position: relative;
-
-    &:first-of-type {
-      &::after {
-        left: -2px;
-      }
-    }
-
-    &:last-of-type {
-      &::after {
-        right: -2px;
-      }
-    }
-
-    &::after {
-      position: absolute;
-      top: 8px;
-      right: -5px;
-      bottom: -1px;
-      left: -5px;
-      z-index: -1;
-      content: '';
-      background-color: rgba-convert(palette(blue), .4);
-    }
+    @extend %highlight;
   }
 }
 
