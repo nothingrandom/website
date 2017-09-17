@@ -11,11 +11,11 @@ html {
 
 @import 'typography';
 
-html,
-body,
-.page {
-  overflow-x: hidden;
-}
+// html,
+// body,
+// .page {
+//   overflow-x: hidden;
+// }
 
 .section {
   padding-top: rem(20px);
@@ -81,6 +81,11 @@ body,
     @include breakpoint(md) {
       right: unset;
       left: -40px;
+    }
+
+    .fa-long-arrow-down {
+      position: relative;
+      right: -2px;
     }
   }
 }
@@ -153,6 +158,12 @@ body,
 
       @include breakpoint(md) {
         display: block;
+      }
+    }
+
+    @include breakpoint(md) {
+      &:nth-child(n+7) {
+        display: none;
       }
     }
 
