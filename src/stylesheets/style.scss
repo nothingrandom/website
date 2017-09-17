@@ -11,11 +11,9 @@ html {
 
 @import 'typography';
 
-// html,
-// body,
-// .page {
-//   overflow-x: hidden;
-// }
+.page {
+  overflow-x: hidden;
+}
 
 .section {
   padding-top: rem(20px);
@@ -69,10 +67,14 @@ html {
 
   a {
     position: absolute;
-    right: 300px;
+    right: 272px;
     bottom: 0;
     color: palette(grey);
     writing-mode: vertical-rl;
+
+    @include breakpoint(xxs) {
+      right: 300px;
+    }
 
     @include breakpoint(sm) {
       right: 500px;
