@@ -18,7 +18,7 @@ $(function() {
 
       $.each(response.items, function(k, item) {
         if (item.categories.length) {
-          output += '<li class="blog__item"><a href="' + item.link + '" >';
+          output += '<li class="blog__item"><a href="' + item.link + '" class="blog__link">';
           output += '<h4 class="blog__title">' + item.title + '</h4>';
           var $desc = $(item.description).filter('h4');
 
