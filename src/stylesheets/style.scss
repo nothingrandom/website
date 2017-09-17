@@ -11,8 +11,6 @@ html {
 
 @import 'typography';
 
-// YOUR STYLES HERE
-// ==============================
 html,
 body,
 .page {
@@ -38,6 +36,7 @@ body,
 
   h1 {
     margin-bottom: rem(30px);
+    padding-right: 50px;
     color: palette(grey);
     font-size: em(20px);
   }
@@ -64,19 +63,23 @@ body,
 
     @include breakpoint(md) {
       width: 100%;
-      height: auto;
+      // height: auto;
     }
   }
 
   a {
     position: absolute;
+    right: 300px;
     bottom: 0;
-    left: -10px;
     color: palette(grey);
     writing-mode: vertical-rl;
 
+    @include breakpoint(sm) {
+      right: 500px;
+    }
+
     @include breakpoint(md) {
-      bottom: 300px;
+      right: unset;
       left: -40px;
     }
   }
@@ -124,9 +127,26 @@ body,
     }
   }
 
-  li {
+  h2 {
+    margin-bottom: 1em;
+  }
+
+  a {
+    &:not(.blog__link) {
+      @include link-underline(palette(blue));
+      color: palette(grey);
+    }
+  }
+
+  .blog__item {
     display: inline-block;
     list-style: none;
+
+    @include breakpoint(md) {
+      &:nth-child(n+7) {
+        display: none;
+      }
+    }
 
     &:nth-child(n+4) {
       display: none;
@@ -136,46 +156,36 @@ body,
       }
     }
 
-    @include breakpoint(md) {
-      &:nth-child(n+7) {
-        display: none;
-      }
+    h4 {
+      margin: 0;
+      font-size: em(24px);
     }
-  }
 
-  h2 {
-    margin-bottom: 1em;
-  }
+    h5 {
+      margin: 10px 0 0;
+      font-size: em(16px);
+    }
 
-  h4 {
-    margin: 0;
-    font-size: em(24px);
-  }
+    p {
+      color: palette(grey);
+      transition: color ease-in-out .2s;
+    }
 
-  h5 {
-    margin: 10px 0 0;
-    font-size: em(16px);
-  }
+    a {
+      position: relative;
+      display: block;
+      margin-bottom: 30px;
+      padding-right: 40px;
+      padding-left: 0;
+      transition: padding ease-in-out .2s;
 
-  p {
-    color: palette(grey);
-    transition: color ease-in-out .2s;
-  }
+      &:hover {
+        padding-right: 20px;
+        padding-left: 20px;
 
-  a {
-    position: relative;
-    display: block;
-    margin-bottom: 30px;
-    padding-right: 40px;
-    padding-left: 0;
-    transition: padding ease-in-out .2s;
-
-    &:hover {
-      padding-right: 20px;
-      padding-left: 20px;
-
-      p {
-        color: palette(blue);
+        p {
+          color: palette(blue);
+        }
       }
     }
   }
@@ -210,17 +220,8 @@ body,
   padding-top: 40px;
   padding-bottom: 0;
 
-  img {
-    width: 80%;
-    margin: 0 auto rem(40px);
-  }
-
   @include breakpoint(md) {
-    padding-top: em(200px);
-  }
-
-  @include breakpoint(md) {
-    padding: em(180px) em(100px) em(50px);
+    padding: em(200px) em(100px) em(30px);
     background-color: palette(white);
 
     img {
@@ -251,6 +252,112 @@ body,
       position: relative;
       // top: 50px;
       left: $image-overlap;
+    }
+  }
+
+  img {
+    width: 80%;
+    margin: 0 auto rem(40px);
+  }
+}
+
+.section--footer {
+  padding: em(20px) 0;
+  background-color: palette(black);
+  text-align: center;
+
+  span {
+    font-family: $sans;
+  }
+
+  .logo {
+    display: inline-block;
+    color: palette(white);
+    font-size: em(34px);
+    font-weight: 700;
+    letter-spacing: 0;
+
+    .collapse {
+      display: inline-block;
+      max-width: 0;
+      transition: max-width .3s .2s cubic-bezier(0, 0, 0, 1);
+
+      em {
+        opacity: 0;
+        font-style: normal;
+        transform: translate(0, -5px);
+
+        &:nth-of-type(1) {
+          transition: all .2s .3s linear;
+        }
+
+        &:nth-of-type(2) {
+          transition: all .2s .25s linear;
+        }
+
+        &:nth-of-type(3) {
+          transition: all .2s .2s linear;
+        }
+
+        &:nth-of-type(4) {
+          transition: all .2s .15s linear;
+        }
+
+        &:nth-of-type(5) {
+          transition: all .2s .1s linear;
+        }
+
+        &:nth-of-type(6) {
+          transition: all .2s .05s linear;
+        }
+
+        &:nth-of-type(7) {
+          transition: all .2s linear;
+        }
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: palette(white);
+
+      .collapse {
+        max-width: 300px;
+        transition: max-width .3s cubic-bezier(0, 0, 0, 1);
+
+        em {
+          opacity: 1;
+          transform: translate(0, 0);
+
+          &:nth-of-type(1) {
+            transition: all .2s linear;
+          }
+
+          &:nth-of-type(2) {
+            transition: all .2s .05s linear;
+          }
+
+          &:nth-of-type(3) {
+            transition: all .2s .1s linear;
+          }
+
+          &:nth-of-type(4) {
+            transition: all .2s .15s linear;
+          }
+
+          &:nth-of-type(5) {
+            transition: all .2s .2s linear;
+          }
+
+          &:nth-of-type(6) {
+            transition: all .2s .25s linear;
+          }
+
+          &:nth-of-type(7) {
+            transition: all .2s .3s linear;
+          }
+        }
+      }
     }
   }
 }
