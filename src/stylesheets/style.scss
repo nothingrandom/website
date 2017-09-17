@@ -205,6 +205,56 @@ body,
   }
 }
 
+.section--photos {
+  $image-overlap: em(-40px);
+  padding-top: 40px;
+  padding-bottom: 0;
+
+  img {
+    width: 80%;
+    margin: 0 auto rem(40px);
+  }
+
+  @include breakpoint(md) {
+    padding-top: em(200px);
+  }
+
+  @include breakpoint(md) {
+    padding: em(180px) em(100px) em(50px);
+    background-color: palette(white);
+
+    img {
+      width: 100%;
+    }
+
+    .image--wrap {
+      position: relative;
+    }
+
+    .image--float {
+      position: absolute;
+      top: -260px;
+      left: 50%;
+      z-index: 3;
+      width: 400px;
+      transform: translateX(-50%);
+    }
+
+    .image--left {
+      position: relative;
+      top: 60px;
+      right: $image-overlap;
+      z-index: 2;
+    }
+
+    .image--right {
+      position: relative;
+      // top: 50px;
+      left: $image-overlap;
+    }
+  }
+}
+
 .col-xs-hidden {
   display: none;
 
