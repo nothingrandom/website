@@ -20,7 +20,8 @@ body,
 }
 
 .section {
-  padding-bottom: 20px;
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
   color: palette(black);
 }
 
@@ -31,12 +32,12 @@ body,
     line-height: 1.25;
 
     @include breakpoint(md) {
-      margin-top: em(100px);
+      margin-top: rem(100px);
     }
   }
 
   h1 {
-    margin-bottom: em(30px);
+    margin-bottom: rem(30px);
     color: palette(grey);
     font-size: em(20px);
   }
@@ -45,7 +46,7 @@ body,
 .profile-pic {
   position: relative;
   right: -1.5rem;
-  margin-bottom: em(60px);
+  margin-bottom: rem(60px);
 
   @include breakpoint(md) {
     right: 0;
@@ -84,6 +85,34 @@ body,
 .section--work {
   background-color: palette(black);
   color: palette(white);
+
+  a {
+    @include link-underline(palette(white));
+    color: palette(grey);
+    transition: color ease-in-out .2s;
+
+    &:hover {
+      color: palette(white);
+    }
+  }
+
+  h4 {
+    font-size: em(24px);
+  }
+
+  .work__item {
+    margin-bottom: rem(40px);
+
+    &:first-child {
+      margin-top: rem(30px);
+    }
+
+    img {
+      @include breakpoint(md) {
+        padding-right: rem(40px);
+      }
+    }
+  }
 }
 
 .section--blog {
@@ -96,8 +125,8 @@ body,
   }
 
   li {
+    display: inline-block;
     list-style: none;
-
 
     &:nth-child(n+4) {
       display: none;
@@ -166,30 +195,12 @@ body,
   }
 
   a {
-    display: inline-block;
+    @include link-underline(palette(blue));
     color: palette(grey);
     transition: color ease-in-out .2s;
 
-    &::after {
-      position: relative;
-      right: 0;
-      bottom: -3px;
-      left: 0;
-      display: block;
-      height: 2px;
-      content: '';
-      background-color: palette(blue);
-      opacity: 0;
-      transition: all ease-in-out .2s;
-    }
-
     &:hover {
       color: palette(black);
-
-      &::after {
-        bottom: 2px;
-        opacity: 1;
-      }
     }
   }
 }
