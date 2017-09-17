@@ -147,12 +147,6 @@ html {
     display: inline-block;
     list-style: none;
 
-    @include breakpoint(md) {
-      &:nth-child(n+7) {
-        display: none;
-      }
-    }
-
     &:nth-child(n+4) {
       display: none;
 
@@ -232,7 +226,7 @@ html {
   padding-bottom: 0;
 
   @include breakpoint(md) {
-    padding: em(200px) em(100px) em(30px);
+    padding: em(130px) em(100px) 0;
     background-color: palette(white);
 
     img {
@@ -241,29 +235,49 @@ html {
 
     .image--wrap {
       position: relative;
+      right: $image-overlap * 2;
     }
 
     .image--float {
       position: absolute;
-      top: -260px;
+      top: -160px;
       left: 50%;
       z-index: 3;
-      width: 400px;
+      width: 60%;
       transform: translateX(-50%);
+
+      @include breakpoint(lg) {
+        top: -260px;
+        width: 400px;
+      }
     }
 
     .image--left {
       position: relative;
-      top: 60px;
-      right: $image-overlap;
-      z-index: 2;
+      top: 70px;
+      // right: $image-overlap;
+      // z-index: 2;
+
+      @include breakpoint(lg) {
+
+      }
     }
 
     .image--right {
       position: relative;
-      // top: 50px;
+      top: -40px;
       left: $image-overlap;
+
+      @include breakpoint(lg) {
+        top: -100px;
+        left: $image-overlap * 2;
+      }
     }
+  }
+
+  @include breakpoint(lg) {
+    padding-top: em(230px);
+    padding-bottom: 0;
   }
 
   img {
