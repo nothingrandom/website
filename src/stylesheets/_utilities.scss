@@ -255,6 +255,11 @@
         @content;
       }
     }
+    @else if $min == 'xl' {
+      @include screen-min($screen-xl) {
+        @content;
+      }
+    }
   }
 
   @else if $type == number {
