@@ -238,6 +238,10 @@ html {
     .image--wrap {
       position: relative;
       right: $image-overlap * 2;
+
+      @include breakpoint(xl) {
+        right: $image-overlap * 3;
+      }
     }
 
     .image--float {
@@ -257,12 +261,7 @@ html {
     .image--left {
       position: relative;
       top: 70px;
-      // right: $image-overlap;
       // z-index: 2;
-
-      @include breakpoint(lg) {
-
-      }
     }
 
     .image--right {
@@ -273,6 +272,10 @@ html {
       @include breakpoint(lg) {
         top: -100px;
         left: $image-overlap * 2;
+      }
+
+      @include breakpoint(xl) {
+        left: $image-overlap * 3;
       }
     }
   }
