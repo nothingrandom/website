@@ -93,12 +93,5 @@ node_modules
 .sass-cache
 *.css.map
 
-### barebones ###
-src/assets/css
-src/assets/js/scripts.js
-build/
-
-src/assets/fonts
-
-### Perch ###
-src/perch/resources
+src/fonts
+public/
