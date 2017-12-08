@@ -38,6 +38,13 @@ html {
     color: palette(grey);
     font-size: em(20px);
   }
+
+  .intro__blurb {
+    a {
+      @include link-underline(palette(blue));
+      color: palette(grey);
+    }
+  }
 }
 
 .profile-pic {
@@ -92,7 +99,7 @@ html {
   }
 }
 
-.section--work {
+.section--music {
   background-color: palette(black);
   color: palette(white);
 
@@ -108,20 +115,6 @@ html {
 
   h4 {
     font-size: em(24px);
-  }
-
-  .work__item {
-    margin-bottom: rem(40px);
-
-    &:first-child {
-      margin-top: rem(30px);
-    }
-
-    img {
-      @include breakpoint(md) {
-        padding-right: rem(40px);
-      }
-    }
   }
 }
 
@@ -207,7 +200,7 @@ html {
     column-count: 3;
 
     @include breakpoint(sm) {
-      column-count: 6;
+      column-count: 5;
     }
   }
 
