@@ -99,25 +99,6 @@ html {
   }
 }
 
-.section--music {
-  background-color: palette(black);
-  color: palette(white);
-
-  a {
-    @include link-underline(palette(white));
-    color: palette(grey);
-    transition: color ease-in-out .2s;
-
-    &:hover {
-      color: palette(white);
-    }
-  }
-
-  h4 {
-    font-size: em(24px);
-  }
-}
-
 .section--blog {
   ul {
     columns: 1;
@@ -137,56 +118,75 @@ html {
       color: palette(grey);
     }
   }
+}
 
-  .blog__item {
-    display: inline-block;
-    list-style: none;
+.blog__item {
+  display: inline-block;
+  list-style: none;
 
-    &:nth-child(n+4) {
-      display: none;
-
-      @include breakpoint(md) {
-        display: block;
-      }
-    }
+  &:nth-child(n+4) {
+    display: none;
 
     @include breakpoint(md) {
-      &:nth-child(n+7) {
-        display: none;
-      }
-    }
-
-    h4 {
-      margin: 0;
-      font-size: em(24px);
-    }
-
-    h5 {
-      margin: 10px 0 0;
-      font-size: em(16px);
-    }
-
-    p {
-      color: palette(grey);
-      transition: color ease-in-out .2s;
-    }
-
-    a {
-      position: relative;
       display: block;
-      margin-bottom: 30px;
-      padding-right: 40px;
-      padding-left: 0;
-      transition: padding ease-in-out .2s;
+    }
+  }
 
-      &:hover {
-        padding-right: 20px;
-        padding-left: 20px;
+  @include breakpoint(md) {
+    &:nth-child(n+7) {
+      display: none;
+    }
+  }
 
-        p {
-          color: palette(blue);
-        }
+  h4 {
+    margin: 0;
+    font-size: em(24px);
+  }
+
+  h5 {
+    margin: 10px 0 0;
+    font-size: em(16px);
+  }
+
+  p {
+    color: palette(grey);
+    transition: color ease-in-out .2s;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    padding-right: 40px;
+    padding-left: 0;
+    transition: padding ease-in-out .2s;
+
+    &:hover {
+      padding-right: 20px;
+      padding-left: 20px;
+
+      p {
+        color: palette(blue);
       }
+    }
+  }
+}
+
+.section--projects {
+  background-color: palette(black);
+  color: palette(white);
+
+  h3 {
+    color: palette(grey);
+    font-family: $monospace;
+    font-weight: 400;
+    font-size: em(20px);
+  }
+
+  .blog__item {
+    h4,
+    h5 {
+      color: palette(white);
     }
   }
 }
@@ -200,7 +200,7 @@ html {
     column-count: 3;
 
     @include breakpoint(sm) {
-      column-count: 5;
+      column-count: 6;
     }
   }
 
@@ -248,6 +248,8 @@ html {
       @include breakpoint(lg) {
         top: -260px;
         width: 400px;
+        height: 345px;
+        object-fit: cover;
       }
     }
 

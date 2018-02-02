@@ -31,6 +31,7 @@ h4,
 h6 {
   font-family: $sans;
   font-feature-settings: 'ss02', 'ss04', 'ss06'; //ss03 for curled 'r'
+  font-display: swap;
 }
 
 h1,
@@ -41,6 +42,7 @@ a {
   font-family: $monospace;
   font-weight: 400;
   line-height: 1.4;
+  font-display: swap;
 }
 
 h2 {
