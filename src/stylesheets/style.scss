@@ -216,73 +216,11 @@ html {
 }
 
 .section--photos {
-  $image-overlap: em(-40px);
-  padding-top: 40px;
-  padding-bottom: 0;
-
-  @include breakpoint(md) {
-    padding: em(130px) em(100px) 0;
-    background-color: palette(white);
-
-    img {
-      width: 100%;
-    }
-
-    .image--wrap {
-      position: relative;
-      right: $image-overlap * 2;
-
-      @include breakpoint(xl) {
-        right: $image-overlap * 3;
-      }
-    }
-
-    .image--float {
-      position: absolute;
-      top: -160px;
-      left: 50%;
-      z-index: 3;
-      width: 60%;
-      transform: translateX(-50%);
-
-      @include breakpoint(lg) {
-        top: -260px;
-        width: 400px;
-        height: 345px;
-        object-fit: cover;
-      }
-    }
-
-    .image--left {
-      position: relative;
-      top: 70px;
-      // z-index: 2;
-    }
-
-    .image--right {
-      position: relative;
-      top: -40px;
-      left: $image-overlap;
-
-      @include breakpoint(lg) {
-        top: -100px;
-        left: $image-overlap * 2;
-      }
-
-      @include breakpoint(xl) {
-        left: $image-overlap * 3;
-      }
-    }
-  }
-
-  @include breakpoint(lg) {
-    padding-top: em(230px);
-    padding-bottom: 0;
-  }
+  padding: em(60px) 0;
 
   img {
-    width: 80%;
-    margin: 0 auto rem(40px);
+    margin-top: .5rem;
+    margin-bottom: .5rem;
   }
 }
 
