@@ -1,0 +1,114 @@
+body {
+  font-family: sans-serif;
+}
+
+%sans-style {
+  font-family: $sans;
+  font-feature-settings: 'ss02', 'ss04', 'ss06'; //ss03 for curled 'r'
+  font-display: swap;
+}
+
+%mono-style {
+  font-family: $monospace;
+  font-weight: 400;
+  line-height: 1.4;
+  font-display: swap;
+}
+
+@include header-style() {
+  @extend %sans-style;
+
+  &.mono {
+    @extend %mono-style;
+  }
+}
+
+@include paragraph-style() {
+  @extend %sans-style;
+
+  &.mono {
+    @extend %mono-style;
+  }
+}
+
+@mixin link-underline($color) {
+  display: inline-block;
+  text-decoration: none;
+
+  &::after {
+    position: relative;
+    right: 0;
+    bottom: -3px;
+    left: 0;
+    display: block;
+    height: 2px;
+    content: '';
+    background-color: $color;
+    opacity: 0;
+    transition: all ease-in-out .2s;
+  }
+
+  &:hover {
+    &::after {
+      bottom: 2px;
+      opacity: 1;
+    }
+  }
+}
+
+%highlight {
+  position: relative;
+
+  &:first-of-type {
+    &::after {
+      left: -2px;
+    }
+  }
+
+  &:last-of-type {
+    &::after {
+      right: -2px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 8px;
+    right: -2.5px;
+    bottom: -1px;
+    left: -2.5px;
+    z-index: -1;
+    content: '';
+    background-color: palette(blue, pale);
+  }
+}
+
+h1 {
+  font-size: em(48px);
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: em(32px);
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+
+p {
+  margin: 14px 0;
+  font-size: em(18px);
+
+  // letter-spacing: -.5px;
+
+  .highlight {
+    @extend %highlight;
+  }
+}
+
+a {
+  transition: color ease-in-out $transition-time;
+}
+
+// .highlight--text {
+//   color: palette(blue);
+// }
