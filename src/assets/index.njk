@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+title: Hey, I'm Benjamin.
+---
+<div class='section section--intro'>
+  <div class='row'>
+    <div class='col-md-5'>
+      <div class='text__wrapper'>
+        <h1>{{ title }}</h1>
+        <h3>A <span data-pre='JS' data-hover='Javascript'></span> & interaction engineer based in Amsterdam, Netherlands.</h3>
+        <h4 class='mono'>Also cooking food, contributing to open source, cycling, mixing live & studio sound, jamming, listening to indie pop, and trying new cafes.</h4>
+        <ul>
+          <li><a href='https://github.com/nothingrandom'><i class='fab fa-github' /></a></li>
+          <li><a href='https://instagram.com/nothingrandom'><i class='fab fa-instagram' /></a></li>
+          <li><a href='https://open.spotify.com/user/nothingrandom'><i class='fab fa-spotify' /></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class='col-md-7'>
+      <div class='profile-pic'>
+        <div class='row end-xs'>
+          <img src='img/benjamin-2019-horrec.jpg' alt='' />
+          {# <a class='section__side-title scroll' href='#more'>more <span class='scroll--arrow'><i class='fal fa-long-arrow-down'></i></span></a> #}
+        </div>
+      </div>
+    </div>
+  <div class="row intro__blurb" id="more">
+    <p>I currently work at the IoT &amp; satellite startup <a href="https://hiber.global">Hiber</a>, building their <span class="highlight">frontend</span> <span class="highlight">web</span> <span class="highlight">systems</span> with a mix of ES6, Vue, lodash, SCSS, and pure magic. I've also been known to use React and Living Styleguides in the past.</p>
+    <p>Every once in a while I'll either be creating or contributing to an <a href="https://github.com/nothingrandom">open source</a> project, and a little more frequently than that I mix <span class="highlight">live</span> <span class="highlight">sound</span> and dream of making it into a real studio.</p>
+    <p>During my downtime, I enjoy cycling to new locations to take pictures a little more off the beaten track, even when there is a perfectly operational train route. My wife, <a href="http://pausefornoeffect.com/">Indy</a>, and I love to create <span class="highlight">indie</span> <span class="highlight">pop</span> <span class="highlight">music</span> with our assortment of synths and guitars.</p>
+    <p>We moved to <span class="highlight">Amsterdam</span> together in March 2017 to join a young church, and feel like this big but small city matches our personalities. If you're ever in Amsterdam and share my love for coffee, local beers, or obscure indie music, let's chat.</p></div>
+</div>
+
+{# <h2>All pages</h2>
+<ul>
+    {% for page in collections.all %}
+        <li>
+            <a href='{{ page.url }}'>
+                {{ page.data.title | default(page.url) }}
+            </a>
+        </li>
+    {% endfor %}
+</ul> #}
