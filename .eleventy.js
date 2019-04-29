@@ -5,7 +5,7 @@ const path = require('path');
 
 /**
  * The @11ty/eleventy configuration.
- * 
+ *
  * For a full list of options, see: https://www.11ty.io/docs/config/
  */
 module.exports = (eleventyConfig) => {
@@ -36,6 +36,8 @@ module.exports = (eleventyConfig) => {
 
     // Make all files pass through to cache
     eleventyConfig.setTemplateFormats(exts);
+
+    eleventyConfig.addPassthroughCopy('_redirects');
 
     return {
         // Set the path from the root of the deploy domain
