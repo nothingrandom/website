@@ -1,0 +1,70 @@
+.menu__container {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: palette(white);
+}
+
+.menu {
+  padding: 25px 0;
+
+  .logo,
+  .menu__icon {
+    position: relative;
+    z-index: 10;
+  }
+
+  .menu__wrapper {
+    float: right;
+
+    .menu__icon {
+      font-size: 28px;
+      cursor: pointer;
+
+      .fa-times {
+        display: none;
+      }
+
+      .fa-cheeseburger {
+        display: inline-block;
+      }
+    }
+  }
+
+  .menu-content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    display: none;
+    background-color: palette(blue, pale);
+    // background-color: pink;
+
+    .social {
+      @include center(horizontal);
+      bottom: 50px;
+    }
+  }
+
+  .menu__checkbox {
+    display: none;
+
+    &:checked {
+      ~ .menu-content {
+        display: block;
+      }
+
+      ~ .menu__icon {
+        .fa-times {
+          display: inline-block;
+        }
+
+        .fa-cheeseburger {
+          display: none;
+        }
+      }
+    }
+  }
+}

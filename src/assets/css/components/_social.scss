@@ -1,0 +1,27 @@
+.social {
+  margin-top: 50px;
+
+  li {
+    display: inline-block;
+    max-width: calc(100 / 3);
+    margin-right: -4px;
+    padding: 0 25px;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  a {
+    color: palette(black);
+    font-size: 36px;
+
+    &:hover {
+      color: palette(blue);
+    }
+  }
+}
