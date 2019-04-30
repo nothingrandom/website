@@ -26,24 +26,24 @@
 {% endblock %}
 
 {% block bodyScripts %}
+  {% include "partials/scripts.njk" %}
+
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(registration => {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch(error => {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', error);
+        });
+      });
+    }
+  </script>
+
   {% if config.env === 'development' %}
     {% include "partials/browser-sync.dev.njk" %}
   {% endif %}
-
-  {% include "partials/scripts.njk" %}
-
-    <script type="text/javascript">
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register('/sw.js').then(registration => {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          })
-          .catch(error => {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', error);
-          });
-        });
-      }
-    </script>
 {% endblock %}
