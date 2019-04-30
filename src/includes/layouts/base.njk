@@ -20,8 +20,11 @@
 {% block body %}
   {{ super() }}
 
-  <div class='container-fluid container'>
-    {{ content | safe }}
+  <div class='page'>
+    {% include "partials/menu.njk" %}
+    <div class='container-fluid container'>
+      {{ content | safe }}
+    </div>
   </div>
 {% endblock %}
 

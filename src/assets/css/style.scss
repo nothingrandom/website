@@ -5,139 +5,23 @@
 // Grid
 @import 'grid';
 
+@import 'components/components';
+
 html {
   @include font-smoothing(on);
   font-size: $base-font-size;
   scroll-behavior: smooth;
 }
 
-.section--intro {
-  position: relative;
-  padding: 25px 0 50px;
-  // margin-top: 25px;
+// body {
+//   height: unset;
+// }
 
-  .col-md-5,
-  .col-md-7 {
-    min-height: 80vh;
-  }
+.page {
+  padding: 0 0 50px;
 
-  .text__wrapper {
-    @include center(vertical);
-    position: relative;
-    padding-right: 25px;
-
-    h1 {
-      margin-top: 0;
-    }
-
-    h3 {
-      span {
-        &::after {
-          content: attr(data-pre);
-        }
-
-        &:hover {
-          &::after {
-            content: attr(data-hover);
-            background-color: yellow;
-          }
-        }
-      }
-    }
-
-    h4 {
-      color: palette(grey);
-      font-size: 20px;
-    }
-
-    ul {
-      margin-top: 50px;
-
-      li {
-        display: inline-block;
-        max-width: calc(100 / 3);
-        margin-right: -4px;
-        padding: 0 15px;
-
-        &:first-child {
-          padding-left: 0;
-        }
-
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-
-      a {
-        color: palette(black);
-        font-size: 36px;
-
-        &:hover {
-          color: palette(blue);
-        }
-      }
-    }
-  }
-}
-
-.profile-pic {
-  @include center(vertical);
-  position: relative;
-  right: -1.5rem;
-  margin-bottom: rem(60px);
-
-  @include breakpoint(md) {
-    right: 0;
-  }
-
-  img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-
-    @include breakpoint(sm) {
-      width: 500px;
-      height: 500px;
-    }
-
-    @include breakpoint(md) {
-      width: 100%;
-      // height: auto;
-    }
-  }
-
-  a {
-    position: absolute;
-    right: 272px;
-    bottom: 0;
-    color: palette(grey);
-    writing-mode: vertical-rl;
-    text-decoration: none;
-
-    @include breakpoint(xxs) {
-      right: 300px;
-    }
-
-    @include breakpoint(sm) {
-      right: 500px;
-    }
-
-    @include breakpoint(md) {
-      right: unset;
-      left: -40px;
-    }
-
-    .fa-long-arrow-down {
-      position: relative;
-      right: -2px;
-    }
-  }
-}
-
-.intro__blurb {
-  a {
-    @include link-underline(palette(blue));
-    color: palette(grey);
+  :has(.menu__checkbox) {
+    color: green;
   }
 }
 
