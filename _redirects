@@ -1,11 +1,2 @@
-# These rules will change if you change your site’s custom domains or HTTPS settings
-
-# Redirect domain aliases to primary domain
-https://nothingrandom.eu/* https://nothingrandom.com/:splat 301!
-https://nothingrandom.co.uk/* https://nothingrandom.com/:splat 301!
-https://benjaminhollway.com/* https://nothingrandom.com/:splat 301!
-https://0random.co/* https://nothingrandom.com/:splat 301!
-https://nothingrandom.xyz/* https://nothingrandom.com/:splat 301!
-
-# Optional: Redirect default Netlify subdomain to primary domain
-https://nothingrandom.netlify.com/* https://nothingrandom.com/:splat 301!
+# Rules that remain true across all builds are in netlify.toml
+# Rules for a per-deploy basis should go in here

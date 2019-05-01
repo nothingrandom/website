@@ -1,0 +1,69 @@
+[Settings]
+[build]
+  base = ""
+  publish = "dist/"
+  command = "yarn build"
+
+# Production context
+[context.production]
+  publish = "dist/"
+
+# Deploy Preview context: all deploys resulting from a pull/merge request
+[context.deploy-preview]
+  publish = "dist/"
+
+# Redirects and headers are GLOBAL for all builds – they do not get scoped to
+# contexts no matter where you define them in the file.
+# For context-specific rules, use _headers or _redirects files, which are
+# PER-DEPLOY.
+
+[[redirects]]
+  from = "https://nothingrandom.eu/*"
+  to = "https://nothingrandom.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://nothingrandom.co.uk/*"
+  to = "https://nothingrandom.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://benjaminhollway.com/*"
+  to = "https://nothingrandom.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://0random.co/*"
+  to = "https://nothingrandom.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://nothingrandom.xyz/*"
+  to = "https://nothingrandom.com/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://nothingrandom.netlify.com/*"
+  to = "https://nothingrandom.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  # Define which paths this specific [[headers]] block will cover.
+  for = "/*"
+
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Content-Security-Policy = "frame-ancestors https://www.facebook.com"
+
+    # Multi-key header rules are expressed with multi-line strings.
+	    cache-control = '''
+	    max-age=0,
+	    no-cache,
+	    no-store,
+	    must-revalidate'''
+
+    # Basic-Auth allows you to password protect your whole site.
+    # This feature may not be available on all plans.
+    Basic-Auth = "someuser:somepassword anotheruser:anotherpassword"
