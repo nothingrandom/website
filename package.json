@@ -20,9 +20,7 @@
     "11ty:watch": "eleventy  --quiet --watch --output .tmp/11ty",
     "parcel:build": "parcel build .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
     "parcel:watch": "parcel serve .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "snyk-protect": "snyk protect",
-    "prepublish": "npm run snyk-protect"
+    "prepublish": "snyk protect"
   },
   "alias": {
     "assets": "./src/assets",
