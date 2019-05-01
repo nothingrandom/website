@@ -4,6 +4,6 @@ node_js:
 cache: yarn
 install:
   - yarn install
-  - snyk test
+  - snyk test --severity-threshold=high
 script:
   - yarn build
