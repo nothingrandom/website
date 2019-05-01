@@ -4,5 +4,6 @@ node_js:
 cache: yarn
 install:
   - yarn install
+  - snyk test
 script:
   - yarn build
