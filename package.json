@@ -30,7 +30,6 @@
   "dependencies": {
     "@11ty/eleventy": "0.8.2",
     "browser-reset": "^1.0.4",
-    "cash-cp": "^0.2.0",
     "chokidar-cli": "^1.2.2",
     "fs-extra": "^7.0.1",
     "globby": "^9.0.0",
