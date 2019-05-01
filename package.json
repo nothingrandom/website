@@ -30,7 +30,7 @@
     "data": "./src/data"
   },
   "dependencies": {
-    "@11ty/eleventy": "^0.7.1",
+    "@11ty/eleventy": "0.8.2",
     "browser-reset": "^1.0.4",
     "cash-cp": "^0.2.0",
     "chokidar-cli": "^1.2.2",
@@ -40,8 +40,8 @@
     "nunjucks": "^3.1.7",
     "parcel-bundler": "^1.11.0",
     "rimraf": "^2.6.3",
-    "workbox-build": "^3.6.3",
-    "snyk": "^1.157.0"
+    "snyk": "^1.157.0",
+    "workbox-build": "^3.6.3"
   },
   "devDependencies": {
     "browser-sync": "^2.26.3",
