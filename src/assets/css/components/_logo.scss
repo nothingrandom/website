@@ -12,6 +12,7 @@
     transition: max-width .3s .2s cubic-bezier(0, 0, 0, 1);
 
     em {
+      display: unset !important;
       opacity: 0;
       font-style: normal;
       transform: translate(0, -5px);
