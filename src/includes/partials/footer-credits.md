@@ -1,0 +1,1 @@
+This site is built with [eleventy](https://www.11ty.io/), [parceleleventy](https://github.com/chrisdmacrae/parceleventy/) & [barebonesio](https://github.com/nothingrandom/barebonesio). It's hosted on [GitHub](https://github.com/nothingrandom/website) and served by [Netlify]((https://www.netlify.com/)).

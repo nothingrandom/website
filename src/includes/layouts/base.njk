@@ -19,9 +19,12 @@
 
   <div class='page'>
     {% include "partials/menu.njk" %}
-    <div class='container-fluid container'>
-      {{ content | safe }}
+    <div class='page__container'>
+        <div class='container-fluid'>
+          {{ content | safe }}
+        </div>
     </div>
+    {% include "partials/footer.njk" %}
   </div>
 {% endblock %}
 

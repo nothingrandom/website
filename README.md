@@ -10,6 +10,8 @@
 
 My primary online presence found at [nothingrandom.com](https://nothingrandom.com)
 
-> Made using [eleventy](https://www.11ty.io/) running on [parceleleventy](https://github.com/chrisdmacrae/parceleventy/) and styling boilerplate from [barebonesio](https://github.com/nothingrandom/barebonesio)
+> This site is built with [eleventy](https://www.11ty.io/), [parceleleventy](https://github.com/chrisdmacrae/parceleventy/) & [barebonesio](https://github.com/nothingrandom/barebonesio). It's hosted on [GitHub](https://github.com/nothingrandom/website) and served by [Netlify]((https://www.netlify.com/)).
+
+<!-- > Made using [eleventy](https://www.11ty.io/) and [parceleleventy](https://github.com/chrisdmacrae/parceleventy/) with styling boilerplate from [barebonesio](https://github.com/nothingrandom/barebonesio). Running on [Netlify](https://www.netlify.com/). -->
 
 `yarn run start` for localhost and `yarn run build` for dist
