@@ -1,0 +1,21 @@
+$footer-height: 225px;
+
+.section--footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-height: 225px;
+  padding: 50px 0 75px;
+  background-color: palette(black);
+  color: palette(white);
+
+  .social {
+    a {
+      color: palette(white);
+    }
+  }
+
+  p a {
+    @include link-underline;
+  }
+}

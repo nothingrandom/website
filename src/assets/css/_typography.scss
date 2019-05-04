@@ -31,8 +31,9 @@ body {
   }
 }
 
-@mixin link-underline($color) {
+@mixin link-underline($color: palette(blue), $text-color: palette(grey)) {
   display: inline-block;
+  color: $text-color;
   text-decoration: none;
 
   &::after {
@@ -49,11 +50,17 @@ body {
   }
 
   &:hover {
+    color: $color;
+
     &::after {
       bottom: 2px;
       opacity: 1;
     }
   }
+}
+
+.link-underline {
+  @include link-underline(palette(blue), palette(grey));
 }
 
 %highlight {
@@ -106,6 +113,7 @@ p {
 }
 
 a {
+  text-decoration: none;
   transition: color ease-in-out $transition-time;
 }
 

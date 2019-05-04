@@ -37,14 +37,40 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 9;
-    display: none;
+    z-index: -1;
     background-color: palette(blue);
-    // background-color: pink;
+    opacity: 0;
+    transition: opacity ease-in-out .25s;
+    pointer-events: none;
+
+    .links {
+      @include center(vertical);
+      position: relative;
+      text-align: center;
+
+      li {
+        padding: 10px 0;
+        font-size: 32px;
+
+        a {
+          color: palette(black);
+
+          &:hover {
+            color: palette(white);
+          }
+        }
+      }
+    }
 
     .social {
       @include center(horizontal);
       bottom: 50px;
+
+      a {
+        &:hover {
+          color: palette(white);
+        }
+      }
     }
   }
 
@@ -53,7 +79,9 @@
 
     &:checked {
       ~ .menu-content {
-        display: block;
+        z-index: 9;
+        opacity: 1;
+        pointer-events: unset;
       }
 
       ~ .menu__icon {
