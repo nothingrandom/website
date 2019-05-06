@@ -88,11 +88,12 @@ $go-offset: 80px;
 
 .go-item__panel {
   width: 100%;
-  height: $go-height;
+  height: 400px;
   vertical-align: top;
 
   @include breakpoint(sm) {
     width: 50%;
+    height: $go-height;
   }
 }
 
@@ -105,14 +106,9 @@ $go-offset: 80px;
 
 .go-item__panel--text {
   position: relative;
-  height: 400px;
   padding: 0 20px;
   background-color: palette(blue);
   color: #F13F35;
-
-  @include breakpoint(sm) {
-    height: $go-height;
-  }
 
   @include breakpoint(md) {
     padding: 0 40px;
