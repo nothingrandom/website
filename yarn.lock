@@ -7588,20 +7588,20 @@ snyk-go-parser@1.0.2:
     toml "^3.0.0"
     tslib "^1.9.3"
 
-snyk-go-plugin@1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/snyk-go-plugin/-/snyk-go-plugin-1.7.0.tgz#b69e12f04204eae73b243b4a52dd8f9ac2eaa8e9"
-  integrity sha512-4gGWFiilx3BINIqVau/GGhyOin5Vf0qzL5VYKV3FeZdJ22RBxqO3+NjRwsOzDJdIEgixp+NGV2hnuSKQCGsr9A==
+snyk-go-plugin@1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/snyk-go-plugin/-/snyk-go-plugin-1.7.1.tgz#27fe11b43b823bd367e57eed945f5dc4b50241a5"
+  integrity sha512-jtsK4V/pOiUMfTjM2ASFb2D4u/xOF3zqOteqbtK6N64o0ndQf5D8SMkIRB0APJV5ZjqhPDHzItRyKRtscSkx4Q==
   dependencies:
     debug "^4.1.1"
     graphlib "^2.1.1"
     snyk-go-parser "1.0.2"
     tmp "0.0.33"
 
-snyk-gradle-plugin@2.9.0:
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/snyk-gradle-plugin/-/snyk-gradle-plugin-2.9.0.tgz#a18a61dc1c04fb077a950ed57cc9a7e146b86e29"
-  integrity sha512-qXwrRkGELIX/I6LwarZwsInTT6FBxH5s5yeMZ2RYkWaABjotC9tJAgVcXqLqmyiY5BD+7Yv7+UeZiauxBVasjg==
+snyk-gradle-plugin@2.10.0:
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/snyk-gradle-plugin/-/snyk-gradle-plugin-2.10.0.tgz#5e1cb9955ebfd4e5d3282b9427a63ca6a03ec5cd"
+  integrity sha512-hfoDN+ozFEliJzvZok1XzMf8zy2C45nHPo6phpp43XFubQvyu3wa1eriWZkrUXyVSPrMkAA9K52Z6QHixfJgfQ==
   dependencies:
     chalk "^2.4.2"
     clone-deep "^0.3.0"
@@ -7616,10 +7616,13 @@ snyk-module@1.9.1, snyk-module@^1.6.0, snyk-module@^1.9.1:
     debug "^3.1.0"
     hosted-git-info "^2.7.1"
 
-snyk-mvn-plugin@2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/snyk-mvn-plugin/-/snyk-mvn-plugin-2.0.1.tgz#c52d5320e34ff3ab6d50d8b9549a4b32243ed6ae"
-  integrity sha512-TBrdcFXHdYuRYFCvpyUeFC+mCi6SOV3vdxgHrP7JRNnJwO8PYaKCObLJyhpRWa8IaHv/8CjJTmnEbWIh7BPHAA==
+snyk-mvn-plugin@2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/snyk-mvn-plugin/-/snyk-mvn-plugin-2.3.0.tgz#a76cfc0041ecc4333f2c6f6f72138f1e4621da24"
+  integrity sha512-LOSiJu+XUPVqKCXcnQPLhlyTGm3ikDwjvYw5fpiEnvjMWkMDd8IfzZqulqreebJDmadUpP7Cn0fabfx7TszqxA==
+  dependencies:
+    lodash "4.17.11"
+    tslib "1.9.3"
 
 snyk-nodejs-lockfile-parser@1.13.0:
   version "1.13.0"
@@ -7674,10 +7677,10 @@ snyk-policy@1.13.5:
     snyk-try-require "^1.3.1"
     then-fs "^2.0.0"
 
-snyk-python-plugin@1.9.2:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/snyk-python-plugin/-/snyk-python-plugin-1.9.2.tgz#3878475d6eaa9f70d5071070059b25c2d331ee67"
-  integrity sha512-Gx5UnADHCxdSfblrbhZV/tbTYTfdkLxS2/TV1KSHiIIlsaAkpuznDKg/6/kT1Qe/AKKlD1h4HqR/fhrNZWrxQw==
+snyk-python-plugin@1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/snyk-python-plugin/-/snyk-python-plugin-1.10.0.tgz#16ce09a72b3676bfde2188837ee42e4695860938"
+  integrity sha512-U88Om9HxKxRp6EQ3Mn/iySr60ozjxzVaui+/Vmv6tcXqAEotstW/q24EBC3wmnRyAxzfZ7qTMQ+6XJxnYSKa2w==
   dependencies:
     tmp "0.0.33"
 
@@ -7732,10 +7735,10 @@ snyk-try-require@1.3.1, snyk-try-require@^1.1.1, snyk-try-require@^1.3.1:
     lru-cache "^4.0.0"
     then-fs "^2.0.0"
 
-snyk@^1.157.0:
-  version "1.157.0"
-  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.157.0.tgz#e859774412c6b302eebd3f29df133eb1964cd26f"
-  integrity sha512-k5+y7yd3O+0HdfADalYPIhn6u44Gwf7eN55YfdWGa9MoVufc9jKGtP7qBOyxN7Qx56AGSOlBrn7HQaHU4Wbu5Q==
+snyk@^1.161.1:
+  version "1.161.1"
+  resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.161.1.tgz#a142e71f76b5ef164468ae8d82ca66fa3508aceb"
+  integrity sha512-DsIltQOMT/MzGzcAyhvFCstmCd91gunjsfW0kbuLGR9hnT8GlWU3WjqmigAEFvGAVmS16frWapkQHdd0D65gGw==
   dependencies:
     "@snyk/dep-graph" "1.4.1"
     "@snyk/gemfile" "1.2.0"
@@ -7756,15 +7759,15 @@ snyk@^1.157.0:
     semver "^6.0.0"
     snyk-config "^2.2.1"
     snyk-docker-plugin "1.24.0"
-    snyk-go-plugin "1.7.0"
-    snyk-gradle-plugin "2.9.0"
+    snyk-go-plugin "1.7.1"
+    snyk-gradle-plugin "2.10.0"
     snyk-module "1.9.1"
-    snyk-mvn-plugin "2.0.1"
+    snyk-mvn-plugin "2.3.0"
     snyk-nodejs-lockfile-parser "1.13.0"
     snyk-nuget-plugin "1.10.0"
     snyk-php-plugin "1.5.3"
     snyk-policy "1.13.5"
-    snyk-python-plugin "1.9.2"
+    snyk-python-plugin "1.10.0"
     snyk-resolve "1.0.1"
     snyk-resolve-deps "4.0.3"
     snyk-sbt-plugin "2.0.1"
@@ -8453,7 +8456,7 @@ trim-right@^1.0.1:
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
   integrity sha1-yy4SAwZ+DI3h9hQJS5/kVwTqYAM=
 
-tslib@^1, tslib@^1.9.0, tslib@^1.9.3:
+tslib@1.9.3, tslib@^1, tslib@^1.9.0, tslib@^1.9.3:
   version "1.9.3"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
   integrity sha512-4krF8scpejhaOgqzBEcGM7yDIEfi0/8+8zDRZhNZZ2kjmHJ4hv3zCbQWxoJGz1iw5U0Jl0nma13xzHXcncMavQ==
