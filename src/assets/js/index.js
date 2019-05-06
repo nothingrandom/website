@@ -5,8 +5,9 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
 import { faSpotify } from '@fortawesome/free-brands-svg-icons/faSpotify';
 import { faCheeseburger } from '@fortawesome/pro-light-svg-icons/faCheeseburger';
 import { faTimes } from '@fortawesome/pro-light-svg-icons/faTimes';
+import { faEye } from '@fortawesome/pro-light-svg-icons/faEye';
 import { faLongArrowDown } from '@fortawesome/pro-light-svg-icons/faLongArrowDown';
 
-library.add(faGithub, faInstagram, faSpotify, faCheeseburger, faTimes, faLongArrowDown);
+library.add(faGithub, faInstagram, faSpotify, faCheeseburger, faTimes, faLongArrowDown, faEye);
 
 dom.watch();
