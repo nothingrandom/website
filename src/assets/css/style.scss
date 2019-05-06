@@ -18,7 +18,11 @@ html {
 // }
 
 .page {
-  padding-bottom: $footer-height;
+  padding-bottom: $footer-height-sm;
+
+  @include breakpoint(md) {
+    padding-bottom: $footer-height-md;
+  }
 
   .page__container {
     position: relative;

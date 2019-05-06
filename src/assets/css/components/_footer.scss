@@ -1,13 +1,18 @@
-$footer-height: 225px;
+$footer-height-sm: 335px;
+$footer-height-md: 225px;
 
 .section--footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  max-height: 225px;
+  height: $footer-height-sm;
   padding: 50px 0 75px;
   background-color: palette(black);
   color: palette(white);
+
+  @include breakpoint(md) {
+    height: $footer-height-md;
+  }
 
   .social {
     a {
