@@ -15,6 +15,6 @@ $sans: 'Circular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 // Hack
 // https://sourcefoundry.org/hack/
 @include font-face('Hack', '../fonts/Hack-Regular', 400, normal);
-@include font-face('Hack', '../fonts/Hack-Italic', 400, italic);
+// @include font-face('Hack', '../fonts/Hack-Italic', 400, italic);
 
 $monospace: 'Hack', 'Courier', monospace;
