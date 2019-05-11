@@ -29,7 +29,7 @@
     "data": "./src/data"
   },
   "dependencies": {
-    "@11ty/eleventy": "0.8.2",
+    "@11ty/eleventy": "0.8.3",
     "browser-reset": "^1.0.4",
     "chokidar-cli": "^1.2.2",
     "fs-extra": "^7.0.1",
