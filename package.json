@@ -21,7 +21,8 @@
     "parcel:build": "parcel build .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
     "parcel:watch": "parcel serve .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
     "prepublish": "npm run snyk-protect",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "test": "snyk test"
   },
   "alias": {
     "assets": "./src/assets",
@@ -39,6 +40,7 @@
     "parcel-bundler": "^1.11.0",
     "rimraf": "^2.6.3",
     "snyk": "^1.161.1",
+    "ua-parser-js": "^0.7.19",
     "workbox-build": "4.2.0"
   },
   "devDependencies": {
