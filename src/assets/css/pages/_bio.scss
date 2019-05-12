@@ -1,0 +1,11 @@
+.section--bio {
+  padding: 50px 0;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  a:not(.link--social) {
+    @include link-underline(palette(blue));
+  }
+}

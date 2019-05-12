@@ -15,9 +15,9 @@ $go-offset: 80px;
     margin: 100px 0;
   }
 
-  &:first-child {
-    margin-top: 50px;
-  }
+  // &:first-child {
+  //   margin-top: 50px;
+  // }
 
   &--left {
     flex-direction: row-reverse;
@@ -35,6 +35,10 @@ $go-offset: 80px;
   }
 
   @include breakpoint(lg) {
+    &.section--scroll {
+      margin-bottom: 340px;
+    }
+
     &--front-text {
       left: -$go-offset;
       width: calc(100% + #{$go-offset} + .5rem);

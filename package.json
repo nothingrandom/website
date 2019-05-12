@@ -31,9 +31,9 @@
   },
   "dependencies": {
     "@11ty/eleventy": "0.8.3",
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-brands-svg-icons": "^5.8.1",
-    "@fortawesome/pro-light-svg-icons": "^5.8.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-brands-svg-icons": "^5.8.2",
+    "@fortawesome/pro-light-svg-icons": "^5.8.2",
     "browser-reset": "^1.0.4",
     "chokidar-cli": "^1.2.2",
     "fs-extra": "^7.0.1",
