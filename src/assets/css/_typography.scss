@@ -99,6 +99,10 @@ h3 {
   font-size: em(32px);
   font-weight: 300;
   letter-spacing: -1px;
+
+  &.section__header {
+    font-weight: 600;
+  }
 }
 
 p {
@@ -115,6 +119,10 @@ p {
 a {
   text-decoration: none;
   transition: color ease-in-out $transition-time;
+}
+
+.text-bold {
+  font-weight: 600;
 }
 
 // .highlight--text {

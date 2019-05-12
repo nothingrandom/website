@@ -97,10 +97,3 @@
     }
   }
 }
-
-.intro__blurb {
-  a {
-    @include link-underline(palette(blue));
-    color: palette(grey);
-  }
-}
