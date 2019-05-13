@@ -1,37 +1,37 @@
-{% extends "extends/html5boilerplate.njk" %}
+{% extends 'extends/html5boilerplate.njk' %}
 
-{% set title = (title + " - " + site.title) if title else (site.title) %}
+{% set title = (title + ' - ' + site.title) if title else (site.title) %}
 {% set description = (description) if description else (site.description) %}
 {% set lang = lang | default(site.lang) %}
 
 {% block headStyles %}
-  {% include "partials/styles.njk" %}
+  {% include 'partials/styles.njk' %}
 {% endblock %}
 
 {% block headMisc %}
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" />
-  <link rel="apple-touch-icon" href="/img/favicon-32x32.png">
+  <link rel='manifest' href='/site.webmanifest'>
+  <link rel='icon' type='image/png' href='/img/favicon-32x32.png' />
+  <link rel='apple-touch-icon' href='/img/favicon-32x32.png'>
 {% endblock %}
 
 {% block body %}
   {{ super() }}
 
   <div class='page'>
-    {% include "partials/menu.njk" %}
+    {% include 'partials/menu.njk' %}
     <div class='page__container'>
         <div class='container-fluid'>
           {{ content | safe }}
         </div>
     </div>
-    {% include "partials/footer.njk" %}
+    {% include 'partials/footer.njk' %}
   </div>
 {% endblock %}
 
 {% block bodyScripts %}
-  {% include "partials/scripts.njk" %}
+  {% include 'partials/scripts.njk' %}
 
-  <script type="text/javascript">
+  <script type='text/javascript'>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js').then(registration => {
@@ -47,6 +47,6 @@
   </script>
 
   {% if config.env === 'development' %}
-    {% include "partials/browser-sync.dev.njk" %}
+    {% include 'partials/browser-sync.dev.njk' %}
   {% endif %}
 {% endblock %}

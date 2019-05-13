@@ -3,14 +3,18 @@
     <div class='row'>
       <div class='col-xs-12'>
         <div class='menu'>
-          <a href="https://nothingrandom.com" class="logo color">
+          {% if config.env === 'development' %}
+            <a href='https://nothingrandom.com' class='logo color'>
+          {% else %}
+            <a href='http://localhost:3000' class='logo color'>
+          {% endif %}
             <span>
-              b<span class="collapse"><em style='display: none'>e</em><em style='display: none'>n</em><em style='display: none'>j</em><em style='display: none'>a</em><em style='display: none'>m</em><em style='display: none'>i</em><em style='display: none'>n</em></span>.
+              b<span class='collapse'><em style='display: none'>e</em><em style='display: none'>n</em><em style='display: none'>j</em><em style='display: none'>a</em><em style='display: none'>m</em><em style='display: none'>i</em><em style='display: none'>n</em></span>.
             </span>
           </a>
           <div class='menu__wrapper'>
-            <input type="checkbox" id="menu-checkbox" class="menu__checkbox">
-            <label for="menu-checkbox" class="menu__icon">
+            <input type='checkbox' id='menu-checkbox' class='menu__checkbox'>
+            <label for='menu-checkbox' class='menu__icon'>
               <i class='fal fa-cheeseburger'></i>
               <i class='fal fa-times'></i>
             </label>
