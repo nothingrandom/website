@@ -17,9 +17,9 @@
     "clean:cache": "rimraf .tmp",
     "clean:dist": "rimraf dist",
     "11ty:build": "eleventy  --quiet --output .tmp/parcel",
-    "11ty:watch": "eleventy  --quiet --watch --output .tmp/11ty",
+    "11ty:watch": "ELEVENTY_ENV=development eleventy  --quiet --watch --output .tmp/11ty",
     "parcel:build": "parcel build .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
-    "parcel:watch": "parcel serve .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
+    "parcel:watch": "ELEVENTY_ENV=development parcel serve .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
     "prepublish": "npm run snyk-protect",
     "snyk-protect": "snyk protect",
     "test": "snyk test --severity-threshold=high"
