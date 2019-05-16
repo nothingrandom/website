@@ -1,7 +1,11 @@
+$menu-height-md: 93px;
+
 .menu__container {
   position: sticky;
   top: 0;
   z-index: 10;
+  height: $menu-height-md;
+  border-top: 4px solid palette(black);
   background-color: palette(white);
 }
 
@@ -20,6 +24,10 @@
     .menu__icon {
       font-size: 28px;
       cursor: pointer;
+
+      @include breakpoint(md) {
+        display: none;
+      }
 
       .fa-times {
         display: none;
@@ -43,20 +51,50 @@
     transition: opacity ease-in-out .25s;
     pointer-events: none;
 
+    @include breakpoint(md) {
+      position: relative;
+      top: unset;
+      right: unset;
+      bottom: unset;
+      left: unset;
+      z-index: 1;
+      background-color: unset;
+      opacity: 1;
+      pointer-events: unset;
+    }
+
     .links {
       @include center(vertical);
       position: relative;
       text-align: center;
 
+      @include breakpoint(md) {
+        position: relative;
+        top: unset;
+        text-align: right;
+        transform: unset;
+      }
+
       li {
         padding: 10px 0;
-        font-size: 32px;
+        font-size: em(32px);
+
+        @include breakpoint(md) {
+          display: inline-block;
+          padding: 10px 15px;
+          font-size: em(22px);
+        }
 
         a {
+          @extend %serif-style;
           color: palette(black);
 
           &:hover {
             color: palette(white);
+
+            @include breakpoint(md) {
+              color: palette(black);
+            }
           }
         }
       }
@@ -65,6 +103,10 @@
     .social {
       @include center(horizontal);
       bottom: 50px;
+
+      @include breakpoint(md) {
+        display: none;
+      }
 
       a {
         &:hover {

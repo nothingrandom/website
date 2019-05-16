@@ -1,7 +1,9 @@
 ---
 layout: /layouts/base.njk
 ---
-Posted on {{ date }}
+Posted on {{ page.date | date('do of MMMM, YYYY') }}
+
+## {{ title }}
 
 {{ content | safe }}
 

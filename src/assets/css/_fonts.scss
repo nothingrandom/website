@@ -8,13 +8,7 @@
 
 @include font-face('Circular', '../fonts/CircularStd-Bold', 700, normal);
 
-@include font-face('Circular', '../fonts/CircularStd-Black', 900, normal);
-
 $sans: 'Circular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
-// Hack
-// https://sourcefoundry.org/hack/
-@include font-face('Hack', '../fonts/Hack-Regular', 400, normal);
-// @include font-face('Hack', '../fonts/Hack-Italic', 400, italic);
-
-$monospace: 'Hack', 'Courier', monospace;
+@import url('https://fonts.googleapis.com/css?family=Lora');
+$serif: 'Lora', serif;

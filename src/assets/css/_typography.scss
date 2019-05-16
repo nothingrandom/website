@@ -8,26 +8,88 @@ body {
   font-display: swap;
 }
 
-%mono-style {
-  font-family: $monospace;
-  font-weight: 400;
-  line-height: 1.4;
+%serif-style {
+  font-family: $serif;
   font-display: swap;
 }
 
 @include header-style() {
   @extend %sans-style;
+  font-weight: 400;
 
-  &.mono {
-    @extend %mono-style;
+  &.section__header {
+    margin-top: 0;
+    font-weight: 400;
   }
 }
 
 @include paragraph-style() {
   @extend %sans-style;
+}
 
-  &.mono {
-    @extend %mono-style;
+h1 {
+  @extend %serif-style;
+  font-size: em(42px);
+  // font-weight: 600;
+}
+
+h2 {
+  font-size: em(32px);
+
+  &.section__header {
+    @extend %serif-style;
+    font-size: em(42px);
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+h3 {
+  font-size: em(26px);
+  font-weight: 300;
+  letter-spacing: -.5px;
+}
+
+p {
+  margin: 14px 0;
+  font-size: em(18px);
+}
+
+a {
+  text-decoration: none;
+  transition: color ease-in-out $transition-time;
+}
+
+.hero__link {
+  position: relative;
+  display: inline-block;
+  color: inherit;
+
+  &::before,
+  &::after {
+    @include pseudo();
+    right: -2px;
+    bottom: 0;
+    left: -2px;
+    z-index: -1;
+    height: .5em;
+  }
+
+  &::before {
+    background-color: palette(grey, pale);
+  }
+
+  &::after {
+    background-color: palette(blue);
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(.86, 0, .07, 1), -webkit-transform .3s cubic-bezier(.86, 0, .07, 1);
+    transform-origin: 0 50%;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
   }
 }
 
@@ -62,69 +124,3 @@ body {
 .link-underline {
   @include link-underline(palette(blue), palette(grey));
 }
-
-%highlight {
-  position: relative;
-
-  &:first-of-type {
-    &::after {
-      left: -2px;
-    }
-  }
-
-  &:last-of-type {
-    &::after {
-      right: -2px;
-    }
-  }
-
-  &::after {
-    position: absolute;
-    top: 8px;
-    right: -2.5px;
-    bottom: -1px;
-    left: -2.5px;
-    z-index: -1;
-    content: '';
-    background-color: palette(blue);
-  }
-}
-
-h1 {
-  font-size: em(48px);
-  letter-spacing: -1px;
-}
-
-h3 {
-  font-size: em(32px);
-  font-weight: 300;
-  letter-spacing: -1px;
-
-  &.section__header {
-    font-weight: 600;
-  }
-}
-
-p {
-  margin: 14px 0;
-  font-size: em(18px);
-
-  // letter-spacing: -.5px;
-
-  .highlight {
-    @extend %highlight;
-  }
-}
-
-a {
-  text-decoration: none;
-  transition: color ease-in-out $transition-time;
-}
-
-.text-bold {
-  font-weight: 600;
-}
-
-// .highlight--text {
-//   color: palette(blue);
-// }

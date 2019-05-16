@@ -2,83 +2,18 @@
 layout: layouts/base.njk
 ---
 <div class='section section--intro'>
-  <div class='row'>
-    <div class='col-xs-12 col-md-5'>
+  <div class='row row--md-padding'>
+    <div class='col col-xs-12 col-sm-6 col-md-5'>
       <div class='text__wrapper'>
         <h1>Hey, I'm Benjamin.</h1>
-        <h3>A <span data-pre='JS' data-hover='Javascript'></span> & interaction engineer based in Amsterdam, the Netherlands.</h3>
-        <h4 class='mono'>Also cooking food, contributing to open source, cycling, mixing live & studio sound, jamming, listening to indie pop, and trying new cafes.</h4>
-        {% include 'partials/social.njk' %}
+        <h2>A Javascript engineer based in Amsterdam.</h2>
+        <h3>I also <a href='/food' class='hero__link'>cook food</a>, cycle, <a href='/blog' class='hero__link'>write blog posts</a>, mix live & studio sound, create and listen to indie pop, <a href='/projects' class='hero__link'>contribute to open source</a>, and love trying new cafes.</h3>
       </div>
     </div>
-    <div class='col-xs-12 col-md-7'>
-      <div class='profile-pic'>
-        <div class='row end-xs'>
-          <img src='img/benjamin-2019-horrec-web.jpg' alt='A picture of Benjamin' />
-          <a class='section__side-title scroll' href='#more'>more <span class='scroll--arrow'><i class='fal fa-long-arrow-down'></i></span></a>
-        </div>
+    <div class='col col-xs-12 col-sm-6 col-md-7'>
+      <div class='profile-pic end-xs'>
+        <img src='img/benjamin-2019-horrec-web.jpg' alt='A picture of Benjamin' />
       </div>
     </div>
   </div>
 </div>
-<div>
-<div class='section go-item go-item--left go-item--front-text section--scroll' id='more'>
-  <div class='go-item__panel go-item__panel--image' style='background-image: url("img/food/sweet-sticky-tofu.jpg")'>
-  </div>
-  <div class='go-item__panel go-item__panel--text go-item__panel--text--blue'>
-    <div class='go-item__panel--inner'>
-      <h4 class='mono'><span>Writing</span> Recipies</h4>
-      <h3>The heart of a home is the kitchen.</h3>
-      <a class='btn'><i class='fal fa-eye'></i><span>Discover Recipies</span></a>
-    </div>
-  </div>
-</div>
-
-<div class='section go-item go-item--right go-item--back-text'>
-  <div class='go-item__panel go-item__panel--image' style='background-image: url("img/stars.jpg")'>
-  </div>
-  <div class='go-item__panel go-item__panel--text go-item__panel--text--yellow'>
-    <div class='go-item__panel--inner'>
-      <h4 class='mono'><span>Projects</span> Open Source</h4>
-      <h3>SCSS boilerplates, utilities, extensions - open source is great</h3>
-      <a class='btn'><i class='fal fa-eye'></i><span>View Projects</span></a>
-    </div>
-  </div>
-</div>
-
-<div class='section go-item go-item--left go-item--front-text'>
-  <div class='go-item__panel go-item__panel--image' style='background-image: url("img/amsterdam.jpg")'>
-  </div>
-  <div class='go-item__panel go-item__panel--text go-item__panel--text--pink'>
-    <div class='go-item__panel--inner'>
-      <h4 class='mono'><span>Writing</span> Blog</h4>
-      <h3>Writing about life, and code; mixed in with miscellaneous thoughts.</h3>
-      <a class='btn'><i class='fal fa-eye'></i><span>Read Blog</span></a>
-    </div>
-  </div>
-</div>
-
-<div class='section go-item go-item--right go-item--back-text go-item--narrow-image'>
-  <div class='go-item__panel go-item__panel--image' style='background-image: url("img/benjamin-2019-verrec-web.jpg")'>
-  </div>
-  <div class='go-item__panel go-item__panel--text go-item__panel--text--green'>
-    <div class='go-item__panel--inner'>
-      <h4 class='mono'><span>About</span> Benjamin</h4>
-      <h3>Where I work, my hobbies, links to my social media, and information for conferences.</h3>
-      <a class='btn' href='bio'><i class='fal fa-eye'></i><span>Bio</span></a>
-    </div>
-  </div>
-</div>
-</div>
-
-
-{# <h2>All pages</h2>
-<ul>
-    {% for page in collections.all %}
-        <li>
-            <a href='{{ page.url }}'>
-                {{ page.data.title | default(page.url) }}
-            </a>
-        </li>
-    {% endfor %}
-</ul> #}
