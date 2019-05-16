@@ -1,0 +1,26 @@
+.posts {
+
+}
+
+.posts-count {
+  li {
+    position: relative;
+    padding: 20px 0 20px 40px;
+    font-size: 22px;
+    counter-increment: start-from -1;
+
+    a {
+      @include link-underline(palette(blue), palette(black));
+    }
+
+    &::before {
+      @extend %serif-style;
+      position: absolute;
+      left: 0;
+      white-space: nowrap;
+      content: counter(start-from, decimal-leading-zero)'. ';
+      color: palette(grey);
+      pointer-events: none;
+    }
+  }
+}

@@ -1,99 +1,29 @@
 .section--intro {
   position: relative;
+  min-height: calc(90vh - (#{$menu-height-md} + #{$footer-height-md}));
 
-  .col-md-5,
-  .col-md-7 {
-    @include breakpoint(md) {
-      min-height: 80vh;
+  .col {
+    @include breakpoint(sm) {
+      min-height: calc(90vh - (#{$menu-height-md} + #{$footer-height-md}));
     }
   }
 
-  .text__wrapper {
+  h1 {
+    margin-top: 0;
+  }
+
+  h3 {
+    font-weight: 300;
+  }
+
+  .text__wrapper,
+  .profile-pic {
     @include center(vertical);
     position: relative;
-    padding-right: 25px;
-
-    h1 {
-      margin-top: 0;
-    }
-
-    h3 {
-      span {
-        &::after {
-          content: attr(data-pre);
-        }
-
-        &:hover {
-          &::after {
-            padding: 0 5px;
-            content: attr(data-hover);
-            background-color: yellow;
-          }
-        }
-      }
-    }
-
-    h4 {
-      color: palette(grey);
-      font-size: 20px;
-    }
-
-    .social {
-      margin-top: 50px;
-    }
-  }
-}
-
-.profile-pic {
-  @include center(vertical);
-  position: relative;
-  right: -1.5rem;
-  margin-bottom: rem(60px);
-
-  @include breakpoint(md) {
-    right: 0;
-  }
-
-  img {
-    width: 300px;
-    height: 300px;
-    object-fit: cover;
-
-    @include breakpoint(sm) {
-      width: 500px;
-      height: 500px;
-    }
+    padding: 20px 0;
 
     @include breakpoint(md) {
-      width: 100%;
-      // height: auto;
-    }
-  }
-
-  a {
-    position: absolute;
-    right: 272px;
-    bottom: 0;
-    color: palette(grey);
-    text-decoration: none;
-    writing-mode: vertical-rl;
-
-    @include breakpoint(xxs) {
-      right: 300px;
-    }
-
-    @include breakpoint(sm) {
-      right: 500px;
-    }
-
-    @include breakpoint(md) {
-      right: unset;
-      left: -40px;
-    }
-
-    .fa-long-arrow-down {
-      position: relative;
-      right: -2px;
+      padding: 0;
     }
   }
 }

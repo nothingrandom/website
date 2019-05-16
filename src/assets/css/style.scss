@@ -14,28 +14,21 @@ html {
   scroll-behavior: smooth;
 }
 
-// body {
-//   height: unset;
-// }
-
 .page {
-  padding-bottom: $footer-height-sm;
-
-  @include breakpoint(md) {
-    padding-bottom: $footer-height-md;
-  }
+  position: relative;
+  min-height: 100vh;
 
   .page__container {
-    position: relative;
-    z-index: 2;
-    padding-bottom: 50px;
-    background-color: palette(white);
+    padding-bottom: $footer-height-sm;
+
+    @include breakpoint(md) {
+      padding-bottom: $footer-height-md;
+    }
   }
 }
 
-.section__side-title {
-  @extend %mono-style;
-  font-size: 16px;
+.section--standard {
+  padding: 50px 0;
 }
 
 .container-fluid {

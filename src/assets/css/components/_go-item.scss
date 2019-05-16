@@ -9,6 +9,10 @@ $go-offset: 80px;
   @include breakpoint(sm) {
     height: $go-height;
     flex-flow: nowrap;
+
+    &.section--scroll {
+      margin-bottom: 150px;
+    }
   }
 
   @include breakpoint(lg) {
@@ -41,7 +45,7 @@ $go-offset: 80px;
 
     &--front-text {
       left: -$go-offset;
-      width: calc(100% + #{$go-offset} + .5rem);
+      width: calc(100% + #{$go-offset});
       margin-bottom: 240px;
 
       .go-item__panel--image {

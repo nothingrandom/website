@@ -1,26 +1,33 @@
-$footer-height-sm: 335px;
-$footer-height-md: 225px;
+$footer-height-sm: 283px;
+$footer-height-md: 139px;
 
 .section--footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: $footer-height-sm;
-  padding: 50px 0 75px;
-  background-color: palette(black);
-  color: palette(white);
+  padding: 30px 0 20px;
+  border-top: 1px solid palette(grey, pale);
+  background-color: palette(white);
 
   @include breakpoint(md) {
     height: $footer-height-md;
   }
 
-  .social {
-    a {
-      color: palette(white);
-    }
+  h4 {
+    margin: 0;
+    font-weight: 700;
   }
 
-  p a {
-    @include link-underline;
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    @include link-underline();
+  }
+
+  .footer__description {
+    margin-top: 0;
   }
 }

@@ -2,6 +2,7 @@
 
 const glob = require('fast-glob');
 const path = require('path');
+const dateFilter = require('nunjucks-date-filter');
 
 /**
  * The @11ty/eleventy configuration.
@@ -33,6 +34,9 @@ module.exports = (eleventyConfig) => {
 
     // Add all found transforms
     transforms.forEach(transform => eleventyConfig.addTransform(resolveNameFromPath(transform), transform));
+
+    // Add date filter, to format dates better
+    eleventyConfig.addNunjucksFilter('date', dateFilter);
 
     // Make all files pass through to cache
     eleventyConfig.setTemplateFormats(exts);
