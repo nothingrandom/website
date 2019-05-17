@@ -4825,7 +4825,7 @@ lru-cache@^4.0.0, lru-cache@^4.0.1, lru-cache@^4.1.2, lru-cache@^4.1.5:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-luxon@^1.12.0:
+luxon@^1.12.0, luxon@^1.13.2:
   version "1.13.2"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.13.2.tgz#2866c7a7591441aea0004e8cf80d5ca6d917017a"
   integrity sha512-U7i2AE+/VWeB8PZZkIeEcxJCZvBA8LegCHufaIFYx3qRQdw2UJw3fuaL/Fqi9Q+2MeFYu+gYqIzr5hWOvAMHBQ==
@@ -5109,11 +5109,6 @@ module-lookup-amd@^6.1.0:
     requirejs "^2.3.5"
     requirejs-config-file "^3.1.1"
 
-moment@^2.9.0:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
-
 moo@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/moo/-/moo-0.5.0.tgz#72f949e6735aeb27d07eb7c087ea5a70143c56e5"
@@ -5375,13 +5370,6 @@ number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
-
-nunjucks-date-filter@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/nunjucks-date-filter/-/nunjucks-date-filter-0.1.1.tgz#a936d44d2cc9898d95c6ab7b2aba7084fa60aba6"
-  integrity sha1-qTbUTSzJiY2Vxqt7KrpwhPpgq6Y=
-  dependencies:
-    moment "^2.9.0"
 
 nunjucks@^3.1.7, nunjucks@^3.2.0:
   version "3.2.0"
