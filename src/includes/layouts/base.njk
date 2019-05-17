@@ -1,6 +1,13 @@
 {% extends 'extends/html5boilerplate.njk' %}
 
-{% set title = (title + ' - ' + site.title) if title else (site.title) %}
+{% if tabtitle %}
+  {% set title = (tabtitle + ' - ' + site.title) %}
+{% elif title %}
+  {% set title = (title + ' - ' + site.title) %}
+{% else %}
+  {% set title = site.title %}
+{% endif %}
+
 {% set description = (description) if description else (site.description) %}
 {% set lang = lang | default(site.lang) %}
 
