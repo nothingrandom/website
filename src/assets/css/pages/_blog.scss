@@ -9,8 +9,8 @@
     font-size: 22px;
     counter-increment: start-from -1;
 
-    a {
-      @include link-underline(palette(blue), palette(black));
+    &:first-child {
+      padding-top: 0;
     }
 
     &::before {
@@ -22,5 +22,34 @@
       color: palette(grey);
       pointer-events: none;
     }
+
+    a {
+      @include link-underline(palette(blue), palette(black));
+    }
   }
+}
+
+.section--blog-item {
+  max-width: 720px;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: $standard-spacing;
+    font-size: em(20px);
+    line-height: 1.5;
+  }
+}
+
+.blog__header {
+  margin-bottom: $standard-spacing;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.blog__footer {
+  margin-top: $standard-spacing;
+  border-top: 1px solid palette(grey, pale);
 }

@@ -23,10 +23,6 @@ $footer-height-md: 139px;
     font-size: 16px;
   }
 
-  a {
-    @include link-underline();
-  }
-
   .footer__description {
     margin-top: 0;
   }

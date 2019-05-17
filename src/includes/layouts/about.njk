@@ -3,13 +3,13 @@ layout: /layouts/base.njk
 ---
 <div class='section section--standard section--bio'>
   <div class='row row--md-padding'>
-    <div class='col-md-12'>
+    <div class='col-xs-12'>
       <h2 class='section__header'>{{ title }}</h2>
     </div>
-    <div class='col-md-6'>
+    <div class='col-xs-12 col-sm-6 col-md-6'>
       <img src='../img/benjamin-2019-verrec-web.jpg' alt='A picture of Benjamin' />
     </div>
-    <div class='col-md-6 intro__blurb'>
+    <div class='col-xs-12 col-sm-6 col-md-6 intro__blurb'>
       {{ content | safe }}
       {% include 'partials/social.njk' %}
     </div>
