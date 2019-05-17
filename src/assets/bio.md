@@ -1,6 +1,7 @@
 ---
 layout: layouts/about.njk
 title: Hey there!
+tabtitle: Bio
 tags:
   - nav
 navtitle: Bio
