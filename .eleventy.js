@@ -17,8 +17,22 @@ module.exports = (eleventyConfig) => {
     const files = glob.sync(path.join(process.cwd(), dirs.input, "**/*"));
     const exts = files.map(file => path.extname(file).replace('.', ''));
 
-    // Add date filter, to format dates better
-    eleventyConfig.addNunjucksFilter('date', dateFilter);
+    // Filters
+    Object.keys(filters).forEach(filterName => {
+        eleventyConfig.addFilter(filterName, filters[filterName])
+    })
+
+    // Shortcodes
+    Object.keys(shortcodes).forEach(shortCodeName => {
+        eleventyConfig.addShortcode(shortCodeName, shortcodes[shortCodeName])
+    })
+
+    // Collections: Navigation
+    eleventyConfig.addCollection('nav', function(collection) {
+        return collection.getFilteredByTag('nav').sort(function(a, b) {
+            return a.data.navorder - b.data.navorder
+        })
+    })
 
     // Make all files pass through to cache
     eleventyConfig.setTemplateFormats(exts);

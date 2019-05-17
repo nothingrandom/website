@@ -1,11 +1,17 @@
 .section--bio {
-  padding: 50px 0;
-
   p {
     line-height: 1.25em;
   }
 
-  a:not(.link--social) {
-    @include link-underline(palette(blue));
+  .intro__blurb {
+    margin-top: $standard-spacing;
+
+    @include breakpoint(sm) {
+      margin-top: unset;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
   }
 }

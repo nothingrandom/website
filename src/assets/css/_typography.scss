@@ -16,11 +16,6 @@ body {
 @include header-style() {
   @extend %sans-style;
   font-weight: 400;
-
-  &.section__header {
-    margin-top: 0;
-    font-weight: 400;
-  }
 }
 
 @include paragraph-style() {
@@ -38,6 +33,8 @@ h2 {
 
   &.section__header {
     @extend %serif-style;
+    margin-top: 0;
+    margin-bottom: $standard-spacing;
     font-size: em(42px);
     font-weight: 400;
     text-align: center;
@@ -55,12 +52,7 @@ p {
   font-size: em(18px);
 }
 
-a {
-  text-decoration: none;
-  transition: color ease-in-out $transition-time;
-}
-
-.hero__link {
+.link--hero {
   position: relative;
   display: inline-block;
   color: inherit;
@@ -97,6 +89,9 @@ a {
   display: inline-block;
   color: $text-color;
   text-decoration: none;
+  @if $text-color != palette(grey) {
+    color: $text-color !important;
+  }
 
   &::after {
     position: relative;
@@ -112,7 +107,7 @@ a {
   }
 
   &:hover {
-    color: $color;
+    color: $color !important;
 
     &::after {
       bottom: 2px;
@@ -123,4 +118,13 @@ a {
 
 .link-underline {
   @include link-underline(palette(blue), palette(grey));
+}
+
+a {
+  text-decoration: none;
+  transition: color ease-in-out $transition-time;
+
+  &:not(.link--hero):not(.link--social):not(.link--exclude) {
+    @include link-underline();
+  }
 }

@@ -1,0 +1,17 @@
+---
+layout: /layouts/base.njk
+---
+<div class='section section--standard section--blog-item'>
+  <div class='blog__header'>
+    <h2 class='section__header'>{{ title }}</h2>
+    <p>{{ page.date | readableDate }}</p>
+  </div>
+
+  {{ content | safe }}
+
+  <div class='blog__footer'>
+    <p>
+      <a href='/blog'><i class='fal fa-long-arrow-left'></i>  View all posts</a>
+    </p>
+  </div>
+</div>
