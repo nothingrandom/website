@@ -75,19 +75,29 @@ $menu-height-md: 93px;
         transform: unset;
       }
 
-      li {
+      .menu__item {
         padding: 10px 0;
         font-size: em(32px);
 
         @include breakpoint(md) {
           display: inline-block;
           padding: 10px 15px;
-          font-size: em(22px);
+          font-size: em(18px);
+        }
+
+        &.menu__item--active {
+          a {
+            color: palette(black);
+          }
         }
 
         a {
           @extend %serif-style;
           color: palette(black);
+
+          @include breakpoint(md) {
+            color: palette(grey);
+          }
 
           &:hover {
             color: palette(white);

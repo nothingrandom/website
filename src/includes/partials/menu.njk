@@ -4,9 +4,9 @@
       <div class='col-xs-12'>
         <div class='menu'>
           {% if config.env === 'development' %}
-            <a href='http://localhost:3000' class='logo color'>
+            <a href='http://localhost:3000' class='link--exclude logo color'>
           {% else %}
-            <a href='https://nothingrandom.com' class='logo color'>
+            <a href='https://nothingrandom.com' class='link--exclude logo color'>
           {% endif %}
             <span>
               b<span class='collapse'><em style='display: none'>e</em><em style='display: none'>n</em><em style='display: none'>j</em><em style='display: none'>a</em><em style='display: none'>m</em><em style='display: none'>i</em><em style='display: none'>n</em></span>.
@@ -20,11 +20,20 @@
             </label>
             <div class='menu-content'>
               <ul class='links'>
-                <li><a href='/'>Home</a></li>
-                <li><a href='/food'>Food</a></li>
-                <li><a href='/blog'>Blog</a></li>
-                <li><a href='/projects'>Projects</a></li>
-                <li><a href='/bio'>Bio</a></li>
+                {# <li class='active'><a href='/'>Home</a></li>
+                <li class=''><a href='/food'>Food</a></li>
+                <li class=''><a href='/blog'>Blog</a></li>
+                <li class=''><a href='/projects'>Projects</a></li>
+                <li class=''><a href='/bio'>Bio</a></li> #}
+                {% for nav in collections.nav %}
+                  {% set isCurrent = (nav.url === page.url) %}
+                  {% set isParent = nav.url != '/' and nav.url in page.url %}
+                  <li class='menu__item {% if isCurrent or isParent %}menu__item--active{% endif %}'>
+                    <a class='link--exclude' href='{{ nav.url | url}}'>
+                      {{ nav.data.navtitle }}
+                    </a>
+                  </li>
+                {% endfor %}
               </ul>
               {% include 'partials/social.njk' %}
             </div>
