@@ -1,11 +1,17 @@
 ---
 layout: layouts/about.njk
+
 title: Hey there!
+
 tabtitle: Bio
+
 tags:
   - nav
+
 navtitle: Bio
 navorder: 3
+
+permalink: /bio/index.html
 ---
 
 ### I'm Benjamin. And in summary, I'm a Javascript engineer based in Amsterdam, the Netherlands who cooks food, cycles a lot, and loves listening to and creating indie music.
