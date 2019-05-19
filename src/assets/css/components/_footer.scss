@@ -21,6 +21,14 @@ $footer-height-md: 139px;
 
   p {
     font-size: 16px;
+
+    a {
+      &:hover {
+        &::after {
+          bottom: 4px !important;
+        }
+      }
+    }
   }
 
   .footer__description {

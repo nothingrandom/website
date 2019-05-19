@@ -9,7 +9,7 @@ tags:
   - nav
 
 navtitle: Bio
-navorder: 3
+navorder: 4
 
 permalink: /bio/index.html
 ---

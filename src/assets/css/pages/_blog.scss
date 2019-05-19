@@ -35,8 +35,16 @@
 
   p {
     margin-bottom: $standard-spacing;
+  }
+
+  li {
+    margin-bottom: 10px;
     font-size: em(20px);
-    line-height: 1.5;
+    list-style: disc;
+  }
+
+  img {
+    margin: $standard-spacing auto;
   }
 }
 

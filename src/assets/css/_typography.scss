@@ -49,7 +49,16 @@ h3 {
 
 p {
   margin: 14px 0;
-  font-size: em(18px);
+  font-size: em(20px);
+  line-height: 1.5;
+
+  a {
+    &:hover {
+      &::after {
+        bottom: 7px !important;
+      }
+    }
+  }
 }
 
 .link--hero {
