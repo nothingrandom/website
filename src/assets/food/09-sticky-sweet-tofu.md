@@ -23,6 +23,6 @@ Sticky tofu noodles! Indy's favourite dish 😉
 - Optionally, press your block of tofu for 30+ minutes between a chopping board and some books (or a heavy casserole dish).
 - Cut the tofu into cubes.
 - Start to lightly fry in some coconut, sesame, or sunflower oil, turning to brown and crisp all the sides taking care not to break any.
-- When pale brown pour over your dressing of soy sauce, honey, ginger, coriander, a generous grind of black pepper, and crushed garlic (Fun fact, you can switch the soy and honey for 4 tbsp of sweet Indonesian soy sauce for a vegan/easier option).
-- Continue to cook for a further fee minutes whilst the sauce / dressing thickens and becomes nice and sticky.
+- When pale brown, pour over your dressing of soy sauce, honey, ginger, coriander, a generous grind of black pepper, and crushed garlic (Fun fact, you can switch the soy and honey for 4 tbsp of sweet Indonesian soy sauce for a vegan/easier option).
+- Continue to cook for a further three minutes whilst the sauce / dressing thickens and becomes nice and sticky.
 - Enjoy topped with sesame seeds and with stir fried egg noodles and vegetables.
