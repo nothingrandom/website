@@ -6,6 +6,7 @@
 @import 'grid';
 
 @import 'components/components';
+@import 'pages/pages';
 
 html {
   @include font-smoothing(on);
@@ -13,21 +14,44 @@ html {
   scroll-behavior: smooth;
 }
 
-// body {
-//   height: unset;
-// }
-
 .page {
-  padding: 0 0 50px;
+  position: relative;
+  min-height: 100vh;
 
-  :has(.menu__checkbox) {
-    color: green;
+  .page__container {
+    padding-bottom: $footer-height-sm;
+
+    @include breakpoint(md) {
+      padding-bottom: $footer-height-md;
+    }
   }
 }
 
-.section__side-title {
-  @extend %mono-style;
+.section--standard {
+  padding: 50px 0;
 }
 
-// YOUR STYLES HERE
-// ==============================
+.container-fluid {
+  max-width: 1280px;
+}
+
+.row--md-padding {
+  @include breakpoint(md) {
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11 {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+}

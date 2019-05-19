@@ -1,13 +1,43 @@
 <div class='menu__container'>
-  <div class='container container-fluid'>
+  <div class='container-fluid'>
     <div class='row'>
       <div class='col-xs-12'>
         <div class='menu'>
-          <a href="https://nothingrandom.com" class="logo color">
+          {% if config.env === 'development' %}
+            <a href='http://localhost:3000' class='link--exclude logo color'>
+          {% else %}
+            <a href='https://nothingrandom.com' class='link--exclude logo color'>
+          {% endif %}
             <span>
-              b<span class="collapse"><em style='display: none'>e</em><em style='display: none'>n</em><em style='display: none'>j</em><em style='display: none'>a</em><em style='display: none'>m</em><em style='display: none'>i</em><em style='display: none'>n</em></span>.
+              b<span class='collapse'><em style='display: none'>e</em><em style='display: none'>n</em><em style='display: none'>j</em><em style='display: none'>a</em><em style='display: none'>m</em><em style='display: none'>i</em><em style='display: none'>n</em></span>.
             </span>
           </a>
+          <div class='menu__wrapper'>
+            <input type='checkbox' id='menu-checkbox' class='menu__checkbox'>
+            <label for='menu-checkbox' class='menu__icon'>
+              <i class='fal fa-cheeseburger'></i>
+              <i class='fal fa-times'></i>
+            </label>
+            <div class='menu-content'>
+              <ul class='links'>
+                {# <li class='active'><a href='/'>Home</a></li>
+                <li class=''><a href='/food'>Food</a></li>
+                <li class=''><a href='/blog'>Blog</a></li>
+                <li class=''><a href='/projects'>Projects</a></li>
+                <li class=''><a href='/bio'>Bio</a></li> #}
+                {% for nav in collections.nav %}
+                  {% set isCurrent = (nav.url === page.url) %}
+                  {% set isParent = nav.url != '/' and nav.url in page.url %}
+                  <li class='menu__item {% if isCurrent or isParent %}menu__item--active{% endif %}'>
+                    <a class='link--exclude' href='{{ nav.url | url}}'>
+                      {{ nav.data.navtitle }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+              {% include 'partials/social.njk' %}
+            </div>
+          </div>
         </div>
       </div>
     </div>

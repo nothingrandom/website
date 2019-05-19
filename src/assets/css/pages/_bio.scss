@@ -1,0 +1,13 @@
+.section--bio {
+  .intro__blurb {
+    margin-top: $standard-spacing;
+
+    @include breakpoint(sm) {
+      margin-top: unset;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+}

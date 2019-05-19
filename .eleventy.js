@@ -2,18 +2,13 @@
 
 const glob = require('fast-glob');
 const path = require('path');
+const filters = require('./lib/filters.js');
+const shortcodes = require('./lib/shortcodes.js');
 
-/**
- * The @11ty/eleventy configuration.
- *
- * For a full list of options, see: https://www.11ty.io/docs/config/
- */
+// The @11ty/eleventy configuration.
+// For a full list of options, see: https://www.11ty.io/docs/config/
+
 module.exports = (eleventyConfig) => {
-    const paths = {
-        filters: path.join(process.cwd(), "src/filters/*.js"),
-        shortcodes: path.join(process.cwd(), "src/shortcodes/*.js"),
-        transforms: path.join(process.cwd(), "src/transforms/*.js")
-    }
     const dirs = {
         input: "src/assets/",
         data: `../data/`,
@@ -21,18 +16,23 @@ module.exports = (eleventyConfig) => {
     }
     const files = glob.sync(path.join(process.cwd(), dirs.input, "**/*"));
     const exts = files.map(file => path.extname(file).replace('.', ''));
-    const filters = glob.sync(paths.filters);
-    const shortcodes = glob.sync(paths.shortcodes);
-    const transforms = glob.sync(paths.transforms);
 
-    // Add all found filters
-    filters.forEach(filter => eleventyConfig.addFilter(resolveNameFromPath(filter), filter));
+    // Filters
+    Object.keys(filters).forEach(filterName => {
+        eleventyConfig.addFilter(filterName, filters[filterName])
+    })
 
-    // Add all found shortcodes
-    shortcodes.forEach(shortcode => eleventyConfig.addShortcode(resolveNameFromPath(shortcode), shortcode));
+    // Shortcodes
+    Object.keys(shortcodes).forEach(shortCodeName => {
+        eleventyConfig.addShortcode(shortCodeName, shortcodes[shortCodeName])
+    })
 
-    // Add all found transforms
-    transforms.forEach(transform => eleventyConfig.addTransform(resolveNameFromPath(transform), transform));
+    // Collections: Navigation
+    eleventyConfig.addCollection('nav', function(collection) {
+        return collection.getFilteredByTag('nav').sort(function(a, b) {
+            return a.data.navorder - b.data.navorder
+        })
+    })
 
     // Make all files pass through to cache
     eleventyConfig.setTemplateFormats(exts);
