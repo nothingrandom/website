@@ -19,10 +19,10 @@ Sometimes you've got to make an impression with dinner guests. Nothing quite doe
 
 ## Method
 - Preheat the oven to 200°C⁣
-- Place the both portions of mushrooms, into a mixing bowl, carefully cutting any of the large ones into halves or quarters.⁣
-- In your mushroom mix, add the oil, cream, red wine, a few sprigs of fresh coriander, thyme and rosemary, salt and pepper.⁣
+- Place both the portions of mushrooms, into a mixing bowl, carefully cutting any of the large ones into halves or quarters.⁣
+- In your mushroom mix, add the oil, cream, red wine, fresh herbs, and season to taste.
 - Gently mix the ingredients together using your hands, taking care not to break any of the mushrooms.⁣
-- Split the mix into 4 or 5 portions and place them into 35cm squares of baking paper, and tie them with bows with coarse string.⁣
+- Split the mix into 4 or 5 portions and place them into 35cm squares of baking paper, and bow them with coarse string.⁣
 - Cook in the oven for 17 minutes, or until the mushrooms are tender.⁣
 - Serve warm and whilst still wrapped, allowing each person to open their own parcel.⁣
 ⁣
