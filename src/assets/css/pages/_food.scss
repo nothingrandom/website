@@ -1,0 +1,13 @@
+.section--food {
+  .food__item {
+    margin-bottom: $standard-spacing;
+
+    a {
+      color: palette(grey);
+
+      &:hover {
+        color: palette(black);
+      }
+    }
+  }
+}
