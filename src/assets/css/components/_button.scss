@@ -1,0 +1,39 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+  border: 2px solid palette(white);
+  color: palette(white);
+  text-align: center;
+  transition: transform linear $transition-time;
+
+  &::after {
+    @include pseudo();
+    @include center(horizontal);
+    bottom: -6px;
+    width: 96%;
+    height: 4px;
+    background-color: palette(white);
+    transition: all linear $transition-time;
+  }
+
+  &:hover {
+    transform: translateY(2px);
+
+    &::after {
+      bottom: -4px;
+      width: 98%;
+    }
+  }
+
+  span {
+    font-size: 22px;
+  }
+
+  .svg-inline--fa {
+    position: absolute;
+    left: 30px;
+    font-size: 26px;
+  }
+}

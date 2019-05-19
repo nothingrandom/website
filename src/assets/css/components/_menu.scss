@@ -1,7 +1,11 @@
+$menu-height-md: 93px;
+
 .menu__container {
   position: sticky;
   top: 0;
   z-index: 10;
+  height: $menu-height-md;
+  border-top: 4px solid palette(black);
   background-color: palette(white);
 }
 
@@ -21,6 +25,10 @@
       font-size: 28px;
       cursor: pointer;
 
+      @include breakpoint(md) {
+        display: none;
+      }
+
       .fa-times {
         display: none;
       }
@@ -37,14 +45,84 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 9;
-    display: none;
-    background-color: palette(blue, pale);
-    // background-color: pink;
+    z-index: -1;
+    background-color: palette(blue);
+    opacity: 0;
+    transition: opacity ease-in-out .25s;
+    pointer-events: none;
+
+    @include breakpoint(md) {
+      position: relative;
+      top: unset;
+      right: unset;
+      bottom: unset;
+      left: unset;
+      z-index: 1;
+      background-color: unset;
+      opacity: 1;
+      pointer-events: unset;
+    }
+
+    .links {
+      @include center(vertical);
+      position: relative;
+      text-align: center;
+
+      @include breakpoint(md) {
+        position: relative;
+        top: unset;
+        text-align: right;
+        transform: unset;
+      }
+
+      .menu__item {
+        padding: 10px 0;
+        font-size: em(32px);
+
+        @include breakpoint(md) {
+          display: inline-block;
+          padding: 10px 15px;
+          font-size: em(18px);
+        }
+
+        &.menu__item--active {
+          a {
+            color: palette(black);
+          }
+        }
+
+        a {
+          @extend %serif-style;
+          color: palette(black);
+
+          @include breakpoint(md) {
+            color: palette(grey);
+          }
+
+          &:hover {
+            color: palette(white);
+
+            @include breakpoint(md) {
+              color: palette(black);
+            }
+          }
+        }
+      }
+    }
 
     .social {
       @include center(horizontal);
       bottom: 50px;
+
+      @include breakpoint(md) {
+        display: none;
+      }
+
+      a {
+        &:hover {
+          color: palette(white);
+        }
+      }
     }
   }
 
@@ -53,7 +131,9 @@
 
     &:checked {
       ~ .menu-content {
-        display: block;
+        z-index: 9;
+        opacity: 1;
+        pointer-events: unset;
       }
 
       ~ .menu__icon {

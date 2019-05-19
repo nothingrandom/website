@@ -1,37 +1,44 @@
-{% extends "extends/html5boilerplate.njk" %}
+{% extends 'extends/html5boilerplate.njk' %}
 
-{% set title = (title + " - " + site.title) if title else (site.title) %}
+{% if tabtitle %}
+  {% set title = (tabtitle + ' - ' + site.title) %}
+{% elif title %}
+  {% set title = (title + ' - ' + site.title) %}
+{% else %}
+  {% set title = site.title %}
+{% endif %}
+
 {% set description = (description) if description else (site.description) %}
 {% set lang = lang | default(site.lang) %}
 
 {% block headStyles %}
-  {% include "partials/styles.njk" %}
+  {% include 'partials/styles.njk' %}
 {% endblock %}
 
 {% block headMisc %}
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/favicon-32x32.png" />
-  <link rel="apple-touch-icon" href="/img/favicon-32x32.png">
-  <script defer src="https://pro.fontawesome.com/releases/v5.8.1/js/light.js" integrity="sha384-avwGKnev1pyXYEbWxXSg9S4rpTsws+5vQpoj76SfcccEzOL162Ei8+z4a6AlaMeE" crossorigin="anonymous"></script>
-  <script defer src="https://pro.fontawesome.com/releases/v5.8.1/js/brands.js" integrity="sha384-b4zU5X+9uCyU5wpeWBsEIFph6tTD8ERLbUs93uYGQGNqzbcfPDeY6c4jMhTAfBri" crossorigin="anonymous"></script>
-  <script defer src="https://pro.fontawesome.com/releases/v5.8.1/js/fontawesome.js" integrity="sha384-w6QYwIdCVqcYkHtaFutVu3VlDeu+pBFvlp7e0/tygMFwnWTl13KuVYfsp0ediPpA" crossorigin="anonymous"></script>
+  <link rel='manifest' href='/site.webmanifest'>
+  <link rel='icon' type='image/png' href='/img/favicon-32x32.png' />
+  <link rel='apple-touch-icon' href='/img/favicon-32x32.png'>
 {% endblock %}
 
 {% block body %}
   {{ super() }}
 
   <div class='page'>
-    {% include "partials/menu.njk" %}
-    <div class='container-fluid container'>
-      {{ content | safe }}
+    {% include 'partials/menu.njk' %}
+    <div class='page__container'>
+        <div class='container-fluid'>
+          {{ content | safe }}
+        </div>
     </div>
+    {% include 'partials/footer.njk' %}
   </div>
 {% endblock %}
 
 {% block bodyScripts %}
-  {% include "partials/scripts.njk" %}
+  {% include 'partials/scripts.njk' %}
 
-  <script type="text/javascript">
+  <script type='text/javascript'>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('/sw.js').then(registration => {
@@ -47,6 +54,6 @@
   </script>
 
   {% if config.env === 'development' %}
-    {% include "partials/browser-sync.dev.njk" %}
+    {% include 'partials/browser-sync.dev.njk' %}
   {% endif %}
 {% endblock %}

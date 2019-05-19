@@ -9,13 +9,11 @@
 // Then, we add placeholder for the precache routes manifest
 // DO NOT REMOVE! :)
 
-if (process.env.NODE_ENV === 'production') {
-  workbox.precaching.precacheAndRoute([]);
-} else {
+const cacheImages = () => {
   workbox.routing.registerRoute(
-    /\.(?:png|gif|jpg|jpeg|svg)$/,
+    /\.(?:png|gif|jpg|jpeg|webp|svg)$/,
     new workbox.strategies.CacheFirst({
-      cacheName: 'name-images',
+      cacheName: 'images',
       plugins: [
         new workbox.expiration.Plugin({
           maxEntries: 60,
@@ -24,6 +22,13 @@ if (process.env.NODE_ENV === 'production') {
       ],
     }),
   );
+};
+
+if (process.env.NODE_ENV === 'production') {
+  workbox.precaching.precacheAndRoute([]);
+} else {
+  cacheImages();
+  // workbox.precaching.precacheAndRoute([]);
 }
 
 // Put any of your custom workbox logic below!
