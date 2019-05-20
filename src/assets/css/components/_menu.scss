@@ -6,6 +6,7 @@ $menu-height-md: 93px;
   z-index: 10;
   height: $menu-height-md;
   border-top: 4px solid palette(black);
+  border-bottom: 1px solid palette(grey, pale);
   background-color: palette(white);
 }
 
@@ -46,7 +47,7 @@ $menu-height-md: 93px;
     bottom: 0;
     left: 0;
     z-index: -1;
-    display: unset;
+    display: unset !important;
     background-color: palette(blue);
     opacity: 0;
     transition: opacity ease-in-out .25s;
