@@ -4,7 +4,7 @@
 // Learn how to configure workbox here: https://developers.google.com/web/tools/workbox/guides/configure-workbox
 // First, we reference the locally bundled workbox script
 
-// importScripts('/workbox/workbox-v4.2.0/workbox-sw.js');
+importScripts('/workbox/workbox-v4.2.0/workbox-sw.js');
 
 // Then, we add placeholder for the precache routes manifest
 // DO NOT REMOVE! :)
