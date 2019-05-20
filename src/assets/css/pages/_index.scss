@@ -1,10 +1,10 @@
 .section--intro {
   position: relative;
-  min-height: calc(90vh - (#{$menu-height-md} + #{$footer-height-md}));
+  min-height: calc(100vh - (#{$menu-height-md} + #{$footer-height-md}));
 
   .col {
     @include breakpoint(sm) {
-      min-height: calc(90vh - (#{$menu-height-md} + #{$footer-height-md}));
+      min-height: calc(100vh - (#{$menu-height-md} + #{$footer-height-md}));
     }
   }
 
@@ -18,12 +18,25 @@
 
   .text__wrapper,
   .profile-pic {
-    @include center(vertical);
-    position: relative;
-    padding: 20px 0;
+    @include breakpoint(sm) {
+      @include center(vertical);
+      position: relative;
+    }
+  }
 
-    @include breakpoint(md) {
-      padding: 0;
+  .text__wrapper {
+    padding-top: $standard-spacing;
+
+    @include breakpoint(sm) {
+      padding-top: 0;
+    }
+  }
+
+  .profile-pic {
+    padding-bottom: $standard-spacing;
+
+    @include breakpoint(sm) {
+      padding-bottom: 0;
     }
   }
 }
