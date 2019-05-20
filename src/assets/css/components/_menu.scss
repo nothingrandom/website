@@ -46,6 +46,7 @@ $menu-height-md: 93px;
     bottom: 0;
     left: 0;
     z-index: -1;
+    display: unset;
     background-color: palette(blue);
     opacity: 0;
     transition: opacity ease-in-out .25s;
