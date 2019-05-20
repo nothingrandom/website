@@ -36,7 +36,7 @@
     padding-bottom: $standard-spacing;
 
     @include breakpoint(sm) {
-      padding-bottom: 0;
+      padding: $standard-spacing 0;
     }
   }
 }
