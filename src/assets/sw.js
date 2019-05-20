@@ -9,7 +9,7 @@ importScripts('/workbox/workbox-v4.2.0/workbox-sw.js');
 // Then, we add placeholder for the precache routes manifest
 // DO NOT REMOVE! :)
 
-// workbox.precaching.precacheAndRoute([]);
+workbox.precaching.precacheAndRoute([]);
 
 // Put any of your custom workbox logic below!
 
