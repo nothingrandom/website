@@ -111,8 +111,10 @@ $menu-height-md: 93px;
     }
 
     .social {
-      @include center(horizontal);
+      position: absolute;
       bottom: 50px;
+      width: 100%;
+      text-align: center;
 
       @include breakpoint(md) {
         display: none;
