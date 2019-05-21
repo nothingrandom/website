@@ -12,10 +12,16 @@ navorder: 3
 permalink: /food/index.html
 ---
 <div class='section section--standard section--food'>
-  <div class='row row--md-padding'>
-    <div class='col-xs-12'>
-      <h2 class='section__header'>{{ title }}</h2>
+  <div class='row center-md'>
+    <div class='col-xs-12 col-md-6'>
+      <div class='section__header'>
+        <h2>{{ title }}</h2>
+        <p>I love to cook simple with fresh ingredients, from pan to plate.</p>
+        <p>All my recipies are vegetarian and dairy free (like me!) and most can be made vegan, if they're not already.</p>
+      </div>
     </div>
+  </div>
+  <div class='row row--md-padding'>
     {% for post in collections.food | reverse %}
       <div class='col-xs-12 col-sm-6 col-md-4 food__item'>
         <a class='link--exclude' href='{{ post.url }}'>

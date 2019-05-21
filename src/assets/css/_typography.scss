@@ -30,15 +30,6 @@ h1 {
 
 h2 {
   font-size: em(32px);
-
-  &.section__header {
-    @extend %serif-style;
-    margin-top: 0;
-    margin-bottom: $standard-spacing;
-    font-size: em(42px);
-    font-weight: 400;
-    text-align: center;
-  }
 }
 
 h3 {

@@ -1,0 +1,20 @@
+.section__header {
+  h2 {
+    @extend %serif-style;
+    margin-top: 0;
+    margin-bottom: $standard-spacing;
+    font-size: em(42px);
+    font-weight: 400;
+    text-align: center;
+  }
+
+  p {
+    &:first-of-type {
+      margin-top: -($standard-spacing / 2);
+    }
+
+    &:last-child {
+      margin-bottom: $standard-spacing;
+    }
+  }
+}
