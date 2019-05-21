@@ -14,7 +14,9 @@ permalink: /blog/index.html
 <div class='section section--standard section--blog'>
   <div class='row'>
     <div class='col-xs-12'>
-      <h2 class='section__header'>{{ title }}</h2>
+      <div class='section__header'>
+        <h2>{{ title }}</h2>
+      </div>
       <ol class='posts posts-count' style='counter-reset: start-from {{ collections.posts | length + 1}}'>
         {% for post in collections.posts | reverse %}
           <li>

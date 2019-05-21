@@ -40,6 +40,7 @@ html {
     margin-right: -1.5rem;
     margin-left: -1.5rem;
 
+    .col-md-1,
     .col-md-2,
     .col-md-3,
     .col-md-4,
@@ -49,7 +50,8 @@ html {
     .col-md-8,
     .col-md-9,
     .col-md-10,
-    .col-md-11 {
+    .col-md-11,
+    .col-md-12 {
       padding-right: 1.5rem;
       padding-left: 1.5rem;
     }
