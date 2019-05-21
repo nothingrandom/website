@@ -33,11 +33,6 @@
   status = 301
   force = true
 [[redirects]]
-  from = "https://0random.co/*"
-  to = "https://nothingrandom.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
   from = "https://nothingrandom.xyz/*"
   to = "https://nothingrandom.com/:splat"
   status = 301
