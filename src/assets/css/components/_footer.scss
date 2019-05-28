@@ -16,11 +16,12 @@ $footer-height-md: 139px;
 
   h4 {
     margin: 0;
+    font-size: em(16px);
     font-weight: 700;
   }
 
   p {
-    font-size: 16px;
+    font-size: em(16px);
 
     a {
       &:hover {
