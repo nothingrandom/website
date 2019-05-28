@@ -98,12 +98,12 @@ A hummus bistro - [d&a](https://dna-hummusbistro.com/) @ [Westerstraat 136, 1015
 You've come to Amsterdam for a reason, and that's probably so that you can see some of the great things this Dutch capital has to offer. I've done a lot of touristy things, and there's enough around to keep you busy for months if money is no issue.
 
 - Wandering the Jordaan - the Jordaan district is one of the prettiest of Amsterdam. It's well worth taking the time to walk around, peer at the quirky, tall canal houses, wander The 9 Streets (De 9 Straatjes) and stop at a cafe or two.
-- Boat trips - which the center of Amsterdam being mostly canal, it's amazing how much the view differs from a boat than the road. I love to hire a boat with some friends and cruise in my own chosen areas. You can also join a guided tour, the smaller ones are better. [Those Dam Boat Guys](https://www.thosedamboatguys.com/), for example.
-- Anne Frank huis - tickets will book up months in advance. If you're quick they release tickets for the same day every morning. It's "nice" (in a sad way) to visit, but in ways a little bit of a weird experience too.
+- Boat trips - with the center of Amsterdam being mostly canal, it's amazing how much the view differs from a boat than the road. I love to hire a boat with some friends and cruise in my own chosen areas. You can also join a guided tour, the smaller ones are better, [Those Dam Boat Guys](https://www.thosedamboatguys.com/), for example.
+- Amsterdam Bos - the forest of the city. Filled with wildlife and birds, there's even a goat farm which sells goat milk ice cream!
+- Anne Frank huis - tickets will book up months in advance. If you're quick they release tickets for the same day every morning. It's "nice" (in a sad way) to visit, but in ways a little bit of a weird experience too due to how touristy it is. I'd recommend the Corrie ten Boom huis instead (see below).
 - Rijksmuseum - full of the Dutch classics, a grand building which you can cycle through the middle of. Again, nice to visit, but if you're not a fan of the Dutch masters it might not be the place for you.
 - Stedelijk museum - design, modern, and contemporary art. One of my favourite art museums, but it's all personal taste.
 - Van Gogh musuem - what it says on the tin. A nice experience and the special / guest exhibits can be really good.
-- Amsterdam Bos - the forest of the city. Filled with wildlife and birds, there's even a goat farm which sells goat milk ice cream!
 
 
 #### Elsewhere
