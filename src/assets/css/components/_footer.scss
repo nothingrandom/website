@@ -1,12 +1,12 @@
-$footer-height-sm: 283px;
-$footer-height-md: 139px;
+$footer-height-sm: 294px;
+$footer-height-md: 113px;
 
 .section--footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: $footer-height-sm;
-  padding: 30px 0 20px;
+  padding: 30px 0;
   border-top: 1px solid palette(grey, pale);
   background-color: palette(white);
 
@@ -15,12 +15,17 @@ $footer-height-md: 139px;
   }
 
   h4 {
-    margin: 0;
+    margin: 15px 0 0;
     font-size: em(16px);
     font-weight: 700;
+
+    @include breakpoint(md) {
+      margin: 0;
+    }
   }
 
   p {
+    margin: 5px 0 0;
     font-size: em(16px);
 
     a {
@@ -33,6 +38,10 @@ $footer-height-md: 139px;
   }
 
   .footer__description {
-    margin-top: 0;
+    margin-top: 15px;
+
+    @include breakpoint(md) {
+      margin-top: -3px;
+    }
   }
 }
