@@ -3,10 +3,27 @@
     margin-bottom: $standard-spacing;
 
     a {
-      color: palette(grey);
+      .food__item__image {
+        overflow: hidden;
+
+        img {
+          transition: transform ease-in-out ($transition-time * 1.5);
+        }
+      }
+
+      p {
+        color: palette(grey);
+        transition: color ease-in-out $transition-time;
+      }
 
       &:hover {
-        color: palette(black);
+        img {
+          transform: scale(1.1);
+        }
+
+        p {
+          color: palette(black);
+        }
       }
     }
   }
