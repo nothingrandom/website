@@ -78,35 +78,64 @@ $menu-height-md: 93px;
       }
 
       .menu__item {
-        padding: 10px 0;
+        position: relative;
+        // padding: 10px 0;
         font-size: em(32px);
 
         @include breakpoint(md) {
           display: inline-block;
-          padding: 10px 15px;
+          // padding: 10px 15px;
           font-size: em(18px);
         }
 
+        &::after {
+          position: absolute;
+          right: 15px;
+          bottom: -4px;
+          left: 15px;
+          display: block;
+          height: 5px;
+          content: '';
+          background-color: palette(grey, pale);
+          transform: scaleX(0);
+          transition: transform .3s cubic-bezier(.86, 0, .07, 1);
+          transform-origin: 0 50%;
+        }
+
         &.menu__item--active {
+          &::after {
+            background-color: palette(blue);
+            transform: none;
+          }
+
           a {
             color: palette(black);
           }
         }
 
-        a {
-          @extend %serif-style;
-          color: palette(black);
-
-          @include breakpoint(md) {
-            color: palette(grey);
+        &:hover {
+          &::after {
+            transform: scaleX(1);
           }
 
-          &:hover {
+          a {
             color: palette(white);
 
             @include breakpoint(md) {
               color: palette(black);
             }
+          }
+        }
+
+        a {
+          @extend %serif-style;
+          display: block;
+          padding: 10px 0;
+          color: palette(black);
+
+          @include breakpoint(md) {
+            padding: 10px 15px;
+            color: palette(grey);
           }
         }
       }

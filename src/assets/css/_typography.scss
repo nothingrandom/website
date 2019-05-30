@@ -15,11 +15,13 @@ body {
 
 @include header-style() {
   @extend %sans-style;
+  color: palette(black);
   font-weight: 400;
 }
 
 @include paragraph-style() {
   @extend %sans-style;
+  color: palette(black);
 }
 
 h1 {
