@@ -10,7 +10,7 @@ image: beer-battered-halloumi.jpg
 Growing up by the sea caused me to become a great lover of battered fish and chunky chips. I find the saltiness and texture of halloumi helps it pair with the chips and batter just as nicely as fish would. But honestly you could use this batter for anything; halloumi, tofu, or even fish!
 
 ## Ingredients (serves 4)
-- 1 225g block of halloumi (tofu as a vegan / totally dairy free option)
+- 1 x 225g block of halloumi (tofu as a vegan / totally dairy free option)
 - 125g self-raising flour, more for dusting (35g)
 - 1-2 tbsp garam masala
 - 330 ml beer
