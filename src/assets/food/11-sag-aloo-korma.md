@@ -7,7 +7,7 @@ permalink: /food/sag-aloo-korma/
 image: sag-aloo-korma.jpg
 ---
 
-There's nothing a Brit loves more than a sweet, salty, and slightly spicy curry. This is a slightly healthier (and vegetarian) twist to the classic korma; that I've adapted from Jamie Oliver's [Super Food Family Classics](https://www.jamieoliver.com/family/jamies-super-food-family-classics/) book. It's easy to double, triple or even quadruple this recipe (the only limit being your pan size), so it's great for larger gatherings and parties. It's vegan, and if you make your own paste, guaranteed gluten free.
+There's nothing a Brit loves more than a sweet, salty, and slightly spicy curry. This is a slightly healthier (and vegan) twist to the classic korma; that I've adapted from Jamie Oliver's [Super Food Family Classics](https://www.jamieoliver.com/family/jamies-super-food-family-classics/) book. It's easy to double, triple or even quadruple this recipe (the only limit being your pan size), so it's great for larger gatherings and parties; and if you make your own paste, guaranteed vegan and gluten free.
 
 ## Ingredients (serves 4)
 - 500g potatoes
