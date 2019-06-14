@@ -9,6 +9,8 @@
   }
 
   p {
+    text-align: left;
+
     &:first-of-type {
       margin-top: -($standard-spacing / 2);
     }
