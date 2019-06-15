@@ -1,4 +1,5 @@
 .logo {
+  @extend %sans-style;
   display: inline-block;
   color: palette(black);
   font-size: em(34px);
