@@ -1,6 +1,832 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.13.5
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-MIXINDEEP-450212:
+    - parcel-bundler > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - globby > fast-glob > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > fast-glob > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > browser-sync > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > fast-glob > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > chokidar > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - nunjucks > chokidar > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - chokidar-cli > chokidar > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > fast-glob > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - globby > fast-glob > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > nunjucks > chokidar > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > fast-glob > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > @parcel/watcher > chokidar > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > browser-sync > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - nunjucks > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > browser-sync > chokidar > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - parcel-bundler > fast-glob > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - globby > fast-glob > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > fast-glob > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - globby > fast-glob > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - nunjucks > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+  SNYK-JS-SETVALUE-450213:
+    - parcel-bundler > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - globby > fast-glob > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > fast-glob > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > browser-sync > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > fast-glob > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > chokidar > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - nunjucks > chokidar > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - chokidar-cli > chokidar > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > fast-glob > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - globby > fast-glob > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > nunjucks > chokidar > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > fast-glob > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > @parcel/watcher > chokidar > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > browser-sync > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - nunjucks > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > browser-sync > chokidar > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - parcel-bundler > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - globby > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - globby > fast-glob > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - nunjucks > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - globby > fast-glob > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > fast-glob > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > browser-sync > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > fast-glob > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > chokidar > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - nunjucks > chokidar > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - chokidar-cli > chokidar > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > fast-glob > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - globby > fast-glob > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > nunjucks > chokidar > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > fast-glob > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > @parcel/watcher > chokidar > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > browser-sync > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - nunjucks > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > browser-sync > chokidar > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - globby > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > browser-sync > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - globby > fast-glob > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - nunjucks > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.014Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.014Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.014Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.014Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+  'npm:ua-parser-js:20180227':
+    - '@11ty/eleventy > browser-sync > ua-parser-js':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:lodash:20180130':
@@ -8,4 +834,4 @@ patch:
         patched: '2019-05-01T12:23:36.928Z'
   SNYK-JS-AXIOS-174505:
     - '@11ty/eleventy > browser-sync > localtunnel > axios':
-        patched: '2019-05-11T19:20:01.174Z'
+        patched: '2019-06-21T10:46:50.615Z'
