@@ -9,7 +9,7 @@ image: jerk-mushrooms-rice.jpg
 
 Rice is a staple at our weekly community group. It's great for many reasons, it's easy to cook on bulk and it's also very versatile allowing me to experiment with different cuisines whilst knowing, worst case, the rice will still be edible.
 
-Pair this with something great, like Jamacian style food and you're onto a winner. So many flavours, so tightly packaged. Each mouthful an explosion.
+Pair this with something great, like Jamaican style food and you're onto a winner. So many flavours, so tightly packaged. Each mouthful an explosion.
 
 ## Ingredients (serves 4)
 - 340g brown rice
