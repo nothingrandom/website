@@ -23,7 +23,7 @@ Pair this with something great, like Jamaican style food and you're onto a winne
 - 4 tbsp tomato puree
 - 1 tbsp coconut oil
 - 100ml coconut milk
-- 1 fresh chilli
+- 1 fresh chili
 - 1 tsp jerk seasoning (if you can't find this, a burrito seasoning could be used as a sub)
 - 1 tsp teaspoon allspice
 - 1 tsp teaspoon cumin powder
@@ -34,7 +34,7 @@ Pair this with something great, like Jamaican style food and you're onto a winne
 
 ## Method
 - Cook the rice by the steam method (1 part rice, 2 parts water). Replace 100ml of the water with the coconut milk. Just before the rice is done, add half the kidney beans, the sweetcorn, and peas.
-- Heat the coconut oil in a medium / large saucepan over mid heat. Saute the chopped onion and crushed garlic until going transparent. Add the spices and mix in very well.
-- Add the tomato puree, chopped tomatoes, chilli, and vegetable stock with roughly 600ml of water. Continue on a medium heat, with the lid on, until most the liquid has evaporated and the sauce is getting thick - roughly 10 minutes.
+- Heat the coconut oil in a medium / large saucepan over mid heat. Sauté the chopped onion and crushed garlic until going transparent. Add the spices and mix in very well.
+- Add the tomato puree, chopped tomatoes, chili, and vegetable stock with roughly 600ml of water. Continue on a medium heat, with the lid on, until most the liquid has evaporated and the sauce is getting thick - roughly 10 minutes.
 - Add the mushrooms and other half of the tin of kidney beans, stir well, and put the lid back on the pot for 5 minutes. Take the lid off and cook to reduce the sauce again, because the mushrooms will have released liquid.
 - Serve with the rice, and optionally some avocado, desiccated coconut and parsley.
