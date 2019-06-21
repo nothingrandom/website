@@ -1,5 +1,6 @@
-$footer-height-sm: 294px;
-$footer-height-md: 113px;
+$footer-height-sm: 313px;
+$footer-height-md: 225px;
+$footer-height-lg: 103px;
 
 .section--footer {
   position: absolute;
@@ -14,12 +15,16 @@ $footer-height-md: 113px;
     height: $footer-height-md;
   }
 
+  @include breakpoint(lg) {
+    height: $footer-height-lg;
+  }
+
   h4 {
     margin: 15px 0 0;
     font-size: em(16px);
     font-weight: 700;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       margin: 0;
     }
   }
@@ -40,7 +45,7 @@ $footer-height-md: 113px;
   .footer__description {
     margin-top: 15px;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       margin-top: -3px;
     }
   }
