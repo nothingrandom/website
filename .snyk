@@ -835,3 +835,60 @@ patch:
   SNYK-JS-AXIOS-174505:
     - '@11ty/eleventy > browser-sync > localtunnel > axios':
         patched: '2019-06-21T10:46:50.615Z'
+  SNYK-JS-LODASH-450202:
+    - '@11ty/eleventy > browser-sync > easy-extender > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - chokidar-cli > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > @babel/generator > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > snyk-php-plugin > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > htmlnano > uncss > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > babylon-walk > babel-types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - '@11ty/eleventy > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > @babel/core > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/traverse > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-define-map > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - '@11ty/eleventy > pug > pug-code-gen > constantinople > babel-types > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+    - '@11ty/eleventy > pug > pug-filters > constantinople > babel-types > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - '@11ty/eleventy > pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > htmlnano > uncss > jsdom > request-promise-native > request-promise-core > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
