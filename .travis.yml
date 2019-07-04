@@ -5,4 +5,5 @@ cache: yarn
 install:
   - yarn install --pure-lockfile
 script:
+  - yarn test
   - yarn build
