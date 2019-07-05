@@ -1,6 +1,832 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.13.5
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-MIXINDEEP-450212:
+    - parcel-bundler > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - globby > fast-glob > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > fast-glob > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > browser-sync > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > fast-glob > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > chokidar > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - nunjucks > chokidar > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - chokidar-cli > chokidar > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > fast-glob > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - globby > fast-glob > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > nunjucks > chokidar > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > fast-glob > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > @parcel/watcher > chokidar > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > browser-sync > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - nunjucks > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - '@11ty/eleventy > browser-sync > chokidar > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.001Z'
+    - parcel-bundler > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - parcel-bundler > fast-glob > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - globby > fast-glob > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > fast-glob > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - globby > fast-glob > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - nunjucks > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.002Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.003Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > braces > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep:
+        reason: None given
+        expires: '2019-07-21T10:49:06.004Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > mixin-deep':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+  SNYK-JS-SETVALUE-450213:
+    - parcel-bundler > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - globby > fast-glob > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > fast-glob > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > browser-sync > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > fast-glob > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > chokidar > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - nunjucks > chokidar > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - chokidar-cli > chokidar > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > fast-glob > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - globby > fast-glob > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > nunjucks > chokidar > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > fast-glob > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > @parcel/watcher > chokidar > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > browser-sync > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - nunjucks > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - '@11ty/eleventy > browser-sync > chokidar > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.005Z'
+    - parcel-bundler > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - parcel-bundler > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - globby > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - globby > fast-glob > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - nunjucks > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.006Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.007Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.008Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - globby > fast-glob > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > fast-glob > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > browser-sync > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > fast-glob > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - '@11ty/eleventy > chokidar > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - nunjucks > chokidar > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.009Z'
+    - parcel-bundler > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - chokidar-cli > chokidar > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > fast-glob > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - globby > fast-glob > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > nunjucks > chokidar > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > fast-glob > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > @parcel/watcher > chokidar > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > browser-sync > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - nunjucks > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > browser-sync > chokidar > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - globby > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > fast-glob > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > browser-sync > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - globby > fast-glob > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.010Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - nunjucks > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > browser-sync > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - globby > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - parcel-bundler > fast-glob > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.011Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.012Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - chokidar-cli > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > nanomatch > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.013Z'
+    - chokidar-cli > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.014Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.014Z'
+    - '@11ty/eleventy > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.014Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.014Z'
+    - nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > braces > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - '@11ty/eleventy > browser-sync > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - '@11ty/eleventy > nunjucks > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - parcel-bundler > @parcel/watcher > chokidar > anymatch > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - '@11ty/eleventy > browser-sync > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - parcel-bundler > @parcel/watcher > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value:
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+    - '@11ty/eleventy > nunjucks > chokidar > readdirp > micromatch > extglob > expand-brackets > snapdragon > base > cache-base > union-value > set-value':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
+  'npm:ua-parser-js:20180227':
+    - '@11ty/eleventy > browser-sync > ua-parser-js':
+        reason: None given
+        expires: '2019-07-21T10:49:06.015Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:lodash:20180130':
@@ -8,4 +834,411 @@ patch:
         patched: '2019-05-01T12:23:36.928Z'
   SNYK-JS-AXIOS-174505:
     - '@11ty/eleventy > browser-sync > localtunnel > axios':
-        patched: '2019-05-11T19:20:01.174Z'
+        patched: '2019-06-21T10:46:50.615Z'
+  SNYK-JS-LODASH-450202:
+    - '@11ty/eleventy > browser-sync > easy-extender > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/core > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - chokidar-cli > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/preset-env > @babel/plugin-transform-block-scoping > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/generator > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/core > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > snyk-php-plugin > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/core > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > inquirer > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > snyk-config > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > htmlnano > uncss > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/core > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > babylon-walk > babel-types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/plugin-transform-react-jsx > @babel/helper-builder-react-jsx > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - '@11ty/eleventy > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/core > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/plugin-transform-modules-commonjs > @babel/helper-simple-access > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/preset-env > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/traverse > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/core > @babel/helpers > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-define-map > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - '@11ty/eleventy > pug > pug-code-gen > constantinople > babel-types > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/core > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - '@11ty/eleventy > pug > pug-filters > constantinople > babel-types > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-define-map > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - '@11ty/eleventy > pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash':
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/preset-env > @babel/plugin-transform-unicode-regex > @babel/helper-regex > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > htmlnano > uncss > jsdom > request-promise-native > request-promise-core > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/preset-env > @babel/plugin-transform-sticky-regex > @babel/helper-regex > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/preset-env > @babel/plugin-transform-dotall-regex > @babel/helper-regex > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/preset-env > @babel/plugin-proposal-unicode-property-regex > @babel/helper-regex > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T06:12:15.478Z'
+      parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-function-name > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-systemjs > @babel/helper-hoist-variables > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/plugin-transform-modules-commonjs > @babel/helper-simple-access > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-optimise-call-expression > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-commonjs > @babel/helper-simple-access > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-annotate-as-pure > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-template-literals > @babel/helper-annotate-as-pure > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/helper-hoist-variables > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-function-name > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-function-name > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/helper-member-expression-to-functions > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/helper-member-expression-to-functions > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-commonjs > @babel/helper-simple-access > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-define-map > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-annotate-as-pure > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-annotate-as-pure > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-module-imports > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/helper-optimise-call-expression > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-define-map > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-amd > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-define-map > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-commonjs > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > @babel/helper-simple-access > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/core > @babel/helpers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-object-super > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-classes > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-async-to-generator > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-proposal-async-generator-functions > @babel/helper-remap-async-to-generator > @babel/helper-wrap-function > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
+    - parcel-bundler > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > @babel/types > lodash:
+        patched: '2019-07-04T10:36:03.861Z'
