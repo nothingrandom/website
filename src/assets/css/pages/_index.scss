@@ -1,10 +1,10 @@
 .section--intro {
   position: relative;
-  min-height: calc(100vh - (#{$menu-height-md} + #{$footer-height-md}));
+  min-height: calc(100vh - (#{$menu-height-md} + #{$footer-height-lg}));
 
   .col {
     @include breakpoint(sm) {
-      min-height: calc(100vh - (#{$menu-height-md} + #{$footer-height-md}));
+      min-height: calc(100vh - (#{$menu-height-md} + #{$footer-height-lg}));
     }
   }
 

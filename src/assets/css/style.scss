@@ -24,6 +24,10 @@ html {
     @include breakpoint(md) {
       padding-bottom: $footer-height-md;
     }
+
+    @include breakpoint(lg) {
+      padding-bottom: $footer-height-lg;
+    }
   }
 }
 
