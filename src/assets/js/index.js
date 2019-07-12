@@ -9,7 +9,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 import { faCheeseburger } from '@fortawesome/pro-light-svg-icons/faCheeseburger';
 import { faEnvelope } from '@fortawesome/pro-light-svg-icons/faEnvelope';
 // import { faEye } from '@fortawesome/pro-light-svg-icons/faEye';
-// import { faLongArrowLeft } from '@fortawesome/pro-light-svg-icons/faLongArrowLeft';
+import { faLongArrowLeft } from '@fortawesome/pro-light-svg-icons/faLongArrowLeft';
 import { faTimes } from '@fortawesome/pro-light-svg-icons/faTimes';
 
 library.add(
@@ -20,7 +20,7 @@ library.add(
   faCheeseburger,
   faEnvelope,
   // faEye,
-  // faLongArrowLeft,
+  faLongArrowLeft,
   faTimes,
 );
 
