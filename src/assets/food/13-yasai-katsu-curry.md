@@ -7,7 +7,7 @@ permalink: /food/yasai-katsu-curry/
 image: yasai-katsu-curry.jpg
 ---
 
-This dish is inspired by my regular order and Wagamama's. It's got a Japanese flair to it, but it's most certainly a British twist to the style of cuisine. This is a crowd pleaser, it's an easy dish, and even the kids with enjoy these veggies!
+This dish is inspired by my regular order and Wagamama's. It's got a Japanese flair to it, but it's most certainly a British twist to the style of cuisine. This is a crowd pleaser, it's an easy dish, and even the kids will enjoy these veggies!
 
 ## Ingredients (serves 4)
 ### For the vegetables
