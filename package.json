@@ -20,9 +20,10 @@
     "11ty:watch": "ELEVENTY_ENV=development eleventy  --quiet --watch --output .tmp/11ty",
     "parcel:build": "parcel build .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
     "parcel:watch": "ELEVENTY_ENV=development parcel serve .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
+    "lint": "eslint --ext .js src",
     "prepublish": "npm run snyk-protect",
     "snyk-protect": "snyk protect",
-    "test": "snyk test --severity-threshold=high"
+    "test": "yarn lint; snyk test --severity-threshold=high"
   },
   "alias": {
     "assets": "./src/assets",
@@ -47,7 +48,10 @@
     "workbox-build": "4.3.1"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "browser-sync": "^2.26.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
     "parcel-plugin-copy-unbundled": "file:lib/parcel/parcel-plugin-copy-unbundled",
     "parcel-plugin-eleventy-sync": "file:lib/parcel/parcel-plugin-eleventy-sync",
     "parcel-plugin-nunjucks-precompile": "file:lib/parcel/parcel-plugin-nunjucks-precompile",

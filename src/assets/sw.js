@@ -1,5 +1,3 @@
-'use strict';
-
 // Welcome to your Workbox-powered service worker!
 // Learn how to configure workbox here: https://developers.google.com/web/tools/workbox/guides/configure-workbox
 // First, we reference the locally bundled workbox script
@@ -59,4 +57,3 @@ workbox.precaching.precacheAndRoute([]);
 //     ],
 //   }),
 // );
-
