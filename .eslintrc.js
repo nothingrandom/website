@@ -9,6 +9,8 @@ module.exports = {
     es6: true,
   },
   globals: {
+    'workbox': true,
+    'importScripts': true,
   },
   extends: ['eslint:recommended', 'airbnb-base'],
   plugins: [
