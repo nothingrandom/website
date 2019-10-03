@@ -5,5 +5,7 @@ cache: yarn
 install:
   - yarn install --pure-lockfile
 script:
+  - yarn lint
+  - snyk test --severity-threshold=high
   - yarn test
   - yarn build
