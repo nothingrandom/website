@@ -52,6 +52,7 @@
     "browser-sync": "^2.26.3",
     "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "parcel-plugin-copy-unbundled": "file:lib/parcel/parcel-plugin-copy-unbundled",
     "parcel-plugin-eleventy-sync": "file:lib/parcel/parcel-plugin-eleventy-sync",
     "parcel-plugin-nunjucks-precompile": "file:lib/parcel/parcel-plugin-nunjucks-precompile",
