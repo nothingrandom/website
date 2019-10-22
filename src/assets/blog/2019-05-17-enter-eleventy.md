@@ -11,5 +11,5 @@ I'm loving it, it's probably one of the first times I've properly started using 
 
 I'm also, for the first time, not "deploying" this website by building locally and uploading new files via FTP. This site is now built in the background by [Netlify](https://www.netlify.com). That's pretty freaking awesome too. It means I can write blog posts, recipes, change content, play with new concepts and ideas without having to deal with a FTP client. Which should mean things stay up to date more, because I won't be dreading it anymore.
 
-Full disclaiming, this isn't sponsored by either 11ty or Netlify. Although they're welcome to reach out to me if they want to 😉.
+Full disclosure, this isn't sponsored by either 11ty or Netlify. Although they're welcome to reach out to me if they want to 😉.
 <!-- https://www.zachleat.com/web/introducing-eleventy/ -->
