@@ -57,7 +57,8 @@
     "parcel-plugin-eleventy-sync": "file:lib/parcel/parcel-plugin-eleventy-sync",
     "parcel-plugin-nunjucks-precompile": "file:lib/parcel/parcel-plugin-nunjucks-precompile",
     "parcel-plugin-service-worker": "file:lib/parcel/parcel-plugin-service-worker",
-    "sass": "^1.18.0"
+    "sass": "^1.18.0",
+    "trim-right": "^1.0.1"
   },
   "snyk": true
 }
