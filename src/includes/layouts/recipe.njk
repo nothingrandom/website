@@ -1,19 +1,23 @@
 ---
 layout: /layouts/base.njk
 ---
-<div class='section section--standard section--blog-item'>
-  <div class='blog__header'>
-    <div class='section__header'>
-      <h2>{{ title }}</h2>
+<div class='row center-xs'>
+  <div class='col-xs-12 col-md-7 text-left'>
+    <div class='section section--standard section--blog-item'>
+      <div class='blog__header'>
+        <div class='section__header'>
+          <h2>{{ title }}</h2>
+        </div>
+        <img src='../../img/food/{{ image }}'>
+      </div>
+
+      {{ content | safe }}
+
+      <div class='blog__footer'>
+        <p>
+          <a href='/food'><i class='fal fa-long-arrow-left'></i>  View all recipes</a>
+        </p>
+      </div>
     </div>
-    <img src='../../img/food/{{ image }}'>
-  </div>
-
-  {{ content | safe }}
-
-  <div class='blog__footer'>
-    <p>
-      <a href='/food'><i class='fal fa-long-arrow-left'></i>  View all recipes</a>
-    </p>
   </div>
 </div>
