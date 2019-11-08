@@ -1,6 +1,6 @@
 ---
 layout: layouts/recipe.njk
-title: Allotment Cottage
+title: Allotment Cottage Pie
 tags:
 - food
 permalink: /food/allotment-cottage-pie/
