@@ -11,8 +11,8 @@ Who else loves a Sunday roast? I think one of the better accompaniments to a goo
 ## Ingredients (per person)
 - Portobello Mushrooms
 - 1 garlic clove
-- 1/2 a sprig of fresh thyme
-- 1/2 a sprig of fresh rosemary
+- ½ a sprig of fresh thyme
+- ½ a sprig of fresh rosemary
 - A touch of olive oil
 - Salt & pepper
 

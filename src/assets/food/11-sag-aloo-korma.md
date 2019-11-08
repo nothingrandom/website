@@ -29,10 +29,10 @@ There's nothing a Brit loves more than a sweet, salty, and slightly spicy curry.
 - 2 chillies (deseeded)
 - 3 tbsp desiccated coconut
 - 2 tbsp ground almonds
-- juice of 1/2 a lemon
+- juice of ½ a lemon
 - 1 tbsp tomato puree
 - small bunch of fresh coriander
-- 1/2 tsp salt
+- ½ tsp salt
 
 ## Method
 - Make your korma curry paste by throwing all the ingredients into a blender, until you get a smooth paste. You only want 2 tbsp of it for this recipe, the rest will keep nicely in an egg box lined with clingfilm in the freezer (thanks Jamie!)
