@@ -13,7 +13,7 @@ Noodles, tofu, breaded food - what's not to love!⁣
 - 2 limes
 - 60g panko breadcrumbs
 - 1 tbsp sesame seeds
-- 1/2 tsp salt
+- ½ tsp salt
 - 35g flour
 - 1 egg
 
