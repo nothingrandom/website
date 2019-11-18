@@ -3,13 +3,14 @@ $footer-height-md: 225px;
 $footer-height-lg: 103px;
 
 .section--footer {
+  @include light-dark(background-color, palette(white), palette(black));
+  @include light-dark(border-top-color, palette(grey, pale), palette(black, true));
   position: absolute;
   bottom: 0;
   width: 100%;
   height: $footer-height-sm;
   padding: 30px 0;
-  border-top: 1px solid palette(grey, pale);
-  background-color: palette(white);
+  border-top: 1px solid;
 
   @include breakpoint(md) {
     height: $footer-height-md;
