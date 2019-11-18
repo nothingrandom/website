@@ -12,7 +12,7 @@
       }
 
       p {
-        color: palette(grey);
+        @include light-dark(color, palette(grey), palette(white));
         transition: color ease-in-out $transition-time;
       }
 
@@ -22,7 +22,7 @@
         }
 
         p {
-          color: palette(black);
+          @include light-dark(color, palette(black), palette(blue));
         }
       }
     }

@@ -15,13 +15,13 @@ body {
 
 @include header-style() {
   @extend %sans-style;
-  color: palette(black);
+  @include light-dark(color, palette(black), palette(white));
   font-weight: 400;
 }
 
 @include paragraph-style() {
   @extend %sans-style;
-  color: palette(black);
+  @include light-dark(color, palette(black), palette(white));
 }
 
 h1 {
@@ -79,7 +79,7 @@ p {
   }
 
   &::before {
-    background-color: palette(grey, pale);
+    @include light-dark(background-color, palette(grey, pale), palette(black, true));
   }
 
   &::after {
@@ -97,12 +97,14 @@ p {
 }
 
 @mixin link-underline($color: palette(blue), $text-color: palette(grey)) {
+  @include light-dark(color, $text-color, palette(blue));
   display: inline-block;
-  color: $text-color;
+  // color: $text-color;
   text-decoration: none;
-  @if $text-color != palette(grey) {
-    color: $text-color !important;
-  }
+
+  // @if $text-color != palette(grey) {
+  //   color: $text-color !important;
+  // }
 
   &::after {
     position: relative;

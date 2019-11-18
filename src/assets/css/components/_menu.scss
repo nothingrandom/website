@@ -1,13 +1,15 @@
 $menu-height-md: 93px;
 
 .menu__container {
+  @include light-dark(border-top-color, palette(black), palette(white));
+  @include light-dark(border-bottom-color, palette(grey, pale), palette(black, true));
+  @include light-dark(background-color, palette(white), palette(black));
   position: sticky;
   top: 0;
   z-index: 10;
   height: $menu-height-md;
-  border-top: 4px solid palette(black);
-  border-bottom: 1px solid palette(grey, pale);
-  background-color: palette(white);
+  border-top: 4px solid;
+  border-bottom: 1px solid;
 }
 
 .menu {
@@ -119,7 +121,7 @@ $menu-height-md: 93px;
             color: palette(white);
 
             @include breakpoint(md) {
-              color: palette(black);
+              @include light-dark(color, palette(black), palette(white));
             }
           }
         }
@@ -133,7 +135,7 @@ $menu-height-md: 93px;
             color: palette(white);
 
             @include breakpoint(md) {
-              color: palette(black);
+              @include light-dark(color, palette(black), palette(white));
             }
           }
         }
