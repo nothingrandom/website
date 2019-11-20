@@ -23,7 +23,7 @@
     "lint": "eslint --ext .js src",
     "prepublish": "npm run snyk-protect",
     "snyk-protect": "snyk protect",
-    "test": "yarn lint; snyk test --severity-threshold=high"
+    "test": "yarn lint; snyk test --severity-threshold=high --trust-policies"
   },
   "alias": {
     "assets": "./src/assets",
