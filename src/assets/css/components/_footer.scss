@@ -10,7 +10,8 @@ $footer-height-lg: 103px;
   width: 100%;
   height: $footer-height-sm;
   padding: 30px 0;
-  border-top: 1px solid;
+  border-top-width: 1px;
+  border-top-style: solid;
 
   @include breakpoint(md) {
     height: $footer-height-md;
