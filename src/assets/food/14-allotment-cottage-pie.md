@@ -27,7 +27,7 @@ Veggies, mashed potatoes. This dish is seriously hearty. Great to present as you
 - 400g tin of green lentils
 
 ## Method
-- Trim, wash and slice the leeks 2cm thick. Then scrub the carrots, sweet potato, and butternut squash. Chop to roughly the same size.
+- Trim, wash and slice the leeks 2cm thick. Then scrub the carrots, sweet potato, and butternut squash, chopping to roughly the same size. Half or quarter the larger mushrooms. 
 - Pour 2 tablespoons of oil into a large casserole pan on a medium heat, strip in the rosemary, fry for 1 minute to crisp up, then remove and save for later. Add the cumin seeds and prepped veg to the flavoured oil, season, and cook for 30 minutes, stirring regularly.
 - Meanwhile, peel and roughly chop the potatoes, cook in a pan of boiling, well salted water for 15 minutes, or until tender, then drain well. Mash with the butter, milk, and powdered vegetable stock. Season to taste.
 - Preheat the oven to 190°C⁣.
