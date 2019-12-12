@@ -21,7 +21,7 @@
     "parcel:build": "parcel build .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
     "parcel:watch": "ELEVENTY_ENV=development parcel serve .tmp/parcel/*.html --out-dir dist --cache-dir .tmp/.cache",
     "lint": "eslint --ext .js src",
-    "prepublish": "npm run snyk-protect",
+    "prepublish": "yarn run snyk-protect",
     "snyk-protect": "snyk protect",
     "test": "yarn lint; snyk test --severity-threshold=high --trust-policies"
   },
@@ -44,7 +44,7 @@
     "nunjucks": "^3.1.7",
     "parcel-bundler": "^1.11.0",
     "rimraf": "^2.6.3",
-    "snyk": "^1.189.0",
+    "snyk": "^1.258.2",
     "workbox-build": "4.3.1"
   },
   "devDependencies": {
