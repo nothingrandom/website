@@ -25,3 +25,25 @@ permalink: /index.html
     </div>
   </div>
 </div>
+
+<div class='section section--projects'>
+  <div class='row row--md-padding center-md'>
+    <div class='col col-xs-12 col-md-8 text-left'>
+      <div class='section__header'>
+        <h2>Projects</h2>
+        <p>These are the six repos on GitHub I pushed to most recently.</p>
+      </div>
+      <div class='row projects__wrapper'>
+        {% for repo in github.myRecentRepos %}
+          <div class='col-xs-12 col-sm-6 project__item'>
+            <h4 class='project__header'>
+              <a href='{{ repo.html_url }}' target='_blank'>{{ repo.name }}</a>
+              <span class='project__tag project__language--{% lowercase repo.language %}'>{{ repo.language }}</span>
+            </h4>
+            <p class='project__description'>{{ repo.description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
