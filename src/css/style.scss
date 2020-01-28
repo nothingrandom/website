@@ -19,6 +19,7 @@ html {
   @include light-dark(color, palette(black), palette(white));
   position: relative;
   min-height: 100vh;
+  overflow-x: hidden;
 
   .page__container {
     padding-bottom: $footer-height-sm;
