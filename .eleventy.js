@@ -27,13 +27,6 @@ module.exports = (eleventyConfig) => {
         eleventyConfig.addShortcode(shortCodeName, shortcodes[shortCodeName])
     })
 
-    // Collections: Navigation
-    eleventyConfig.addCollection('nav', function(collection) {
-        return collection.getFilteredByTag('nav').sort(function(a, b) {
-            return a.data.navorder - b.data.navorder
-        })
-    })
-
     // Make all files pass through to cache
     eleventyConfig.setTemplateFormats(exts);
 

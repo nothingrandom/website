@@ -4,7 +4,7 @@ $footer-height-lg: 103px;
 
 .section--footer {
   @include light-dark(background-color, palette(white), palette(black));
-  @include light-dark(border-top-color, palette(grey, pale), palette(black, true));
+  @include light-dark(border-top-color, palette(grey, pale), palette(black, off));
   position: absolute;
   bottom: 0;
   width: 100%;
