@@ -2,7 +2,7 @@ $menu-height-md: 93px;
 
 .menu__container {
   @include light-dark(border-top-color, palette(black), palette(white));
-  @include light-dark(border-bottom-color, palette(grey, pale), palette(black, true));
+  @include light-dark(border-bottom-color, palette(grey, pale), palette(black, off));
   @include light-dark(background-color, palette(white), palette(black));
   position: sticky;
   top: 0;
