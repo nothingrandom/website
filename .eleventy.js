@@ -15,8 +15,8 @@ module.exports = (eleventyConfig) => {
         includes: '_includes',
         output: 'dist',
     }
-    const files = glob.sync(path.join(process.cwd(), dirs.input, "**/*"));
-    const exts = files.map(file => path.extname(file).replace('.', ''));
+    // const files = glob.sync(path.join(process.cwd(), dirs.input, "**/*"));
+    // const exts = files.map(file => path.extname(file).replace('.', ''));
 
     // Filters
     Object.keys(filters).forEach(filterName => {
@@ -29,9 +29,11 @@ module.exports = (eleventyConfig) => {
     })
 
     // Make all files pass through to cache
-    eleventyConfig.setTemplateFormats(exts);
+    // eleventyConfig.setTemplateFormats(exts);
 
     eleventyConfig.addPassthroughCopy('_redirects');
+    eleventyConfig.addPassthroughCopy('src/img');
+    eleventyConfig.addPassthroughCopy('src/fonts');
 
     return {
         // Set the path from the root of the deploy domain
