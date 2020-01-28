@@ -1,0 +1,65 @@
+// Import barebones scss structure
+@import 'reset';
+@import 'utilities', 'variables', 'colors', 'fonts', 'typography';
+
+// Grid
+@import 'grid';
+
+@import 'components/components';
+@import 'pages/pages';
+
+html {
+  @include font-smoothing(on);
+  font-size: $base-font-size;
+  scroll-behavior: smooth;
+}
+
+.page {
+  @include light-dark(background-color, palette(white), palette(black));
+  @include light-dark(color, palette(black), palette(white));
+  position: relative;
+  min-height: 100vh;
+
+  .page__container {
+    padding-bottom: $footer-height-sm;
+
+    @include breakpoint(md) {
+      padding-bottom: $footer-height-md;
+    }
+
+    @include breakpoint(lg) {
+      padding-bottom: $footer-height-lg;
+    }
+  }
+}
+
+.section--standard {
+  padding: 50px 0;
+}
+
+.container-fluid {
+  max-width: 1280px;
+}
+
+.row--md-padding {
+  @include breakpoint(md) {
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12 {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+}

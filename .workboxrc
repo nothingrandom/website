@@ -1,7 +1,0 @@
-{
-    "strategy": 0,
-    "generate": {
-        "cleanupOutdatedCaches": true
-    },
-    "inject": {}
-}
