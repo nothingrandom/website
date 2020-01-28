@@ -14,12 +14,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .page {
   @include light-dark(background-color, palette(white), palette(black));
   @include light-dark(color, palette(black), palette(white));
   position: relative;
   min-height: 100vh;
-  overflow-x: hidden;
 
   .page__container {
     padding-bottom: $footer-height-sm;
