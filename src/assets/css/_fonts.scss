@@ -12,3 +12,6 @@ $sans: 'Circular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 @import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
 $serif: 'Lora', serif;
+
+@include font-face('Hack', '../fonts/Hack-Regular', 400, normal);
+$mono: 'Hack', monospace;
