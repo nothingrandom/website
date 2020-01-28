@@ -34,6 +34,7 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy('_redirects');
     eleventyConfig.addPassthroughCopy('src/img');
     eleventyConfig.addPassthroughCopy('src/fonts');
+    eleventyConfig.addPassthroughCopy('src/sw.js');
 
     return {
         // Set the path from the root of the deploy domain
