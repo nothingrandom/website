@@ -1,7 +1,7 @@
 .section--projects {
   @include light-dark(background-color, palette(grey, pale), palette(black, off));
   height: 100vh - #{$menu-height-md};
-  padding: 100px 0 60px;
+  padding: 100px 2rem 60px;
 }
 
 .project__item {
