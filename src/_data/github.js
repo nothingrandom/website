@@ -3,6 +3,7 @@ const fetch = require('node-fetch');
 const username = 'nothingrandom';
 
 module.exports = (async () => {
+  // eslint-disable-next-line
   console.log('Fetching github repos');
 
   // GitHub API: https://developer.github.com/v3/repos/#get
