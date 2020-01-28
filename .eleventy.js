@@ -1,7 +1,5 @@
 "use strict";
 
-const glob = require('fast-glob');
-const path = require('path');
 const filters = require('./utils/filters.js');
 const shortcodes = require('./utils/shortcodes.js');
 
@@ -15,8 +13,6 @@ module.exports = (eleventyConfig) => {
         includes: '_includes',
         output: 'dist',
     }
-    // const files = glob.sync(path.join(process.cwd(), dirs.input, "**/*"));
-    // const exts = files.map(file => path.extname(file).replace('.', ''));
 
     // Filters
     Object.keys(filters).forEach(filterName => {
@@ -27,9 +23,6 @@ module.exports = (eleventyConfig) => {
     Object.keys(shortcodes).forEach(shortCodeName => {
         eleventyConfig.addShortcode(shortCodeName, shortcodes[shortCodeName])
     })
-
-    // Make all files pass through to cache
-    // eleventyConfig.setTemplateFormats(exts);
 
     eleventyConfig.addPassthroughCopy('_redirects');
     eleventyConfig.addPassthroughCopy('src/img');
