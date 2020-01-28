@@ -13,6 +13,10 @@ body {
   font-display: swap;
 }
 
+%mono-style {
+  font-family: $mono;
+}
+
 @include header-style() {
   @extend %sans-style;
   @include light-dark(color, palette(black), palette(white));
@@ -61,6 +65,16 @@ p {
       }
     }
   }
+
+  code {
+    padding: 0 5px;
+    font-size: em(18px, 20px);
+  }
+}
+
+code {
+  @extend %mono-style;
+  @include light-dark(background-color, palette(grey, pale), palette(black, off));
 }
 
 .link--hero {

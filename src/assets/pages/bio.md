@@ -5,12 +5,7 @@ title: Hey there!
 
 tabtitle: Bio
 
-tags:
-  - nav
-
-navtitle: Bio
-navorder: 4
-
+menukey: bio
 permalink: /bio/index.html
 ---
 
