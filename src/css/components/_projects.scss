@@ -1,7 +1,12 @@
 .section--projects {
   @include light-dark(background-color, palette(grey, pale), palette(black, off));
   height: 100vh - #{$menu-height-md};
-  padding: 100px 2rem 60px;
+  padding: 100px $grid-padding 60px;
+
+  @include breakpoint(md) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .project__item {
@@ -9,11 +14,11 @@
 
   @include breakpoint(md) {
     &:nth-child(odd) {
-      padding-right: 20px;
+      padding-right: 25px;
     }
 
     &:nth-child(even) {
-      padding-right: 20px;
+      padding-right: 25px;
     }
   }
 }
