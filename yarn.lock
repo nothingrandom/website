@@ -1803,9 +1803,9 @@ brorand@^1.0.1:
   integrity sha1-EsJe/kCkXjwyPrhnWgoM5XsiNx8=
 
 browser-reset@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/browser-reset/-/browser-reset-1.0.5.tgz#3b0000ec1af7485340752c9d796e6c6a3e1902a0"
-  integrity sha512-Q/sxpGwIAQ8OZy4/iqUfXWIkcb1ta2IZghaBfpImPGceTgVktUoCmNSTVpd/pkCPo4TlPr+/we18c5h9UhEQBw==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/browser-reset/-/browser-reset-1.0.7.tgz#7c6d06ca330ddd330ecccfca8e56fd582cabc752"
+  integrity sha512-X/b+YGQjw1krWFydzYKoN3iKa/lnaYc7dvc0uerX0jH3ZrLRTa3fEDWRJxhDijknNrad2FimvmSXVrI5J2mfGQ==
 
 browser-sync-client@^2.26.6:
   version "2.26.6"
@@ -4069,6 +4069,11 @@ git-url-parse@11.1.2:
   integrity sha512-gZeLVGY8QVKMIkckncX+iCq2/L8PlwncvDFKiWkBn9EtCfYDbliRTTp6qzyQ1VMdITUfq7293zDzfpjdiGASSQ==
   dependencies:
     git-up "^4.0.0"
+
+github-languages-css@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/github-languages-css/-/github-languages-css-1.0.0.tgz#7afc279223a41fa40b2989eb8a15ae278f62416a"
+  integrity sha512-X45TUi8Q0KI+mVV4QIUCKSUswnpC+sSt0TmXJ0RrbbK4/bcgAhSE8Xbm6zF79lnTszY0V++qAU89eU1MOl8W6g==
 
 glob-parent@^3.1.0:
   version "3.1.0"
