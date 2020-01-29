@@ -1,10 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+    main: './src/js/index.js',
+    sw: './src/js/sw.js',
+  },
   output: {
     path: path.resolve(__dirname, 'dist/js'),
-    filename: 'index.js'
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -14,10 +17,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      }
-    ]
-  }
-}
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+    ],
+  },
+};
