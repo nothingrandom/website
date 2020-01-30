@@ -1,10 +1,9 @@
-// scss-lint:disable all
+/// Fonts and Text
+/// ==============================
 
-// Fonts and Text
-// ==============================
+/// font-smoothing
+/// @parameter $value: Accepted values: [ON | off]
 
-// font-smoothing
-// @param $value: Accepted values: [ON | off]
 @mixin font-smoothing($value: on) {
   @if $value == on {
     -moz-osx-font-smoothing: grayscale;
@@ -17,21 +16,29 @@
   }
 }
 
-// em
-// Convert px value to em equivalent
-// @param $value: Input px value
-// @param $px-reference: Reference px size (font-size of self/parent)
+/// em
+/// Convert px value to em equivalent
+/// @parameter {Number} $value: Input px value
+/// @parameter {Number} $px-reference: Reference px size (font-size of self/parent)
+/// @return {Number}
+
 @function em($value, $px-reference: $base-font-size) {
   @return ($value / $px-reference) * 1em;
 }
 
-// rem
-// @param $px-value
+/// rem
+/// @parameter {Number} $px-value
+/// @return {Number}
+
 @function rem($px-value) {
   @return $px-value / ($base-font-size / (1rem * 1));
 }
 
-// @see https://github.com/bitmanic/rem
+/// @see https://github.com/bitmanic/rem
+/// @parameter {Property} $property
+/// @parameter {Number} $px-values
+/// @return {Number}
+
 @mixin rem($property, $px-values) {
   // Print the first line in pixel values
   #{$property}: $px-values;
@@ -61,43 +68,36 @@
   }
 }
 
-// font-face
-// Taken from Bourbon
-// @param $font-family: Name of the font
-// @param $file-path: Path to font (filename without extension)
-// @param $weight: Weight of font (default: normal)
-// @param $style: Style of font (default: normal)
-// @see https://github.com/thoughtbot/bourbon/blob/3dca2ecccaaa3db9cea8d74c8221fbde7e6284d8/app/assets/stylesheets/css3/_font-face.scss
+/// font-face
+/// @parameter {String} $font-family: Name of the font
+/// @parameter {Path} $file-path: Path to font (filename without extension)
+/// @parameter {Number} $weight: Weight of font (default: normal)
+/// @parameter {String} $style: Style of font (default: normal)
+/// @see https://github.com/thoughtbot/bourbon/blob/3dca2ecccaaa3db9cea8d74c8221fbde7e6284d8/app/assets/stylesheets/css3/_font-face.scss
+
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
   @font-face {
     font-family: $font-family;
     font-weight: $weight;
     font-style: $style;
-    font-display: swap;
 
-    src: url('#{$file-path}.eot'); /* IE9 Compat Modes */
-    src: url('#{$file-path}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url('#{$file-path}.woff2') format('woff2'), /* Super Modern Browsers */
-         url('#{$file-path}.woff') format('woff'), /* Pretty Modern Browsers */
-         url('#{$file-path}.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url('#{$file-path}.svg##{$font-family}') format('svg'); /* Legacy iOS */
+    src: url('#{$file-path}.woff2') format('woff2'),
+         url('#{$file-path}.woff') format('woff'),
+         url('#{$file-path}.otf') format('opentype'),
+         url('#{$file-path}.ttf') format('truetype');
   }
 }
 
-// placeholder
-// @param @content: Add styles for placeholders
+/// placeholder
+/// @parameter {Content} @content: Add styles for placeholders
+
 @mixin placeholder {
   &::-webkit-input-placeholder {
     @content;
     opacity: 1;
   }
 
-  &::-moz-placeholder { // FF < 19
-    @content;
-    opacity: 1;
-  }
-
-  &::-moz-placeholder { // FF >= 19
+  &::-moz-placeholder {
     @content;
     opacity: 1;
   }
@@ -107,20 +107,26 @@
   }
 }
 
-// selection
-// @param @content: Add styles for highlighted text
+/// selection
+/// @parameter {Content} @content: Add styles for highlighted text
+
 @mixin selection {
-  &::-moz-selection {
+  ::-webkit-selection {
     @content;
   }
 
-  &::selection {
+  ::-moz-selection {
+    @content;
+  }
+
+  ::selection {
     @content;
   }
 }
 
-// header-style
-// @param @content: Add styles for header texts
+/// header-style
+/// @parameter {Content} @content: Add styles for header texts
+
 @mixin header-style {
   h1,
   h2,
@@ -133,8 +139,9 @@
   }
 }
 
-// paragraph-style
-// @param @content: Add styles for paragraph texts
+/// paragraph-style
+/// @parameter {Content} @content: Add styles for paragraph texts
+
 @mixin paragraph-style {
   p,
   li,
@@ -143,21 +150,37 @@
   }
 }
 
-// line-clamp
-// cut text off after a certain number of lines, ending in ellipsis
-// @param $lines: maximum number of lines
-// @see https://dropshado.ws/post/1015351370/webkit-line-clamp
+/// line-clamp
+/// cut text off after a certain number of lines, ending in ellipsis
+/// @parameter {Nunber} $lines: maximum number of lines
+/// @see https://dropshado.ws/post/1015351370/webkit-line-clamp
+
 @mixin line-clamp($lines: 2) {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: $lines;
   -webkit-box-orient: vertical;
+  word-break: break-word;
 }
 
-// Layout
-// ==============================
+/// Layout
+/// ==============================
 
+/// clearfix
+@mixin clearfix {
+  &::before,
+  &::after {
+    display: block;
+    content: ' ';
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+// force an emlement within a `.container` div to be full width
 @mixin force-full-width() {
   position: relative;
   width: calc(100vw);
@@ -168,24 +191,18 @@
   overflow-x: hidden;
 }
 
-// clearfix
-@mixin clearfix {
-  &::after {
-    display: block;
-    content: ' ';
-    clear: both;
-  }
-}
+/// Create multiple columns from a group of items
+/// @parameter {Number} $column-count
+/// @parameter {Number} $column-gap
 
-
-// columns
 @mixin columns($column-count: 2, $column-gap: 40px) {
   column-count: $column-count;
   column-gap: $column-gap;
 }
 
-// center
-// @param: define absolute [vertical / horizontal / both] centered position
+/// absolutly center an element either vertically, horizontally, bor both
+/// @parameter {String} $position: [vertical | horizontal | both]
+
 @mixin center($position) {
   position: absolute;
 
@@ -212,20 +229,24 @@
   }
 }
 
-// pseudo
-// for use with ::before / ::after elements, as you always use these
-// @param $pos: Accepted values: [ABSOLUTE | relative | static | sticky | fixed]
+/// pseudo
+/// for use with ::before / ::after elements, as you always use these
+/// @parameter {String} $content:
+/// @parameter {Value} $pos: Accepted values: [ABSOLUTE | relative | static | sticky | fixed]
+/// @parameter {Value} $display:
+
 @mixin pseudo($content: '', $pos: absolute, $display: block) {
   position: $pos;
   display: $display;
   content: $content;
 }
 
-// Device targetting
-// ==============================
+/// Device targetting
+/// ==============================
 
-// retina
-// @param @content: Add the styles you wish to apply to retina
+/// retina
+/// @parameter {Content} @content: Add the styles you wish to apply to retina
+
 @mixin retina {
   @media
   (min--moz-device-pixel-ratio: 1.3),
@@ -237,11 +258,12 @@
   }
 }
 
-// background-image-retina
-// @param $file: Location of @2x file
-// @param $type: Extension of @2x file
-// @param $width: Width of @2x image (in @1x dimensions)
-// @param $height: Height of @2x image (in @1x dimensions)
+/// background-image-retina
+/// @parameter {Path} $file: Location of @2x file
+/// @parameter {Extension} $type: Extension of @2x file
+/// @parameter {Number} $width: Width of @2x image (in @1x dimensions)
+/// @parameter {Number} $height: Height of @2x image (in @1x dimensions)
+
 @mixin background-image-retina($file, $type, $width: auto, $height: auto) {
   background-image: url($file + '.' + $type);
 
@@ -249,34 +271,58 @@
     & {
       background-image: url($file + '@2x.' + $type);
       -webkit-background-size: $width $height;
+      background-size: $width $height;
     }
   }
 }
 
-// chromeonly
-// @param @content: Add the styles you wish to apply to chrome
+/// chromeonly
+/// @parameter {Content} @content: Add the styles you wish to apply to chrome
+
 @mixin chromeonly {
   @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
     @content;
   }
 }
 
-// reader-hide
-// @param: Prevent content from being read by a screen reader
-// @see http://a11yproject.com/posts/how-to-hide-content/
-@mixin reader-hide {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
+/// Generate vendor prefixes
+/// @parameter {String} $property
+/// @argument {Value} $value
+/// @argument {String()} $prefixes
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+  }
+  #{$property}: $value;
 }
 
-// Screen sizes
-// ==============================
+/// visually-hidden
+/// @parameter {String} $toggle: [hide | unhide]
+/// @see http://a11yproject.com/posts/how-to-hide-content/
+
+@mixin reader-hide($toggle: 'hide') {
+  &:not(:focus):not(:active) {
+    @if $toggle == 'hide' {
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    } @else if $toggle == 'unhide' {
+      position: static;
+      height: unset;
+      width: unset;
+      overflow: visible;
+      clip: auto;
+      white-space: unset;
+    }
+  }
+}
+
+/// Screen sizes
+/// ==============================
 @mixin screen-min($min-width) {
   @media screen
   and (min-width: $min-width) {
@@ -286,7 +332,7 @@
 
 @mixin screen-max($max-width) {
   @media screen
-  and (max-width: $max-width) {
+  and (max-width: $max-width - 1) {
     @content;
   }
 }
@@ -294,7 +340,7 @@
 @mixin screen-range($min-width, $max-width) {
   @media screen
   and (min-width: $min-width)
-  and (max-width: $max-width) {
+  and (max-width: $max-width - 1) {
     @content;
   }
 }
@@ -307,8 +353,9 @@
   }
 }
 
-// breakpoint (for mobile first)
-// @param @content for everything that is arg (@see _variables) and up
+/// breakpoint (for mobile first)
+/// @parameter {String} $type (@see _variables)
+/// @parameter {Content} @content
 @mixin breakpoint($min: 0, $max: 0) {
   $type: type-of($min);
 
@@ -352,30 +399,53 @@
   }
 }
 
-// Colors
-// ==============================
+/// Colors
+/// ==============================
 
-// palette
-// @param $palette: Primary palette color as declared in _colors
-// @param $tone: Modifier of primary color, base by default
-// @see https://twitter.com/thecodezombie/status/595977653296996354/photo/1
+/// palette
+/// @parameter {String} $palette: Primary palette color as declared in _colors
+/// @parameter {String} $tone: Modifier of primary color, base by default
+/// @see https://twitter.com/thecodezombie/status/595977653296996354/photo/1
+
 @function palette($palette, $tone: 'base') {
   @return map-get(map-get($palettes, $palette), $tone);
 }
 
-// rgba-convert
-// @param $hexcolor: Hex color you want to be converted to a rgba value
-// @param $opacity: Value of alpha / opacity
-// @see https://alwaystwisted.com/articles/2013-05-06-smarter-rgba-fallbacks-with-sass
+/// rgba-convert
+/// @parameter {Color} $hexcolor: Hex color you want to be converted to a rgba value
+/// @parameter {Number} $opacity: Value of alpha / opacity
+/// @return {RGBAColor}
+/// @see https://alwaystwisted.com/articles/2013-05-06-smarter-rgba-fallbacks-with-sass
+
 @function rgba-convert($hexcolor, $opacity) {
   @return rgba($hexcolor, $opacity);
 }
 
-// light-dark
-// @param $property: The CSS property to give different values to if browser pref. is light / dark
-// @param $lightcolor: Value (color) to have if browser is light (fallback)
-// @param $darkcolor: Value (color) to have if browser is dark
-@mixin light-dark($property, $lightcolor, $darkcolor) {
+/// Lighten a color by mixing it with white.
+/// @parameter {Color} $color - Color to lighten
+/// @parameter {Number} $percentage - Amount of white color to mix in
+/// @return {Color}
+
+@function tint($color, $percentage) {
+  @return mix(#fff, $color, $percentage);
+}
+
+/// Darken a color by mixing it with black.
+/// @parameter {Color} $color - Color to darken
+/// @parameter {Number} $percentage - Amount of black color to mix in
+/// @return {Color}
+
+@function shade($color, $percentage) {
+  @return mix(#000, $color, $percentage);
+}
+
+/// Change your colors depending on browser dark-mode preference with fallback to "light mode"
+/// @parameter {Property} $property: The CSS property to give different values to if browser pref. is light / dark
+/// @parameter {Color} $lightcolor: Value (color) to have if browser is light (fallback)
+/// @parameter {Color} $darkcolor: Value (color) to have if browser is dark
+/// @return {Propery}: {Color}
+
+@mixin color-schemes($property, $lightcolor, $darkcolor) {
   #{$property}: $lightcolor;
 
   @media (prefers-color-scheme: dark) {
@@ -387,13 +457,40 @@
   }
 }
 
-// Other
-// ==============================
+/// Pick the best text color for the background
+/// @parameter {Color} $base-color: The color you want a conflicting color for
+/// @parameter {Color} $light-color: default white
+/// @parameter {Color} $dark-color: default black
 
-// hardware-acceleration
-// @param $value: Accepted values: [ON | off]
+@function text-contrast($base-color, $light-color: #FFFFFF, $dark-color: #000000) {
+  $color-brightness: round((red($base-color) * 299) + (green($base-color) * 587) + (blue($base-color) * 114) / 1000);
+  $light: round((red(#FFFFFF) * 299) + (green(#FFFFFF) * 587) + (blue(#FFFFFF) * 114) / 1000);
+
+  @if abs($color-brightness) < ($light/2){
+    @return $light-color;
+  }
+
+  @else {
+    @return $dark-color;
+  }
+}
+
+/// Other
+/// ==============================
+
+/// Strip the unit from a number
+/// @parameter {Number} $number: Number value with px/em/% etc, to be stripped
+/// @return {Number}
+
+@function strip-unit($number) {
+	@return $number / ($number * 0 + 1);
+}
+
+/// hardware-acceleration
+/// @parameter {Boolean} $value: Accepted values: [ON | off]
+
 @mixin hardware-acceleration($value: on) {
-  @if $value == on {
+  @if $value == true {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000;
@@ -406,8 +503,9 @@
   }
 }
 
-// hardware-acceleration
-// @param $value: Accepted values: [on | OFF]
+/// Allow a user to interact with an element
+/// @parameter {Boolean} $value: Accepted values: [ON | off]
+
 @mixin interaction($value: off) {
   @if $value == off {
     cursor: default;
@@ -422,18 +520,12 @@
   }
 }
 
-// strip-units
-// @param $number
-//@see http://stackoverflow.com/a/12335841
-@function strip-units($number) {
-  @return $number / ($number * 0 + 1);
-}
+/// Styling
+/// ==============================
 
-// Styling
-// ==============================
+/// hr-color
+/// @parameter {Color} $color
 
-// hr-color
-// @param $color
 @mixin hr-color($color) {
   display: block;
   height: 1px;
@@ -443,11 +535,13 @@
   padding: 0;
 }
 
-// transition
-// simple ease in out transition with one line
-// @param $property: what css property to transition
-// @param $timing: what transition effect to use
-// @param $duration: how long the transition will last (see _variables)
+/// simple ease in out transition with one line
+/// @parameter {Value} $property: what css property to transition
+/// @parameter {Value} $timing: what transition effect to use
+/// @parameter {Number} $duration: how long the transition will last (see _variables)
+/// @parameter {Number} $delay: how long to delay the transition for
+/// @return transition: all ease-in-out .15s 0s;
+
 @mixin transition($property: all, $timing: ease-in-out, $duration: $transition-time, $delay: 0s) {
   transition: $property $timing $duration $delay;
 }
