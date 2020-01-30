@@ -13,18 +13,14 @@ const imagesCacheName = 'images';
 const version = 'v1::';
 
 // Store core files in a cache (including a page to display when offline)
-const updateStaticCache = () => caches.open(version + staticCacheName).then((cache) => {
-  cache.addAll([
-    '/img/',
-    '/fonts/',
-  ]);
-  return cache.addAll([
-    '/js/index.js',
-    '/css/style.css',
-    '/',
-    '/offline.html',
-  ]);
-});
+const updateStaticCache = () => caches.open(version + staticCacheName).then((cache) => cache.addAll([
+  '/img/',
+  '/fonts/',
+  '/index.js',
+  '/css/style.css',
+  '/',
+  '/offline.html',
+]));
 
 // Put an item in a specified cache
 const stashInCache = (cacheName, request, response) => {

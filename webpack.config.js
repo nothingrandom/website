@@ -6,7 +6,7 @@ module.exports = {
     sw: './src/js/sw.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist/js'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
   },
   module: {
