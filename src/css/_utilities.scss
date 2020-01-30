@@ -158,6 +158,16 @@
 // Layout
 // ==============================
 
+@mixin force-full-width() {
+  position: relative;
+  width: calc(100vw);
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
+}
+
 // clearfix
 @mixin clearfix {
   &::after {
