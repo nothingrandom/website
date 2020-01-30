@@ -4,7 +4,5 @@
 }
 
 .section--full-width {
-  position: relative;
-  left: -2rem;
-  width: 100vw;
+  @include force-full-width();
 }
