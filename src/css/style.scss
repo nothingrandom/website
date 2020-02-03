@@ -20,8 +20,8 @@ body {
 }
 
 .page {
-  @include light-dark(background-color, palette(white), palette(black));
-  @include light-dark(color, palette(black), palette(white));
+  @include color-schemes(background-color, palette(white), palette(black));
+  @include color-schemes(color, palette(black), palette(white));
   position: relative;
   min-height: 100vh;
 

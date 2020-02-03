@@ -19,13 +19,13 @@ body {
 
 @include header-style() {
   @extend %sans-style;
-  @include light-dark(color, palette(black), palette(white));
+  @include color-schemes(color, palette(black), palette(white));
   font-weight: 400;
 }
 
 @include paragraph-style() {
   @extend %sans-style;
-  @include light-dark(color, palette(black), palette(white));
+  @include color-schemes(color, palette(black), palette(white));
 }
 
 h1 {
@@ -74,7 +74,7 @@ p {
 
 code {
   @extend %mono-style;
-  @include light-dark(background-color, palette(grey, pale), palette(black, off));
+  @include color-schemes(background-color, palette(grey, pale), palette(black, off));
 }
 
 .link--hero {
@@ -93,7 +93,7 @@ code {
   }
 
   &::before {
-    @include light-dark(background-color, palette(grey, pale), palette(black, true));
+    @include color-schemes(background-color, palette(grey, pale), palette(black, true));
   }
 
   &::after {
@@ -111,7 +111,7 @@ code {
 }
 
 @mixin link-underline($color: palette(blue), $text-color: palette(grey)) {
-  @include light-dark(color, $text-color, palette(blue));
+  @include color-schemes(color, $text-color, palette(blue));
   display: inline-block;
   // color: $text-color;
   text-decoration: none;

@@ -1,5 +1,5 @@
 .logo {
-  @include light-dark(color, palette(black), palette(white));
+  @include color-schemes(color, palette(black), palette(white));
   @extend %sans-style;
   display: inline-block;
   font-size: em(34px);
@@ -50,7 +50,7 @@
 
   &:hover,
   &:focus {
-    @include light-dark(color, palette(black), palette(white));
+    @include color-schemes(color, palette(black), palette(white));
 
     .collapse {
       max-width: 300px;
