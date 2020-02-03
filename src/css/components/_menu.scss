@@ -1,9 +1,9 @@
 $menu-height-md: 93px;
 
 .menu__container {
-  @include light-dark(border-top-color, palette(black), palette(white));
-  @include light-dark(border-bottom-color, palette(grey, pale), palette(black, off));
-  @include light-dark(background-color, palette(white), palette(black));
+  @include color-schemes(border-top-color, palette(black), palette(white));
+  @include color-schemes(border-bottom-color, palette(grey, pale), palette(black, off));
+  @include color-schemes(background-color, palette(white), palette(black));
   position: sticky;
   top: 0;
   z-index: 10;
@@ -45,7 +45,7 @@ $menu-height-md: 93px;
   }
 
   .menu-content {
-    @include light-dark(background-color, palette(white), palette(black));
+    @include color-schemes(background-color, palette(white), palette(black));
     position: fixed;
     top: 0;
     right: 0;
@@ -120,7 +120,7 @@ $menu-height-md: 93px;
           }
 
           a {
-            @include light-dark(color, palette(black), palette(white));
+            @include color-schemes(color, palette(black), palette(white));
           }
         }
 
@@ -130,12 +130,12 @@ $menu-height-md: 93px;
           }
 
           a {
-            @include light-dark(color, palette(black), palette(white));
+            @include color-schemes(color, palette(black), palette(white));
           }
         }
 
         a {
-          @include light-dark(color, palette(black), palette(white));
+          @include color-schemes(color, palette(black), palette(white));
           @extend %serif-style;
           display: block;
           padding: 20px 0;
@@ -160,7 +160,7 @@ $menu-height-md: 93px;
       }
 
       a {
-        @include light-dark(color, palette(black), palette(white));
+        @include color-schemes(color, palette(black), palette(white));
 
         &:hover {
           color: palette(blue);

@@ -1,5 +1,5 @@
 .section--projects {
-  @include light-dark(background-color, palette(grey, pale), palette(black, off));
+  @include color-schemes(background-color, palette(grey, pale), palette(black, off));
   height: 100vh - #{$menu-height-md};
   padding: 100px $grid-padding 60px;
 
