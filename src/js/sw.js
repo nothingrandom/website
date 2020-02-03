@@ -14,8 +14,8 @@ const version = 'v1::';
 
 // Store core files in a cache (including a page to display when offline)
 const updateStaticCache = () => caches.open(version + staticCacheName).then((cache) => cache.addAll([
-  '/img/',
-  '/fonts/',
+  // '/img/',
+  // '/fonts/',
   '/index.js',
   '/css/style.css',
   '/',
