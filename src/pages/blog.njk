@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 
-title: Blog
+title: Blog.
 
 menukey: blog
 permalink: /blog/index.html
@@ -12,15 +12,25 @@ permalink: /blog/index.html
       <div class='section__header'>
         <h2>{{ title }}</h2>
       </div>
-      <ol class='posts posts-count' style='counter-reset: start-from {{ collections.posts | length + 1}}'>
+      <ul class='posts posts-count' style='counter-reset: start-from {{ collections.posts | length + 1}}'>
         {% for post in collections.posts | reverse %}
-          <li>
-            <a href='{{ post.url }}'>
-              {{ post.data.title | default(page.url) }}
+          <li class='section__item'>
+            <a class='link--exclude' href='{{ post.url }}'>
+              {% for tag in post.data.tags %}
+                {% if tag !== 'posts' %}
+                  <span class='section__item__tag posts__tag posts__tag--{{ tag }}'>{{ tag | trim }}</span>
+                {% endif %}
+              {% endfor %}
+              <h3 class='section__item__header'>{{ post.data.title | default(page.url) }}</h3>
+              <div class='flex-spread'>
+                <span class='section__item__detail'>{{ post.date | readableDate }}</span>
+                <span class='section__item__detail'>About {{ post.template.frontMatter.content | readingTime }}</span>
+              </div>
+              <p class='section__item__description'>{{ post.template.frontMatter.content | truncate(75) }}</p>
             </a>
           </li>
         {% endfor %}
-      </ol>
+      </ul>
     </div>
   </div>
 </div>

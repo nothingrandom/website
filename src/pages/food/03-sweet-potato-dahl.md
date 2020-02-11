@@ -5,24 +5,15 @@ tags:
 - food
 permalink: /food/sweet-potato-dahl/
 image: sweet-potato-dahl.jpg
+
+serves: 4
+time: 35 mins
+challenge: 1
+
+intro: There are few meals more satisfying and filling than dahl.⁣ This is my wife's family recipe for sweet potato dahl.⁣
+
+ingredients: [1 large onion, 2 garlic cloves, 1 tsp turmeric, 1 tsp cumin, 1 tsp ground coriander, 1 tsp ground ginger, 1 tbsp naturally sweetened ketchup, 250g red split lentils, 2 large sweet potatoes (diced into bite size cubes optionally peeled), 600ml vegetable stock]
 ---
-There are few meals more satisfying and filling than dahl.⁣
-⁣
-This is my wife's family recipe for sweet potato dahl.⁣
-
-## Ingredients (serves 4⁣)
-- 1 large onion
-- 2 garlic cloves
-- 1 tsp turmeric
-- 1 tsp cumin
-- 1 tsp ground coriander
-- 1 tsp ground ginger
-- 1 tbsp naturally sweetened ketchup
-- 250g red split lentils
-- 2 large sweet potatoes (diced into bite size cubes, optionally peeled)
-- 600ml vegetable stock
-
-## Method
 - Lightly fry the onion in a saucepan until it starts to brown.⁣
 - Crush and add the garlic cloves, cook for a further minute.⁣
 - Add the spices and a little bit of ketchup. Mix this over a low heat until nicely combined and the onion mix is coated.⁣

@@ -1,17 +1,17 @@
 $menu-height-md: 93px;
 
 .menu__container {
-  @include color-schemes(border-top-color, palette(black), palette(white));
-  @include color-schemes(border-bottom-color, palette(grey, pale), palette(black, off));
-  @include color-schemes(background-color, palette(white), palette(black));
   position: sticky;
   top: 0;
   z-index: 10;
   height: $menu-height-md;
   border-top-width: 4px;
   border-top-style: solid;
+  border-top-color: palette(black);
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  border-bottom-color: palette(grey, pale);
+  background-color: palette(white);
 }
 
 .menu {
@@ -27,8 +27,8 @@ $menu-height-md: 93px;
     float: right;
 
     .menu__icon {
-      font-size: 28px;
       cursor: pointer;
+      font-size: 28px;
 
       @include breakpoint(md) {
         display: none;
@@ -45,7 +45,6 @@ $menu-height-md: 93px;
   }
 
   .menu-content {
-    @include color-schemes(background-color, palette(white), palette(black));
     position: fixed;
     top: 0;
     right: 0;
@@ -54,6 +53,7 @@ $menu-height-md: 93px;
     z-index: -1;
     display: unset !important;
     padding: 0 4rem;
+    background-color: palette(white);
     opacity: 0;
     transition: opacity ease-in-out .25s;
     pointer-events: none;
@@ -92,6 +92,18 @@ $menu-height-md: 93px;
           font-size: em(18px);
         }
 
+        a {
+          @extend %font-mono;
+          display: block;
+          padding: 20px 0;
+          color: palette(black);
+
+          @include breakpoint(md) {
+            padding: 10px 15px;
+            color: palette(grey);
+          }
+        }
+
         &::after {
           position: absolute;
           bottom: 10px;
@@ -102,8 +114,8 @@ $menu-height-md: 93px;
           content: '';
           background-color: palette(grey, pale);
           transform: scaleX(0);
-          transition: transform .3s cubic-bezier(.86, 0, .07, 1);
           transform-origin: 0 50%;
+          transition: transform .3s cubic-bezier(.86, 0, .07, 1);
 
           @include breakpoint(md) {
             right: 15px;
@@ -120,7 +132,7 @@ $menu-height-md: 93px;
           }
 
           a {
-            @include color-schemes(color, palette(black), palette(white));
+            color: palette(black);
           }
         }
 
@@ -130,19 +142,7 @@ $menu-height-md: 93px;
           }
 
           a {
-            @include color-schemes(color, palette(black), palette(white));
-          }
-        }
-
-        a {
-          @include color-schemes(color, palette(black), palette(white));
-          @extend %serif-style;
-          display: block;
-          padding: 20px 0;
-
-          @include breakpoint(md) {
-            padding: 10px 15px;
-            color: palette(grey);
+            color: palette(black);
           }
         }
       }
@@ -160,7 +160,7 @@ $menu-height-md: 93px;
       }
 
       a {
-        @include color-schemes(color, palette(black), palette(white));
+        color: palette(black);
 
         &:hover {
           color: palette(blue);
@@ -182,7 +182,7 @@ $menu-height-md: 93px;
       ~ .menu__icon {
         .fa-times {
           display: inline-block;
-          color: palette(white);
+          color: palette(black);
         }
 
         .fa-cheeseburger {

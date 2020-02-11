@@ -2,6 +2,7 @@
 
 const filters = require('./utils/filters.js');
 const shortcodes = require('./utils/shortcodes.js');
+const readingTime = require('eleventy-plugin-reading-time');
 
 // The @11ty/eleventy configuration.
 // For a full list of options, see: https://www.11ty.io/docs/config/
@@ -27,6 +28,8 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addPassthroughCopy('_redirects');
     eleventyConfig.addPassthroughCopy('src/img');
     eleventyConfig.addPassthroughCopy('src/fonts');
+
+    eleventyConfig.addPlugin(readingTime);
 
     return {
         // Set the path from the root of the deploy domain

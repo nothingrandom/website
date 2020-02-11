@@ -1,8 +1,28 @@
 .section--food {
+  .section__intro {
+    background-color: #814CC5;
+    color: text-contrast(#814CC5);
+  }
+
   .food__item {
-    margin-bottom: $standard-spacing;
+    padding: 0 !important;
 
     a {
+      display: block;
+      width: 100%;
+      margin-bottom: 3rem;
+      padding: 1.5rem;
+
+      color: palette(black);
+
+      &:hover {
+        background-color: palette(grey, pale);
+
+        img {
+          transform: scale(1.05);
+        }
+      }
+
       .food__item__image {
         overflow: hidden;
 
@@ -10,21 +30,25 @@
           transition: transform ease-in-out ($transition-time * 1.5);
         }
       }
-
-      p {
-        @include color-schemes(color, palette(grey), palette(white));
-        transition: color ease-in-out $transition-time;
-      }
-
-      &:hover {
-        img {
-          transform: scale(1.05);
-        }
-
-        p {
-          @include color-schemes(color, palette(black), palette(blue));
-        }
-      }
     }
+  }
+}
+
+.recipe__stats {
+  margin-top: 40px;
+
+  li {
+    margin-bottom: 15px;
+    span {
+      display: block;
+      color: palette(blue, dark);
+      font-weight: 600;
+    }
+  }
+}
+
+.recipe__ingredients {
+  h4 {
+    margin-bottom: 10px;
   }
 }
