@@ -15,7 +15,12 @@ module.exports = (async () => {
     .then((res) => res.json()) // node-fetch option to transform to json
     .then((json) => {
       // prune the data to return only what we want
-      const myRecentRepos = json.filter((r) => !r.fork).slice(0, 6);
+      let myRecentRepos = '';
+
+      if (json.filter) {
+        myRecentRepos = json.filter((r) => !r.fork && r.name !== 'website').slice(0, 6);
+      }
+
       return {
         myRecentRepos,
       };

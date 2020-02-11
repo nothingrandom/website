@@ -5,19 +5,15 @@ tags:
 - food
 permalink: /food/panko-coated-tofu/
 image: panko-coated-tofu.jpg
+
+serves: 4
+time: 55 mins
+challenge: 2
+
+intro: Noodles, tofu, breaded food - what's not to love!⁣
+
+ingredients: [1 block of tofu, 2 limes, 60g panko breadcrumbs, 1 tbsp sesame seeds, ½ tsp salt, 35g flour, 1 egg ]
 ---
-Noodles, tofu, breaded food - what's not to love!⁣
-
-## Ingredients (serves 4)
-- 1 block of tofu
-- 2 limes
-- 60g panko breadcrumbs
-- 1 tbsp sesame seeds
-- ½ tsp salt
-- 35g flour
-- 1 egg
-
-## Method
 - Press your tofu to drain of moisture for 30 minutes then cut into cubes.⁣
 - Put the zest of the limes, the panko breadcrumbs, sesame seeds, and salt into a bowl and gently combine.⁣
 - Put each piece of tofu into the flour, then the beaten egg, before the breadcrumb mixture (do this individually for the best results)⁣.

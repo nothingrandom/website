@@ -1,0 +1,42 @@
+.posts__tag {
+  background-color: palette(white);
+
+  &--code {
+    background-color: palette(black);
+    color: limegreen;
+  }
+}
+
+/* List */
+ul.posts {
+  padding: 100px 0;
+  // counter-reset: index;
+  // // max-width: 300px;
+
+  // li {
+  //   display: flex;
+  //   box-sizing: border-box;
+  //   align-items: center;
+  //   padding: 12px 0;
+  //   counter-increment: index;
+
+  //   &::before {
+  //     min-width: 50px;
+  //     align-self: flex-start;
+  //     padding-right: 12px;
+  //     content: counters(index, ".", decimal-leading-zero);
+  //     background-attachment: fixed;
+  //     -webkit-background-clip: text;
+  //     background-image: linear-gradient(to bottom, aquamarine, orangered);
+  //     font-size: 1.5rem;
+  //     font-weight: bold;
+  //     text-align: right;
+  //     font-variant-numeric: tabular-nums;
+  //     -webkit-text-fill-color: transparent;
+
+  //     + li {
+  //       border-top: 1px solid rgba(255,255,255,0.2);
+  //     }
+  //   }
+  // }
+}

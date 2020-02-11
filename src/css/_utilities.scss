@@ -1,3 +1,5 @@
+// stylelint-disable
+
 /// Fonts and Text
 /// ==============================
 
@@ -78,8 +80,8 @@
 @mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
   @font-face {
     font-family: $font-family;
-    font-weight: $weight;
     font-style: $style;
+    font-weight: $weight;
 
     src: url('#{$file-path}.woff2') format('woff2'),
          url('#{$file-path}.woff') format('woff'),
@@ -183,12 +185,12 @@
 // force an emlement within a `.container` div to be full width
 @mixin force-full-width() {
   position: relative;
-  width: calc(100vw);
-  left: 50%;
   right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  left: 50%;
   overflow-x: hidden;
+  width: calc(100vw);
+  margin-right: -50vw;
+  margin-left: -50vw;
 }
 
 /// Create multiple columns from a group of items
@@ -529,10 +531,10 @@
 @mixin hr-color($color) {
   display: block;
   height: 1px;
-  border: 0;
-  border-top: 1px solid $color;
   margin: 1em 0;
   padding: 0;
+  border: 0;
+  border-top: 1px solid $color;
 }
 
 /// simple ease in out transition with one line

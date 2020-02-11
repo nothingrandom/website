@@ -5,6 +5,14 @@ tags:
 - food
 permalink: /food/mushroom-leek-pie/
 image: mushroom-leek-pie.jpg
+
+serves: x
+time: 35 mins
+challenge: 1
+
+intro:
+
+ingredients: []
 ---
 I recently discovered that the grocery store right near us sells vegan (notably dairy free) puff pastry. As a lover of pie, here's a leek, asparagus and mushroom pie - which I made without dairy, but you could easily include if you wished.
 
