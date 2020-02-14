@@ -9,8 +9,14 @@ $grid-padding: 2rem;
 }
 
 .container-fluid {
+  max-width: 1280px;
   padding-right: $grid-padding;
   padding-left: $grid-padding;
+}
+
+%container {
+  @extend .container-fluid;
+  max-width: 1280px;
 }
 
 .row {
@@ -61,6 +67,10 @@ $grid-padding: 2rem;
   flex: 0 0 auto;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
+}
+
+.row-xs-hidden {
+  display: none;
 }
 
 .col-xs {
@@ -223,6 +233,10 @@ $grid-padding: 2rem;
 @media only screen and (min-width: 48em) {
   .container {
     width: 49rem;
+  }
+
+  .row-xs-hidden {
+    display: flex;
   }
 
   .col-sm,

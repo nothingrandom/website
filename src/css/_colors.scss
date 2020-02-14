@@ -1,6 +1,9 @@
+// stylelint-disable
+
 $palettes: (
   white: (
-    base: #FFFFFF
+    base: #FFFFFF,
+    pale: #F2F4F6
   ),
   black: (
     base: #28292B,
@@ -17,6 +20,9 @@ $palettes: (
     // base: #B7E3E4,
   ),
   red: (
-    base: #E13334,
+    base: #E13334
+  ),
+  yellow: (
+    base: #FFC72A
   )
 );

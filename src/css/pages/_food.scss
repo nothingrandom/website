@@ -1,7 +1,6 @@
 .section--food {
   .section__intro {
-    background-color: #814CC5;
-    color: text-contrast(#814CC5);
+    @include section-box-background(palette(yellow));
   }
 
   .food__item {
@@ -35,10 +34,18 @@
 }
 
 .recipe__stats {
-  margin-top: 40px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+
+  @include breakpoint(md) {
+    display: block;
+    margin-top: 40px;
+  }
 
   li {
     margin-bottom: 15px;
+
     span {
       display: block;
       color: palette(blue, dark);
@@ -50,5 +57,13 @@
 .recipe__ingredients {
   h4 {
     margin-bottom: 10px;
+  }
+}
+
+.recipe__method {
+  margin-top: 40px;
+
+  @include breakpoint(md) {
+    margin-top: 0;
   }
 }

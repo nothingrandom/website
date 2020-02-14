@@ -12,7 +12,7 @@ challenge: 1
 
 intro: Sticky tofu noodles! Indy's favourite dish 😉
 
-ingredients: [1 block of tofu, 1 tbsp coconut, sesame, or sunflower oil, 3 tbsp soy sauce, 1 tbsp honey, 1 tsp ginger, 1 tsp coriander, Black pepper, 2 garlic cloves]
+ingredients: [1 block of tofu, 1 tbsp coconut, sesame or sunflower oil, 3 tbsp soy sauce, 1 tbsp honey, 1 tsp ginger, 1 tsp coriander, Black pepper, 2 garlic cloves]
 ---
 - Optionally, press your block of tofu for 30+ minutes between a chopping board and some books (or a heavy casserole dish).
 - Cut the tofu into cubes.

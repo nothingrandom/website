@@ -1,23 +1,27 @@
 {% set menuList = [
   {
-    id: 'projects',
-    name: 'Projects',
-    link: '/#projects'
+    id: 'home',
+    name: 'Home',
+    link: '/',
+    color: '#2323FD'
   },
   {
     id: 'blog',
     name: 'Blog',
-    link: '/blog/'
+    link: '/blog/',
+    color: '#A0DBD4'
   },
   {
     id: 'food',
     name: 'Food',
-    link: '/food/'
+    link: '/food/',
+    color: '#FFC72A'
   },
   {
     id: 'bio',
     name: 'Bio',
-    link: '/bio/'
+    link: '/bio/',
+    color: '#814CC5'
   }
 ] %}
 
@@ -27,7 +31,7 @@
       <div class='col-xs-12'>
         <div class='menu'>
           {% if config.env === 'development' %}
-            <a href='http://localhost:3000' class='link--exclude logo color'>
+            <a href='http://localhost:4000' class='link--exclude logo color'>
           {% else %}
             <a href='https://nothingrandom.com' class='link--exclude logo color'>
           {% endif %}
@@ -46,7 +50,7 @@
                 {% for nav in menuList %}
                   {% set isCurrent = (menukey === nav.id) %}
                   {% set isParent = nav.link != '/' and nav.link in page.url %}
-                  <li class='menu__item {% if isCurrent or isParent %}menu__item--active{% endif %}'>
+                  <li class='menu__item {% if isCurrent or isParent %}menu__item--active{% endif %}' style='--hover-color: {{ nav.color }}'>
                     <a class='link--exclude' href='{{ nav.link }}'>
                       {{ nav.name }}
                     </a>

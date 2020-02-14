@@ -1,38 +1,53 @@
-@mixin link-underline($color: palette(white), $text-color: palette(blue)) {
-  // @include color-schemes(color, $text-color, palette(blue));
-  display: inline-block;
-  color: $text-color;
-  text-decoration: none;
+// @mixin link-underline($color: palette(white), $text-color: palette(blue)) {
+//   // @include color-schemes(color, $text-color, palette(blue));
+//   display: inline-block;
+//   color: $text-color;
+//   text-decoration: none;
 
-  // @if $text-color != palette(grey) {
-  //   color: $text-color !important;
-  // }
+//   // @if $text-color != palette(grey) {
+//   //   color: $text-color !important;
+//   // }
 
-  &::after {
-    position: relative;
-    right: 0;
-    bottom: -3px;
-    left: 0;
-    display: block;
-    height: 4px;
-    content: '';
-    background-color: $color;
-    opacity: 0;
-    transition: all ease-in-out .2s;
+//   &::after {
+//     position: relative;
+//     right: 0;
+//     bottom: -3px;
+//     left: 0;
+//     display: block;
+//     height: 4px;
+//     content: '';
+//     background-color: $color;
+//     opacity: 0;
+//     transition: all ease-in-out .2s;
+//   }
+
+//   &:hover {
+//     color: $color !important;
+
+//     &::after {
+//       bottom: 6px;
+//       opacity: 1;
+//     }
+//   }
+// }
+
+// .link-underline {
+//   @include link-underline(palette(blue), palette(grey));
+// }
+
+@mixin section-box-background($background-color) {
+  background-color: $background-color;
+  color: text-contrast($background-color);
+
+  a {
+    text-shadow:
+      .025em 0 0 $background-color,
+      -.025em 0 0 $background-color,
+      .05em 0 0 $background-color,
+      -.05em 0 0 $background-color,
+      .075em 0 0 $background-color,
+      -.075em 0 0 $background-color;
   }
-
-  &:hover {
-    color: $color !important;
-
-    &::after {
-      bottom: 6px;
-      opacity: 1;
-    }
-  }
-}
-
-.link-underline {
-  @include link-underline(palette(blue), palette(grey));
 }
 
 body {
@@ -72,9 +87,18 @@ h1 {
 }
 
 h2 {
-  font-size: em(126px);
+  font-size: em(48px);
   font-weight: 700;
-  letter-spacing: -2px;
+
+  @include breakpoint(xs) {
+    font-size: em(84px);
+    letter-spacing: -1px;
+  }
+
+  @include breakpoint(md) {
+    font-size: em(126px);
+    letter-spacing: -2px;
+  }
 }
 
 h3 {
@@ -96,20 +120,47 @@ p {
   font-size: em(20px);
   line-height: 1.5;
 
-  a {
-    // color: palette(blue);
-    &:not(.link--hero):not(.link--social):not(.link--exclude) {
-      @include link-underline();
-    }
-
-    &:hover {
-      // color: palette(black);
-    }
-  }
-
   code {
     padding: 0 5px;
     font-size: em(18px, 20px);
+  }
+}
+
+p a,
+.link--wiggle,
+%link--wiggle {
+  background-image: linear-gradient(to top,
+    transparent 8%,
+    currentColor 10%,
+    currentColor 14%,
+    transparent 10%
+  );
+
+  color: currentColor;
+  text-shadow:
+    .025em 0 0 #FFFFFF,
+    -.025em 0 0 #FFFFFF,
+    .05em 0 0 #FFFFFF,
+    -.05em 0 0 #FFFFFF,
+    .075em 0 0 #FFFFFF,
+    -.075em 0 0 #FFFFFF;
+
+  &.section__header__see {
+    padding-bottom: 3px;
+    background-image: none;
+
+    &:hover {
+      background-position: 0 16px;
+    }
+  }
+
+  &:hover {
+    padding-bottom: 3px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23f00' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 21px;
+    background-repeat: repeat-x;
+    background-size: auto 3px;
+    text-decoration: none;
   }
 }
 
@@ -120,7 +171,7 @@ a {
 
 code {
   @extend %font-mono;
-  @include color-schemes(background-color, palette(grey, pale), palette(black, off));
+  background-color: palette(grey, pale);
 }
 
 .text-center {

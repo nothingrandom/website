@@ -5248,6 +5248,11 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
+leadingzero@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/leadingzero/-/leadingzero-1.0.0.tgz#6b986cca29d66a5c1c01aa59e2898b1013984eaf"
+  integrity sha512-hgB5owxd18lgbeE3NKivdoCjam1i4ebpQUchVGcIOvS3GV2qt+BIHvaJ7+Zd5/7sg54lo/AJK6r3qXe24Cc+mg==
+
 leven@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/leven/-/leven-3.1.0.tgz#77891de834064cccba82ae7842bb6b14a13ed7f2"
