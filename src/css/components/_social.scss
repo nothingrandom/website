@@ -1,25 +1,16 @@
 .social {
+  display: flex;
+  justify-content: space-between;
   margin-top: 50px;
 
   li {
-    display: inline-block;
     width: calc(100% / 2);
     margin-right: -4px;
     margin-bottom: 20px;
-    padding: 0 20px 0 0;
 
     @include breakpoint(md) {
       width: calc(100% / 4);
       margin-bottom: 0;
-      padding: 0 20px;
-
-      &:nth-child(odd) {
-        padding-left: 0;
-      }
-
-      &:nth-child(even) {
-        padding-right: 0;
-      }
     }
   }
 
@@ -33,7 +24,7 @@
     }
 
     &:hover {
-      color: palette(blue);
+      background-position: 0 19px;
     }
   }
 }
