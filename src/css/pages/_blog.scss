@@ -1,34 +1,3 @@
-// .posts {
-
-// }
-
-// .posts-count {
-//   li {
-//     position: relative;
-//     padding: 10px 0 10px 40px;
-//     counter-increment: start-from -1;
-//     font-size: 22px;
-
-//     &:first-child {
-//       padding-top: 0;
-//     }
-
-//     &::before {
-//       @extend %serif-style;
-//       position: absolute;
-//       left: 0;
-//       content: counter(start-from, decimal-leading-zero)'. ';
-//       color: palette(grey);
-//       white-space: nowrap;
-//       pointer-events: none;
-//     }
-
-//     a {
-//       @include link-underline(palette(blue), palette(black));
-//     }
-//   }
-// }
-
 .section--blog-item {
   p {
     margin-bottom: $standard-spacing / 2;
@@ -50,8 +19,8 @@
         &:before {
           position: absolute;
           left: 0;
-          counter-increment: section;
           content: counter(section)'. ';
+          counter-increment: section;
           white-space: nowrap;
           pointer-events: none;
         }

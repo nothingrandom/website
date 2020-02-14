@@ -1,24 +1,27 @@
 ---
 layout: layouts/base.njk
 
-menukey: projects
+menukey: home
 permalink: /index.html
 ---
 <div class='section section--homepage'>
   <div class='row'>
     <div class='col col-xs-12'>
       <div class='row section__floating--horizontal'>
-        <div class='col col-xs-12 col-md-8'>
+        <div class='col col-xs-12 col-md-7'>
           <img src='img/benjamin-2019-2-horrec-web.jpg' alt='A picture of Benjamin' />
         </div>
-        <div class='col col-xs-12 col-md-4'>
-          <div class='section__header'>
-            <h2>Hey.</h2>
-          </div>
-          <div class='section--intro section__floating section__floating--right-to-left section__floating--center-top'>
-            <p>I'm Benjamin, a lead javascript / frontend engineer at Hiber, based in Amsterdam.</p>
-            <p>I also cook food, cycle, mix live & studio sound, listen to almost any genre of music (and make noise), contribute to open source, hiking in the mountains, and enjoy discovering new cafes.</h3>
-            {% include 'partials/social.njk' %}
+        <div class='col col-xs-12 col-md-5 first-xs last-md'>
+          <div class='section--intro__wrapper'>
+            <div class='section__header'>
+              <h2>Hey.</h2>
+            </div>
+            <div class='section--intro section__floating section__floating--right-to-left section__floating--center-top'>
+              <p>I'm Benjamin, a lead javascript / frontend engineer at Hiber, based in Amsterdam.</p>
+              <p>Mostly working with vue.js, but also pushing the boundaries with the latest spec of ES and TypeScript, and a bit of a S/CSS geek.</p>
+              <p>When I'm not behind a screen I love to cook food for others, cycle, mix live & studio sound, listen to almost any genre of music (and make noise), contribute to open source, hiking in the mountains, and enjoy discovering new cafes.</p>
+              {% include 'partials/social.njk' %}
+            </div>
           </div>
         </div>
       </div>
@@ -32,13 +35,13 @@ permalink: /index.html
       <div class='section__header'>
         <h5>Latest GitHub repos</h5>
         <h2>Projects.</h2>
-        <a class='section__header__see' href='https://github.com/nothingrandom'>See all <i class='fal fa-eye'></i></a>
+        <a class='section__header__see link--wiggle' href='https://github.com/nothingrandom'>See all <i class='fal fa-eye'></i></a>
       </div>
       <div class='row'>
         {% for repo in github.myRecentRepos %}
-          <div class='col-xs-12 col-sm-6 col-md-4 section__item'>
+          <div class='col-xs-12 col-sm-4 section__item'>
             <a href='{{ repo.html_url }}' target='_blank'>
-              <span class='section__item__tag project__language project__language--{% lowercase repo.language %}'>{{ repo.language }}</span>
+              <span class='pip section__item__tag project__language project__language--{% lowercase repo.language %}'>{{ repo.language }}</span>
               <h3 class='section__item__header'>{{ repo.name }}</h3>
               <p class='section__item__description'>{{ repo.description }}</p>
             </a>
@@ -53,7 +56,17 @@ permalink: /index.html
   <div class='row'>
     <div class='col col-xs-12'>
       <div class='section__header'>
-        <h2>Food + Music.</h2>
+        <h2>Food.</h2>
+      </div>
+      <div class='row section__item--food'>
+        <div class='col-xs-12 col-md-8'>
+          <img src='https://cdn.dribbble.com/users/1068771/screenshots/10002765/media/45479ca7977fd87588f6ddc4f8099653.jpg' />
+        </div>
+        <div class='col-xs-12 col-md-4'>
+          <div class='section__intro section__floating section__floating--center-top'>
+            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. From its medieval origins to the digital era, learn everything there is to know about the ubiquitous lorem ipsum passage.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -65,7 +78,7 @@ permalink: /index.html
       <div class='section__header'>
         <h5>Recent thoughts</h5>
         <h2>Blog.</h2>
-        <a class='section__header__see' href='/blog/'>See all <i class='fal fa-eye'></i></a>
+        <a class='section__header__see link--wiggle' href='/blog/'>See all <i class='fal fa-eye'></i></a>
       </div>
       <div class='row'>
         {% for post in collections.posts | limitTo(-3) | reverse %}
@@ -73,7 +86,7 @@ permalink: /index.html
             <a class='link--exclude' href='{{ post.url }}'>
               {% for tag in post.data.tags %}
                 {% if tag !== 'posts' %}
-                  <span class='section__item__tag posts__tag posts__tag--{{ tag }}'>{{ tag | trim }}</span>
+                  <span class='pip section__item__tag posts__tag posts__tag--{{ tag }}'>{{ tag | trim }}</span>
                 {% endif %}
               {% endfor %}
               <h3 class='section__item__header'>{{ post.data.title | default(page.url) }}</h3>

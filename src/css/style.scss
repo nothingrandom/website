@@ -3,15 +3,17 @@
 @import 'github-languages-css/index.css';
 @import 'utilities', 'variables', 'grid', 'colors', 'fonts', 'typography';
 
-@import 'components/buttons';
-@import 'components/images';
+// @import 'components/buttons';
+@import 'components/filter';
+@import 'components/footer';
 @import 'components/logo';
 @import 'components/menu';
 @import 'components/posts';
-@import 'components/projects';
+// @import 'components/projects';
 @import 'components/section';
 @import 'components/social';
 
+// @import 'pages/404';
 @import 'pages/bio';
 @import 'pages/blog';
 @import 'pages/food';
@@ -25,10 +27,6 @@ html {
 
 body {
   overflow-x: hidden;
-}
-
-.container-fluid {
-  max-width: 1280px;
 }
 
 .row--md-padding {

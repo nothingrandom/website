@@ -1,0 +1,56 @@
+$footer-height-sm: 353px;
+$footer-height-md: 225px;
+$footer-height-lg: 103px;
+
+.section--footer {
+  background-color: palette(white);
+  border-top-color: palette(grey, pale);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height-sm;
+  padding: 30px 0;
+  border-top-width: 1px;
+  border-top-style: solid;
+
+  @include breakpoint(md) {
+    height: $footer-height-md;
+  }
+
+  @include breakpoint(lg) {
+    height: $footer-height-lg;
+  }
+
+  h4 {
+    margin: 15px 0 0;
+    font-size: em(16px);
+    font-weight: 700;
+
+    @include breakpoint(lg) {
+      margin: 0;
+    }
+  }
+
+  p {
+    margin: 5px 0 0;
+    font-size: em(16px);
+
+    a {
+      &:hover {
+        background-position: 0 17px;
+
+        &::after {
+          bottom: 4px !important;
+        }
+      }
+    }
+  }
+
+  .footer__description {
+    margin-top: 15px;
+
+    @include breakpoint(lg) {
+      margin-top: -3px;
+    }
+  }
+}

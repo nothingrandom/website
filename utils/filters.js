@@ -35,8 +35,6 @@ module.exports = {
     return i;
   },
   isIngredientsList(i) {
-    console.log(i);
-    console.log(typeof i);
     if (typeof i === 'object') {
       return true;
     }
