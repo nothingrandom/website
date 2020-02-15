@@ -100,7 +100,6 @@ $menu-height-md: 93px;
           color: palette(black);
           font-size: 14px;
           text-transform: uppercase;
-          letter-spacing: 1px;
 
           @include breakpoint(md) {
             padding: 10px 15px;
