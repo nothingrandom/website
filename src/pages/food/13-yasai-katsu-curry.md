@@ -10,7 +10,7 @@ serves: 4
 time: 45 mins
 challenge: 2
 
-intro: This dish is inspired by my regular order and Wagamama's. It's got a Japanese flair to it, but it's most certainly a British twist to the style of cuisine. This is a crowd pleaser, it's an easy dish, and even the kids will enjoy these veggies!
+intro: This dish is inspired by my regular order at Wagamama. Its got a Japanese flair to it, but it's most certainly a British twist to the style of cuisine. This is a crowd pleaser, it's an easy dish, and even the kids will enjoy these veggies!
 
 ingredients:
   - fried vegetables: [2 sweet potatoes, 1 aubergine, 50g plain flour, 1 egg, 100g panko breadcrumbs, 2 tbsp sesame seeds, salt & pepper]

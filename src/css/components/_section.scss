@@ -16,7 +16,7 @@
   h2 {
     position: relative;
     z-index: 3;
-    margin: 0 0 -12px;
+    margin: 0 0 -15px;
     text-align: left;
     line-height: 1;
 
@@ -30,9 +30,12 @@
   }
 
   h5 {
-    margin: 0 0 0;
-    padding-left: 7.5px;
+    margin: 0;
     color: palette(grey);
+
+    @include breakpoint(md) {
+      padding-left: 7.5px;
+    }
   }
 
   .section__header__see {
@@ -41,8 +44,12 @@
     position: absolute;
     right: 0;
     z-index: 4;
-    margin-top: -10px;
+    margin-top: 15px;
     color: palette(grey);
+
+    @include breakpoint(md) {
+      margin-top: -10px;
+    }
 
     &:hover {
       color: palette(black);
@@ -112,11 +119,12 @@
 
 .section__floating {
   z-index: 1;
-  padding: 40px;
+  padding: 40px 20px;
   background-color: palette(white);
 
   @include breakpoint(md) {
     position: absolute;
+    padding: 40px;
   }
 
   &--left-to-right {

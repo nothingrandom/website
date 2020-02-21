@@ -45,19 +45,21 @@
               <i class='fal fa-cheeseburger'></i>
               <i class='fal fa-times'></i>
             </label>
-            <div class='menu-content' style='display: none'>
-              <ul class='links'>
-                {% for nav in menuList %}
-                  {% set isCurrent = (menukey === nav.id) %}
-                  {% set isParent = nav.link != '/' and nav.link in page.url %}
-                  <li class='menu__item {% if isCurrent or isParent %}menu__item--active{% endif %}' style='--hover-color: {{ nav.color }}'>
-                    <a class='link--exclude' href='{{ nav.link }}'>
-                      {{ nav.name }}
-                    </a>
-                  </li>
-                {% endfor %}
-              </ul>
-              {% include 'partials/social.njk' %}
+            <div class='menu__content' style='display: none'>
+              <div class='menu__links'>
+                <ul class='links'>
+                  {% for nav in menuList %}
+                    {% set isCurrent = (menukey === nav.id) %}
+                    {% set isParent = nav.link != '/' and nav.link in page.url %}
+                    <li class='menu__item {% if isCurrent or isParent %}menu__item--active{% endif %}' style='--hover-color: {{ nav.color }}'>
+                      <a class='link--exclude' href='{{ nav.link }}'>
+                        {{ nav.name }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+                {% include 'partials/social.njk' %}
+              </div>
             </div>
           </div>
         </div>
