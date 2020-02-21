@@ -9,10 +9,12 @@
     a {
       display: block;
       width: 100%;
-      margin-bottom: 3rem;
       padding: 1.5rem;
-
       color: palette(black);
+
+      @include breakpoint(md) {
+        margin-bottom: 3rem;
+      }
 
       &:hover {
         background-color: palette(grey, pale);
