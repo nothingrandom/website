@@ -61,8 +61,10 @@
                     {# <a class='link--exclude' href="/search" id="search-link"><i class='far fa-search'></i></a> #}
                     <label class='toggle__label' for='toggle-search'><i class='far fa-search'></i></label>
                     <input class='toggle__input--search' type='checkbox' id='toggle-search'>
-                    <form action="https://www.google.co.uk/search" method="get" autocomplete="off" class="search toggle__item">
-                      <input type="hidden" name="q" id="q" value="site:https://nothingrandom.com">
+                    <form action="https://duckduckgo.com/" method="get" autocomplete="off" class="search toggle__item">
+                      <input type="hidden" name="sites" value="nothingrandom.com" />
+                      <input type="hidden" name="k1" value="-1"/>
+                      <input type="hidden" name="kae" value="d"/>
                       <input type="text" name="q" id="search-input"></p>
                       <ul class='search-results'>
                       </ul>

@@ -61,5 +61,6 @@ searchInput.addEventListener('keyup', () => {
 searchInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' || e.keyCode === 13 || e.keyCode === 169) {
     e.preventDefault();
+    return false;
   }
 });
