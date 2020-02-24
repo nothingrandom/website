@@ -54,12 +54,6 @@ body {
   font-family: sans-serif;
 }
 
-%font-sans {
-  font-family: $sans;
-  font-feature-settings: 'ss02', 'ss04', 'ss06'; //ss03 for curled 'r'
-  font-display: swap;
-}
-
 %font-serif {
   font-family: $serif;
   font-display: swap;
@@ -67,6 +61,12 @@ body {
 
 %font-mono {
   font-family: $mono;
+}
+
+%font-sans {
+  font-family: $sans;
+  font-feature-settings: 'ss02', 'ss04', 'ss06'; //ss03 for curled 'r'
+  font-display: swap;
 }
 
 @include header-style() {

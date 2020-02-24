@@ -57,6 +57,20 @@
                       </a>
                     </li>
                   {% endfor %}
+                  <li class='menu__item'>
+                    {# <a class='link--exclude' href="/search" id="search-link"><i class='far fa-search'></i></a> #}
+                    <label class='toggle__label' for='toggle-search'><i class='far fa-search'></i></label>
+                    <input class='toggle__input--search' type='checkbox' id='toggle-search'>
+                    <form action="https://www.google.co.uk/search" method="get" autocomplete="off" class="search toggle__item">
+                      <input type="hidden" name="q" id="q" value="site:https://nothingrandom.com">
+                      <input type="text" name="q" id="search-input"></p>
+                      <ul class='search-results'>
+                        {# <li><a>Search result item 1</a></li>
+                        <li><a>Search result item 2</a></li>
+                        <li><a>Search result item 3</a></li> #}
+                      </ul>
+                    </form>
+                  </li>
                 </ul>
                 {% include 'partials/social.njk' %}
               </div>

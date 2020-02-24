@@ -30,7 +30,7 @@ $filters-list: all, code, life;
   }
 }
 
-input {
+.filter__input {
   display: none;
 
   &:checked {
