@@ -4,7 +4,7 @@ const searchInput = document.querySelector('#search-input');
 const searchResults = document.querySelector('.search-results');
 
 // attach a click handler to the search link
-btn.addEventListener('click', (event) => {
+btn.addEventListener('click', () => {
   // don't navigate to that page. Stay put.
   // event.preventDefault();
 
@@ -48,12 +48,18 @@ const find = (s) => {
   });
 };
 
-searchInput.addEventListener('keyup', (event) => {
+searchInput.addEventListener('keyup', () => {
   const str = searchInput.value;
 
   if (str.length > 2) {
     find(str);
   } else {
     clearResults();
+  }
+});
+
+searchInput.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' || e.keyCode === 13 || e.keyCode === 169) {
+    e.preventDefault();
   }
 });
