@@ -1,0 +1,17 @@
+.toggle__item {
+  display: none;
+}
+
+.toggle__label {
+  cursor: pointer;
+}
+
+.toggle__input--search {
+  display: none;
+
+  &:checked {
+    + .toggle__item {
+      display: block;
+    }
+  }
+}

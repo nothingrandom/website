@@ -10,7 +10,7 @@
     margin-bottom: 20px;
 
     @include breakpoint(md) {
-      width: calc(100% / 4);
+      width: unset;
       margin-bottom: 0;
     }
   }
