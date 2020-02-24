@@ -11,17 +11,13 @@ btn.addEventListener('click', (event) => {
   searchInput.focus();
   searchInput.select();
 
-  // make search magic happen instead...
-
   // get the data
   fetch('/search.json').then((response) => response.json()).then((response) => {
     searchIndex = response.search;
-    console.log(searchIndex);
   });
 }, false);
 
 const clearResults = () => {
-  console.log('CLEAR!');
   while (searchResults.firstChild) {
     searchResults.removeChild(searchResults.firstChild);
   }
