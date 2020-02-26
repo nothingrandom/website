@@ -1,40 +1,3 @@
-// @mixin link-underline($color: palette(white), $text-color: palette(blue)) {
-//   // @include color-schemes(color, $text-color, palette(blue));
-//   display: inline-block;
-//   color: $text-color;
-//   text-decoration: none;
-
-//   // @if $text-color != palette(grey) {
-//   //   color: $text-color !important;
-//   // }
-
-//   &::after {
-//     position: relative;
-//     right: 0;
-//     bottom: -3px;
-//     left: 0;
-//     display: block;
-//     height: 4px;
-//     content: '';
-//     background-color: $color;
-//     opacity: 0;
-//     transition: all ease-in-out .2s;
-//   }
-
-//   &:hover {
-//     color: $color !important;
-
-//     &::after {
-//       bottom: 6px;
-//       opacity: 1;
-//     }
-//   }
-// }
-
-// .link-underline {
-//   @include link-underline(palette(blue), palette(grey));
-// }
-
 @mixin section-box-background($background-color) {
   background-color: $background-color;
   color: text-contrast($background-color);
@@ -54,6 +17,12 @@ body {
   font-family: sans-serif;
 }
 
+%font-sans {
+  font-family: $sans;
+  font-feature-settings: 'ss02', 'ss04', 'ss06'; //ss03 for curled 'r'
+  font-display: swap;
+}
+
 %font-serif {
   font-family: $serif;
   font-display: swap;
@@ -61,12 +30,6 @@ body {
 
 %font-mono {
   font-family: $mono;
-}
-
-%font-sans {
-  font-family: $sans;
-  font-feature-settings: 'ss02', 'ss04', 'ss06'; //ss03 for curled 'r'
-  font-display: swap;
 }
 
 @include header-style() {
@@ -87,7 +50,7 @@ h1 {
 }
 
 h2 {
-  font-size: em(64px);
+  font-size: em(56px);
   font-weight: 700;
 
   @include breakpoint(xs) {
@@ -127,6 +90,7 @@ p {
 }
 
 p a,
+.section--blog-item li a,
 .link--wiggle,
 %link--wiggle {
   background-image: linear-gradient(to top,
