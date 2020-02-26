@@ -57,7 +57,7 @@ $mobile-menu-animation-time: .4s;
     pointer-events: none;
 
     @include breakpoint(md) {
-      position: relative;
+      position: unset;
       top: unset;
       right: unset;
       bottom: unset;
@@ -89,29 +89,131 @@ $mobile-menu-animation-time: .4s;
       opacity: 0;
 
       @include breakpoint(md) {
+        position: unset;
         opacity: 1;
+      }
+
+      .menu__item--search {
+        .toggle__label--on {
+          position: relative;
+          top: -2px;
+          right: -80%;
+          z-index: 1;
+
+          @include breakpoint(md) {
+            top: unset;
+            right: unset;
+          }
+        }
+      }
+
+      .search {
+        position: absolute;
+        top: 14px;
+        right: -30px;
+        left: -30px;
+        background-color: palette(white);
+
+        @include breakpoint(md) {
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          padding: 90px $grid-padding;
+        }
+
+        &::before {
+          background-color: palette(green);
+        }
+
+        input[type='text'],
+        .search-results {
+          position: relative;
+          z-index: 1;
+        }
+
+        input[type='text'] {
+          width: 100%;
+          padding: 10px 15px;
+          border: 0;
+          border-bottom: 1px solid palette(white);
+          outline: 0;
+          background-color: transparent;
+          font-size: em(24px);
+
+          @include breakpoint(md) {
+            padding: 10px 95px 10px 15px;
+          }
+        }
+
+        .search-results {
+          margin-top: -15px;
+          text-align: left;
+
+          li {
+            display: inline-block;
+            min-width: 100%;
+
+            &:first-child {
+              margin-top: 10px;
+            }
+
+            &:last-child {
+              margin-bottom: 10px;
+            }
+          }
+
+          a {
+            @extend %font-sans;
+            @include transition((background-color, color));
+            padding: 20px 15px;
+            color: palette(black);
+            font-size: em(24px);
+            text-transform: none;
+            // transition: background-color $transition-time ease-in-out, color $transition-time ease-in-out;
+
+            &:hover {
+              background-color: palette(blue, dark);
+              color: palette(white);
+            }
+          }
+        }
       }
     }
 
     .links {
       @include center(vertical);
       position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -25px;
       text-align: left;
 
       @include breakpoint(md) {
-        position: relative;
+        position: unset;
         top: unset;
+        margin-top: unset;
         text-align: right;
         transform: unset;
       }
 
       .menu__item {
         position: relative;
-        font-size: em(42px);
+        width: 100%;
 
         @include breakpoint(md) {
           display: inline-block;
+          width: unset;
           font-size: em(18px);
+        }
+
+        &.menu__item--search {
+          position: unset;
+          order: -1;
+
+          @include breakpoint(md) {
+            order: unset;
+          }
         }
 
         a,
@@ -175,7 +277,7 @@ $mobile-menu-animation-time: .4s;
 
     .social {
       position: absolute;
-      bottom: 50px;
+      bottom: 25px;
       left: 0;
       width: 100%;
       text-align: center;
@@ -189,47 +291,6 @@ $mobile-menu-animation-time: .4s;
 
         &:hover {
           color: palette(blue);
-        }
-      }
-    }
-
-    .search {
-      position: absolute;
-      top: -7px;
-      right: 40px;
-      width: 260px;
-      background-color: palette(white);
-
-      input[type='text'] {
-        width: 100%;
-        padding: 10px 15px;
-      }
-
-      .search-results {
-        margin-top: -15px;
-        background-color: palette(grey, pale);
-        text-align: left;
-
-        li {
-          display: inline-block;
-          min-width: 100%;
-
-          &:first-child {
-            margin-top: 10px;
-          }
-
-          &:last-child {
-            margin-bottom: 10px;
-          }
-        }
-
-        a {
-          @extend %font-sans;
-          color: palette(black);
-
-          &:hover {
-            color: palette(blue);
-          }
         }
       }
     }
@@ -251,6 +312,10 @@ $mobile-menu-animation-time: .4s;
         &::before {
           opacity: 1;
           transform: scale(40);
+
+          @include breakpoint(md) {
+            opacity: 0;
+          }
         }
       }
 

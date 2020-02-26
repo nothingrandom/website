@@ -43,6 +43,7 @@ const find = (s) => {
     const link = document.createElement('a');
     link.textContent = item.title;
     link.setAttribute('href', item.url);
+    listItem.classList.add('search-results__result');
     listItem.appendChild(link);
     searchResults.appendChild(listItem);
   });
