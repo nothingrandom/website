@@ -13,8 +13,8 @@ challenge: 1
 intro: I can say with strong certainty that this is one of the best lemon poppy seed cake recipes out there. It's sweet, moist, has that lemony tang, everything you look for in a lemon cake. This cake is also really simple, there's a fair margin on some of the ingredients as long as the dry to wet ratio is maintained, a little fiddly, but well worth your time.
 
 ingredients:
-  - cake: [113g unsalted butter, 201g light brown sugar, 3 tbsp. lemon zest (that of 2 lemons), 1½ tsp. vanilla extract, 3 eggs, 213g plain flour, 2 tbsp. poppy seeds, 1 tsp. baking powder, ¼ tsp. baking soda, ½ tsp. salt, 118ml (soy) yogurt, 59ml (oat) milk, 2 tbsp. fresh lemon juice (that of 1 lemon)]
-  - glaze: [59g granulated sugar, 59ml fresh lemon juice (that of 2 lemons)]
+  - cake: [115g unsalted butter, 200g light brown sugar, 3 tbsp. lemon zest (that of 2 lemons), 1½ tsp. vanilla extract, 3 eggs, 215g plain flour, 2 tbsp. poppy seeds, 1 tsp. baking powder, ¼ tsp. baking soda, ½ tsp. salt, 120ml (soy) yogurt, 60ml (oat) milk, 2 tbsp. fresh lemon juice (that of 1 lemon)]
+  - glaze: [60g granulated sugar, 60ml fresh lemon juice (that of 2 lemons)]
 ---
 
 - Preheat oven to 180°C⁣, and prepare your medium sized loaf pan (900g / 23 x 13cm) by rubbing with coconut oil.

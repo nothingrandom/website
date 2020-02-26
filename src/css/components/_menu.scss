@@ -96,7 +96,7 @@ $mobile-menu-animation-time: .4s;
       .menu__item--search {
         .toggle__label--on {
           position: relative;
-          top: 60px;
+          top: -5px;
           right: -80%;
           z-index: 1;
 
@@ -108,7 +108,8 @@ $mobile-menu-animation-time: .4s;
       }
 
       .search {
-        position: relative;
+        position: absolute;
+        top: 10px;
         right: -30px;
         left: -30px;
         background-color: palette(white);
@@ -182,19 +183,16 @@ $mobile-menu-animation-time: .4s;
     }
 
     .links {
-      @include center(vertical);
       position: relative;
       display: flex;
       flex-wrap: wrap;
-      margin-top: -25px;
+      margin-top: 100px;
       text-align: left;
 
       @include breakpoint(md) {
         position: unset;
-        top: unset;
         margin-top: unset;
         text-align: right;
-        transform: unset;
       }
 
       .menu__item {
