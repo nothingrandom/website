@@ -16,12 +16,12 @@
   h2 {
     position: relative;
     z-index: 3;
-    margin: 0 0 -15px;
+    margin: 0 0 -10px;
     text-align: left;
     line-height: 1;
 
     @include breakpoint(xs) {
-      margin: 0 0 -20px;
+      margin: 0 0 -15px;
     }
 
     @include breakpoint(md) {
