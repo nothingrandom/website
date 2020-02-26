@@ -13,7 +13,7 @@
       color: palette(black);
 
       @include breakpoint(md) {
-        margin-bottom: 3rem;
+        margin-bottom: $standard-spacing;
       }
 
       &:hover {
