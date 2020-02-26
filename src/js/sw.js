@@ -3,14 +3,15 @@
 // Licensed under a CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
 // http://creativecommons.org/publicdomain/zero/1.0/
 
+// Update 'version' if you need to refresh the caches
+import { version } from '../../package.json';
+
 // A cache for core files like CSS and JavaScript
 const staticCacheName = 'static';
 // A cache for pages to store for offline
 const pagesCacheName = 'pages';
 // A cache for images to store for offline
 const imagesCacheName = 'images';
-// Update 'version' if you need to refresh the caches
-const version = 'v1::';
 
 // Store core files in a cache (including a page to display when offline)
 const updateStaticCache = () => caches.open(version + staticCacheName).then((cache) => cache.addAll([

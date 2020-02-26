@@ -1,23 +1,27 @@
 {% set menuList = [
   {
-    id: 'projects',
-    name: 'Projects',
-    link: '/#projects'
+    id: 'home',
+    name: 'Home',
+    link: '/',
+    color: '#2323FD'
   },
   {
     id: 'blog',
     name: 'Blog',
-    link: '/blog/'
+    link: '/blog/',
+    color: '#A0DBD4'
   },
   {
     id: 'food',
     name: 'Food',
-    link: '/food/'
+    link: '/food/',
+    color: '#FFC72A'
   },
   {
     id: 'bio',
     name: 'Bio',
-    link: '/bio/'
+    link: '/bio/',
+    color: '#814CC5'
   }
 ] %}
 
@@ -27,7 +31,7 @@
       <div class='col-xs-12'>
         <div class='menu'>
           {% if config.env === 'development' %}
-            <a href='http://localhost:3000' class='link--exclude logo color'>
+            <a href='http://localhost:4000' class='link--exclude logo color'>
           {% else %}
             <a href='https://nothingrandom.com' class='link--exclude logo color'>
           {% endif %}
@@ -41,19 +45,37 @@
               <i class='fal fa-cheeseburger'></i>
               <i class='fal fa-times'></i>
             </label>
-            <div class='menu-content' style='display: none'>
-              <ul class='links'>
-                {% for nav in menuList %}
-                  {% set isCurrent = (menukey === nav.id) %}
-                  {% set isParent = nav.link != '/' and nav.link in page.url %}
-                  <li class='menu__item {% if isCurrent or isParent %}menu__item--active{% endif %}'>
-                    <a class='link--exclude' href='{{ nav.link }}'>
-                      {{ nav.name }}
-                    </a>
+            <div class='menu__content' style='display: none'>
+              <div class='menu__links'>
+                <ul class='links'>
+                  {% for nav in menuList %}
+                    {% set isCurrent = (menukey === nav.id) %}
+                    {% set isParent = nav.link != '/' and nav.link in page.url %}
+                    <li class='menu__item {% if isCurrent or isParent %}menu__item--active{% endif %}' style='--hover-color: {{ nav.color }}'>
+                      <a class='link--exclude' href='{{ nav.link }}'>
+                        {{ nav.name }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                  <li class='menu__item menu__item--search'>
+                    {# <a class='link--exclude' href="/search" id="search-link"><i class='far fa-search'></i></a> #}
+                    <input class='toggle__input toggle__input--search' type='checkbox' id='toggle-search'>
+                    <label class='toggle__label' for='toggle-search'>
+                      <span class='toggle__label--off'>search <i class='far fa-search'></i></span>
+                      <span class='toggle__label--on'>close <i class='far fa-search'></i></span>
+                    </label>
+                    <form action="https://duckduckgo.com/" method="get" autocomplete="off" class="search toggle__item">
+                      <input type="hidden" name="sites" value="nothingrandom.com" />
+                      <input type="hidden" name="k1" value="-1"/>
+                      <input type="hidden" name="kae" value="d"/>
+                      <input type="text" name="q" placeholder='Search...' id="search-input"></p>
+                      <ul class='search-results'>
+                      </ul>
+                    </form>
                   </li>
-                {% endfor %}
-              </ul>
-              {% include 'partials/social.njk' %}
+                </ul>
+                {% include 'partials/social.njk' %}
+              </div>
             </div>
           </div>
         </div>

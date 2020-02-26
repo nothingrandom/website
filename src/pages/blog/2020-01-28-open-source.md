@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: My 2020 open source goal
 tags:
 - posts
+- code
 permalink: /blog/my-2020-open-source-goal/
 ---
 
