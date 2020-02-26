@@ -1,16 +1,16 @@
 ---
-layout: layouts/page.njk
+layout: layouts/post.njk
 
 title: Amsterdam
 
-date: Last Modified
+date: 2019-05-28
 
 permalink: /amsterdam/index.html
 ---
 
-Last updated: {{ page.date | readableDate}}
+<!-- Last updated: {{ page.date | readableDate}} -->
 
-## Welkom bij Amsterdam! 🌷
+### Welkom bij Amsterdam! 🌷
 Hey! This is my little guide to Amsterdam. Indy and I have been living here since March 2017, and although we still sometimes feel quite new to the city we've done most of the standard tourist things when family and friends come to visit. We know what's different and some things to watch out for. Hopefully this guide assists you in your visit.
 
 ![Photo of Amsterdam](../img/amsterdam.jpg)
