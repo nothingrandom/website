@@ -3,8 +3,8 @@ $footer-height-md: 225px;
 $footer-height-lg: 103px;
 
 .section--footer {
-  @include color-schemes(background-color, palette(white), palette(black));
-  @include color-schemes(border-top-color, palette(grey, pale), palette(black, off));
+  background-color: palette(white);
+  border-top-color: palette(grey, pale);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -37,6 +37,8 @@ $footer-height-lg: 103px;
 
     a {
       &:hover {
+        background-position: 0 17px;
+
         &::after {
           bottom: 4px !important;
         }

@@ -1,13 +1,24 @@
 // Import barebones scss structure
 @import 'browser-reset/reset.css';
 @import 'github-languages-css/index.css';
-@import 'utilities', 'variables', 'colors', 'fonts', 'typography';
+@import 'utilities', 'variables', 'grid', 'colors', 'fonts', 'typography';
 
-// Grid
-@import 'grid';
+// @import 'components/buttons';
+@import 'components/filter';
+@import 'components/footer';
+@import 'components/logo';
+@import 'components/menu';
+@import 'components/posts';
+// @import 'components/projects';
+@import 'components/section';
+@import 'components/social';
+@import 'components/toggle';
 
-@import 'components/components';
-@import 'pages/pages';
+// @import 'pages/404';
+@import 'pages/bio';
+@import 'pages/blog';
+@import 'pages/food';
+@import 'pages/index';
 
 html {
   @include font-smoothing(on);
@@ -17,33 +28,6 @@ html {
 
 body {
   overflow-x: hidden;
-}
-
-.page {
-  @include color-schemes(background-color, palette(white), palette(black));
-  @include color-schemes(color, palette(black), palette(white));
-  position: relative;
-  min-height: 100vh;
-
-  .page__container {
-    padding-bottom: $footer-height-sm;
-
-    @include breakpoint(md) {
-      padding-bottom: $footer-height-md;
-    }
-
-    @include breakpoint(lg) {
-      padding-bottom: $footer-height-lg;
-    }
-  }
-}
-
-.section--standard {
-  padding: 50px 0;
-}
-
-.container-fluid {
-  max-width: 1280px;
 }
 
 .row--md-padding {
@@ -67,4 +51,9 @@ body {
       padding-left: 1.5rem;
     }
   }
+}
+
+.flex-spread {
+  display: flex;
+  justify-content: space-between;
 }

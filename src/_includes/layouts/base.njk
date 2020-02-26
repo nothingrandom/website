@@ -21,6 +21,9 @@
   <link rel='apple-touch-icon' href='/img/favicon-32x32.png'>
 {% endblock %}
 
+{% block headScripts %}
+{% endblock %}
+
 {% block body %}
   {{ super() }}
 
@@ -31,6 +34,7 @@
           {{ content | safe }}
         </div>
     </div>
+    {{ process.env }}
     {% include 'partials/footer.njk' %}
   </div>
 {% endblock %}
@@ -38,18 +42,20 @@
 {% block bodyScripts %}
   {% include 'partials/scripts.njk' %}
 
-  <script type='text/javascript'>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').then(registration => {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        })
-        .catch(error => {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', error);
+  {% if config.env !== 'development' %}
+    <script type='text/javascript'>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('/sw.js').then(registration => {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+          })
+          .catch(error => {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', error);
+          });
         });
-      });
-    }
-  </script>
+      }
+    </script>
+  {% endif %}
 {% endblock %}

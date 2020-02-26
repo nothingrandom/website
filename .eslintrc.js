@@ -23,5 +23,8 @@ module.exports = {
       ignoreStrings: true,
       ignoreTemplateLiterals: true,
     }],
+    'no-param-reassign': ['error', {
+      props: false,
+    }],
   },
 };
