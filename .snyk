@@ -826,7 +826,7 @@ ignore:
   'npm:ua-parser-js:20180227':
     - '@11ty/eleventy > browser-sync > ua-parser-js':
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-SERIALIZETOJS-460149:
     - parcel-bundler > serialize-to-js:
         reason: None given
@@ -834,71 +834,71 @@ ignore:
   SNYK-JS-MARKDOWNIT-459438:
     - '@11ty/eleventy > markdown-it':
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-535497:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-535498:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-535502:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540956:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540958:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540964:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540974:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540978:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540980:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540990:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540992:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540994:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540996:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-540998:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-541000:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
   SNYK-JS-NODESASS-541002:
     - node-sass:
         reason: None given
-        expires: '2020-02-27T13:48:29.913Z'
+        expires: '2020-03-28T16:36:29.850Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:lodash:20180130':
