@@ -1,17 +1,18 @@
 $menu-height-md: 93px;
+$mobile-menu-animation-time: .4s;
 
 .menu__container {
-  @include light-dark(border-top-color, palette(black), palette(white));
-  @include light-dark(border-bottom-color, palette(grey, pale), palette(black, off));
-  @include light-dark(background-color, palette(white), palette(black));
   position: sticky;
   top: 0;
   z-index: 10;
   height: $menu-height-md;
   border-top-width: 4px;
   border-top-style: solid;
+  border-top-color: palette(black);
   border-bottom-width: 1px;
   border-bottom-style: solid;
+  border-bottom-color: palette(grey, pale);
+  background-color: palette(white);
 }
 
 .menu {
@@ -27,8 +28,8 @@ $menu-height-md: 93px;
     float: right;
 
     .menu__icon {
-      font-size: 28px;
       cursor: pointer;
+      font-size: 28px;
 
       @include breakpoint(md) {
         display: none;
@@ -44,8 +45,7 @@ $menu-height-md: 93px;
     }
   }
 
-  .menu-content {
-    @include light-dark(background-color, palette(white), palette(black));
+  .menu__content {
     position: fixed;
     top: 0;
     right: 0;
@@ -54,12 +54,10 @@ $menu-height-md: 93px;
     z-index: -1;
     display: unset !important;
     padding: 0 4rem;
-    opacity: 0;
-    transition: opacity ease-in-out .25s;
     pointer-events: none;
 
     @include breakpoint(md) {
-      position: relative;
+      position: unset;
       top: unset;
       right: unset;
       bottom: unset;
@@ -71,78 +69,121 @@ $menu-height-md: 93px;
       pointer-events: unset;
     }
 
-    .links {
-      @include center(vertical);
+    &::before {
+      @include pseudo();
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: #FFD1DC;
+      opacity: 0;
+      transition: transform $mobile-menu-animation-time ease-in-out;
+    }
+
+    .menu__links {
       position: relative;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+
+      @include breakpoint(md) {
+        position: unset;
+        opacity: 1;
+      }
+    }
+
+    .links {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 100px;
       text-align: left;
 
       @include breakpoint(md) {
-        position: relative;
-        top: unset;
+        position: unset;
+        margin-top: unset;
         text-align: right;
-        transform: unset;
       }
 
       .menu__item {
         position: relative;
-        font-size: em(42px);
+        width: 100%;
 
         @include breakpoint(md) {
           display: inline-block;
+          width: unset;
           font-size: em(18px);
         }
 
-        &::after {
-          position: absolute;
-          bottom: 10px;
-          left: -4rem;
+        a,
+        label {
           display: block;
-          width: 125px;
-          height: 5px;
-          content: '';
-          background-color: palette(grey, pale);
-          transform: scaleX(0);
-          transition: transform .3s cubic-bezier(.86, 0, .07, 1);
-          transform-origin: 0 50%;
-
-          @include breakpoint(md) {
-            right: 15px;
-            bottom: -4px;
-            left: 15px;
-            width: unset;
-          }
         }
 
-        &.menu__item--active {
-          &::after {
-            background-color: palette(blue);
-            transform: none;
-          }
-
-          a {
-            @include light-dark(color, palette(black), palette(white));
-          }
-        }
-
-        &:hover {
-          &::after {
-            transform: scaleX(1);
-          }
-
-          a {
-            @include light-dark(color, palette(black), palette(white));
-          }
-        }
-
-        a {
-          @include light-dark(color, palette(black), palette(white));
-          @extend %serif-style;
-          display: block;
-          padding: 20px 0;
+        %link-style {
+          @extend %font-mono;
+          padding: 30px 0;
+          color: palette(black);
+          font-size: 14px;
+          text-transform: uppercase;
 
           @include breakpoint(md) {
             padding: 10px 15px;
             color: palette(grey);
+          }
+
+          &::after {
+            position: absolute;
+            bottom: 10px;
+            left: -4rem;
+            display: block;
+            width: 125px;
+            height: 5px;
+            content: '';
+            background-color: var(--hover-color);
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            transition: transform .3s cubic-bezier(.86, 0, .07, 1);
+
+            @include breakpoint(md) {
+              right: 15px;
+              bottom: -4px;
+              left: 15px;
+              width: unset;
+            }
+          }
+
+          &:hover {
+            &::after {
+              transform: scaleX(1);
+            }
+
+            a {
+              color: palette(black);
+            }
+          }
+        }
+
+        label {
+          @extend %link-style;
+        }
+
+        &:not(.menu__item--search) {
+          a {
+            @extend %link-style;
+          }
+        }
+
+        &.menu__item--active {
+          a {
+            color: palette(black);
+
+            &::after {
+              background-color: var(--hover-color);
+              transform: scaleX(1);
+            }
           }
         }
       }
@@ -150,7 +191,7 @@ $menu-height-md: 93px;
 
     .social {
       position: absolute;
-      bottom: 50px;
+      bottom: 25px;
       left: 0;
       width: 100%;
       text-align: center;
@@ -160,7 +201,7 @@ $menu-height-md: 93px;
       }
 
       a {
-        @include light-dark(color, palette(black), palette(white));
+        color: palette(black);
 
         &:hover {
           color: palette(blue);
@@ -173,16 +214,29 @@ $menu-height-md: 93px;
     display: none;
 
     &:checked {
-      ~ .menu-content {
+      ~ .menu__content {
         z-index: 9;
-        opacity: 1;
         pointer-events: unset;
+
+        .menu__links {
+          opacity: 1;
+          transition: opacity $transition-time ease-in-out $mobile-menu-animation-time;
+        }
+
+        &::before {
+          opacity: 1;
+          transform: scale(40);
+
+          @include breakpoint(md) {
+            opacity: 0;
+          }
+        }
       }
 
       ~ .menu__icon {
         .fa-times {
           display: inline-block;
-          color: palette(white);
+          color: palette(black);
         }
 
         .fa-cheeseburger {

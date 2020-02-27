@@ -1,56 +1,81 @@
+@mixin section-box-background($background-color) {
+  background-color: $background-color;
+  color: text-contrast($background-color);
+
+  a {
+    text-shadow:
+      .025em 0 0 $background-color,
+      -.025em 0 0 $background-color,
+      .05em 0 0 $background-color,
+      -.05em 0 0 $background-color,
+      .075em 0 0 $background-color,
+      -.075em 0 0 $background-color;
+  }
+}
+
 body {
   font-family: sans-serif;
 }
 
-%sans-style {
+%font-sans {
   font-family: $sans;
   font-feature-settings: 'ss02', 'ss04', 'ss06'; //ss03 for curled 'r'
   font-display: swap;
 }
 
-%serif-style {
+%font-serif {
   font-family: $serif;
   font-display: swap;
 }
 
-%mono-style {
+%font-mono {
   font-family: $mono;
 }
 
 @include header-style() {
-  @extend %sans-style;
-  @include light-dark(color, palette(black), palette(white));
+  @extend %font-sans;
+  // @include color-schemes(color, palette(black), palette(white));
   font-weight: 400;
 }
 
 @include paragraph-style() {
-  @extend %sans-style;
-  @include light-dark(color, palette(black), palette(white));
+  @extend %font-sans;
+  // @include color-schemes(color, palette(black), palette(white));
 }
 
 h1 {
-  @extend %serif-style;
+  @extend %font-serif;
   font-size: em(42px);
   // font-weight: 600;
 }
 
 h2 {
-  font-size: em(32px);
+  font-size: em(56px);
+  font-weight: 700;
+
+  @include breakpoint(xs) {
+    font-size: em(84px);
+    letter-spacing: -1px;
+  }
+
+  @include breakpoint(md) {
+    font-size: em(126px);
+    letter-spacing: -2px;
+  }
 }
 
 h3 {
-  font-size: em(26px);
-  font-weight: 300;
+  font-size: em(36px);
   letter-spacing: -.5px;
 }
 
 h4 {
-  margin-bottom: 0;
   font-size: em(24px);
 }
 
 h5 {
-  font-size: em(22px);
+  @extend %font-mono;
+  font-size: em(18px);
 }
 
 p {
@@ -58,102 +83,59 @@ p {
   font-size: em(20px);
   line-height: 1.5;
 
-  a {
-    &:hover {
-      &::after {
-        bottom: 7px !important;
-      }
-    }
-  }
-
   code {
     padding: 0 5px;
     font-size: em(18px, 20px);
   }
 }
 
-code {
-  @extend %mono-style;
-  @include light-dark(background-color, palette(grey, pale), palette(black, off));
-}
+p a,
+.section--blog-item li a,
+.link--wiggle,
+%link--wiggle {
+  background-image: linear-gradient(to top,
+    transparent 8%,
+    currentColor 10%,
+    currentColor 14%,
+    transparent 10%
+  );
 
-.link--hero {
-  position: relative;
-  display: inline-block;
-  color: inherit;
+  color: currentColor;
+  text-shadow:
+    .025em 0 0 #FFFFFF,
+    -.025em 0 0 #FFFFFF,
+    .05em 0 0 #FFFFFF,
+    -.05em 0 0 #FFFFFF,
+    .075em 0 0 #FFFFFF,
+    -.075em 0 0 #FFFFFF;
 
-  &::before,
-  &::after {
-    @include pseudo();
-    right: -2px;
-    bottom: 0;
-    left: -2px;
-    z-index: -1;
-    height: .5em;
-  }
+  &.section__header__see {
+    padding-bottom: 3px;
+    background-image: none;
 
-  &::before {
-    @include light-dark(background-color, palette(grey, pale), palette(black, true));
-  }
-
-  &::after {
-    background-color: palette(blue);
-    transform: scaleX(0);
-    transition: transform .3s cubic-bezier(.86, 0, .07, 1), -webkit-transform .3s cubic-bezier(.86, 0, .07, 1);
-    transform-origin: 0 50%;
+    &:hover {
+      background-position: 0 16px;
+    }
   }
 
   &:hover {
-    &::after {
-      transform: scaleX(1);
-    }
+    padding-bottom: 3px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='Squiggle-svg' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.st0{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23f00' stroke-width='1' class='st0' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 21px;
+    background-repeat: repeat-x;
+    background-size: auto 3px;
+    text-decoration: none;
   }
-}
-
-@mixin link-underline($color: palette(blue), $text-color: palette(grey)) {
-  @include light-dark(color, $text-color, palette(blue));
-  display: inline-block;
-  // color: $text-color;
-  text-decoration: none;
-
-  // @if $text-color != palette(grey) {
-  //   color: $text-color !important;
-  // }
-
-  &::after {
-    position: relative;
-    right: 0;
-    bottom: -3px;
-    left: 0;
-    display: block;
-    height: 2px;
-    content: '';
-    background-color: $color;
-    opacity: 0;
-    transition: all ease-in-out .2s;
-  }
-
-  &:hover {
-    color: $color !important;
-
-    &::after {
-      bottom: 2px;
-      opacity: 1;
-    }
-  }
-}
-
-.link-underline {
-  @include link-underline(palette(blue), palette(grey));
 }
 
 a {
   text-decoration: none;
-  transition: color ease-in-out $transition-time;
+  transition: color $transition-time ease-in-out;
+}
 
-  &:not(.link--hero):not(.link--social):not(.link--exclude) {
-    @include link-underline();
-  }
+code {
+  @extend %font-mono;
+  background-color: palette(grey, pale);
 }
 
 .text-center {
@@ -162,4 +144,8 @@ a {
 
 .text-left {
   text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
