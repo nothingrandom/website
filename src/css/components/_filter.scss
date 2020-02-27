@@ -1,0 +1,64 @@
+.section__filter-wrapper {
+  margin: 0 0 40px;
+  padding: 40px 0;
+  text-align: center;
+}
+
+$filters-list: all, code, life;
+
+@each $filter in $filters-list {
+  input#filter-#{$filter}:checked ~ .filter__list li[data-filter~='#{$filter}'] {
+    @if ($filter == 'all') {
+      display: block;
+    } @else {
+      display: block !important;
+    }
+  }
+}
+
+.filter__label {
+  @extend %font-sans;
+  position: relative;
+  z-index: 4;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+  opacity: 0.4;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.filter__input {
+  display: none;
+
+  &:checked {
+    + .filter__label {
+      opacity: 1;
+    }
+  }
+}
+
+.filter__list {
+  position: relative;
+  padding-top: 80px;
+
+  &::before {
+    @include pseudo();
+    @include section-box-background(#A0DBD4);
+    top: -80px;
+    z-index: -1;
+    width: calc(100%);
+    height: 130px;
+
+    @include breakpoint(md) {
+      left: -50px;
+      width: calc(100% + 100px);
+    }
+  }
+
+  li {
+    display: none;
+  }
+}

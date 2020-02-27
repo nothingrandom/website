@@ -1,27 +1,31 @@
 .social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: 50px;
 
   li {
-    display: inline-block;
-    max-width: calc(100 / 4);
+    width: calc(100% / 2);
     margin-right: -4px;
-    padding: 0 20px;
+    margin-bottom: 20px;
 
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
+    @include breakpoint(md) {
+      width: unset;
+      margin-bottom: 0;
     }
   }
 
   a {
+    @extend %link--wiggle;
     color: palette(black);
-    font-size: 36px;
+    font-size: 18px;
+
+    .svg-inline--fa {
+      margin-right: 2px;
+    }
 
     &:hover {
-      color: palette(blue);
+      background-position: 0 19px;
     }
   }
 }

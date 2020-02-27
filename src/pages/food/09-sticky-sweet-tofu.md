@@ -5,21 +5,15 @@ tags:
 - food
 permalink: /food/sweet-sticky-tofu/
 image: sweet-sticky-tofu.jpg
+
+serves: 4
+time: 55 mins
+challenge: 1
+
+intro: Sticky tofu noodles! Indy's favourite dish 😉
+
+ingredients: [1 block of tofu, 1 tbsp coconut, sesame or sunflower oil, 3 tbsp soy sauce, 1 tbsp honey, 1 tsp ginger, 1 tsp coriander, Black pepper, 2 garlic cloves]
 ---
-
-Sticky tofu noodles! Indy's favourite dish 😉
-
-## Ingredients (serves 4)
-- 1 block of tofu
-- 1 tbsp coconut, sesame, or sunflower oil
-- 3 tbsp soy sauce
-- 1 tbsp honey
-- 1 tsp ginger
-- 1 tsp coriander
-- Black pepper
-- 2 garlic cloves
-
-## Method
 - Optionally, press your block of tofu for 30+ minutes between a chopping board and some books (or a heavy casserole dish).
 - Cut the tofu into cubes.
 - Start to lightly fry in some coconut, sesame, or sunflower oil, turning to brown and crisp all the sides taking care not to break any.

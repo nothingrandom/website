@@ -1,42 +1,63 @@
+.section--homepage {
+  margin: 80px 0;
+
+  @include breakpoint(md) {
+    margin: 160px 0;
+  }
+
+  &--food {
+    .section__floating--horizontal {
+      margin-left: -100px;
+    }
+  }
+}
+
+.section--intro__wrapper {
+  margin-bottom: 20px;
+
+  @include breakpoint(md) {
+    height: 640px;
+    margin-bottom: 0;
+  }
+}
+
 .section--intro {
-  position: relative;
-  min-height: calc(100vh - #{$menu-height-md});
+  @include section-box-background(palette(blue, dark));
 
-  .col {
-    @include breakpoint(sm) {
-      min-height: calc(100vh - #{$menu-height-md});
+  .social {
+    a {
+      color: text-contrast(palette(blue, dark));
+
+      &:hover {
+        color: palette(red);
+      }
     }
   }
+}
 
-  h1 {
-    margin-top: 0;
+.section--homepage--food {
+  .col-md-4 {
+    position: relative;
   }
 
-  h3 {
-    font-weight: 300;
-  }
+  .section__item--food {
+    padding-top: 75px;
 
-  .text__wrapper,
-  .profile-pic {
-    @include breakpoint(sm) {
-      @include center(vertical);
-      position: relative;
+    &::before {
+      @include pseudo();
+      @include force-full-width();
+      z-index: -1;
+      margin-top: -75px;
+      background-color: palette(yellow);
     }
-  }
 
-  .text__wrapper {
-    padding-top: $standard-spacing;
+    .section__intro {
+      @include section-box-background(palette(black));
+      margin: -20px 0 0;
 
-    @include breakpoint(sm) {
-      padding-top: 0;
-    }
-  }
-
-  .profile-pic {
-    padding-bottom: $standard-spacing;
-
-    @include breakpoint(sm) {
-      padding: $standard-spacing 0;
+      @include breakpoint(md) {
+        margin: 0;
+      }
     }
   }
 }

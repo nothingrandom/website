@@ -1,22 +1,76 @@
 ---
 layout: /layouts/base.njk
 ---
-<div class='row center-xs'>
-  <div class='col-xs-12 col-md-7 text-left'>
-    <div class='section section--standard section--blog-item'>
-      <div class='blog__header'>
-        <div class='section__header'>
-          <h2>{{ title }}</h2>
-        </div>
-        <img src='../../img/food/{{ image }}'>
+<div class='section--standard section--blog-item'>
+  <div class='row center-xs'>
+    <div class='col-xs-12 col-md-7 text-left'>
+      <div class='section__header'>
+        <h2>{{ title }}</h2>
       </div>
+      <div class='row'>
+        <div class='col-xs-12 col-md-8'>
+          <img src='../../img/food/{{ image }}'>
+        </div>
+          <div class='col-xs-12 col-md-4'>
+          <ul class='recipe__stats no-count'>
+            <li><span>Time</span> {{ time }}</li>
+            <li><span>Serves</span> {{ serves }}</li>
+            <li><span>Challenge</span>
+              <div class='recipe__challenge recipe__challenge--{{ challenge }}'>
+                {% for i in range(0, challenge) %}
+                  <i class='fas fa-hat-chef'></i>
+                {% endfor %}
 
-      {{ content | safe }}
+                {% for i in range(0, 3 - challenge) %}
+                  <i class='fal fa-hat-chef'></i>
+                {% endfor %}
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class='col-xs-12'>
+          <div class='section__intro recipe__intro'>
+            <p>{{ intro | safe }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='col-xs-12 col-md-9 text-left'>
+      <div class='row row--md-padding'>
+        <div class='col-xs-12 col-md-4'>
+          <div class='recipe__ingredients'>
+            <h3>Ingredients</h3>
+            <ul class='no-count'>
+              {% for ingredient in ingredients %}
+                {% if ingredient | isIngredientsList %}
+                  {% for topic, list in ingredient %}
+                    <h4>For the {{ topic }}:</h4>
+                    {% for item in list %}
+                      <li>{{ item }}</li>
+                    {% endfor %}
+                  {% endfor %}
+                {% else %}
+                  <li>{{ ingredient }}</li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
 
-      <div class='blog__footer'>
-        <p>
-          <a href='/food'><i class='fal fa-long-arrow-left'></i>  View all recipes</a>
-        </p>
+        <div class='col-xs-12 col-md-8'>
+          <div class='recipe__method'>
+            <h3>Method</h3>
+            {{ content | safe }}
+          </div>
+        </div>
+
+        <div class='col-xs-12'>
+          <div class='blog__footer'>
+            <p>
+              <a href='/food/'><i class='fal fa-long-arrow-left'></i>  View all recipes</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
