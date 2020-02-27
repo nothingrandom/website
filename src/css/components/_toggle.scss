@@ -39,6 +39,12 @@
         transform: scale(40);
         transition: transform .6s ease-in-out;
       }
+
+      input[type='text'],
+      .search-results {
+        opacity: 1 !important;
+        transition: opacity $transition-time ease-in-out (.6s - $transition-time);
+      }
     }
 
     ~ .toggle__label {

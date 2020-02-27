@@ -131,6 +131,7 @@ $mobile-menu-animation-time: .4s;
         .search-results {
           position: relative;
           z-index: 1;
+          opacity: 0;
         }
 
         input[type='text'] {
