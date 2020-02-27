@@ -27,24 +27,12 @@
   }
 }
 
-.toggle__input--search {
+.toggle__input {
   display: none;
 
   &:checked {
     ~ .toggle__item {
       visibility: visible;
-
-      &::before {
-        opacity: 1;
-        transform: scale(40);
-        transition: transform .6s ease-in-out;
-      }
-
-      input[type='text'],
-      .search-results {
-        opacity: 1 !important;
-        transition: opacity $transition-time ease-in-out (.6s - $transition-time);
-      }
     }
 
     ~ .toggle__label {
