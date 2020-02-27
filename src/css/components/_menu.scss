@@ -92,95 +92,6 @@ $mobile-menu-animation-time: .4s;
         position: unset;
         opacity: 1;
       }
-
-      .menu__item--search {
-        .toggle__label--on {
-          position: relative;
-          top: -5px;
-          right: -80%;
-          z-index: 1;
-
-          @include breakpoint(md) {
-            top: unset;
-            right: unset;
-          }
-        }
-      }
-
-      .search {
-        position: absolute;
-        top: 10px;
-        right: -30px;
-        left: -30px;
-        background-color: palette(white);
-
-        @include breakpoint(md) {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100vh;
-          padding: 90px $grid-padding;
-        }
-
-        &::before {
-          background-color: palette(green);
-        }
-
-        input[type='text'],
-        .search-results {
-          position: relative;
-          z-index: 1;
-          opacity: 0;
-        }
-
-        input[type='text'] {
-          width: 100%;
-          padding: 10px 15px;
-          border: 0;
-          border-bottom: 1px solid palette(white);
-          outline: 0;
-          background-color: transparent;
-          font-size: em(24px);
-
-          @include breakpoint(md) {
-            padding: 10px 95px 10px 15px;
-          }
-        }
-
-        .search-results {
-          margin-top: -15px;
-          text-align: left;
-
-          li {
-            display: inline-block;
-            min-width: 100%;
-
-            &:first-child {
-              margin-top: 10px;
-            }
-
-            &:last-child {
-              margin-bottom: 10px;
-            }
-          }
-
-          a {
-            @extend %font-sans;
-            @include transition((background-color, color));
-            padding: 20px 15px;
-            color: palette(black);
-            font-size: em(24px);
-            text-transform: none;
-            // transition: background-color $transition-time ease-in-out, color $transition-time ease-in-out;
-
-            &:hover {
-              background-color: palette(blue, dark);
-              color: palette(white);
-            }
-          }
-        }
-      }
     }
 
     .links {
@@ -206,19 +117,13 @@ $mobile-menu-animation-time: .4s;
           font-size: em(18px);
         }
 
-        &.menu__item--search {
-          position: unset;
-          order: -1;
-
-          @include breakpoint(md) {
-            order: unset;
-          }
-        }
-
         a,
         label {
-          @extend %font-mono;
           display: block;
+        }
+
+        %link-style {
+          @extend %font-mono;
           padding: 30px 0;
           color: palette(black);
           font-size: 14px;
@@ -228,47 +133,57 @@ $mobile-menu-animation-time: .4s;
             padding: 10px 15px;
             color: palette(grey);
           }
+
+          &::after {
+            position: absolute;
+            bottom: 10px;
+            left: -4rem;
+            display: block;
+            width: 125px;
+            height: 5px;
+            content: '';
+            background-color: var(--hover-color);
+            transform: scaleX(0);
+            transform-origin: 0 50%;
+            transition: transform .3s cubic-bezier(.86, 0, .07, 1);
+
+            @include breakpoint(md) {
+              right: 15px;
+              bottom: -4px;
+              left: 15px;
+              width: unset;
+            }
+          }
+
+          &:hover {
+            &::after {
+              transform: scaleX(1);
+            }
+
+            a {
+              color: palette(black);
+            }
+          }
         }
 
-        &::after {
-          position: absolute;
-          bottom: 10px;
-          left: -4rem;
-          display: block;
-          width: 125px;
-          height: 5px;
-          content: '';
-          background-color: var(--hover-color);
-          transform: scaleX(0);
-          transform-origin: 0 50%;
-          transition: transform .3s cubic-bezier(.86, 0, .07, 1);
+        label {
+          @extend %link-style;
+        }
 
-          @include breakpoint(md) {
-            right: 15px;
-            bottom: -4px;
-            left: 15px;
-            width: unset;
+        &:not(.menu__item--search) {
+          a {
+            @extend %link-style;
           }
         }
 
         &.menu__item--active {
-          &::after {
-            background-color: var(--hover-color);
-            transform: none;
-          }
-
           a {
             color: palette(black);
-          }
-        }
 
-        &:hover {
-          &::after {
-            transform: scaleX(1);
-          }
-
-          a {
-            color: palette(black);
+            &::after {
+              background-color: var(--hover-color);
+              transform: scaleX(1);
+            }
           }
         }
       }
