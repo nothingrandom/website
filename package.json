@@ -20,7 +20,8 @@
     "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label",
     "lint": "eslint --ext .js src",
     "prepublish": "yarn run snyk-protect",
-    "snyk-protect": "snyk protect"
+    "snyk-protect": "snyk protect",
+    "preinstall": "node ./preinstall.js"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
