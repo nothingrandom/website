@@ -18,11 +18,11 @@ layout: /layouts/base.njk
             <li><span>Challenge</span>
               <div class='recipe__challenge recipe__challenge--{{ challenge }}'>
                 {% for i in range(0, challenge) %}
-                  <i class='fas fa-hat-chef'></i>
+                  <i class='recipe__challenge--on fad fa-utensils-alt'></i>
                 {% endfor %}
 
                 {% for i in range(0, 3 - challenge) %}
-                  <i class='fal fa-hat-chef'></i>
+                  <i class='recipe__challenge--off fal fa-utensils-alt'></i>
                 {% endfor %}
               </div>
             </li>
