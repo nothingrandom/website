@@ -8,7 +8,7 @@ image: allotment-cottage-pie.jpg
 
 serves: 6-8
 time: 1h 30mins
-challenge: 1
+challenge: 2
 
 intro: Veggies, mashed potatoes. This dish is seriously hearty. Great to present as you can put the casserole dish in the middle of the table and just let everyone serve themselves.
 

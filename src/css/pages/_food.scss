@@ -55,9 +55,21 @@
 
     span {
       display: block;
+      margin-bottom: 3px;
       color: palette(blue, dark);
       font-weight: 600;
     }
+  }
+}
+
+.recipe__challenge {
+  .recipe__challenge--on {
+    --fa-primary-color: #FFC72A;
+    // --fa-secondary-color: #E61E21;
+  }
+
+  .recipe__challenge--off {
+    color: palette(grey);
   }
 }
 
