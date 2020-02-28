@@ -36,10 +36,6 @@ module.exports = {
     }
     return input;
   },
-  logIt(i) {
-    console.log(i);
-    return i;
-  },
   isIngredientsList(i) {
     if (typeof i === 'object') {
       return true;
@@ -61,14 +57,14 @@ module.exports = {
     // remove duplicated words
     const words = plain.split(' ');
     const deduped = [...(new Set(words))];
-    const dedupedStr = deduped.join(' ')
+    const dedupedStr = deduped.join(' ');
 
     // remove short and less meaningful words
     let result = dedupedStr.replace(/\b(\.|\,|the|a|an|and|am|you|I|to|if|of|off|me|my|on|in|it|is|at|as|we|do|be|has|but|was|so|no|not|or|up|for)\b/gi, '');
     // remove newlines, and punctuation
-    result = result.replace(/\.|\,|\?|-|—|\n/g, '');
+    result = result.replace(/\.|,|\?|-|—|\n/g, '');
     // remove repeated spaces
-    result = result.replace(/[ ]{2,}/g, ' ');
+    result = result.replace(/([ ]{2,}|\t+)/g, ' ');
 
     return result;
   },
