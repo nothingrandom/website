@@ -1,6 +1,50 @@
 $menu-height-md: 93px;
 $mobile-menu-animation-time: .4s;
 
+%link-style {
+  @extend %font-mono;
+  padding: 30px 0;
+  color: palette(black);
+  font-size: 14px;
+  text-transform: uppercase;
+
+  @include breakpoint(md) {
+    padding: 10px 15px;
+    color: palette(grey);
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 10px;
+    left: -4rem;
+    display: block;
+    width: 125px;
+    height: 5px;
+    content: '';
+    background-color: var(--hover-color);
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform .3s cubic-bezier(.86, 0, .07, 1);
+
+    @include breakpoint(md) {
+      right: 15px;
+      bottom: -4px;
+      left: 15px;
+      width: unset;
+    }
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+
+    a {
+      color: palette(black);
+    }
+  }
+}
+
 .menu__container {
   position: sticky;
   top: 0;
@@ -33,6 +77,13 @@ $mobile-menu-animation-time: .4s;
 
       @include breakpoint(md) {
         display: none;
+      }
+
+      span {
+        @extend %link-style;
+        position: relative;
+        top: -3px;
+        margin-right: 5px;
       }
 
       .fa-times {
@@ -120,50 +171,6 @@ $mobile-menu-animation-time: .4s;
         a,
         label {
           display: block;
-        }
-
-        %link-style {
-          @extend %font-mono;
-          padding: 30px 0;
-          color: palette(black);
-          font-size: 14px;
-          text-transform: uppercase;
-
-          @include breakpoint(md) {
-            padding: 10px 15px;
-            color: palette(grey);
-          }
-
-          &::after {
-            position: absolute;
-            bottom: 10px;
-            left: -4rem;
-            display: block;
-            width: 125px;
-            height: 5px;
-            content: '';
-            background-color: var(--hover-color);
-            transform: scaleX(0);
-            transform-origin: 0 50%;
-            transition: transform .3s cubic-bezier(.86, 0, .07, 1);
-
-            @include breakpoint(md) {
-              right: 15px;
-              bottom: -4px;
-              left: 15px;
-              width: unset;
-            }
-          }
-
-          &:hover {
-            &::after {
-              transform: scaleX(1);
-            }
-
-            a {
-              color: palette(black);
-            }
-          }
         }
 
         label {
