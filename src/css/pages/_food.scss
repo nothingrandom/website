@@ -4,20 +4,25 @@
   }
 
   .food__item {
-    padding: 0 !important;
+    @include breakpoint(md) {
+      padding: 0 !important;
+    }
 
     a {
       display: block;
       width: 100%;
-      padding: 1.5rem;
       color: palette(black);
+      padding-bottom: 1.5rem;
 
       @include breakpoint(md) {
         margin-bottom: $standard-spacing;
+        padding: 1.5rem;
       }
 
       &:hover {
-        background-color: palette(grey, pale);
+        @include breakpoint(md) {
+          background-color: palette(grey, pale);
+        }
 
         img {
           transform: scale(1.05);
