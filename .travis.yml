@@ -9,3 +9,4 @@ script:
   - snyk test --severity-threshold=high
   - yarn test
   - yarn build
+  - yarn postbuild:lint
