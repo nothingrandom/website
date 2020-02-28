@@ -19,6 +19,7 @@
     "dev:debug": "DEBUG=* npm run dev",
     "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label",
     "lint": "eslint --ext .js src",
+    "postbuild:lint": "jsonlint dist/search.json -q",
     "prepublish": "yarn run snyk-protect",
     "snyk-protect": "snyk protect",
     "preinstall": "node ./preinstall.js"
@@ -28,6 +29,7 @@
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
+    "jsonlint": "^1.6.3",
     "light-server": "2.6.4"
   },
   "dependencies": {
