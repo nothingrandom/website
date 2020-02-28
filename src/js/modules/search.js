@@ -1,3 +1,5 @@
+const meaningless = require('../../_data/search-regex.js');
+
 let searchIndex = '';
 const btn = document.querySelector('#toggle-search');
 const searchInput = document.querySelector('#search-input');
@@ -24,7 +26,9 @@ const clearResults = () => {
 };
 
 const find = (s) => {
-  const str = s.toLowerCase();
+  let str = s.toLowerCase();
+
+  str = str.replace(meaningless, '');
 
   // look for matches in each item in the JSON
   const results = [];
