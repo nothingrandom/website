@@ -46,7 +46,7 @@ $filters-list: all, code, life;
 
   &::before {
     @include pseudo();
-    @include section-box-background(#A0DBD4);
+    @include section-box-background(palette(sections, blog));
     top: -80px;
     z-index: -1;
     width: calc(100%);
