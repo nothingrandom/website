@@ -127,7 +127,7 @@ $mobile-menu-animation-time: .4s;
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background: #FFD1DC;
+      background: palette(sections, menu);
       opacity: 0;
       transition: transform $mobile-menu-animation-time ease-in-out;
     }
@@ -209,10 +209,6 @@ $mobile-menu-animation-time: .4s;
 
       a {
         color: palette(black);
-
-        &:hover {
-          color: palette(blue);
-        }
       }
     }
   }

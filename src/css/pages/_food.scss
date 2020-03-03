@@ -1,6 +1,6 @@
 .section--food {
   .section__intro {
-    @include section-box-background(palette(yellow));
+    @include section-box-background(palette(sections, food));
   }
 
   .food__item {

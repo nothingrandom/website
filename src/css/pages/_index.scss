@@ -48,7 +48,7 @@
       @include force-full-width();
       z-index: -1;
       margin-top: -75px;
-      background-color: palette(yellow);
+      background-color: palette(sections, food);
     }
 
     .section__intro {
