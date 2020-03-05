@@ -12,6 +12,32 @@
   }
 }
 
+.section--intro__picture {
+  position: relative;
+
+  .hover-image {
+    @include center(horizontal);
+    top: -70px;
+    display: none;
+    transform: translate(-50%) scale(.6);
+
+    @include breakpoint(sm) {
+      top: 60px;
+      transform: translate(-50%);
+    }
+
+    @include breakpoint(md) {
+      top: 10px;
+    }
+  }
+
+  &:hover {
+    .hover-image {
+      display: block;
+    }
+  }
+}
+
 .section--intro__wrapper {
   margin-bottom: 20px;
 
