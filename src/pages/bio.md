@@ -9,7 +9,7 @@ menukey: bio
 permalink: /bio/index.html
 ---
 
-### I'm Benjamin, in summary, a Javascript engineer based in Amsterdam. And a lover of good food.
+### I'm Benjamin, in summary, a lead frontend / Javascript engineer based in Amsterdam. And a lover of good food.
 
 I currently work at the IoT & satellite startup [Hiber](https://hiber.global), building their frontend web applications with a mix of the latest ES & TypeScript specs, vue.js, S/CSS, and pure magic. I've also been known to use React, Living Styleguides, and much more in the past.
 
