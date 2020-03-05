@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "Benjamin Hollway's primary online presence",
   "author": "Benjamin Hollway <benjamin@nothingrandom.com>",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "dev:debug": "DEBUG=* npm run dev",
     "build": "run-s clean styles:prod scripts:prod eleventy:default --print-label",
     "lint": "eslint --ext .js src",
-    "postbuild:lint": "jsonlint dist/search.json -q",
+    "postbuild:lint": "jsonlint dist/*.json -q",
     "prepublish": "yarn run snyk-protect",
     "snyk-protect": "snyk protect",
     "preinstall": "node ./preinstall.js"
