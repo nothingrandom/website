@@ -95,6 +95,10 @@
 
 .toggle__input--search {
   &:checked {
+    ~ .toggle__label {
+      color: palette(black) !important;
+    }
+
     ~ .toggle__item {
       &::before {
         opacity: 1;
