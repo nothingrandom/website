@@ -10,7 +10,7 @@ serves: 4
 time: 25 mins
 challenge: 1
 
-intro: There's nothing a Brit loves more than a sweet, salty, and slightly spicy curry. This is a slightly healthier (and vegan) twist to the classic korma; that I've adapted from Jamie Oliver's <a href='https://www.jamieoliver.com/family/jamies-super-food-family-classics/'>Super Food Family Classics</a> book. It's easy to double, triple or even quadruple this recipe (the only limit being your pan size), so it's great for larger gatherings and parties; and if you make your own paste, guaranteed vegan and gluten free.
+intro: There's nothing a Brit loves more than a sweet, salty, and spicy curry. This is a slightly healthier (and vegan) twist to the classic korma; that I've adapted from Jamie Oliver's <a href='https://www.jamieoliver.com/family/jamies-super-food-family-classics/'>Super Food Family Classics</a> book. It's easy to double, triple or even quadruple this recipe (the only limit being your pan size), so it's great for larger gatherings and parties; and if you make your own paste, guaranteed vegan and gluten free.
 
 ingredients:
   - curry: [500g potatoes, 500g sweet potatoes, olive oil, 1 bunch of spring onions, 500g spinach, 1 400g tin of  chickpeas, 1 400ml tin of whole fat coconut milk, 1 lemon, 2 tbsp korma curry paste]
