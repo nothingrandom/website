@@ -3,9 +3,7 @@
   base = ""
   publish = "dist/"
   command = "yarn build"
-
-[build.environment]
-  YARN_FLAGS = "--pure-lockfile"
+  environment = { YARN_FLAGS = "--pure-lockfile" }
 
 # Production context
 [context.production]
