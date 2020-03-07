@@ -19,5 +19,7 @@ if (process.env.NETLIFY === 'true') { // this is a default Netlify environment v
     // The original yarn process will continue after this second yarn process finishes,
     // and when it does it will report "success Already up-to-date.";
     spawnSync('yarn', { stdio: 'inherit', env: { ...process.env, NETLIFY_NPMRC_DONE: true } });
+  } else {
+    return false;
   }
 }
