@@ -7,18 +7,10 @@ menukey: food
 permalink: /food/index.html
 ---
 <div class='section section--standard section--food'>
-  <div class='row center-md'>
-    <div class='col-xs-12 col-md-6'>
-      <div class='section__header text-left'>
-        <h2>{{ title }}</h2>
-      </div>
-      <div class='section__intro text-left'>
-        <p>I love to cook simple with fresh ingredients, from pan to plate.</p>
-        <p>All my recipies are vegetarian and dairy free (except for the occassional inclusion of halloumi) and most can be made vegan, if they're not already.</p>
-        <p>You can ask questions via <a href='https://instagram.com/foodwithbenjamin'>my food Instagram</a>.</p>
-      </div>
-    </div>
-  </div>
+  {% set header_content = "<p>I love to cook simple with fresh ingredients, from pan to plate.</p>
+    <p>All my recipies are vegetarian and dairy free (except for the occassional inclusion of halloumi) and most can be made vegan, if they're not already.</p>
+    <p>You can ask questions via <a href='https://instagram.com/foodwithbenjamin'>my food Instagram</a>.</p>" %}
+  {% include 'partials/header.njk' %}
   <div class='row row--md-padding'>
     {% for post in collections.food | reverse %}
       <div class='col-xs-12 col-sm-6 col-md-4 food__item'>
