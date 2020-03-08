@@ -11,6 +11,9 @@ module.exports = {
   readableDate(date) {
     return DateTime.fromJSDate(date).toFormat('dd LLLL yyyy');
   },
+  cvDate(date) {
+    return DateTime.fromFormat(date, 'MM-yyyy').toFormat('LLLL yyyy');
+  },
   currentYear() {
     return DateTime.local().toFormat('yyyy');
   },

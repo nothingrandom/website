@@ -7,17 +7,8 @@ title: "404: Page not found"
 permalink: /404/index.html
 ---
 <div class='section section--standard section--404'>
-  <div class='row center-md'>
-    <div class='col-xs-12 col-md-6'>
-      <div class='section__header text-left'>
-        <h2>404.</h2>
-      </div>
-      <div class='section__intro text-left'>
-        <p>This page could not be found.</p>
-        <p>
-          <a href='/'>Return home</a>
-        </p>
-      </div>
-    </div>
-  </div>
+  {% set title = '404.' %}
+  {% set header_content = "<p>This page could not be found.</p>
+    <p><a href='/'>Return home</a></p>" %}
+  {% include 'partials/header.njk' %}
 </div>
