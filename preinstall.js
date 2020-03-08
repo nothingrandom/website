@@ -14,7 +14,14 @@ if (process.env.NETLIFY === 'true') { // this is a default Netlify environment v
     // Create .npmrc
     fs.writeFileSync('.npmrc', `@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=${process.env.FA_NPM_TOKEN}`);
     fs.chmodSync('.npmrc', 0o600);
-    console.log(fs.readFile('.npmrc'));
+    fs.readFile('./npmrc', (err, data) => {
+      if (err) {
+        throw err;
+      }
+
+      // Invoke the next step here however you like
+      console.log(data); // Put all of the code here (not the best solution)
+    });
     // Run yarn again, because the yarn process which is executing
     // this script won't pick up the .npmrc file we just created.
     // The original yarn process will continue after this second yarn process finishes,
