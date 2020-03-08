@@ -23,7 +23,7 @@ ingredients:
 - In a jug, combine the yogurt, milk, and lemon juice.
 - Slowly add, alternating, the dry ingredients and wet ingredients to the sugar, butter, and egg mixture.
 - Mix gently until you have smooth batter and there aren't any lumps of butter or flour left, being careful not to incorporate too much air.
-- Pour the batter into the pepared loaf pan.
+- Pour the batter into the prepared loaf pan.
 - Bake for 50 minutes to 1 hour and 15 minutes, or until the cake has a nice brown top and the middle is set. Allow to cool for 30 minutes. Then remove from the pan, transfer to a wire rack, and poke the cake to make holes with a toothpick or small knife.
 - Prepare the glaze by adding the sugar and lemon juice in a saucepan over a medium heat until the sugar has dissolved.
-- Pour the glaze over the cooled load slowly, and allow to sit for 20 minutes before enjoying.
+- Pour the glaze over the cooled loaf slowly, and allow to sit for 20 minutes before enjoying.
