@@ -14,7 +14,7 @@ if (process.env.NETLIFY === 'true') { // this is a default Netlify environment v
     // Create .npmrc
     fs.writeFileSync('.npmrc', `@fortawesome:registry=https://npm.fontawesome.com/\n//npm.fontawesome.com/:_authToken=${process.env.FA_NPM_TOKEN}`);
     fs.chmodSync('.npmrc', 0o600);
-    fs.readFile('./npmrc', (err, data) => {
+    fs.readFile('.npmrc', (err, data) => {
       if (err) {
         throw err;
       }
