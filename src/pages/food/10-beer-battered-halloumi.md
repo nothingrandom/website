@@ -12,7 +12,7 @@ challenge: 1
 
 intro: Growing up by the sea caused me to become a great lover of battered fish and chunky chips. I find the saltiness and texture of halloumi helps it pair with the chips and batter just as nicely as fish would. But honestly you could use this batter for anything; halloumi, tofu, or even fish!
 
-ingredients: [1 x 225g block of halloumi (tofu as a vegan / totally dairy free option), 125g self-raising flour, more for dusting (35g), 1-2 tbsp garam masala, 330 ml beer, salt and pepper to season, frying oil (I use sunflower), 1 lemon, quartered]
+ingredients: [1 x 225g block of halloumi (tofu as a vegan / totally dairy free option), '125g self-raising flour, and some for dusting (35g)', 1-2 tbsp garam masala, 330 ml beer, salt and pepper to season, frying oil (I use sunflower), '1 lemon, quartered']
 ---
 - Make your batter by mixing the flour, garam masala, beer, and salt and pepper. Whisk until it's a thick creamy consistency. If possible, leave in the fridge, covered, for tomorrow. Otherwise, set aside in the fridge for as long as possible, minimum of 30 minutes.
 - Cut the block of halloumi into 9 or 10 slices. If you're using tofu, press for half an hour first.
