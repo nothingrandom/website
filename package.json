@@ -21,8 +21,7 @@
     "lint": "eslint --ext .js src",
     "postbuild:lint": "jsonlint dist/*.json -q",
     "prepublish": "yarn run snyk-protect",
-    "snyk-protect": "snyk protect",
-    "preinstall": "node ./preinstall.js"
+    "snyk-protect": "snyk protect"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
