@@ -899,6 +899,10 @@ ignore:
     - node-sass:
         reason: None given
         expires: '2020-03-28T16:36:29.850Z'
+  SNYK-JS-ACORN-559469:
+    - webpack > acorn:
+        reason: None given
+        expires: '2020-04-06T18:54:17.893Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:lodash:20180130':
