@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Beer Battered Halloumi
-tags:
-- food
+
 permalink: /food/beer-battered-halloumi/
 image: beer-battered-halloumi.jpg
 

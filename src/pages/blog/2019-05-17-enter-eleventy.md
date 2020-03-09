@@ -2,8 +2,8 @@
 layout: layouts/post.njk
 title: Enter Eleventy
 tags:
-- posts
 - code
+
 permalink: /blog/enter-eleventy/
 ---
 For those of you who don't know, Eleventy otherwise known as [11ty](https://www.11ty.io/) is a "simple static site generator". It's pretty awesome, both in that it generates from markdown, HTML, nunjucks, handlebars, Javascript template literals (and more), but it's also crazy fast.

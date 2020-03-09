@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Asparagus and Poached Eggs on Toast
-tags:
-- food
+
 permalink: /food/asparagus-poached-egg-toast/
 image: asparagus-poached-egg-toast.jpg
 

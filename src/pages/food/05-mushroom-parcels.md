@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Mushroom Parcels
-tags:
-- food
+
 permalink: /food/mushroom-parcels/
 image: mushroom-parcels.jpg
 
