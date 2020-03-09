@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Lemon Poppy Seed Cake
-tags:
-- food
+
 permalink: /food/lemon-poppy-seed-cake/
 image: lemon-poppy-seed-cake.jpg
 

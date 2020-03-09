@@ -12,7 +12,7 @@ permalink: /food/index.html
     <p>You can ask questions via <a href='https://instagram.com/foodwithbenjamin'>my food Instagram</a>.</p>" %}
   {% include 'partials/header.njk' %}
   <div class='row row--md-padding'>
-    {% for post in collections.food | reverse %}
+    {% for post in collections.food %}
       <div class='col-xs-12 col-sm-6 col-md-4 food__item'>
         <a class='link--exclude' href='{{ post.url }}'>
           <div class='food__item__image'>

@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Sweet Sticky Tofu
-tags:
-- food
+
 permalink: /food/sweet-sticky-tofu/
 image: sweet-sticky-tofu.jpg
 

@@ -3,46 +3,8 @@ layout: layouts/base.njk
 
 title: Resume.
 
-permalink: /cv/index.html
+permalink: /resume/index.html
 ---
-{% set cv_items = [
-  {
-    role: 'Senior Frontend Developer (Team Lead)',
-    company: 'Hiber',
-    location: 'Amsterdam, NL',
-    start: '12-2017',
-    description: "During my time at Hiber I've been building and managing the internal and client facing web applications. This includes a modem management tool, satellite operational tools, a web GUI for devices in the field, and the website at https://hiber.global.<br /><br />
-    I've also transitioned into the role of a team lead. I manage a team focusing on these web applications and the API that supports them, by running the project management, streamlining the flow for new products and features, and product owning our collection of tools. I'm also responsible for hiring and on boarding of new team members and, along with the other senior members of the team, coaching the more junior developers.<br /><br />
-    The web applications have been built in Vue with a living styleguide. They're built organically with primary input coming from direct users, with a real focus on making the interaction as seamless as possible.<br /><br />
-    One of the primary products we've been working on is Mission Control, as described on our website; &quot;Mission Control (sometimes referred to as Customer Mission Control) is a modem management platform. It provides a quick overview of every device deployed anywhere on Earth. Including its health status and location. Mission control also manages Cloud services via API, webhooks or bespoke integration. 'Houston, we don't have a problem.'&quot;"
-  },
-  {
-    role: 'Frontend Developer',
-    company: 'Young Capital',
-    location: 'Amsterdam, NL',
-    start: '04-2017',
-    end: '12-2017',
-    description: "At YoungCapital, I worked on a microteam prototyping new projects and ideas, using a mix of Vue, React, and Cordova. Alongside this, I was also part of a team that worked on a rebuild of the front end in React from the current Ruby system. I took ownership of a styleguide, wrote tests and CI runners using Docker, and built a system that future SPAs in the company will be built upon."
-  },
-  {
-    role: 'Freelance Frontend Developer',
-    location: 'UK',
-    start: '03-2013',
-    end: '04-2017',
-    description: "During my time as a freelancer, I worked with a large number of international and remote teams. This taught me how to quickly adapt to a teams' work flow and code base. Only being a part of a team for a couple of month at a time allowed me to develop my ability to read legacy code, and work on my communication skills. My tasks on these projects and teams included building fast, responsive, and fluid websites and web apps. I was often given the freedom to experiment and pick my own workspace allowing me to learn new technologies and develop a wide range of skills."
-  },
-  {
-    role: 'Intern Frontend Developer',
-    company: 'Built by Buffalo',
-    location: 'Brighton, UK',
-    start: '09-2014',
-    end: '12-2014',
-    description: "I spent three months working as an intern at the web development agency, Built by Buffalo. This was my first experience working with a larger agency, and taught me vital team working and communication skills, as well as giving me real work experience. Whilst there I worked on a variation of projects, focusing on creating websites for global brands, that were responsive and met client standards."
-  }
-]
-%}
-
-
 <div class='section section--standard section--cv'>
   {% set header_content = "<p class='font--bold'>🚀 Not looking for new opportunities right now.</p>
     <p>I'm Benjamin Hollway, a lead frontend / Javascript engineer based in Amsterdam. And a lover of good food.</p>
@@ -54,15 +16,15 @@ permalink: /cv/index.html
     </div>
     <div class='col-xs-12 col-md-8'>
       <ul class='cv__list text-left'>
-        {% for item in cv_items %}
+        {% for experience in resume %}
           <li class='cv__item'>
             <div class='cv__item__header'>
-              <h3 class='font--bold'>{{ item.role }}</h3>
+              <h3 class='font--bold'>{{ experience.role }}</h3>
               <div class='flex-spread'>
-                <h4>{{ item.company }}</h4>
-                <span class='section__item__detail'>{{ item.location }}<br />{{ item.start | cvDate }} - {% if item.end %}{{ item.end | cvDate }}{% else %}Present{% endif %}</span>
+                <h4>{{ experience.company }}</h4>
+                <span class='section__item__detail'>{{ experience.location }}<br />{{ experience.start | cvDate }} - {% if experience.end %}{{ experience.end | cvDate }}{% else %}Present{% endif %}</span>
               </div>
-              <p>{{ item.description | safe }}</p>
+              <p>{{ experience.description | safe }}</p>
             </div>
           </li>
         {% endfor %}

@@ -49,6 +49,12 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/cv"
+  to = "/resume"
+  status = 301
+  force = false
+
 # 404s
 [[redirects]]
   from = "*"

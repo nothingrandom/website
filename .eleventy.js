@@ -25,9 +25,18 @@ module.exports = (eleventyConfig) => {
     eleventyConfig.addShortcode(shortCodeName, shortcodes[shortCodeName])
   })
 
-  eleventyConfig.addPassthroughCopy('_redirects');
-  eleventyConfig.addPassthroughCopy('src/img');
-  eleventyConfig.addPassthroughCopy('src/fonts');
+  eleventyConfig.addCollection('food', collection => {
+    return collection.getFilteredByGlob('**/food/*.md').reverse();
+  });
+
+  eleventyConfig.addCollection('posts', collection => {
+    return collection.getFilteredByGlob('**/blog/*.md').reverse();
+  });
+
+  eleventyConfig
+    .addPassthroughCopy('_redirects')
+    .addPassthroughCopy('src/img')
+    .addPassthroughCopy('src/fonts');
 
   eleventyConfig.addPlugin(readingTime);
 

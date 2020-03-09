@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Panko Coated Tofu
-tags:
-- food
+
 permalink: /food/panko-coated-tofu/
 image: panko-coated-tofu.jpg
 
