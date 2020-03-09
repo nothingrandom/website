@@ -22,26 +22,10 @@ permalink: /blog/index.html
         {% endfor %}
 
         <ul class='posts filter__list posts-count text-left' style='counter-reset: start-from {{ collections.posts | length + 1}}'>
-          {% for post in collections.posts | reverse %}
+          {% for post in collections.posts %}
             <li class='section__item' data-filter='all {{ post.data.tags | join(' ') }}'>
-              <a class='link--exclude' href='{{ post.url }}'>
-                <div class='flex-spread'>
-                  <span class='section__item__count'>{% leadingZeros loop.revindex, loop.length %}</span>
-                  <span>
-                    {% for tag in post.data.tags %}
-                      {% if tag !== 'posts' %}
-                        <span class='pip posts__tag posts__tag--{{ tag }}'>{{ tag | trim }}</span>
-                      {% endif %}
-                    {% endfor %}
-                  </span>
-                </div>
-                <h3 class='section__item__header'>{{ post.data.title | default(page.url) }}</h3>
-                <div class='flex-spread'>
-                  <span class='section__item__detail'>{{ post.date | readableDate }}</span>
-                  <span class='section__item__detail'>About {{ post.template.frontMatter.content | readingTime }}</span>
-                </div>
-                <p class='section__item__description'>{{ post.template.frontMatter.content | truncate(75) }}</p>
-              </a>
+            {% set showCount = true %}
+              {% include 'partials/blog-small-item.njk' %}
             </li>
           {% endfor %}
         </ul>

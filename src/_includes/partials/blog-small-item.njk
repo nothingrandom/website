@@ -1,0 +1,20 @@
+<a class='link--exclude' href='{{ post.url }}'>
+  <div class='flex-spread'>
+    {% if showCount %}
+      <span class='section__item__count'>{% leadingZeros loop.revindex, loop.length %}</span>
+    {% endif %}
+    <span>
+      {% for tag in post.data.tags %}
+        {% if tag !== 'posts' %}
+          <span class='pip posts__tag posts__tag--{{ tag }}'>{{ tag | trim }}</span>
+        {% endif %}
+      {% endfor %}
+    </span>
+  </div>
+  <h3 class='section__item__header'>{{ post.data.title | default(page.url) }}</h3>
+  <div class='flex-spread'>
+    <span class='section__item__detail'>{{ post.date | readableDate }}</span>
+    <span class='section__item__detail'>About {{ post.template.frontMatter.content | readingTime }}</span>
+  </div>
+  <p class='section__item__description'>{{ post.template.frontMatter.content | truncate(75) }}</p>
+</a>

@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Sweet Potato Dahl
-tags:
-- food
+
 permalink: /food/sweet-potato-dahl/
 image: sweet-potato-dahl.jpg
 

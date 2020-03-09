@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Mushroom and Leek Pie
-tags:
-- food
+
 permalink: /food/mushroom-leek-pie/
 image: mushroom-leek-pie.jpg
 

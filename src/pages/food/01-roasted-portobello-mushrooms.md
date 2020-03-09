@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Roasted Portobello Mushrooms
-tags:
-- food
+
 permalink: /food/roasted-portobello-mushrooms/
 image: roasted-portobello-mushrooms.jpg
 

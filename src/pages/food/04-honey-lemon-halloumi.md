@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Honey & Lemon Halloumi
-tags:
-- food
+
 permalink: /food/honey-lemon-halloumi/
 image: honey-lemon-halloumi.jpg
 

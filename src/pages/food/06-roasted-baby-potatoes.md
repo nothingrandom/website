@@ -1,8 +1,7 @@
 ---
 layout: layouts/recipe.njk
 title: Roasted Baby Potatoes
-tags:
-- food
+
 permalink: /food/roasted-baby-potatoes/
 image: roasted-baby-potatoes.jpg
 
