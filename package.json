@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "description": "Benjamin Hollway's primary online presence",
   "author": "Benjamin Hollway <benjamin@nothingrandom.com>",
   "license": "MIT",
@@ -49,6 +49,7 @@
     "cssnano-preset-advanced": "^4.0.7",
     "eleventy-plugin-reading-time": "^0.0.1",
     "github-languages-css": "^1.0.0",
+    "lazysizes": "^5.2.0",
     "leadingzero": "^1.0.0",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.12.0",
