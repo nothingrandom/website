@@ -82,6 +82,7 @@
     font-family: $font-family;
     font-style: $style;
     font-weight: $weight;
+    font-display: swap;
 
     src: url('#{$file-path}.woff2') format('woff2'),
       url('#{$file-path}.woff') format('woff'),
