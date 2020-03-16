@@ -19,6 +19,7 @@
     @include center(horizontal);
     top: -70px;
     display: none;
+    width: unset;
     transform: translate(-50%) scale(.6);
 
     @include breakpoint(sm) {
