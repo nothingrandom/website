@@ -16,7 +16,7 @@ permalink: /food/index.html
       <div class='col-xs-12 col-sm-6 col-md-4 food__item'>
         <a class='link--exclude' href='{{ post.url }}'>
           <div class='food__item__image'>
-            <img src='/img/food/{{ post.data.image }}'>
+            <img src='/img/food/{{ post.data.image }}' alt='Food picture of {{ post.data.title }}'>
           </div>
           <p>{{ post.data.title | default(page.url) }}</p>
         </a>
