@@ -3,6 +3,7 @@
 const filters = require('./utils/filters.js');
 const shortcodes = require('./utils/shortcodes.js');
 const readingTime = require('eleventy-plugin-reading-time');
+const lazyImagesPlugin = require('./utils/eleventy-plugin-lazyimages.js');
 
 // The @11ty/eleventy configuration.
 // For a full list of options, see: https://www.11ty.io/docs/config/
@@ -39,6 +40,18 @@ module.exports = (eleventyConfig) => {
     .addPassthroughCopy('src/fonts');
 
   eleventyConfig.addPlugin(readingTime);
+
+  eleventyConfig.addPlugin(lazyImagesPlugin, {
+    appendInitScript: false,
+    className: ['lazyload', 'blur-up'],
+    transformImgPath: (imgPath) => {
+      if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
+        return `./src${imgPath}`;
+      }
+
+      return imgPath;
+    },
+  });
 
   return {
     // Set the path from the root of the deploy domain

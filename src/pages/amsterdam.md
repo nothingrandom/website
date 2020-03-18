@@ -13,7 +13,7 @@ permalink: /amsterdam/index.html
 ### Welkom bij Amsterdam! 🌷
 Hey! This is my little guide to Amsterdam. Indy and I have been living here since March 2017, and although we still sometimes feel quite new to the city we've done most of the standard tourist things when family and friends come to visit. We know what's different and some things to watch out for. Hopefully this guide assists you in your visit.
 
-![Photo of Amsterdam](../img/amsterdam.jpg)
+![Photo of Amsterdam](/img/amsterdam.jpg)
 
 ### General info
 You might be here on vacation, but many live and work in the city. Being a respectful tourist keeps it nice for those people and ensures you'll have a gezellig experience of Dutch culture.
