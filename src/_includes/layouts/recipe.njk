@@ -1,6 +1,27 @@
----
-layout: /layouts/base.njk
----
+{% extends 'extends/html5boilerplate.njk' %}
+
+{% block headMisc %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Recipe",
+      "name": "{{ title }}",
+      "image": [
+      "https://nothingrandom.com//img/food/{{ image }}",
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "Benjamin Hollway"
+      },
+      "datePublished": "{{ page.date }}",
+      "description": "{{ intro | safe }}",
+      "recipeYield": "{{ serves }}",
+      "recipeIngredient": "{{ ingredients }}"
+    }
+    </script>
+{% endblock %}
+
+{% block body %}
 <div class='section--standard section--blog-item'>
   <div class='row center-xs'>
     <div class='col-xs-12 col-md-7 text-left'>
@@ -9,7 +30,7 @@ layout: /layouts/base.njk
       </div>
       <div class='row'>
         <div class='col-xs-12 col-md-8'>
-          <img src='/img/food/{{ image }}'>
+          <img src='/img/food/{{ image }}' alt='Food picture of {{ title }}'>
         </div>
           <div class='col-xs-12 col-md-4'>
           <ul class='recipe__stats no-count'>
@@ -75,3 +96,4 @@ layout: /layouts/base.njk
     </div>
   </div>
 </div>
+{% endblock %}
