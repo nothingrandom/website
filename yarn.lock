@@ -4616,11 +4616,6 @@ git-url-parse@11.1.2:
   dependencies:
     git-up "^4.0.0"
 
-github-languages-css@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/github-languages-css/-/github-languages-css-1.0.0.tgz#7afc279223a41fa40b2989eb8a15ae278f62416a"
-  integrity sha512-X45TUi8Q0KI+mVV4QIUCKSUswnpC+sSt0TmXJ0RrbbK4/bcgAhSE8Xbm6zF79lnTszY0V++qAU89eU1MOl8W6g==
-
 glob-parent@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
