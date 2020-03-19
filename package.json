@@ -49,6 +49,8 @@
     "cssnano-preset-advanced": "^4.0.7",
     "eleventy-plugin-lazyimages": "^1.0.6",
     "eleventy-plugin-reading-time": "^0.0.1",
+    "jimp": "^0.9.5",
+    "jsdom": "^16.2.1",
     "lazysizes": "^5.2.0",
     "leadingzero": "^1.0.0",
     "node-fetch": "^2.6.0",
