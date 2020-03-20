@@ -4,6 +4,8 @@ const filters = require('./utils/filters.js');
 const shortcodes = require('./utils/shortcodes.js');
 const readingTime = require('eleventy-plugin-reading-time');
 const lazyImagesPlugin = require('./utils/eleventy-plugin-lazyimages.js');
+const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
+const pjson = require('./package.json');
 
 // The @11ty/eleventy configuration.
 // For a full list of options, see: https://www.11ty.io/docs/config/
@@ -52,6 +54,14 @@ module.exports = (eleventyConfig) => {
       return imgPath;
     },
   });
+
+  const cacheBusterOptions = {
+    outputDirectory: dirs.output,
+    createResourceHash(outputDirectoy, url, target) {
+      return pjson.version;
+    }
+  };
+  eleventyConfig.addPlugin(cacheBuster(cacheBusterOptions));
 
   return {
     // Set the path from the root of the deploy domain
