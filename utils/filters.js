@@ -54,7 +54,8 @@ module.exports = {
     // all lower case, please
     content = content.toLowerCase();
 
-    // remove all html elements and new lines
+    // remove all new lines
+    content = content.replace(/\n/g, '');
     // const plain = unescape(content.replace(/(&lt;.*?&gt;)|(<.*?>)/gi, ' '));
     const plain = removeHTML(content);
 

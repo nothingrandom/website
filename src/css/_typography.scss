@@ -23,10 +23,10 @@ body {
   font-display: swap;
 }
 
-%font-serif {
-  font-family: $serif;
-  font-display: swap;
-}
+// %font-serif {
+//   font-family: $serif;
+//   font-display: swap;
+// }
 
 %font-mono {
   font-family: $mono;
@@ -44,7 +44,7 @@ body {
 }
 
 h1 {
-  @extend %font-serif;
+  @extend %font-sans;
   font-size: em(42px);
   // font-weight: 600;
 }

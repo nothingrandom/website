@@ -38,7 +38,7 @@ The Nest Thermostat has some nice routines tied it, and it's linked to our phone
 The shutters are on radio frequency remotes. There's three remotes because there's three shutters. One in the bedroom and two in the living room.
 
 ### Tosti
-![Photo of Tosti](../img/tosti.jpg)
+![Photo of Tosti](/img/tosti.jpg)
 We feed Tosti half a packet of wet food (kept in the bottom shelf of the large cupboard) first thing in the morning and the other half when we eat dinner. We top up her dry food only in the morning. Sometimes she'll scoff the wet stuff up in 5 minutes, other times it'll still be half full mid-afternoon, she paces her own eating throughout the day. I struggle to remember a time she's ever finished all the wet and dry food in a day, so it doesn't need a same-day topup. Her water bowl might though!
 
 Her litter box also gets scooped first thing in the morning. We change the litter 2 or 3 times a week, it varies, as does her bathroom routine. All normal.

@@ -1,6 +1,6 @@
 // Import barebones scss structure
 @import 'browser-reset/reset.css';
-@import 'github-languages-css/index.css';
+@import 'vendor/github-languages';
 @import 'utilities', 'variables', 'grid', 'colors', 'fonts', 'typography';
 
 // @import 'components/buttons';
