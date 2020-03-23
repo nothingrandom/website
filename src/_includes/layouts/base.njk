@@ -1,11 +1,11 @@
 {% extends 'extends/html5boilerplate.njk' %}
 
 {% if tabtitle %}
-  {% set title = (tabtitle + ' - ' + site.title) %}
+  {% set sitetitle = (tabtitle + ' - ' + site.title) %}
 {% elif title %}
-  {% set title = (title + ' - ' + site.title) %}
+  {% set sitetitle = (title + ' - ' + site.title) %}
 {% else %}
-  {% set title = site.title %}
+  {% set sitetitle = site.title %}
 {% endif %}
 
 {% set description = (description) if description else (site.description) %}
@@ -31,7 +31,9 @@
     {% include 'partials/menu.njk' %}
     <div class='page__container'>
         <div class='container-fluid'>
-          {{ content | safe }}
+          {% block bodyContent %}
+            {{ content | safe }}
+          {% endblock %}
         </div>
     </div>
     {{ process.env }}
