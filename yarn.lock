@@ -3652,10 +3652,10 @@ electron-to-chromium@^1.3.338, electron-to-chromium@^1.3.361:
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.362.tgz#9ed33f9d0673888d6a2614347b4b63b490009408"
   integrity sha512-xdU5VCoZyMPMOWtCaMgbr48OwWZHrMLbGnAOlEqibXiIGsb4kiCGWEHK5NOghcVLdBVIbr/BW+yuKxVuGTtzEg==
 
-eleventy-plugin-lazyimages@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/eleventy-plugin-lazyimages/-/eleventy-plugin-lazyimages-1.0.6.tgz#49587fc9a55121d794cf97e12ce107b653b205e6"
-  integrity sha512-VQ3y0SnYqUcZJB3xfYdMu1/2sRQWI1gVzJNNHHs3Hy437TITTtXOR8y2Muuifo+zz47OBiNW3q+G9VPdlcWXWQ==
+eleventy-plugin-lazyimages@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eleventy-plugin-lazyimages/-/eleventy-plugin-lazyimages-1.1.0.tgz#41d5c923216135b91f48b1ad8429f4ab4ff1b9f6"
+  integrity sha512-0ueCD1ozUaPyqGIH0kuHTHJNgKRYK83oMHlggw6uIWGub3LoUF9ndWM74jQStOArqqL6Hm+ltnhYWhrpIxg4Gw==
   dependencies:
     jimp "^0.9.5"
     jsdom "^16.2.1"
