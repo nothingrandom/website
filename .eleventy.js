@@ -3,7 +3,7 @@
 const filters = require('./utils/filters.js');
 const shortcodes = require('./utils/shortcodes.js');
 const readingTime = require('eleventy-plugin-reading-time');
-const lazyImagesPlugin = require('./utils/eleventy-plugin-lazyimages.js');
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 const cacheBuster = require('@mightyplow/eleventy-plugin-cache-buster');
 const pjson = require('./package.json');
 
