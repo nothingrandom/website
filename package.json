@@ -50,7 +50,7 @@
     "cssnano-preset-advanced": "^4.0.7",
     "eleventy-plugin-lazyimages": "^1.1.0",
     "eleventy-plugin-reading-time": "^0.0.1",
-    "lazysizes": "^5.2.0",
+    "lazysizes": "^5.2.1",
     "leadingzero": "^1.0.0",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.12.0",
