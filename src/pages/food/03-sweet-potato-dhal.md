@@ -1,6 +1,6 @@
 ---
 layout: layouts/recipe.njk
-title: Sweet Potato dhal
+title: Sweet Potato Dhal
 
 permalink: /food/sweet-potato-dhal/
 image: sweet-potato-dhal.jpg
