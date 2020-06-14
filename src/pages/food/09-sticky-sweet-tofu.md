@@ -16,6 +16,6 @@ ingredients: [1 block of tofu, '1 tbsp coconut, sesame, or sunflower oil', 3 tbs
 - Optionally, press your block of tofu for 30+ minutes between a chopping board and some books (or a heavy casserole dish).
 - Cut the tofu into cubes.
 - Start to lightly fry the tofu in the oil, turning to brown and crisp all the sides taking care not to break any.
-- When pale brown, pour over your dressing of soy sauce, honey, ginger, coriander, a generous grind of black pepper, and crushed garlic.
+- When pale brown, pour over your dressing of soy sauce, mirin, ginger, coriander, a generous grind of black pepper, and crushed garlic.
 - Continue to cook for a further three minutes whilst the sauce / dressing thickens and becomes nice and sticky.
 - Enjoy topped with sesame seeds and with stir fried egg noodles and vegetables.
