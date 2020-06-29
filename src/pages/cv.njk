@@ -6,13 +6,12 @@ title: Resume.
 permalink: /resume/index.html
 ---
 <div class='section section--standard section--cv'>
-  {% set header_content = "<p class='font--bold'>🚀 Not looking for new opportunities right now.</p>
-    <p>I'm Benjamin Hollway, a lead frontend / Javascript engineer based in Amsterdam. And a lover of good food.</p>
+  {% set header_content = "<p>I'm Benjamin Hollway, a lead frontend / Javascript engineer based in Amsterdam. And a lover of good food.</p>
     <p>I currently work at the IoT & satellite startup Hiber, building their frontend web applications with a mix of the latest ES & TypeScript specs, vue.js, S/CSS, and pure magic. I've also been known to use React, Living Styleguides, and much more in the past.</p>" %}
   {% include 'partials/header.njk' %}
   <div class='row center-md row--md-padding'>
     <div class='col-xs-12 col-md-6'>
-      {% include 'partials/social.njk' %}
+      {% include 'partials/social-usernames.njk' %}
     </div>
     <div class='col-xs-12 col-md-8'>
       <ul class='cv__list text-left'>
@@ -24,7 +23,9 @@ permalink: /resume/index.html
                 <h4>{{ experience.company }}</h4>
                 <span class='section__item__detail'>{{ experience.location }}<br />{{ experience.start | cvDate }} - {% if experience.end %}{{ experience.end | cvDate }}{% else %}Present{% endif %}</span>
               </div>
-              <p>{{ experience.description | safe }}</p>
+              {% for para in experience.description %}
+                <p>{{ para | safe }}</p><br />
+              {% endfor %}
             </div>
           </li>
         {% endfor %}
