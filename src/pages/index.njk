@@ -86,7 +86,7 @@ permalink: /index.html
         <a class='section__header__see link--wiggle' href='/blog/'>See all <i class='fal fa-eye'></i></a>
       </div>
       <div class='row'>
-        {% for post in collections.posts | limitTo(-3) %}
+        {% for post in collections.posts | limitTo(3) %}
           <div class='col-xs-12 col-sm-4 section__item'>
             {% include 'partials/blog-small-item.njk' %}
           </div>
