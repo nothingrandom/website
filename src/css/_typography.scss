@@ -67,10 +67,18 @@ h2 {
 h3 {
   font-size: em(36px);
   letter-spacing: -.5px;
+
+  @media print {
+    font-size: em(26px);
+  }
 }
 
 h4 {
   font-size: em(24px);
+
+  @media print {
+    font-size: em(18px);
+  }
 }
 
 h5 {
@@ -82,6 +90,10 @@ p {
   margin: 14px 0;
   font-size: em(20px);
   line-height: 1.5;
+
+  @media print {
+    font-size: em(16px);
+  }
 
   code {
     padding: 0 5px;
