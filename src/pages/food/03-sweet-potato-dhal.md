@@ -1,15 +1,15 @@
 ---
 layout: layouts/recipe.njk
-title: Sweet Potato Dahl
+title: Sweet Potato Dhal
 
-permalink: /food/sweet-potato-dahl/
-image: sweet-potato-dahl.jpg
+permalink: /food/sweet-potato-dhal/
+image: sweet-potato-dhal.jpg
 
 serves: 4
 time: 35 mins
 challenge: 1
 
-intro: There are few meals more satisfying and filling than dahl.⁣ This is my wife's family recipe for sweet potato dahl.⁣
+intro: There are few meals more satisfying and filling than dhal.⁣ This is my wife's family recipe for sweet potato dhal.⁣
 
 ingredients: [1 large onion, 2 garlic cloves, 1 tsp turmeric, 1 tsp cumin, 1 tsp ground coriander, 1 tsp ground ginger, 1 tbsp naturally sweetened ketchup, 250g red split lentils, 2 large sweet potatoes (diced into bite size cubes optionally peeled), 600ml vegetable stock]
 ---

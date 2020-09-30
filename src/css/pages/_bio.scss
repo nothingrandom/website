@@ -1,4 +1,10 @@
 .section--bio {
+  .bio__photos {
+    img {
+      margin-bottom: 25px;
+    }
+  }
+
   .intro__blurb {
     margin-top: $standard-spacing;
 

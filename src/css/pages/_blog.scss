@@ -1,6 +1,10 @@
 .section--blog-item {
   h2 {
     text-align: center;
+
+    @include breakpoint(md) {
+      font-size: em(84px, 16px);
+    }
   }
 
   p,
