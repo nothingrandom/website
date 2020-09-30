@@ -68,22 +68,33 @@
   }
 
   .section__item--food {
-    padding-top: 75px;
+    padding: 75px 0 300px;
+
+    @include breakpoint(md) {
+      padding: 75px 0 0;
+    }
 
     &::before {
       @include pseudo();
       @include force-full-width();
       z-index: -1;
       margin-top: -75px;
-      background-color: palette(sections, food);
+      background-image: url('../img/food-hero.jpeg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+      // background-color: palette(sections, food);
     }
 
     .section__intro {
       @include section-box-background(palette(black));
-      margin: -20px 0 0;
+      position: relative;
+      top: 360px;
+      margin: -20px 0 75px;
 
       @include breakpoint(md) {
-        margin: 0;
+        top: unset;
+        margin: 0 0 75px;
       }
     }
   }
