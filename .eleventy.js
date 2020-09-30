@@ -43,17 +43,19 @@ module.exports = (eleventyConfig) => {
 
   eleventyConfig.addPlugin(readingTime);
 
-  eleventyConfig.addPlugin(lazyImagesPlugin, {
-    appendInitScript: false,
-    className: ['lazyload', 'blur-up'],
-    transformImgPath: (imgPath) => {
-      if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
-        return `./src${imgPath}`;
-      }
+  if (process.env.ELEVENTY_ENV !== 'development') {
+    eleventyConfig.addPlugin(lazyImagesPlugin, {
+      appendInitScript: false,
+      className: ['lazyload', 'blur-up'],
+      transformImgPath: (imgPath) => {
+        if (imgPath.startsWith('/') && !imgPath.startsWith('//')) {
+          return `./src${imgPath}`;
+        }
 
-      return imgPath;
-    },
-  });
+        return imgPath;
+      },
+    });
+  }
 
   const cacheBusterOptions = {
     outputDirectory: dirs.output,

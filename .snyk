@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.13.5
+version: v1.14.1
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
   SNYK-JS-MIXINDEEP-450212:
@@ -838,67 +838,67 @@ ignore:
   SNYK-JS-NODESASS-535497:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-535498:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-535502:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540956:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540958:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540964:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540974:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540978:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540980:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540990:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540992:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540994:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540996:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-540998:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-541000:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-NODESASS-541002:
     - node-sass:
         reason: None given
-        expires: '2020-03-28T16:36:29.850Z'
+        expires: '2020-09-18T08:59:55.420Z'
   SNYK-JS-ACORN-559469:
     - webpack > acorn:
         reason: None given
@@ -1334,3 +1334,70 @@ patch:
   SNYK-JS-TREEKILL-536781:
     - snyk > snyk-sbt-plugin > tree-kill:
         patched: '2019-12-12T06:12:42.709Z'
+  SNYK-JS-LODASH-567746:
+    - '@babel/core > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - node-sass > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@babel/preset-env > @babel/plugin-transform-block-scoping > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - node-sass > sass-graph > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - postcss-cli > postcss-reporter > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > @snyk/dep-graph > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > inquirer > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > snyk-config > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > snyk-mvn-plugin > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > snyk-nodejs-lockfile-parser > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > snyk-nuget-plugin > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@11ty/eleventy > browser-sync > easy-extender > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - node-sass > gaze > globule > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > snyk-go-plugin > graphlib > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > snyk-nodejs-lockfile-parser > graphlib > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > snyk-php-plugin > @snyk/composer-lockfile-parser > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@babel/preset-env > @babel/plugin-transform-unicode-regex > @babel/helper-create-regexp-features-plugin > @babel/helper-regex > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - eleventy-plugin-lazyimages > jsdom > request-promise-native > request-promise-core > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/ruby-semver > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@11ty/eleventy > pug > pug-code-gen > constantinople > babel-types > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@11ty/eleventy > pug > pug-filters > constantinople > babel-types > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - snyk > @snyk/snyk-cocoapods-plugin > @snyk/cocoapods-lockfile-parser > @snyk/dep-graph > graphlib > lodash:
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@11ty/eleventy > pug > pug-code-gen > pug-attrs > constantinople > babel-types > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > @babel/types > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
+    - '@babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash':
+        patched: '2020-05-01T06:12:24.347Z'
