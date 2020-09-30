@@ -1,41 +1,25 @@
-{% extends 'layouts/base.njk' %}
-
-{% block headMisc %}
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org/",
-      "@type": "Recipe",
-      "name": "{{ title }}",
-      "image": [
-      "https://nothingrandom.com//img/food/{{ image }}",
-      ],
-      "author": {
-        "@type": "Person",
-        "name": "Benjamin Hollway"
-      },
-      "datePublished": "{{ page.date }}",
-      "description": "{{ intro | safe }}",
-      "recipeYield": "{{ serves }}",
-      "recipeIngredient": "{{ ingredients }}"
-    }
-    </script>
-{% endblock %}
-
-{% block bodyContent %}
-<div class='section--standard section--blog-item'>
+---
+layout: /layouts/base.njk
+---
+<div class='section--standard section--blog-item' itemscope itemtype="http://schema.org/Recipe">
   <div class='row center-xs'>
     <div class='col-xs-12 col-md-7 text-left'>
       <div class='section__header'>
-        <h2>{{ title }}</h2>
+        <h2 itemprop="name">{{ title }}</h2>
+        <p style='display: none'>
+          By <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">Benjamin Hollway</span>
+          </span>
+        </p>
       </div>
       <div class='row'>
         <div class='col-xs-12 col-md-8'>
-          <img src='/img/food/{{ image }}' alt='Food picture of {{ title }}'>
+          <img itemprop="image" src='/img/food/{{ image }}' alt='Food picture of {{ title }}'>
         </div>
           <div class='col-xs-12 col-md-4'>
           <ul class='recipe__stats no-count'>
-            <li><span>Time</span> {{ time }}</li>
-            <li><span>Serves</span> {{ serves }}</li>
+            <li><span>Time</span> <time datetime="{{ time }}" itemprop="prepTime">{{ time }}</time></li>
+            <li itemprop="recipeYield"><span>Serves</span> {{ serves }}</li>
             <li><span>Challenge</span>
               <div class='recipe__challenge recipe__challenge--{{ challenge }}'>
                 {% for i in range(0, challenge) %}
@@ -67,11 +51,11 @@
                   {% for topic, list in ingredient %}
                     <h4>For the {{ topic }}:</h4>
                     {% for item in list %}
-                      <li>{{ item }}</li>
+                      <li itemprop="recipeIngredient">{{ item }}</li>
                     {% endfor %}
                   {% endfor %}
                 {% else %}
-                  <li>{{ ingredient }}</li>
+                  <li itemprop="recipeIngredient">{{ ingredient }}</li>
                 {% endif %}
               {% endfor %}
             </ul>
@@ -79,7 +63,7 @@
         </div>
 
         <div class='col-xs-12 col-md-8'>
-          <div class='recipe__method'>
+          <div class='recipe__method' itemprop="recipeInstructions">
             <h3>Method</h3>
             {{ content | safe }}
           </div>
@@ -96,4 +80,3 @@
     </div>
   </div>
 </div>
-{% endblock %}
