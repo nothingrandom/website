@@ -13,6 +13,10 @@ $footer-height-lg: 103px;
   border-top-width: 1px;
   border-top-style: solid;
 
+  @media print {
+    display: none;
+  }
+
   @include breakpoint(md) {
     height: $footer-height-md;
   }
