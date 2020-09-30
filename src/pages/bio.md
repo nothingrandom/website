@@ -15,7 +15,7 @@ I currently work at the IoT & satellite startup [Hiber](https://hiber.global), b
 
 Every once in a while I'll either be creating or contributing to an [open source project](https://github.com/nothingrandom) and a little more frequently than that I mix live sound.
 
-During my downtime, there's few things better than cycling to new locations to take pictures in new places. My wife, [Indy](https://instagram.com/indy_hollway), and I love to create indie/jazz/fusion music with our assortment of synths and guitars. Whenever possible we take a vacation to hike in the mountains, discovering trails off the beaten path.
+During my downtime, there's few things better than playing fetch with our {{ '24-08-2020' | timeSince }} old border collie, [Nova](). And sometimes cycling to new locations to take pictures in new places. My wife, [Indy](https://instagram.com/indy_hollway), and I love to create indie/jazz/fusion music with our assortment of synths and guitars. Whenever possible we take a vacation to hike in the mountains, discovering trails off the beaten path.
 
 I believe food is the heart of every home, and following the legacy of many a British man before me; I have a [food and recipe blog](/food). I'm currently looking to get some of my food into local cafes - so [watch this space](https://instagram.com/foodwithbenjamin), with a dream of maybe opening one myself in years to come.</p>
 

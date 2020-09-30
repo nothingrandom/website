@@ -17,6 +17,16 @@ module.exports = {
   currentYear() {
     return DateTime.local().toFormat('yyyy');
   },
+  timeSince(filterDate) {
+    const timeAgo = (date) => {
+      const now = DateTime.local();
+      const past = DateTime.fromFormat(date, 'dd-MM-yyyy');
+      const diff = now.diff(past, 'months');
+      return `${Math.floor(diff.months)} months`;
+    };
+
+    return timeAgo(filterDate);
+  },
   limitTo(input, limit) {
     if (typeof limit !== 'number') {
       return input;
