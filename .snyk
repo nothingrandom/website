@@ -903,6 +903,10 @@ ignore:
     - webpack > acorn:
         reason: None given
         expires: '2020-04-06T18:54:17.893Z'
+  SNYK-JS-OBJECTPATH-1017036:
+    - '@11ty/eleventy > browser-sync > eazy-logger > tfunk > object-path':
+        reason: None given
+        expires: '2020-11-11T13:18:35.628Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:lodash:20180130':
