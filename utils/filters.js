@@ -17,12 +17,12 @@ module.exports = {
   currentYear() {
     return DateTime.local().toFormat('yyyy');
   },
-  timeSince(filterDate) {
+  timeSince(filterDate, unit) {
     const timeAgo = (date) => {
       const now = DateTime.local();
       const past = DateTime.fromFormat(date, 'dd-MM-yyyy');
-      const diff = now.diff(past, 'months');
-      return `${Math.floor(diff.months)} months`;
+      const diff = now.diff(past, unit);
+      return `${Math.floor(diff[unit])} ${unit.slice(0, -1)}`;
     };
 
     return timeAgo(filterDate);
