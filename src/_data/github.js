@@ -7,7 +7,7 @@ module.exports = (async () => {
   console.log('Fetching github repos');
 
   // GitHub API: https://developer.github.com/v3/repos/#get
-  return fetch('https://api.github.com/users/nothingrandom/repos?sort=updated', {
+  return fetch('https://api.github.com/users/nothingrandom/repos?sort=pushed', {
     headers: {
       Authorization: `Basic ${Buffer.from(username).toString('base64')}`,
     },
