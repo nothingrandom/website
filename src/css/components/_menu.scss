@@ -4,7 +4,7 @@ $mobile-menu-animation-time: .4s;
 %link-style {
   @extend %font-mono;
   padding: 30px 0;
-  color: palette(black);
+  @include color-schemes(color, palette(black), palette(white));
   font-size: 14px;
   text-transform: uppercase;
 
@@ -40,23 +40,23 @@ $mobile-menu-animation-time: .4s;
     }
 
     a {
-      color: palette(black);
+      @include color-schemes(color, palette(black), palette(white));
     }
   }
 }
 
 .menu__container {
+  @include color-schemes(border-bottom-color, palette(black), palette(white));
+  @include color-schemes(border-bottom-color, palette(grey, pale), palette(black, true));
+  @include color-schemes(background-color, palette(white), palette(black));
   position: sticky;
   top: 0;
   z-index: 10;
   height: $menu-height-md;
   border-top-width: 4px;
   border-top-style: solid;
-  border-top-color: palette(black);
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: palette(grey, pale);
-  background-color: palette(white);
 
   @media print {
     display: none;
@@ -125,13 +125,13 @@ $mobile-menu-animation-time: .4s;
     }
 
     &::before {
+      @include color-schemes(background, palette(sections, bio), palette(sections, menu));
       @include pseudo();
       top: 20px;
       right: 20px;
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      background: palette(sections, menu);
       opacity: 0;
       transition: transform $mobile-menu-animation-time ease-in-out;
     }
@@ -189,7 +189,7 @@ $mobile-menu-animation-time: .4s;
 
         &.menu__item--active {
           a {
-            color: palette(black);
+            @include color-schemes(color, palette(black), palette(white));
 
             &::after {
               background-color: var(--hover-color);
@@ -212,7 +212,7 @@ $mobile-menu-animation-time: .4s;
       }
 
       a {
-        color: palette(black);
+        @include color-schemes(color, palette(black), palette(white));
       }
     }
   }
@@ -243,7 +243,7 @@ $mobile-menu-animation-time: .4s;
       ~ .menu__icon {
         .fa-times {
           display: inline-block;
-          color: palette(black);
+          @include color-schemes(color, palette(black), palette(white));
         }
 
         .fa-cheeseburger {

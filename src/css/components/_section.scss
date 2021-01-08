@@ -52,7 +52,7 @@
     }
 
     &:hover {
-      color: palette(black);
+      @include color-schemes(color, palette(black), palette(white));
     }
   }
 }
@@ -70,13 +70,13 @@
 .section__item {
   a {
     @include transition(transform);
+    @include color-schemes(color, palette(black), palette(white));
+    @include color-schemes(background-color, palette(grey, pale), palette(black, true));
     display: block;
     width: 100%;
     margin-bottom: 1rem;
     padding: 40px;
     // border-radius: 5px;
-    background-color: palette(grey, pale);
-    color: palette(black);
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
 

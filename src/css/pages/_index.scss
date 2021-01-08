@@ -17,18 +17,19 @@
 
   .hover-image {
     @include center(horizontal);
-    top: -70px;
+    top: 0;
+    // top: -70px;
     display: none;
     width: unset;
-    transform: translate(-50%) scale(.6);
+    // transform: translate(-50%) scale(.6);
 
     @include breakpoint(sm) {
-      top: 60px;
-      transform: translate(-50%);
+      // top: 60px;
+      // transform: translate(-50%);
     }
 
     @include breakpoint(md) {
-      top: 10px;
+      // top: 10px;
     }
   }
 

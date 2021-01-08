@@ -9,9 +9,9 @@
     }
 
     a {
+      @include color-schemes(color, palette(black), palette(white));
       display: block;
       width: 100%;
-      color: palette(black);
       padding-bottom: 1.5rem;
 
       @include breakpoint(md) {
@@ -21,7 +21,7 @@
 
       &:hover {
         @include breakpoint(md) {
-          background-color: palette(grey, pale);
+          @include color-schemes(background-color, palette(grey, pale), palette(black, true));
         }
 
         img {
