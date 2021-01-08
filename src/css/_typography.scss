@@ -97,7 +97,7 @@ p {
 
   code {
     padding: 0 5px;
-    font-size: em(18px, 20px);
+    font-size: em(16px, 20px);
   }
 }
 
@@ -113,14 +113,27 @@ p a,
   );
 
   color: currentColor;
-  text-shadow:
-    .025em 0 0 #FFFFFF,
-    -.025em 0 0 #FFFFFF,
-    .05em 0 0 #FFFFFF,
-    -.05em 0 0 #FFFFFF,
-    .075em 0 0 #FFFFFF,
-    -.075em 0 0 #FFFFFF;
   line-height: 1;
+
+  @media (prefers-color-scheme: dark) {
+    text-shadow:
+      .025em 0 0 palette(black),
+      -.025em 0 0 palette(black),
+      .05em 0 0 palette(black),
+      -.05em 0 0 palette(black),
+      .075em 0 0 palette(black),
+      -.075em 0 0 palette(black);
+  }
+
+  @media (prefers-color-scheme: light) {
+    text-shadow:
+      .025em 0 0 #FFFFFF,
+      -.025em 0 0 #FFFFFF,
+      .05em 0 0 #FFFFFF,
+      -.05em 0 0 #FFFFFF,
+      .075em 0 0 #FFFFFF,
+      -.075em 0 0 #FFFFFF;
+  }
 
   &.section__header__see {
     padding-bottom: 3px;
@@ -148,7 +161,7 @@ a {
 
 code {
   @extend %font-mono;
-  background-color: palette(grey, pale);
+  @include color-schemes(background-color, palette(grey, pale), palette(black, true));
 }
 
 .text-center {

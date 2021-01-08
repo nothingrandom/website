@@ -18,7 +18,7 @@ module.exports = (async () => {
       let myRecentRepos = '';
 
       if (json.filter) {
-        myRecentRepos = json.filter((r) => !r.fork && r.name !== 'website').slice(0, 6);
+        myRecentRepos = json.filter((r) => !r.fork && r.name !== 'website' && r.name !== 'nothingrandom').slice(0, 6);
       }
 
       return {
