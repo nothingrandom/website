@@ -58,7 +58,14 @@
 }
 
 .section__intro {
-  @include section-box-background(palette(black));
+  @media (prefers-color-scheme: dark) {
+    @include section-box-background(palette(black, true));
+  }
+
+  @media (prefers-color-scheme: light) {
+    @include section-box-background(palette(black));
+  }
+
   margin: 0 0 40px;
   padding: 40px;
 
