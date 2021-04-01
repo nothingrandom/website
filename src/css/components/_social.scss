@@ -17,8 +17,11 @@
 
   a {
     @extend %link--wiggle;
-    color: palette(black);
     font-size: 18px;
+
+    a {
+      @include color-schemes(color, palette(black), palette(white));
+    }
 
     .svg-inline--fa {
       margin-right: 2px;
