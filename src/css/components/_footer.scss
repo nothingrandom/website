@@ -3,8 +3,8 @@ $footer-height-md: 225px;
 $footer-height-lg: 103px;
 
 .section--footer {
-  background-color: palette(white);
-  border-top-color: palette(grey, pale);
+  @include color-schemes(background-color, palette(white), palette(black));
+  @include color-schemes(border-top-color, palette(grey, pale), palette(black, true));
   position: absolute;
   bottom: 0;
   width: 100%;

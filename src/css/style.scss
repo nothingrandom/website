@@ -28,6 +28,8 @@ html {
 }
 
 body {
+  @include color-schemes(background-color, palette(white), palette(black));
+  @include color-schemes(color, palette(black), palette(white));
   overflow-x: hidden;
 }
 

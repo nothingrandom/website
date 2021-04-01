@@ -1,7 +1,7 @@
 .logo {
   @extend %font-sans;
   display: inline-block;
-  color: palette(black);
+  @include color-schemes(color, palette(black), palette(white));
   font-size: em(34px);
   font-weight: 700;
   letter-spacing: 0;
@@ -49,7 +49,7 @@
 
   &:hover,
   &:focus {
-    color: palette(black);
+    @include color-schemes(color, palette(black), palette(white));
 
     .collapse {
       max-width: 300px;
