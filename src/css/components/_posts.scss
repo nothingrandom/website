@@ -1,6 +1,11 @@
 .posts__tag {
   background-color: palette(white);
 
+  &--all {
+    background-color: palette(white);
+    color: palette(black);
+  }
+
   &--code {
     background-color: palette(black);
     color: limegreen;
