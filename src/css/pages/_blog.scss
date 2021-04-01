@@ -57,6 +57,7 @@
 }
 
 .blog__footer {
+  @include color-schemes(border-top-color, palette(grey, pale), palette(black, true));
   margin-top: $standard-spacing;
-  border-top: 1px solid palette(grey, pale);
+  border-top: 1px solid;
 }
