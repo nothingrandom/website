@@ -17,18 +17,19 @@
 
   .hover-image {
     @include center(horizontal);
-    top: -70px;
+    top: 0;
+    // top: -70px;
     display: none;
     width: unset;
-    transform: translate(-50%) scale(.6);
+    // transform: translate(-50%) scale(.6);
 
     @include breakpoint(sm) {
-      top: 60px;
-      transform: translate(-50%);
+      // top: 60px;
+      // transform: translate(-50%);
     }
 
     @include breakpoint(md) {
-      top: 10px;
+      // top: 10px;
     }
   }
 
@@ -87,7 +88,14 @@
     }
 
     .section__intro {
-      @include section-box-background(palette(black));
+      @media (prefers-color-scheme: dark) {
+        @include section-box-background(palette(black, true));
+      }
+
+      @media (prefers-color-scheme: light) {
+        @include section-box-background(palette(black));
+      }
+
       position: relative;
       top: 360px;
       margin: -20px 0 75px;
