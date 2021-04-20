@@ -6,9 +6,17 @@ title: Resume.
 permalink: /resume/index.html
 ---
 <div class='section section--standard section--cv'>
-  {% set header_content = "<p>I'm Benjamin Hollway, a lead frontend / Javascript engineer based in Amsterdam. And a lover of good food.</p>
-    <p>I currently work at the IoT & satellite startup Hiber, building their frontend web applications with a mix of the latest ES & TypeScript specs, Vue.js, S/CSS, and pure magic. I've also been known to use React, Living Styleguides, build the occassional node module, and much more in the past.</p>" %}
-  {% include 'partials/header.njk' %}
+  <div class='row center-md'>
+    <div class='col-xs-12 col-md-6'>
+      <div class='section__header text-left'>
+        <h2>{{ title }}</h2>
+      </div>
+      <div class='section__intro text-left'>
+        <p>I'm Benjamin Hollway, a lead frontend / Javascript engineer based in {{ myself.currentLocation }}. And a lover of good food.</p>
+        <p>{{ myself.currently | safe }} {{ myself.fe }}</p>
+      </div>
+    </div>
+  </div>
   <div class='row center-md row--md-padding'>
     <div class='col-xs-12 col-md-6'>
       {% include 'partials/cv-social.njk' %}
