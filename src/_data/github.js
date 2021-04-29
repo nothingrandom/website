@@ -16,9 +16,10 @@ module.exports = (async () => {
     .then((json) => {
       // prune the data to return only what we want
       let myRecentRepos = '';
+      const excludes = ['website', 'nothingrandom']
 
       if (json.filter) {
-        myRecentRepos = json.filter((r) => !r.fork && r.name !== 'website' && r.name !== 'nothingrandom').slice(0, 6);
+        myRecentRepos = json.filter((r) => !r.fork && !excludes.includes(r.name)).slice(0, 6);
       }
 
       return {
