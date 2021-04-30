@@ -98,4 +98,31 @@ ignore:
     - '@11ty/eleventy > browser-sync > socket.io > socket.io-client > engine.io-client > xmlhttprequest-ssl':
         reason: None given
         expires: '2021-05-01T10:58:02.697Z'
+  SNYK-JS-POSTCSS-1090595:
+    - cssnano-preset-advanced > autoprefixer > postcss:
+        reason: None given
+        expires: '2021-05-30T14:56:59.673Z'
+    - cssnano > cssnano-preset-default > cssnano-util-raw-cache > postcss:
+        reason: None given
+        expires: '2021-05-30T14:56:59.673Z'
+    - cssnano-preset-advanced > cssnano-preset-default > cssnano-util-raw-cache > postcss:
+        reason: None given
+        expires: '2021-05-30T14:56:59.673Z'
+  SNYK-JS-POSTCSS-1255640:
+    - cssnano-preset-advanced > autoprefixer > postcss:
+        reason: None given
+        expires: '2021-05-30T14:56:59.673Z'
+    - cssnano > cssnano-preset-default > cssnano-util-raw-cache > postcss:
+        reason: None given
+        expires: '2021-05-30T14:56:59.673Z'
+    - cssnano-preset-advanced > cssnano-preset-default > cssnano-util-raw-cache > postcss:
+        reason: None given
+        expires: '2021-05-30T14:56:59.673Z'
+  SNYK-JS-XMLHTTPREQUESTSSL-1255647:
+    - '@11ty/eleventy > browser-sync > browser-sync-ui > socket.io-client > engine.io-client > xmlhttprequest-ssl':
+        reason: None given
+        expires: '2021-05-30T14:56:59.673Z'
+    - '@11ty/eleventy > browser-sync > socket.io > socket.io-client > engine.io-client > xmlhttprequest-ssl':
+        reason: None given
+        expires: '2021-05-30T14:56:59.673Z'
 patch: {}
