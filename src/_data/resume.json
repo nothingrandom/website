@@ -11,7 +11,7 @@
     "company": "Young Capital",
     "location": "Amsterdam, NL",
     "start": "04-2017",
-    "end": "12-2017",
+    "end": "11-2017",
     "description": ["At YoungCapital, I worked on a microteam prototyping new projects and ideas, using a mix of Vue, React, and Cordova. Alongside this, I was also part of a team that worked on a rebuild of the front end in React from the current Ruby system. I took ownership of a styleguide, wrote tests and CI runners using Docker, and built a system that future SPAs in the company will be built upon."]
   },
   {
