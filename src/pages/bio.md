@@ -1,5 +1,5 @@
 ---
-layout: layouts/about.njk
+layout: layouts/bio.njk
 
 title: Just a little<br />about me.
 
