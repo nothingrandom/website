@@ -18,11 +18,31 @@ module.exports = {
     return DateTime.local().toFormat('yyyy');
   },
   timeSince(filterDate, unit) {
+    const roundHalf = (num) => {
+      return Math.floor(num * 2) / 2;
+    };
+
+    const generateTimeString = (diff, diffUnit) => {
+      return `${roundHalf(diff[diffUnit])} ${diffUnit.slice(0, -1)}`;
+    };
+
     const timeAgo = (date) => {
       const now = DateTime.local();
       const past = DateTime.fromFormat(date, 'dd-MM-yyyy');
+
+      if (unit === 'life') {
+        const monthDiff = now.diff(past, 'months');
+
+        if (monthDiff.months >= 12) {
+          const yearDiff = now.diff(past, 'years');
+          return generateTimeString(yearDiff, 'years');
+        }
+
+        return generateTimeString(monthDiff, 'months');
+      }
+
       const diff = now.diff(past, unit);
-      return `${Math.floor(diff[unit])} ${unit.slice(0, -1)}`;
+      return generateTimeString(diff, unit);
     };
 
     return timeAgo(filterDate);
