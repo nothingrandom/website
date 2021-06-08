@@ -1,4 +1,4 @@
-const meaningless = require('../../_data/search-regex.js');
+const meaningless = require('../../_data/search-regex');
 
 let searchIndex = '';
 const btn = document.querySelector('#toggle-search');
