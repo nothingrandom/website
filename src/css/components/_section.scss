@@ -94,7 +94,7 @@
   }
 
   p {
-    color: tint(palette(black), 30%);
+    @include color-schemes(color, #69696B, #969699);
     font-size: 18px;
   }
 }
