@@ -9,7 +9,7 @@ serves: 6
 time: 1h 45mins
 challenge: 3
 
-intro: I can say with strong certainty that this is one of the best lemon poppy seed cake recipes out there. It's sweet, moist, has that lemony tang, everything you look for in a lemon cake. This cake is also really simple, there's a fair margin on some of the ingredients as long as the dry to wet ratio is maintained, a little fiddly, but well worth your time.
+intro: When you have a great burger (mushroom, alternative, or "real") - then it only makes sense that you pair it with a bun that's soft, delicate, and mouth wateringly good. These buns are exactly that, perfect the day after as well with a good helping of scrambled eggs.
 
 ingredients:
   - tangzhong: [20g bread flour, 27g water, 60g whole milk]
