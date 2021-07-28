@@ -60,7 +60,7 @@
     "postcss": "^8.2.13",
     "postcss-cli": "^8.0.0",
     "postcss-import": "13.0.0",
-    "snyk": "^1.518.0",
+    "snyk": "^1.667.0",
     "webpack": "^5.1.1",
     "webpack-cli": "^4.0.0"
   },
