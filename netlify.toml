@@ -29,8 +29,8 @@
   status = 301
   force = true
 [[redirects]]
-  from = "https://benjaminhollway.com/*"
-  to = "https://nothingrandom.com/:splat"
+  from = "https://nothingrandom.com/*"
+  to = "https://benjaminhollway.com/:splat"
   status = 301
   force = true
 [[redirects]]
