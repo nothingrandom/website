@@ -3,7 +3,6 @@ import { library, dom } from '@fortawesome/fontawesome-svg-core';
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram';
-import { faSpotify } from '@fortawesome/free-brands-svg-icons/faSpotify';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
 
 import { faSearch } from '@fortawesome/pro-regular-svg-icons/faSearch';
@@ -17,12 +16,12 @@ import { faCode } from '@fortawesome/pro-light-svg-icons/faCode';
 import { faEye } from '@fortawesome/pro-light-svg-icons/faEye';
 import { faUtensilsAlt as falUtensilsAlt } from '@fortawesome/pro-light-svg-icons/faUtensilsAlt';
 import { faLongArrowLeft } from '@fortawesome/pro-light-svg-icons/faLongArrowLeft';
+import { faMusic } from '@fortawesome/pro-solid-svg-icons/faMusic';
 import { faTimes } from '@fortawesome/pro-light-svg-icons/faTimes';
 
 library.add(
   faGithub,
   faInstagram,
-  faSpotify,
   faTwitter,
   faSearch,
   faCheeseburger,
@@ -33,6 +32,7 @@ library.add(
   fadUtensilsAlt,
   falUtensilsAlt,
   faLongArrowLeft,
+  faMusic,
   faTimes,
 );
 
