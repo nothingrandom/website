@@ -13,10 +13,12 @@ layout: /layouts/base.njk
         </p>
       </div>
       <div class='row'>
+        {% if image %}
         <div class='col-xs-12 col-md-8'>
-          <img itemprop="image" src='/img/food/{{ image }}' alt='Food picture of {{ title }}'>
+            <img itemprop="image" src='/img/food/{{ image }}' alt='Food picture of {{ title }}'>
         </div>
-          <div class='col-xs-12 col-md-4'>
+        {% endif %}
+        <div class='col-xs-12 col-md-4'>
           <ul class='recipe__stats no-count'>
             <li><span>Time</span> <time datetime="{{ time }}" itemprop="prepTime">{{ time }}</time></li>
             <li itemprop="recipeYield"><span>Serves</span> {{ serves }}</li>
@@ -33,7 +35,11 @@ layout: /layouts/base.njk
             </li>
           </ul>
         </div>
+        {% if image %}
         <div class='col-xs-12'>
+        {% else %}
+        <div class='col-xs-12 col-md-8'>
+        {% endif %}
           <div class='section__intro recipe__intro'>
             <p>{{ intro | safe }}</p>
           </div>
