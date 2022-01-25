@@ -1,6 +1,7 @@
 .menu__item--search {
   position: unset !important;
   order: -1;
+  z-index: 9;
 
   @include breakpoint(md) {
     order: unset;
@@ -24,6 +25,7 @@
   top: 10px;
   right: -30px;
   left: -30px;
+  // z-index: 4;
 
   @include breakpoint(md) {
     @include center(horizontal);
