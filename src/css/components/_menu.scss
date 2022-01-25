@@ -49,7 +49,7 @@ $mobile-menu-animation-time: .4s;
   @include color-schemes(border-bottom-color, palette(black), palette(white));
   @include color-schemes(border-bottom-color, palette(grey, pale), palette(black, true));
   @include color-schemes(background-color, palette(white), palette(black));
-  position: sticky;
+  // position: sticky;
   top: 0;
   z-index: 10;
   overflow: hidden;
