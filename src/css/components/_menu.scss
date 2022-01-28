@@ -91,11 +91,11 @@ $mobile-menu-animation-time: .4s;
         margin-right: 5px;
       }
 
-      .fa-times {
+      .fa-xmark {
         display: none;
       }
 
-      .fa-cheeseburger {
+      .fa-burger-cheese {
         display: inline-block;
       }
     }
@@ -242,12 +242,12 @@ $mobile-menu-animation-time: .4s;
       }
 
       ~ .menu__icon {
-        .fa-times {
+        .fa-xmark {
           display: inline-block;
           @include color-schemes(color, palette(black), palette(white));
         }
 
-        .fa-cheeseburger {
+        .fa-burger-cheese {
           display: none;
         }
       }

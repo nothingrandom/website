@@ -41,8 +41,8 @@
             <input type='checkbox' id='menu-checkbox' class='menu__checkbox'>
             <label for='menu-checkbox' class='menu__icon'>
               <span>menu</span>
-              <i class='fal fa-cheeseburger'></i>
-              <i class='fal fa-times'></i>
+              <i class='fa-thin fa-burger-cheese'></i>
+              <i class='fa-thin fa-xmark'></i>
             </label>
             <div class='menu__content' style='display: none'>
               <div class='menu__links'>
@@ -57,11 +57,10 @@
                     </li>
                   {% endfor %}
                   <li class='menu__item menu__item--search'>
-                    {# <a class='link--exclude' href="/search" id="search-link"><i class='far fa-search'></i></a> #}
                     <input class='toggle__input toggle__input--search' type='checkbox' id='toggle-search'>
                     <label class='toggle__label' for='toggle-search' style='--hover-color: #A3E7FC'>
-                      <span class='toggle__label--off'>search <i class='far fa-search'></i></span>
-                      <span class='toggle__label--on'>close <i class='far fa-search'></i></span>
+                      <span class='toggle__label--off'>search <i class='fa-thin fa-search'></i></span>
+                      <span class='toggle__label--on'>close <i class='fa-thin fa-search'></i></span>
                     </label>
                     <form action="https://duckduckgo.com/" method="get" autocomplete="off" class="search toggle__item">
                       <input type="hidden" name="sites" value="nothingrandom.com" />
