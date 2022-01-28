@@ -25,11 +25,11 @@ layout: /layouts/base.njk
             <li><span>Challenge</span>
               <div class='recipe__challenge recipe__challenge--{{ challenge }}'>
                 {% for i in range(0, challenge) %}
-                  <i class='recipe__challenge--on fad fa-utensils-alt'></i>
+                  <i class='recipe__challenge--on fa-duotone fa-fork-knife'></i>
                 {% endfor %}
 
                 {% for i in range(0, 3 - challenge) %}
-                  <i class='recipe__challenge--off fal fa-utensils-alt'></i>
+                  <i class='recipe__challenge--off fa-thin fa-fork-knife'></i>
                 {% endfor %}
               </div>
             </li>
@@ -78,7 +78,7 @@ layout: /layouts/base.njk
         <div class='col-xs-12'>
           <div class='blog__footer'>
             <p>
-              <a href='/food/'><i class='fal fa-long-arrow-left'></i>  View all recipes</a>
+              <a href='/food/'><i class="fa-thin fa-arrow-left-long"></i>  View all recipes</a>
             </p>
           </div>
         </div>
