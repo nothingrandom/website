@@ -108,4 +108,8 @@ ignore:
     - snyk > snyk-nuget-plugin > dotnet-deps-parser > lodash.set:
         reason: None given
         expires: '2022-02-05T18:05:10.607Z'
+  SNYK-JS-JSBEAUTIFY-2311652:
+    - '@11ty/eleventy > pretty > js-beautify':
+        reason: None given
+        expires: '2022-02-28T17:37:16.174Z'
 patch: {}
