@@ -19,28 +19,8 @@
 # PER-DEPLOY.
 
 [[redirects]]
-  from = "https://nothingrandom.eu/*"
-  to = "https://nothingrandom.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://nothingrandom.co.uk/*"
-  to = "https://nothingrandom.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://nothingrandom.com/*"
-  to = "https://benjaminhollway.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
-  from = "https://nothingrandom.xyz/*"
-  to = "https://nothingrandom.com/:splat"
-  status = 301
-  force = true
-[[redirects]]
   from = "https://foodwithbenjamin.com/*"
-  to = "https://nothingrandom.com/:splat"
+  to = "https://benjaminhollway.com/:splat"
   status = 301
   force = true
 [[redirects]]
