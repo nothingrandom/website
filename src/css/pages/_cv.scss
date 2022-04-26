@@ -17,6 +17,15 @@
     margin-bottom: 0;
   }
 
+  ul {
+    list-style-type: circle;
+  }
+
+  li {
+    font-size: 1.25em;
+    line-height: 1.5;
+  }
+
   .flex-spread {
     margin-bottom: 15px;
     color: palette(grey);
