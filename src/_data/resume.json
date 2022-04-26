@@ -2,7 +2,7 @@
   {
     "role": "Senior Frontend Engineer",
     "company": "Lean Library (A SAGE Publishing Company)",
-    "location": "Remote (NL)",
+    "location": "Remote (NL & [now] UK)",
     "start": "05-2021",
     "description": ["Lean Library's core project revolves around a browser extension patrons (students and researchers) can install to give them off-campus access to library holdings (material and subscriptions).", "Shortly after joining Lean Library I identified a need to level up and mature the project. The existing team had built a feature-heavy project and obtained an impressive set of clients (libraries). However, it was overdue that things progress towards a more reliable, trusted project.", "In my first year we worked on;", "post-mortem and retrospective culture, Typescript and modern technologies, testing and coverage, identified a need to monitor and value CPU impact, identified the need for better UI, UX, and user testing, kick-off for an extension codebase rewrite - allowing us to build faster and better"]
   },
