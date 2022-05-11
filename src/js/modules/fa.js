@@ -5,9 +5,12 @@ import {
   faGithub,
   faInstagram,
   faTwitter,
+  faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
 
 import {
+  faAt,
+  faIdCard,
   faMusic,
   faSearch,
   faBurgerCheese,
@@ -26,6 +29,9 @@ library.add(
   faGithub,
   faInstagram,
   faTwitter,
+  faLinkedin,
+  faAt,
+  faIdCard,
   faMusic,
   faSearch,
   faBurgerCheese,

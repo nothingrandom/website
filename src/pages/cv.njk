@@ -32,7 +32,7 @@ permalink: /resume/index.html
                 <span class='section__item__detail'>{{ experience.location }}<br />{{ experience.start | cvDate }} - {% if experience.end %}{{ experience.end | cvDate }}{% else %}Present{% endif %}</span>
               </div>
               {% for para in experience.description %}
-                <p>{{ para | safe }}</p><br />
+                <p>{{ para | safe }}</p>
               {% endfor %}
             </div>
           </li>
