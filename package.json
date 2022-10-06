@@ -58,7 +58,7 @@
     "postcss-cli": "^8.0.0",
     "postcss-import": "13.0.0",
     "sass": "^1.47.0",
-    "snyk": "^1.848.0",
+    "snyk": "^1.996.0",
     "webpack": "^5.1.1",
     "webpack-cli": "^4.0.0"
   },
