@@ -1,8 +1,8 @@
 {
   "name": "website",
   "version": "2.1.11",
-  "description": "Benjamin Hollway's primary online presence",
-  "author": "Benjamin Hollway <benjamin@nothingrandom.com>",
+  "description": "Benjamin Grant's primary online presence",
+  "author": "Benjamin Grant <benjamin@nothingrandom.com>",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
