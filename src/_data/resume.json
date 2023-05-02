@@ -2,9 +2,14 @@
   {
     "role": "Senior Frontend Engineer",
     "company": "Lean Library (A SAGE Publishing Company)",
-    "location": "Remote (NL & [now] UK)",
+    "location": "Remote (UK)",
     "start": "05-2021",
-    "description": ["Lean Library's core project revolves around a browser extension patrons (students and researchers) can install to give them off-campus access to library holdings (material and subscriptions).", "Shortly after joining Lean Library I identified a need to level up and mature the project. The existing team had built a feature-heavy project and obtained an impressive set of clients (libraries). However, it was overdue that things progress towards a more reliable, trusted project.", "In my first year we worked on; <ul><li>post-mortem and retrospective culture</li> <li>Typescript and modern technologies</li> <li>testing and coverage</li> <li>identified a need to monitor and value CPU impact</li> <li>identified the need for better UI, UX, and user testing</li> <li>kick-off for an extension codebase rewrite - allowing us to build faster and better</li></ul>"]
+    "description": [
+      "Lean Library's core project revolves around a browser extension patrons (students and researchers) can install to give them off-campus access to library holdings (material and subscriptions). We also have a feature set branded as \"Futures\" which brings the library toolings into the patron workflow.",
+      "I joined Lean Library with the goal of taking a legacy extension codebase and turning it into a project that was enjoyable to work on. We needed to build something with better UX, that was more reliable and easier to build upon to give libraries new features.",
+      "In my first year I focused on; <ul><li>post-mortem and retrospective culture</li> <li>Typescript and modern technologies</li> <li>testing and coverage</li> <li>identifying the need for better UI, UX, and user testing</li> <li>identifying a need to monitor and value CPU impact</li> <li>kick-off for an extension codebase rewrite - allowing us to build faster and better</li></ul>",
+      "In my second year I focused on; <ul><li>onboarding and peer programming with new team members</li> <li>completing and launching the extension codebase rewrite - with major UX updates, manifest v3 support, and best practices within the code</li> <li>building culture as the team grows and joins with other engineering teams with Technology from Sage</li> <li>architecture for new features</li> <li>backlog and resource allocation</li></ul>"
+    ]
   },
   {
     "role": "Senior Frontend Developer (Team Lead)",
