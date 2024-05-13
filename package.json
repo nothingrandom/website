@@ -33,7 +33,7 @@
     "light-server": "2.6.4"
   },
   "dependencies": {
-    "@11ty/eleventy": "1.0.0",
+    "@11ty/eleventy": "2.0.0",
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@fortawesome/fontawesome-pro": "^6.0.0-beta3",
