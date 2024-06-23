@@ -20,17 +20,22 @@
 
 [[redirects]]
   from = "https://foodwithbenjamin.com/*"
-  to = "https://b.nothingrandom.studio/:splat"
+  to = "https://begrant.io/:splat"
   status = 301
   force = true
 [[redirects]]
   from = "https://benjaminhollway.com/*"
-  to = "https://b.nothingrandom.studio/:splat"
+  to = "https://begrant.io/:splat"
+  status = 301
+  force = true
+[[redirects]]
+  from = "https://b.nothingrandom.studio/*"
+  to = "https://begrant.io/:splat"
   status = 301
   force = true
 [[redirects]]
   from = "https://nothingrandom.netlify.com/*"
-  to = "https://b.nothingrandom.studio/:splat"
+  to = "https://begrant.io/:splat"
   status = 301
   force = true
 
