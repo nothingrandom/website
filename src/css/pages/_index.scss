@@ -50,11 +50,11 @@
 }
 
 .section--intro {
-  @include section-box-background(palette(blue, dark));
+  @include section-box-background(palette(green, dark));
 
   .social {
     a {
-      color: text-contrast(palette(blue, dark));
+      color: text-contrast(palette(green, dark));
 
       &:hover {
         color: palette(red);
