@@ -8,7 +8,7 @@
 [![Uptime Robot ratio (30 days)](https://img.shields.io/uptimerobot/ratio/m782561473-4626d1b0855e2d56a41ace52.svg?style=for-the-badge)](https://nothingrandom.com)
 
 
-My primary online presence found at [b.nothingrandom.studio](https://b.nothingrandom.studio)
+My primary online presence found at [begrant.io](https://begrant.io)
 
 > This site is built with things like [eleventy](https://www.11ty.io/), [https://github.com/ianrose/deventy](deventy), and [barebonesio](https://github.com/nothingrandom/barebonesio) under the hood. It's hosted on [GitHub](https://github.com/nothingrandom/website) and served by [Netlify]((https://www.netlify.com/)).
 
