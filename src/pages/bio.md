@@ -9,7 +9,7 @@ menukey: bio
 permalink: /bio/index.html
 ---
 
-### I'm Benjamin, in summary, a lead javascript / frontend engineer based {{ myself.currentLocation }}. And a lover of good food.
+### I'm Benjamin, or Be, a lead javascript / frontend engineer based {{ myself.currentLocation }}. And a lover of good food.
 
 {{ myself.currently | safe }} {{ myself.fe }} {{ myself.resume | safe }}
 
