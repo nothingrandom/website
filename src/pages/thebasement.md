@@ -16,4 +16,4 @@ WiFi network: `The Basement`
 
 WiFi password: `grantsbrighton`
 
-[Open WiFi Settings (mobile)](prefs:root=WIFI)
+[Open WiFi Settings (Android Only)](prefs:root=WIFI)
