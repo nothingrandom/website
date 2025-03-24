@@ -1,0 +1,53 @@
+---
+import Logo from '../components/Logo.astro';
+const menuList = [
+  {
+    id: 'resume',
+    name: 'Resume',
+    link: '/resume/',
+    color: '#72A25E'
+  }
+];
+
+const isDevelopment = import.meta.env.MODE === 'development';
+---
+<div class='menu__container'>
+  <div class='container-fluid'>
+    <div class='row'>
+      <div class='col-xs-12'>
+        <div class='menu'>
+          <a
+            href={isDevelopment ? 'http://localhost:4321' : 'https://begrant.io'}
+            class='link--exclude logo color'
+          >
+            <Logo />
+          </a>
+          <div class='menu__wrapper'>
+            <div class='menu__content'>
+              <div class='menu__links'>
+                <ul class='links'>
+                  {menuList.map((nav) => {
+                    const isCurrent = false;
+                    const isParent = false;
+                    return (
+                      <li
+                        class={`menu__item ${
+                          isCurrent || isParent ? 'menu__item--active' : ''
+                        }`}
+                        style={`--hover-color: ${nav.color}`}
+                      >
+                        <a class='link--exclude' href={nav.link}>
+                          {nav.name}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

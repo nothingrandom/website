@@ -1,0 +1,6 @@
+---
+const isDevelopment = import.meta.env.MODE === 'development';
+---
+{!isDevelopment &&
+  <script defer src="https://umami.nothingrandom.dev/script.js" data-website-id={import.meta.env.PUBLIC_UMAMI_ID}></script>
+}

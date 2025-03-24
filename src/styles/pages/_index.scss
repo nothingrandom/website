@@ -1,0 +1,37 @@
+@use '../utilities' as *;
+@use '../typography' as *;
+
+.section--homepage {
+  margin: 60px 0;
+
+  @include breakpoint(md) {
+    margin: 160px 0;
+  }
+}
+
+.section--intro__picture {
+  position: relative;
+}
+
+.section--intro__wrapper {
+  margin-bottom: 20px;
+
+  @include breakpoint(md) {
+    height: 610px;
+    margin-bottom: 0;
+  }
+}
+
+.section--intro {
+  @include section-box-background(palette(green, dark));
+
+  .social {
+    a {
+      color: text-contrast(palette(green, dark));
+
+      &:hover {
+        color: palette(red);
+      }
+    }
+  }
+}

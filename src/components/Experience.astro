@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getEntry, render } from 'astro:content';
+
+interface Props {
+  experience: CollectionEntry<'experience'>;
+}
+
+const { experience } = Astro.props;
+
+const entry = await getEntry('experience', experience.id);
+if (!entry) {
+  throw new Error(`Profile not found: ${experience.id}`);
+}
+
+const convertDate = (date: string | Date) => {
+  if (typeof date === 'string') {
+    return date;
+  }
+
+  const d = new Date(date);
+  return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+};
+
+const { Content } = await render(entry);
+---
+<li class='cv__item'>
+  <div class='cv__item__header'>
+    <h3 class='font--bold'>{ experience.data.role }</h3>
+    <div class='flex-spread'>
+      <h4>{ experience.data.company }</h4>
+      <span class='section__item__detail'>{ experience.data.location }<br />{ convertDate(experience.data.startDate) } - { convertDate(experience.data.endDate) }</span>
+    </div>
+    <Content />
+  </div>
+</li>

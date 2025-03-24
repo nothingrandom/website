@@ -1,0 +1,35 @@
+@use '../utilities' as *;
+@use '../typography' as *;
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+
+  li {
+    width: calc(100% / 2);
+    margin-right: -4px;
+    margin-bottom: 20px;
+
+    @include breakpoint(md) {
+      width: unset;
+      margin-bottom: 0;
+    }
+  }
+
+  a {
+    @extend %link--wiggle;
+
+    position: relative;
+    margin-left: 25px;
+    font-size: 18px;
+
+    svg {
+      position: absolute;
+      top: -2px;
+      left: -25px;
+      width: 16px;
+    }
+  }
+}

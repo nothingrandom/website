@@ -1,7 +1,0 @@
-excluded_words:
-  - njk
-  - eleventy
-  - eleventyConfig
-  - hiber
-  - hollway
-  - halloumi

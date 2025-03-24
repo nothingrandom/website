@@ -1,2 +1,0 @@
-# Rules that remain true across all builds are in netlify.toml
-# Rules for a per-deploy basis should go in here
