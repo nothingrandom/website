@@ -1,0 +1,61 @@
+@use 'utilities' as *;
+@use 'variables' as *;
+@use 'grid' as *;
+@use 'colors' as *;
+@use 'fonts' as *;
+@use 'typography' as *;
+@use 'vendor/browser-reset';
+@use 'components/footer';
+@use 'components/logo';
+@use 'components/menu';
+@use 'components/section';
+@use 'components/social';
+@use 'pages/cv';
+@use 'pages/index';
+
+html {
+  @include font-smoothing(on);
+
+  font-size: $base-font-size;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include color-schemes(background-color, palette(white), palette(black));
+  @include color-schemes(color, palette(black), palette(white));
+
+  overflow-x: hidden;
+}
+
+.row--md-padding {
+  @include breakpoint(md) {
+    margin-right: -1.5rem;
+    margin-left: -1.5rem;
+
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12 {
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+  }
+}
+
+.flex-spread {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+img {
+  width: 100%;
+}

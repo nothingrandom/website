@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "stylelint-selector-bem-pattern"
+  ],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-idiomatic-order"
+  ],
+  "rules": {
+    "color-function-notation": "legacy",
+    "selector-class-pattern": null,
+    "plugin/selector-bem-pattern": {
+      "preset": "bem",
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      }
+    }
+  }
+}

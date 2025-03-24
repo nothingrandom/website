@@ -1,0 +1,78 @@
+@use '../utilities' as *;
+
+.section--cv {
+  .section__header {
+    h2 {
+      display: block;
+    }
+
+    h3 {
+      display: none;
+    }
+
+    @media print {
+      h2 {
+        display: none;
+      }
+
+      h3 {
+        display: block;
+      }
+    }
+  }
+
+  .section__intro {
+    @media print {
+      padding: 0;
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  .social {
+    margin-top: 0;
+  }
+
+  li {
+    line-height: 2;
+
+    @media print {
+      line-height: 1;
+    }
+  }
+
+  .cv__item {
+    margin-bottom: 75px;
+
+    @media print {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+    }
+
+    h4 {
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    ul {
+      list-style-type: circle;
+    }
+
+    li {
+      font-size: em(20px);
+      line-height: 1.5;
+
+      @media print {
+        font-size: em(16px);
+      }
+    }
+
+    .flex-spread {
+      margin-bottom: 15px;
+      color: palette(grey);
+    }
+  }
+}

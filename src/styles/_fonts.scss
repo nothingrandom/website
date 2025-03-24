@@ -1,0 +1,14 @@
+// stylelint-disable
+
+@use 'utilities' as *;
+
+// LL Circular
+@include font-face('Circular', '../fonts/CircularStd-Book', 400, normal);
+@include font-face('Circular', '../fonts/CircularStd-BookItalic', 400, italic);
+@include font-face('Circular', '../fonts/CircularStd-Medium', 500, normal);
+@include font-face('Circular', '../fonts/CircularStd-Bold', 700, normal);
+$sans: 'Circular', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+
+// Hack
+@include font-face('Hack', '../fonts/Hack-Regular', 400, normal);
+$mono: 'Hack', monospace;

@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ResumeSocial from '../components/ResumeSocial.astro';
+import Experience from '../components/Experience.astro';
+
+import { getCollection } from 'astro:content';
+const experienceItems = (await getCollection('experience')).sort((a, b) => new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime());
+---
+
+<Layout>
+  <div class='section section--standard section--cv'>
+    <div class='row center-md'>
+      <div class='col-xs-12 col-md-6'>
+        <div class='section__header text-left'>
+          <h2>Resume.</h2>
+          <h3 class='font--bold'>Benjamin Grant</h3>
+        </div>
+        <div class='section__intro text-left'>
+          <p>I'm Benjamin, a lead frontend engineer specializing in modern JavaScript/Typescript and Node.js. I have a passion for building scalable, user-friendly web applications. Using my extensive expertise in modern JavaScript frameworks, performance optimization, and product-driven development, I've played a key role in shaping frontend architecture for SaaS platforms.</p>
+        </div>
+      </div>
+    </div>
+    <div class='row center-md row--md-padding'>
+      <div class='col-xs-12 col-md-6'>
+        <ResumeSocial />
+      </div>
+      <div class='col-xs-12 col-md-8'>
+        <ul class='cv__list text-left'>
+          {experienceItems.map((experience) => (
+            <Experience
+              experience={experience}
+            />
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>

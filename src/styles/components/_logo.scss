@@ -1,0 +1,99 @@
+@use '../variables' as *;
+@use '../utilities' as *;
+@use '../typography' as *;
+
+.logo {
+  @extend %font-sans;
+
+  display: inline-block;
+
+  @include color-schemes(color, palette(black), palette(white));
+
+  font-size: em(34px);
+  font-weight: 700;
+  letter-spacing: 0;
+
+  .collapse {
+    display: inline-block;
+    max-width: 0;
+    transition: max-width .3s .2s cubic-bezier(0, 0, 0, 1);
+
+    em {
+      display: unset !important;
+      font-style: normal;
+      opacity: 0;
+      transform: translate(0, -5px);
+
+      &:nth-of-type(1) {
+        transition: all .2s .3s linear;
+      }
+
+      &:nth-of-type(2) {
+        transition: all .2s .25s linear;
+      }
+
+      &:nth-of-type(3) {
+        transition: all .2s .2s linear;
+      }
+
+      &:nth-of-type(4) {
+        transition: all .2s .15s linear;
+      }
+
+      &:nth-of-type(5) {
+        transition: all .2s .1s linear;
+      }
+
+      &:nth-of-type(6) {
+        transition: all .2s .05s linear;
+      }
+
+      &:nth-of-type(7) {
+        transition: all .2s linear;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    @include color-schemes(color, palette(black), palette(white));
+
+    .collapse {
+      max-width: 300px;
+      transition: max-width .3s cubic-bezier(0, 0, 0, 1);
+
+      em {
+        opacity: 1;
+        transform: translate(0, 0);
+
+        &:nth-of-type(1) {
+          transition: all .2s linear;
+        }
+
+        &:nth-of-type(2) {
+          transition: all .2s .05s linear;
+        }
+
+        &:nth-of-type(3) {
+          transition: all .2s .1s linear;
+        }
+
+        &:nth-of-type(4) {
+          transition: all .2s .15s linear;
+        }
+
+        &:nth-of-type(5) {
+          transition: all .2s .2s linear;
+        }
+
+        &:nth-of-type(6) {
+          transition: all .2s .25s linear;
+        }
+
+        &:nth-of-type(7) {
+          transition: all .2s .3s linear;
+        }
+      }
+    }
+  }
+}
