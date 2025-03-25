@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import ResumeSocial from '../components/ResumeSocial.astro';
 import Experience from '../components/Experience.astro';
+import Skills from '../components/Skills.astro';
 
 import { getCollection } from 'astro:content';
 const experienceItems = (await getCollection('experience')).sort((a, b) => new Date(b.data.startDate).getTime() - new Date(a.data.startDate).getTime());
@@ -16,7 +17,7 @@ const experienceItems = (await getCollection('experience')).sort((a, b) => new D
           <h3 class='font--bold'>Benjamin Grant</h3>
         </div>
         <div class='section__intro text-left'>
-          <p>I'm Benjamin, a lead frontend engineer specializing in modern JavaScript/Typescript and Node.js. I have a passion for building scalable, user-friendly web applications. Using my extensive expertise in modern JavaScript frameworks, performance optimization, and product-driven development, I've played a key role in shaping frontend architecture for SaaS platforms.</p>
+          <p>As a Lead Frontend Engineer, I have a proven track record of building scalable, high-performance SaaS platforms. I specialize in modern JavaScript/TypeScript, React, and Node.js, bringing extensive experience in frontend architecture, performance optimisation, and cross-functional collaboration. Throughout my career, I've consistently driven product success through technical leadership and strategic process improvements.</p>
         </div>
       </div>
     </div>
@@ -26,6 +27,8 @@ const experienceItems = (await getCollection('experience')).sort((a, b) => new D
       </div>
       <div class='col-xs-12 col-md-8'>
         <ul class='cv__list text-left'>
+          <Skills />
+          <hr />
           {experienceItems.map((experience) => (
             <Experience
               experience={experience}
