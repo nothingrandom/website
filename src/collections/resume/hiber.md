@@ -6,6 +6,8 @@ startDate: 2017-12-01
 endDate: 2021-04-30
 techStack: [Vue.js, TypeScript, Mocha, gRPC, Storybook]
 ---
-- Built and oversaw internal and client-facing web applications, including a modem management tool, satellite operational tools, a locally-running web GUI for field devices, and the marketing website.
-- Led a team focused on web applications and their supporting API, managing project flow, product roadmap alignment, stakeholder communication, and ownership of product tools.
-- Additionally, handled recruitment, onboarding, and mentorship of new team members.
+- Built comprehensive web application ecosystem including modem management tools, satellite operational dashboards, field device interfaces, and customer-facing marketing site
+- Led cross-functional team responsible for web applications and supporting APIs, managing project flow and stakeholder communication
+- Balanced technical implementation with user experience considerations, often suggesting creative alternatives that enhanced both feasibility and design quality
+- Managed complete product development lifecycle from conception to delivery
+- Handled recruitment, onboarding, and mentorship of new team members, fostering collaborative team culture
