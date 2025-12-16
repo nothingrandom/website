@@ -3,7 +3,7 @@ role: Senior Frontend Engineer
 company: Technology from Sage
 location: Remote (UK)
 startDate: 2021-05-04
-endDate: Present
+endDate: 2025-12-15
 techStack: [React, TypeScript, Jest, Cypress, Webpack, Docker]
 ---
 - Rebuilt a browser extension to be compatible with the latest versions of Chrome and Firefox, whilst improving user experience, performance, stability, and maintainability.
